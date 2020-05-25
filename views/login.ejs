@@ -1,0 +1,17 @@
+<%- include('partials/head') %>
+
+<header>
+    <h1><%= title %></h1>
+</header>
+
+<main>
+   <div class="container">
+     <h1>Please login to Spotify</h1>
+     <p>In order for you to play Spotify Song Roulette, we need your Spotify data. This data will be used for this game and this game only.</p>
+     <form action="/spotifylogin">
+       <button type="submit">Login to spotify</button>
+     </form>
+   </div>
+</main>
+
+<%- include('partials/footer') %>

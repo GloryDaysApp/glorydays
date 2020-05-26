@@ -1,0 +1,54 @@
+<%- include('partials/head') %>
+
+  <header>
+  </header>
+
+  <main class="conversational-UI">
+    <!-- Page Content -->
+    <%- include('partials/scrollButtons') %>
+      <%- include('partials/spotifyNavigationPlayer') %>
+
+
+        <form>
+          <label>
+      <p>Voeg muziek toe aan de herinnering</p>
+    <a class="button">Muziekstream openen</a> 
+    <a class="button"> Overslaan</a> 
+</label>
+
+          <label>
+    <p>Geef de herinnering een titel</p>
+    <input type="text">
+</label>
+
+          <label>
+    <p>Waar gaat de herinnering over?
+        Omschrijf het met tekst, audio en foto’s</p>
+        <buttons><img alt="afbeelding"></buttons>
+        <buttons><img alt="tekst"></buttons>
+<input type="image">
+<input type="text">
+</label>
+
+
+          <label>
+    <p>Welke verzorgers mogen deze herinnering zien?</p>
+
+    <%  console.log(data.id) %>
+
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+
+</label>
+
+
+          <a class="button"> Herinnering opslaan</a>
+        </form>
+
+
+  </main>
+
+  <%- include('partials/navigation') %>
+
+    <%- include('partials/footer') %>

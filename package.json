@@ -18,6 +18,8 @@
     "watch:css": "chokidar 'src/scss/**/*.scss' --command 'npm run build:css'",
     "watch:js": "chokidar 'src/js/**/*.js' --command 'npm run build:js'",
     "watch:assets": "chokidar 'src/img/*.*' --command 'npm run build:assets'",
+    "watch:lint": "chokidar '**/*.js' --command 'npm run lint --silent'",
+    "lint": "eslint '**/*.js' --ignore-path .gitignore .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

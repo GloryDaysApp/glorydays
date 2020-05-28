@@ -18,20 +18,25 @@
     "watch:css": "chokidar 'src/scss/**/*.scss' --command 'npm run build:css'",
     "watch:js": "chokidar 'src/js/**/*.js' --command 'npm run build:js'",
     "watch:assets": "chokidar 'src/img/*.*' --command 'npm run build:assets'",
+    "watch:lint": "chokidar '**/*.js' --command 'npm run lint --silent'",
+    "lint": "eslint '**/*.js' --ignore-path .gitignore .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marissaverdonck/glory-days.git"
+    "url": "git+https://github.com/GloryDaysApp/glorydays.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/marissaverdonck/glory-days/issues"
+    "url": "https://github.com/GloryDaysApp/glorydays/issues"
   },
-  "homepage": "https://github.com/marissaverdonck/glory-days#readme",
+  "homepage": "https://github.com/GloryDaysApp/glorydays#readme",
   "dependencies": {
+<<<<<<< HEAD
     "body-parser": "^1.19.0",
+=======
+>>>>>>> 5a02f349026058240e3e9190d1a89e897023f01a
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.3",
@@ -45,6 +50,7 @@
   "devDependencies": {
     "chokidar-cli": "^2.1.0",
     "concurrently": "^5.2.0",
+    "eslint": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",

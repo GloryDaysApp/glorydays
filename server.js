@@ -9,7 +9,7 @@ app.set('view engine', 'ejs')
     .use(express.static('static'))
 
     .get('/', async (req, res) => {
-        router.basicPage(res, "home", "Home");
+        router.basicPage(res, 'home', 'Home');
     })
 
     .listen(config.port, () => {

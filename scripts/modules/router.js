@@ -6,4 +6,4 @@ const basicPage = (res, view, title) => {
   });
 
 
-module.exports = { basicPage };
+  module.exports = { basicPage };

@@ -1,45 +1,54 @@
-const config = require('./config');
+const config = require("./config");
 
-const express = require('express'),
-  router = require('./scripts/modules/router'),
+const express = require("express"),
+  router = require("./scripts/modules/router"),
   app = express();
 
-const bodyParser = require('body-parser')
-const session = require('express-session')
-const cookies = require('cookie-parser')
+const bodyParser = require("body-parser");
+const session = require("express-session");
+const cookies = require("cookie-parser");
 
 // Body parser init
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 // Session init
-app.use(session({ secret: process.env.SESSION_KEY, resave: false, saveUninitialized: true }))
+app.use(
+  session({
+    secret: process.env.SESSION_KEY,
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 // Cookie parser init
-app.use(cookies())
+app.use(cookies());
 
-app.use(session({
-  resave: false,
-  saveUninitialized: true,
-  secret: process.env.SESSION_KEY,
-  port: process.env.PORT,
-  secure: false
-}))
+app.use(
+  session({
+    resave: false,
+    saveUninitialized: true,
+    secret: process.env.SESSION_KEY,
+    port: process.env.PORT,
+    secure: false,
+  })
+);
 
-app.set('view engine', 'ejs')
-  .set('views', 'views')
-  .use(express.static('static'))
+app
+  .set("view engine", "ejs")
+  .set("views", "views")
+  .use(express.static("static"))
 
-  .get('/', async (req, res) => {
-    router.basicPage(res, 'home', 'Home');
+  .get("/", async (req, res) => {
+    router.basicPage(res, "home", "Home");
   })
 
   // Spotify login url
-  .get('/login', async (req, res) => {
-    router.basicPage(res, 'login', 'Login');
+  .get("/login", async (req, res) => {
+    router.basicPage(res, "login", "Login");
   })
 
   .listen(config.port, () => {
@@ -47,25 +56,16 @@ app.set('view engine', 'ejs')
   });
 
 // Spotify Oauth
-const spotifyLogin = require('./server/login.js')
-const spotifyCallback = require('./server/callback.js')
-const getRefreshToken = require('./server/get_refresh_token.js')
-
+const spotifyLogin = require("./server/login.js");
+const spotifyCallback = require("./server/callback.js");
+const getRefreshToken = require("./server/get_refresh_token.js");
 
 // Spotify login routes
-app.get('/spotifylogin', spotifyLogin) // Redirect for Spotify auth
-app.get('/callback', spotifyCallback) // Callback for fetching Spotify tokens
+app.get("/spotifylogin", spotifyLogin); // Redirect for Spotify auth
+app.get("/callback", spotifyCallback); // Callback for fetching Spotify tokens
 
-app.get('/refresh', getRefreshToken) // Callback for fetching Spotify tokens
+app.get("/refresh", getRefreshToken); // Callback for fetching Spotify tokens
 
-
-<<<<<<< HEAD
 // Spotify song search
-const getSpotifySongs = require('./server/get_spotify_songs.js')
-=======
-    .get('/', async (req, res) => {
-        router.basicPage(res, 'home', 'Home');
-    })
->>>>>>> db25eb258dce2faad988574e2920703f80f3134c
-
-app.post('/search', getSpotifySongs)
+const getSpotifySongs = require("./server/get_spotify_songs.js");
+app.post("/search", getSpotifySongs);

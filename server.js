@@ -59,7 +59,13 @@ app.get('/callback', spotifyCallback) // Callback for fetching Spotify tokens
 app.get('/refresh', getRefreshToken) // Callback for fetching Spotify tokens
 
 
+<<<<<<< HEAD
 // Spotify song search
 const getSpotifySongs = require('./server/get_spotify_songs.js')
+=======
+    .get('/', async (req, res) => {
+        router.basicPage(res, 'home', 'Home');
+    })
+>>>>>>> db25eb258dce2faad988574e2920703f80f3134c
 
 app.post('/search', getSpotifySongs)

@@ -49,10 +49,14 @@ app.set('view engine', 'ejs')
 // Spotify Oauth
 const spotifyLogin = require('./server/login.js')
 const spotifyCallback = require('./server/callback.js')
+const getRefreshToken = require('./server/get_refresh_token.js')
+
 
 // Spotify login routes
 app.get('/spotifylogin', spotifyLogin) // Redirect for Spotify auth
 app.get('/callback', spotifyCallback) // Callback for fetching Spotify tokens
+
+app.get('/refresh', getRefreshToken) // Callback for fetching Spotify tokens
 
 
 // Spotify song search

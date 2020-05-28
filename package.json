@@ -33,10 +33,7 @@
   },
   "homepage": "https://github.com/GloryDaysApp/glorydays#readme",
   "dependencies": {
-<<<<<<< HEAD
     "body-parser": "^1.19.0",
-=======
->>>>>>> 5a02f349026058240e3e9190d1a89e897023f01a
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.3",

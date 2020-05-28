@@ -5,5 +5,4 @@ const basicPage = (res, view, title) => {
     title,
   });
 
-
   module.exports = { basicPage };

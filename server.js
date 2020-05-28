@@ -58,8 +58,6 @@ app.get('/callback', spotifyCallback) // Callback for fetching Spotify tokens
 
 app.get('/refresh', getRefreshToken) // Callback for fetching Spotify tokens
 
-
 // Spotify song search
 const getSpotifySongs = require('./server/get_spotify_songs.js')
-
 app.post('/search', getSpotifySongs)

@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 
-const getRefreshToken = require('./get_refresh_token.js')
+const getRefreshToken = require('./get_refresh_token.js');
 
 module.exports = (req, res) => {
 	if (req.cookies.ACCESS_TOKEN) {

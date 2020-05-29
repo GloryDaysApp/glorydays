@@ -1,11 +1,8 @@
-const config = require('../../config');
-
 const basicPage = (res, view, title) => {
     res.render(view, {
-      title
-    })
-  },
-
+        title
+    });
+};
   pageWithData = (res, view, title, data) => {
     res.render(view, {
       title,

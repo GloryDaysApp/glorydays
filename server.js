@@ -11,17 +11,13 @@ app.set('view engine', 'ejs')
   .set('views', 'views')
   .use(express.static('static'))
 
-.get('/', async(req, res) => {
-  router.basicPage(res, "home", "Home");
-})
-
+ .get('/', async (req, res) => {
+        router.basicPage(res, 'home', 'Home');
+    })
 
 .get('/addMemory.ejs', async(req, res) => {
   router.pageWithData(res, "addMemory", "Herinnering toevoegen", caregivers);
-
 })
-
-
 
 .listen(config.port, () => {
   console.log(`Application started on port: ${config.port}`);

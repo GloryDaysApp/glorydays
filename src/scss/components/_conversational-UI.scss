@@ -224,6 +224,21 @@ body {
                 input[type="checkbox"] {
                     width: 10%;
                 }
+
+                &--choose-file {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    span {
+                        margin-left: 1rem;
+                    }
+                }
+
+                .output-image {
+                    max-width: 250px;
+                    margin-top: 1rem;
+                }
             }
 
             // .buttons below the page
@@ -267,9 +282,5 @@ body {
                 }
             }
         }
-    }
-
-    img {
-        max-width: 250px;
     }
 }

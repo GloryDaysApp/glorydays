@@ -5,50 +5,71 @@
 
   <main class="conversational-UI">
     <!-- Page Content -->
-    <%- include('partials/scrollButtons') %>
-      <%- include('partials/spotifyNavigationPlayer') %>
+
+    <%- include('partials/spotifyNavigationPlayer') %>
 
 
-        <form>
-          <label>
-      <p>Voeg muziek toe aan de herinnering</p>
-    <a class="button">Muziekstream openen</a> 
-    <a class="button"> Overslaan</a> 
-</label>
-
-          <label>
-    <p>Geef de herinnering een titel</p>
-    <input type="text">
-</label>
-
-          <label>
-    <p>Waar gaat de herinnering over?
-        Omschrijf het met tekst, audio en foto’s</p>
-        <buttons><img alt="afbeelding"></buttons>
-        <buttons><img alt="tekst"></buttons>
-<input type="image">
-<input type="text">
-</label>
+      <form method="GET" enctype="multipart/form-data">
 
 
-          <label>
-    <p>Welke verzorgers mogen deze herinnering zien?</p>
-
-    <%  console.log(data.id) %>
-
-<input type="checkbox">
-<input type="checkbox">
-<input type="checkbox">
-
-</label>
 
 
-          <a class="button"> Herinnering opslaan</a>
-        </form>
+        <fieldset id="input-1">
+          <legend class="legend-text">Voeg muziek toe aan de herinnering</legend>
+          <div class="input input-button">
+            <a href="/" class="">Muziekstream openen</a>
+          </div>
+          <div class="buttons">
+            <!-- <a href="/" class="button">Muziekstream openen</a> -->
+            <a class="button next"> Overslaan</a>
+          </div>
+        </fieldset>
+
+
+
+        <fieldset id="input-2">
+          <legend class="legend-text">Geef de herinnering een titel</legend>
+          <div class="input input-text">
+            <input id="title" type="text" placeholder="Titel">
+          </div>
+          <div class="buttons">
+            <!-- <a class="button next"> Volgende</a> -->
+          </div>
+        </fieldset>
+
+        <fieldset id="input-3">
+          <legend class="legend-text">Waar gaat de herinnering over? Omschrijf het met tekst, audio en foto’s</legend>
+          <div class="input input-text">
+            <input id="description" type="text" placeholder="De herinnering gaat over">
+          </div>
+          <div class="buttons">
+            <!-- <a class="button next "> Volgende</a> -->
+          </div>
+        </fieldset>
+
+        <fieldset id="input-4">
+          <legend class="legend-text">Welke verzorgers mogen deze herinnering zien?</legend>
+          <div class="input input-button">
+            <input type="checkbox" id="verzorger-1">
+            <label for="verzorger-1">Marie</label>
+
+            <input type="checkbox" id="verzorger-2">
+            <label for="verzorger-2">Pieter</label>
+
+            <input type="checkbox" id="verzorger-3">
+            <label for="verzorger-3">Noortje</label>
+          </div>
+          <div class="buttons">
+            <a class="button save"> Herinnering opslaan</a>
+          </div>
+        </fieldset>
+      </form>
+      <%- include('partials/scrollButtons') %>
 
 
   </main>
 
   <%- include('partials/navigation') %>
+
 
     <%- include('partials/footer') %>

@@ -3,11 +3,11 @@ const basicPage = (res, view, title) => {
         title
     });
 };
-  pageWithData = (res, view, title, data) => {
+pageWithData = (res, view, title, data) => {
     res.render(view, {
-      title,
-      data
-    })
-  };
+        title,
+        data
+    });
+};
 
-module.exports = { basicPage, pageWithData };
+module.exports = {basicPage, pageWithData};

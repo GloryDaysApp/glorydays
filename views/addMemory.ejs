@@ -63,6 +63,21 @@
             <a class="button save"> Herinnering opslaan</a>
           </div>
         </fieldset>
+
+        <fieldset id="input-5">
+          <legend class="legend-text">Upload een afbeelding</legend>
+          <div class="input input-button">
+            <div class="input-button--choose-file">
+              <input type="file" id="real-file" hidden="hidden">
+              <button type="button" id="custom-button" class="button-icon"><img src="./icon-image.png" alt="Image Icon"></button>
+              <span id="custom-text">Nog geen afbeelding gekozen.</span>
+            </div>
+            <img id="output-image" class="output-image hide"/>
+          </div>
+          <div class="buttons">
+            <a class="button save"> Herinnering opslaan</a>
+          </div>
+        </fieldset>
       </form>
       <%- include('partials/scrollButtons') %>
 

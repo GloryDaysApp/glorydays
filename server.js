@@ -2,7 +2,10 @@ const config = require('./config');
 
 const express = require('express'),
   router = require('./scripts/modules/router'),
-  app = express();
+  app = express(),
+  multer = require('multer'),
+  upload = multer({dest: 'uploads/'}),
+  caregivers = {id: 'test'};
 
 const bodyParser = require('body-parser')
 const session = require('express-session')
@@ -42,6 +45,11 @@ app.set('view engine', 'ejs')
     router.basicPage(res, 'login', 'Login');
   })
 
+  // Add memory
+  .get('/addMemory.ejs', async (req, res) => {
+    router.pageWithData(res, 'addMemory', 'Herinnering toevoegen', caregivers);
+})
+
   .listen(config.port, () => {
     console.log(`Application started on port: ${config.port}`);
   });
@@ -54,8 +62,6 @@ const spotifyCallback = require('./server/callback.js')
 app.get('/spotifylogin', spotifyLogin) // Redirect for Spotify auth
 app.get('/callback', spotifyCallback) // Callback for fetching Spotify tokens
 
-
 // Spotify song search
 const getSpotifySongs = require('./server/get_spotify_songs.js')
-
 app.post('/search', getSpotifySongs)

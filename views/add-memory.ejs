@@ -6,7 +6,7 @@
   <main class="conversational-UI">
     <!-- Page Content -->
 
-    <%- include('partials/spotifyNavigationPlayer') %>
+    <%- include('partials/spotify-navigation-player') %>
 
 
       <form method="GET" enctype="multipart/form-data">
@@ -69,7 +69,7 @@
           <div class="input input-button">
             <div class="input-button--choose-file">
               <input type="file" id="real-file" hidden="hidden">
-              <button type="button" id="custom-button" class="button-icon"><img src="./icon-image.png" alt="Image Icon"></button>
+              <button type="button" id="custom-button" class="button-icon"><img src="./camera_icon.png" alt="Image Icon"></button>
               <span id="custom-text">Nog geen afbeelding gekozen.</span>
             </div>
             <img id="output-image" class="output-image hide"/>
@@ -79,7 +79,7 @@
           </div>
         </fieldset>
       </form>
-      <%- include('partials/scrollButtons') %>
+      <%- include('partials/scroll-buttons') %>
 
 
   </main>

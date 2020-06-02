@@ -1,8 +1,11 @@
 const config = require('./config');
 
 const express = require('express'),
-    router = require('./scripts/modules/router'),
-    app = express();
+  router = require('./scripts/modules/router'),
+  app = express(),
+  multer = require('multer'),
+  upload = multer({ dest: 'uploads/' }),
+  caregivers = { id: "test" }
 
 const bodyParser = require('body-parser');
 const session = require('express-session');
@@ -44,18 +47,20 @@ app
     .set('views', 'views')
     .use(express.static('static'))
 
-    .get('/', async (req, res) => {
+ .get('/', async (req, res) => {
         router.basicPage(res, 'home', 'Home');
     })
 
-    // Spotify login url
-    .get('/login', async (req, res) => {
-        router.basicPage(res, 'login', 'Login');
-    })
-
-    .listen(config.port, () => {
-        console.log(`Application started on port: ${config.port}`);
-    });
+// Spotify login url
+.get('/login', async (req, res) => {
+    router.basicPage(res, 'login', 'Login');
+})
+.get('/addMemory.ejs', async(req, res) => {
+  router.pageWithData(res, 'addMemory', 'Herinnering toevoegen', caregivers);
+})
+.listen(config.port, () => {
+    console.log(`Application started on port: ${config.port}`);
+});
 
 // Spotify Oauth
 const spotifyLogin = require('./server/login.js');
@@ -70,4 +75,4 @@ app.get('/refresh', getRefreshToken); // Callback for fetching Spotify tokens
 
 // Spotify song search
 const getSpotifySongs = require('./server/get_spotify_songs.js');
-app.post('/search', getSpotifySongs);
+app.post('/search', getSpotifySongs)

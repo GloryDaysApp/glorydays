@@ -1,12 +1,19 @@
 <%- include('partials/head') %>
 
-<header>
-    <h1><%= title %></h1>
-</header>
-
+  <header>
+  
 <main>
+  </header>
   <%- include('partials/search') %>
+  <main class="conversational-UI">
     <!-- Page Content -->
-</main>
+    <%- include('partials/memoryChecker') %>
 
-<%- include('partials/footer') %>
+      <div class="buttons">
+        <a href="addMemory.ejs" class="button">Herinnering toevoegen</a>
+        <a class="button">Muziek luisteren</a>
+      </div>
+  </main>
+
+  <%- include('partials/navigation') %>
+  <%- include('partials/footer') %>

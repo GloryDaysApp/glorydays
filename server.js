@@ -4,7 +4,10 @@ const socket = require('socket.io');
 const express = require('express'),
     // socket = require('./server/spotify_playback'),
     router = require('./scripts/modules/router'),
-    app = express();
+    app = express(),
+    multer = require('multer'),
+    upload = multer({ dest: 'uploads/' }),
+    caregivers = { id: 'test' };
 
 // const http = require('http');
 // const server = http.createServer(app);
@@ -60,9 +63,17 @@ app
         router.basicPage(res, 'home', 'Home');
     })
 
+    .get('/addMemory.ejs', async (req, res) => {
+        router.pageWithData(res, 'addMemory', 'Herinnering toevoegen', caregivers);
+    })
+
     // Spotify login url
     .get('/login', async (req, res) => {
         router.basicPage(res, 'login', 'Login');
+    })
+
+    .listen(config.port, () => {
+        console.log(`Application started on port: ${config.port}`);
     });
 
 const server = app.listen(config.port, () => {
@@ -126,6 +137,3 @@ ioInstance.on('connection', function () {
     // });
 
 });
-
-
-

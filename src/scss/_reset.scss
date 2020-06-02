@@ -21,8 +21,8 @@ time, mark, audio, video {
     border: 0;
     font: inherit;
     font-size: 100%;
-    vertical-align: baseline;
     text-decoration: none;
+    vertical-align: baseline;
 }
 
 html {
@@ -63,7 +63,7 @@ table {
 input,
 select,
 textarea {
-    border: none;
+    border: 0;
 }
 
 select {
@@ -71,10 +71,10 @@ select {
 }
 
 * {
+    box-sizing: border-box;
+    color: inherit;
     margin: 0;
     padding: 0;
-    color: inherit;
-    box-sizing: border-box;
 }
 
 *::before,

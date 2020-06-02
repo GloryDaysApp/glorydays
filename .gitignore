@@ -1,6 +1,15 @@
 /.idea/
 /node_modules/
 /.env
+<<<<<<< HEAD
+<<<<<<< HEAD
+/static/
+.DS_Store
+=======
+/static/
+>>>>>>> 0356dd4449fdde62dd7e7113b872a03e54da5ad9
+=======
 /static/
 .DS_Store
 
+>>>>>>> afefe6636cc3203be64c136bc73bf075268a58a9

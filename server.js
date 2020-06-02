@@ -11,9 +11,22 @@ app.set('view engine', 'ejs')
   .set('views', 'views')
   .use(express.static('static'))
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+.get('/', async(req, res) => {
+  router.basicPage(res, "home", "Home");
+})
+=======
+    .get('/', async (req, res) => {
+        router.basicPage(res, 'home', 'Home');
+    })
+>>>>>>> 0356dd4449fdde62dd7e7113b872a03e54da5ad9
+
+=======
  .get('/', async (req, res) => {
         router.basicPage(res, 'home', 'Home');
     })
+>>>>>>> afefe6636cc3203be64c136bc73bf075268a58a9
 
 .get('/addMemory.ejs', async(req, res) => {
   router.pageWithData(res, "addMemory", "Herinnering toevoegen", caregivers);

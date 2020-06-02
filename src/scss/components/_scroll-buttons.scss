@@ -5,8 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .navigation-dot {
-        &::before {
+        .navigation-dot {
             &::before {
                 width: .6em;
                 height: .6em;
@@ -21,18 +20,17 @@
             }
         }
         .active-navigation-dot {
-            &::before {
-                background-color: #64A9A9;
-                width: .8em;
-                height: .8em;
-                transition: all 0.2s ease-in-out;
-                content: "";
-                border-radius: 50%;
-                border: 0;
-                display: flex;
-                flex-direction: column;
-                margin: 0 0 .5em 0;
-            }
+        &::before {
+            background-color: #64A9A9;
+            width: .8em;
+            height: .8em;
+            transition: all 0.2s ease-in-out;
+            content: "";
+            border-radius: 50%;
+            border: 0;
+            display: flex;
+            flex-direction: column;
+            margin: 0 0 .5em 0;
         }
     }
 }

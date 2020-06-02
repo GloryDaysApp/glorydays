@@ -3,7 +3,7 @@ console.log(inputTextFields);
 
 // 
 inputTextFields.forEach((element, index) => {
-  inputTextFields[index].insertAdjacentHTML('beforeend', `
-    <a class="send_button">Stuur</a> 
-    `);
+    inputTextFields[index].insertAdjacentHTML('beforeend', `
+      <a class="send_button">Stuur</a> 
+      `);
 });

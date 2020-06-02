@@ -15,8 +15,8 @@ app.set('view engine', 'ejs')
         router.basicPage(res, 'home', 'Home');
     })
 
-    .get('/addMemory.ejs', async (req, res) => {
-        router.pageWithData(res, 'addMemory', 'Herinnering toevoegen', caregivers);
+    .get('/add-memory', async (req, res) => {
+        router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
     })
 
     .listen(config.port, () => {

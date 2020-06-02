@@ -1,67 +1,67 @@
 const config = require('./config');
 
 const express = require('express'),
-  router = require('./scripts/modules/router'),
-  app = express(),
-  multer = require('multer'),
-  upload = multer({dest: 'uploads/'}),
-  caregivers = {id: 'test'};
+    router = require('./scripts/modules/router'),
+    app = express(),
+    // multer = require('multer'),
+    // upload = multer({dest: 'uploads/'}),
+    caregivers = {id: 'test'};
 
-const bodyParser = require('body-parser')
-const session = require('express-session')
-const cookies = require('cookie-parser')
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const cookies = require('cookie-parser');
 
 // Body parser init
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 // Session init
-app.use(session({ secret: process.env.SESSION_KEY, resave: false, saveUninitialized: true }))
+app.use(session({ secret: process.env.SESSION_KEY, resave: false, saveUninitialized: true }));
 
 // Cookie parser init
-app.use(cookies())
+app.use(cookies());
 
 app.use(session({
-  resave: false,
-  saveUninitialized: true,
-  secret: process.env.SESSION_KEY,
-  port: process.env.PORT,
-  secure: false
-}))
+    resave: false,
+    saveUninitialized: true,
+    secret: process.env.SESSION_KEY,
+    port: process.env.PORT,
+    secure: false
+}));
 
 app.set('view engine', 'ejs')
-  .set('views', 'views')
-  .use(express.static('static'))
+    .set('views', 'views')
+    .use(express.static('static'))
 
-  .get('/', async (req, res) => {
-    router.basicPage(res, 'home', 'Home');
-  })
+    .get('/', async (req, res) => {
+        router.basicPage(res, 'home', 'Home');
+    })
 
-  // Spotify login url
-  .get('/login', async (req, res) => {
-    router.basicPage(res, 'login', 'Login');
-  })
+    // Spotify login url
+    .get('/login', async (req, res) => {
+        router.basicPage(res, 'login', 'Login');
+    })
 
-  // Add memory
-  .get('/addMemory.ejs', async (req, res) => {
-    router.pageWithData(res, 'addMemory', 'Herinnering toevoegen', caregivers);
-})
+    // Add memory
+    .get('/addMemory.ejs', async (req, res) => {
+        router.pageWithData(res, 'addMemory', 'Herinnering toevoegen', caregivers);
+    })
 
-  .listen(config.port, () => {
-    console.log(`Application started on port: ${config.port}`);
-  });
+    .listen(config.port, () => {
+        console.log(`Application started on port: ${config.port}`);
+    });
 
 // Spotify Oauth
-const spotifyLogin = require('./server/login.js')
-const spotifyCallback = require('./server/callback.js')
+const spotifyLogin = require('./server/login.js');
+const spotifyCallback = require('./server/callback.js');
 
 // Spotify login routes
-app.get('/spotifylogin', spotifyLogin) // Redirect for Spotify auth
-app.get('/callback', spotifyCallback) // Callback for fetching Spotify tokens
+app.get('/spotifylogin', spotifyLogin); // Redirect for Spotify auth
+app.get('/callback', spotifyCallback); // Callback for fetching Spotify tokens
 
 // Spotify song search
-const getSpotifySongs = require('./server/get_spotify_songs.js')
-app.post('/search', getSpotifySongs)
+const getSpotifySongs = require('./server/get_spotify_songs.js');
+app.post('/search', getSpotifySongs);

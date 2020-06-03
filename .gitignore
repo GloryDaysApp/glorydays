@@ -2,3 +2,5 @@
 /node_modules/
 /.env
 /static/
+.DS_Store
+/package-lock.json

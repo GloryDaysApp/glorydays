@@ -1,0 +1,90 @@
+<%- include('partials/head') %>
+
+  <header>
+  </header>
+
+  <main class="conversational-UI">
+    <!-- Page Content -->
+
+    <%- include('partials/spotify-navigation-player') %>
+
+
+      <form method="GET" enctype="multipart/form-data">
+
+
+
+
+        <fieldset id="input-1">
+          <legend class="legend-text">Voeg muziek toe aan de herinnering</legend>
+          <div class="input input-button">
+            <a href="/" class="">Muziekstream openen</a>
+          </div>
+          <div class="buttons">
+            <!-- <a href="/" class="button">Muziekstream openen</a> -->
+            <a class="button next"> Overslaan</a>
+          </div>
+        </fieldset>
+
+
+
+        <fieldset id="input-2">
+          <legend class="legend-text">Geef de herinnering een titel</legend>
+          <div class="input input-text">
+            <input id="title" type="text" placeholder="Titel">
+          </div>
+          <div class="buttons">
+            <!-- <a class="button next"> Volgende</a> -->
+          </div>
+        </fieldset>
+
+        <fieldset id="input-3">
+          <legend class="legend-text">Waar gaat de herinnering over? Omschrijf het met tekst, audio en foto’s</legend>
+          <div class="input input-text">
+            <input id="description" type="text" placeholder="De herinnering gaat over">
+          </div>
+          <div class="buttons">
+            <!-- <a class="button next "> Volgende</a> -->
+          </div>
+        </fieldset>
+
+        <fieldset id="input-4">
+          <legend class="legend-text">Welke verzorgers mogen deze herinnering zien?</legend>
+          <div class="input input-button">
+            <input type="checkbox" id="verzorger-1">
+            <label for="verzorger-1">Marie</label>
+
+            <input type="checkbox" id="verzorger-2">
+            <label for="verzorger-2">Pieter</label>
+
+            <input type="checkbox" id="verzorger-3">
+            <label for="verzorger-3">Noortje</label>
+          </div>
+          <div class="buttons">
+            <a class="button save"> Herinnering opslaan</a>
+          </div>
+        </fieldset>
+
+        <fieldset id="input-5">
+          <legend class="legend-text">Upload een afbeelding</legend>
+          <div class="input input-button">
+            <div class="input-button--choose-file">
+              <input type="file" id="real-file" hidden="hidden">
+              <button type="button" id="custom-button" class="button-icon"><img src="./camera_icon.png" alt="Image Icon"></button>
+              <span id="custom-text">Nog geen afbeelding gekozen.</span>
+            </div>
+            <img id="output-image" class="output-image hide"/>
+          </div>
+          <div class="buttons">
+            <a class="button save"> Herinnering opslaan</a>
+          </div>
+        </fieldset>
+      </form>
+      <%- include('partials/scroll-buttons') %>
+
+
+  </main>
+
+  <%- include('partials/navigation') %>
+
+
+    <%- include('partials/footer') %>

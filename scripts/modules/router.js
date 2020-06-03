@@ -3,5 +3,12 @@ const basicPage = (res, view, title) => {
     title,
   });
 };
+pageWithData = (res, view, title, data) => {
+  res.render(view, {
+    title,
+    data
+  });
+};
 
-module.exports = { basicPage };
+
+module.exports = { basicPage, pageWithData };

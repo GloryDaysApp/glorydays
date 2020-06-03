@@ -41,3 +41,5 @@ async function search(searchQuery, token) {
     const data = await response.json();
     return data;
 }
+
+

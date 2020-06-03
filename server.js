@@ -11,6 +11,11 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 
+// Port
+app.listen(config.port, () => {
+    console.log(`Application started on port: ${config.port}`);
+});
+
 // Body parser init
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -29,7 +34,6 @@ app.use(
 
 // Cookie parser init
 app.use(cookies());
-
 
 // Session init
 app.use(
@@ -55,24 +59,22 @@ app
     .get('/login', async (req, res) => {
         router.basicPage(res, 'login', 'Login');
     })
+
     .get('/add-memory', async (req, res) => {
         router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
     })
-    .listen(config.port, () => {
-        console.log(`Application started on port: ${config.port}`);
-    });
+
+
 
 // Spotify Oauth
 const spotifyLogin = require('./server/login.js');
 const spotifyCallback = require('./server/callback.js');
-const getRefreshToken = require('./server/get_refresh_token.js');
 
 // Spotify login routes
 app.get('/spotifylogin', spotifyLogin); // Redirect for Spotify auth
 app.get('/callback', spotifyCallback); // Callback for fetching Spotify tokens
 
-app.get('/refresh', getRefreshToken); // Callback for fetching Spotify tokens
-
 // Spotify song search
 const getSpotifySongs = require('./server/get_spotify_songs.js');
-app.post('/search', getSpotifySongs)
+app.post('/search', getSpotifySongs);
+

@@ -3,6 +3,7 @@
 <header></header>
 
 <main class="conversational-UI">
+    <div class="overlay"></div>
     <!-- Page Content -->
     <form method="GET" enctype="multipart/form-data">
         <fieldset id="input-1">
@@ -21,7 +22,12 @@
         <fieldset id="input-2">
             <legend class="legend-text">Geef de herinnering een titel</legend>
             <div class="input input-text">
-                <input id="title" type="text" placeholder="Titel" />
+                <input
+                    id="title"
+                    type="text"
+                    placeholder="Titel"
+                    maxlength="40"
+                />
             </div>
             <div class="buttons">
                 <a href="#input-3" class="button next"> Volgende</a>
@@ -30,8 +36,7 @@
 
         <fieldset id="input-3">
             <legend class="legend-text">
-                Waar gaat de herinnering over? Omschrijf het met tekst, audio en
-                foto’s
+                Waar gaat deze herinnering over?
             </legend>
             <div class="input input-text">
                 <input
@@ -39,6 +44,7 @@
                     type="text"
                     placeholder="De herinnering gaat over"
                     value=""
+                    maxlength="40"
                 />
             </div>
             <div class="buttons">

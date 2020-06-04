@@ -2,6 +2,20 @@ body {
     background-color: $background-color;
 }
 .conversational-UI {
+    // .overlay {
+    //     height: 20vh;
+    //     width: 100%;
+    //     background-color: #ffffff63;
+    //     position: fixed;
+    //     top: 0;
+    //     z-index: 100;
+    //     background: rgb(255, 255, 255);
+    //     background: linear-gradient(
+    //         180deg,
+    //         rgba(255, 255, 255, 0.8995973389355743) 50%,
+    //         rgba(255, 255, 255, 0) 100%
+    //     );
+    // }
     .buttons {
         // bottom: 5em;
         // position: fixed;
@@ -19,7 +33,7 @@ body {
         }
     }
     form {
-        margin: 3em auto 0 auto;
+        margin: 5em auto 0 auto;
         width: 100%;
         height: 90vh;
         max-width: 50em;
@@ -27,7 +41,8 @@ body {
         position: relative;
 
         fieldset {
-            margin: 0em auto;
+            margin: 0em auto 0em auto;
+            // top: 10em;
             padding: 1em;
             height: 90vh;
             overflow: hidden;
@@ -39,52 +54,74 @@ body {
                 left: 5%;
                 width: 90vw;
                 max-width: 40em;
-                bottom: 5em;
+                bottom: 8em;
+
                 .button {
                     width: 100%;
+                    background-color: transparent;
+                    color: #7e7e7e;
+                    text-decoration: underline;
+                    text-align: right;
                 }
             }
             .legend-text {
+                font-size: 1.5em;
+                position: absolute;
+                // top: 10%;
+                width: 80vw;
                 max-width: 30em;
                 text-align: center;
-                background-color: #8bd5d5;
-                color: #fff;
+                // background-color: #8bd5d5;
+                color: #7d7d7d;
                 border-radius: 15px 15px 15px 0;
                 padding: 1em;
                 text-align: left;
-                margin: 1em auto -1em 0;
-                box-shadow: 10px 10px 15px -9px #929292;
+                margin: 0em auto -1em 0;
+                // box-shadow: 10px 10px 15px -9px #929292;
             }
             .input {
                 margin: 1em auto 1em 0;
                 background-color: #fff;
-                a {
-                    margin: 1em auto 1em 0;
-                    color: #fff;
-                    text-decoration: underline;
-                }
+                // a {
+                //     margin: 1em auto 1em 0;
+                //     color: #fff;
+                //     text-decoration: underline;
+                // }
             }
             .input-button {
+                width: 80vw;
                 max-width: 30em;
-                background-color: #8bd5d6;
+                // background-color: #8bd5d6;
                 border-radius: 15px 15px 15px 0;
                 padding: 1em;
                 text-align: left;
                 margin: 1em auto 1em 0;
                 display: inline-block;
-                color: #fff;
+                // color: #fff;
+                position: absolute;
+                top: 25%;
                 input[type='checkbox'] {
                     width: 10vw;
+                }
+                a {
+                    margin: 1em auto 1em 0;
+                    color: #8bd5d6;
+                    // text-decoration: underline;
+                    // border: 3px solid #8bd5d6;
+                    padding: 1em;
+                    border-radius: 30px;
+                    text-align: left;
+                    box-shadow: -1px 4px 26px -12px #929292;
                 }
             }
             .input-text {
                 align-items: center;
-                box-shadow: 10px 10px 15px -9px #929292;
+                box-shadow: -1px 4px 26px -12px #929292;
                 border-radius: 15px;
                 display: flex;
                 position: absolute;
                 z-index: 100;
-                bottom: 8em;
+                bottom: 5em;
                 width: 90vw;
                 max-width: 40em;
                 left: 5%;
@@ -111,6 +148,7 @@ body {
                 opacity: 0;
                 position: absolute;
                 top: 1em;
+                width: 80vw;
                 max-width: 30em;
                 margin: 0 auto;
                 transform: translate(0vw, -30vw);
@@ -127,8 +165,8 @@ body {
                 opacity: 0;
                 border-radius: 15px;
                 text-align: left;
-                position: absolute;
-                bottom: 8em;
+                position: fixed;
+                bottom: 5em;
                 left: 5%;
                 width: 90vw;
                 max-width: 40em;
@@ -146,9 +184,10 @@ body {
                 }
             }
             .input-button {
+                width: 80vw;
                 max-width: 30em;
                 opacity: 0;
-                top: 15%;
+                // top: 15%;
                 position: absolute;
                 text-align: left;
                 margin: 1em auto 1em 0;
@@ -175,7 +214,14 @@ body {
                     width: 100%;
                     // max-width: 40em;
                 }
+                .next {
+                    opacity: 0;
+                }
+                .save {
+                    text-align: center;
+                }
             }
+
             .output {
                 max-width: 30em;
                 opacity: 0;
@@ -200,6 +246,7 @@ body {
                 opacity: 1;
                 position: absolute;
                 top: 1em;
+                width: 80vw;
                 max-width: 30em;
                 margin: 0 auto;
                 transform: translate(0%, -10%);
@@ -214,9 +261,9 @@ body {
                 opacity: 1;
                 border-radius: 15px;
                 text-align: left;
-                position: absolute;
+                position: fixed;
                 z-index: 100;
-                bottom: 8em;
+                bottom: 5em;
                 width: 90vw;
                 max-width: 40em;
                 left: 5%;
@@ -236,9 +283,9 @@ body {
                     opacity: 1;
                     width: 20%;
                     text-align: center;
-                    color: #7d7d7d;
-                    background-color: #64a9a9;
-                    color: white;
+                    // color: #7d7d7d;
+                    // background-color: #64a9a9;
+                    color: #64a9a9;
                     /* width: 100%; */
                     height: 100%;
                     margin: 0;
@@ -254,8 +301,9 @@ body {
             .input-button {
                 opacity: 1;
                 position: absolute;
+                width: 80vw;
                 max-width: 40em;
-                top: 15%;
+                // top: 15%;
                 padding: 1em;
                 text-align: left;
                 margin: 1em auto 1em 0;
@@ -264,6 +312,15 @@ body {
                 transition: all 0.4s cubic-bezier(0.1, 0.45, 0.1, 0.85) 0.5s;
                 input[type='checkbox'] {
                     width: 10vw;
+                }
+                a {
+                    margin: 1em auto 1em 0;
+                    color: #8bd5d6;
+                    // text-decoration: underline;
+                    // border: 3px solid #8bd5d6;
+                    padding: 1em;
+                    border-radius: 30px;
+                    text-align: left;
                 }
                 &--choose-file {
                     display: flex;
@@ -289,31 +346,43 @@ body {
                 .button {
                     width: 100%;
                 }
+                .next {
+                    opacity: 0;
+                }
+                .save {
+                    text-align: center;
+                }
             }
+
             .output {
                 max-width: 30em;
-                margin: 1em 0 0em auto;
+                margin: 0.5em 0 0em auto;
                 display: block;
                 opacity: 1;
+                background-color: transparent;
                 transform: translate(0, -10%);
                 transition: all 0.3s cubic-bezier(0.1, 0.45, 0.1, 0.85) 0.4s;
                 textarea {
+                    font-size: 1.2em;
+                    color: #8bd5d8;
                     border-radius: 15px 15px 0 15px;
                     text-align: right;
-                    padding: 1em;
-                    min-width: 20em;
+                    padding: 0.5em 1em;
+                    width: 80vw;
                     text-align: right;
-                    padding: 1em;
-                    // max-width: 80vw;
+                    max-width: 30em;
                     margin: 0 0 0 auto;
                     display: block;
+                    background-color: transparent;
+                    // background-color: white;
+                    // box-shadow: -1px 4px 26px -12px #929292;
                 }
             }
             .output:nth-of-type(1) {
-                margin-top: 6em;
+                margin-top: 8em;
             }
             .output:nth-last-of-type(1) {
-                margin: 1em 0em 5em auto;
+                margin: 0em 0em 8em auto;
             }
 
             // Animation setting: the next fieldset comes in from below (*the previous fieldset from above, see .hidden-fieldset).

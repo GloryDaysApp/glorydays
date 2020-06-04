@@ -24,7 +24,7 @@ function addTextBaloon(index) {
         const initialInputField = initialInputArray[index];
 
         initialInputField.insertAdjacentHTML('beforebegin', `
-        <div class='output'><textarea class='output-textarea'>${valueInitialInputField}</textarea></div>
+        <div class='output'><textarea class='output-textarea' rows='1'>${valueInitialInputField}</textarea></div>
         `);
         console.log(initialInputFieldArray[index].value);
         initialInputFieldArray[index].value = '';

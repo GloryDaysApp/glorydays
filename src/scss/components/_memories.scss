@@ -1,0 +1,45 @@
+.memories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 350px;
+
+    .memory--circles {
+        .memory--circle {
+            width: 125px;
+            height: 125px;
+            background-color: $empty-memories-circles;
+            border-radius: 50%;
+
+            &-big {
+                width: 165px;
+                height: 165px;
+                background-color: $empty-memories-circles;
+                border-radius: 50%;
+
+                position: absolute;
+                top: 105px;
+                left: 42px;
+            }
+        }
+
+        div {
+            position: absolute;
+
+            &:nth-child(2) {
+                top: 157px;
+                right: 27px;
+            }
+
+            &:nth-child(3) {
+                top: 273px;
+                left: 111px;
+            }
+        }
+    }
+
+    h1 {
+        position: absolute;
+    }
+}

@@ -3,23 +3,6 @@ body {
 }
 
 .conversational-ui {
-    .buttons {
-        position: fixed;
-        bottom: 4em;
-        // left: 15vw;
-        // right: 15vw;
-        .button {
-            margin: 1em auto 0;
-            text-align: center;
-            display: block;
-            width: 70vw;
-            background-color: #64a9a9;
-            border-radius: 15px;
-            color: #fff;
-            padding: 1em;
-        }
-    }
-
     form {
         margin: 5em auto;
         width: 100%;

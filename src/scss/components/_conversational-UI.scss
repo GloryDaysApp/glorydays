@@ -6,6 +6,7 @@ body {
     .buttons {
         position: fixed;
         bottom: 4em;
+
         // left: 15vw;
         // right: 15vw;
         .button {
@@ -169,6 +170,7 @@ body {
 
         // The active-fieldset class comes from JS
         .active-fieldset {
+
             // display: block;
             .legend-text {
                 opacity: 1;
@@ -256,7 +258,7 @@ body {
             }
 
             // Animation setting: the next fieldset comes in from below (*the previous fieldset from above, see .hidden-fieldset).
-            ~ .hidden-fieldset {
+            ~.hidden-fieldset {
                 .legend-text {
                     opacity: 0;
                     transform: translate(0vw, 150vw);

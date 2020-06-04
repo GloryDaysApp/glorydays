@@ -1,0 +1,26 @@
+.account {
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+
+    &--avatar {
+        width: 54px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $empty-avatar-background;
+        border-radius: 50%;
+
+        img {
+            height: 32px;
+        }
+    }
+
+    &--information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: .5rem;
+    }
+}

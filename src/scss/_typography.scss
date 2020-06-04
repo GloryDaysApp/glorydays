@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Avenir-Black';
-    src: url('./fonts/Avenir_Black.ttf');
+    src: url('./Avenir_Black.ttf');
 }
 
 @font-face {
     font-family: 'Avenir-Light';
-    src: url('./fonts/Avenir_Book.ttf');
+    src: url('./Avenir_Book.ttf');
 }
 
 @font-face {
     font-family: 'Avenir-Medium';
-    src: url('./fonts/Avenir_Medium.ttf');
+    src: url('./AvenirLTStd-Medium.ttf');
 }
 
 a,
@@ -18,7 +18,7 @@ label,
 legend,
 span {
     font-family: Avenir-Medium;
-    font-size: 0.9em;
+    font-size: .9em;
     letter-spacing: 1px;
     line-height: 1.5em;
 }
@@ -27,7 +27,11 @@ input,
 textarea,
 li {
     font-family: Avenir-Light;
-    font-size: 0.8em;
+    font-size: .8em;
     letter-spacing: 1px;
     line-height: 1.5em;
+}
+
+.bold {
+    font-weight: bold;
 }

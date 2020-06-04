@@ -1,7 +1,7 @@
 .button {
     background-color: #b6f2ff;
     display: block;
-    padding: 0.5em 0.2em;
+    padding: .5em .2em;
     width: 10em;
     overflow-wrap: break-word;
     text-align: center;
@@ -9,6 +9,23 @@
 
 .button-icon {
     border: 0;
-    padding: 0.5rem;
+    padding: .5rem;
     border-radius: 4px;
+}
+
+.buttons {
+    position: fixed;
+    bottom: 4em;
+    width: 100%;
+
+    .button {
+        margin: 1em auto 0;
+        text-align: center;
+        display: block;
+        width: 70vw;
+        background-color: #64a9a9;
+        border-radius: 15px;
+        color: #fff;
+        padding: 1em;
+    }
 }

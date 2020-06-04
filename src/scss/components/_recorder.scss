@@ -1,0 +1,81 @@
+.mic-container {
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+
+	.circle {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: #ffffff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+		transition: .5s;
+		box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+
+		img.mic-icon {
+			width: 15px;
+			height: auto;
+		}
+
+		&:before {
+			content: '';
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			opacity: .2;
+			z-index: -1;
+			position: absolute;
+		}
+	}
+
+	.circle.active {
+		background: #ff0000;
+
+		&:before {
+			background: gray;
+			animation: bounce 1.3s ease-in-out infinite;
+		}
+	}
+
+	.timer {
+		margin-left: 25px;
+		padding-top: 2px;
+	}
+
+	.minutes,
+	.colon,
+	.seconds {
+		font-size: 30px;
+	}
+
+}
+
+@keyframes bounce {
+	0% {
+		transform: scale(1);
+	}
+
+	;
+
+	20% {
+		transform: scale(1.3);
+	}
+
+	60% {
+		transform: scale(1);
+	}
+
+	75% {
+		transform: scale(1.3);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

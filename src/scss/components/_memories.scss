@@ -1,0 +1,48 @@
+.memories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 350px;
+    margin-top: 2rem;
+
+    .memory--circles {
+        width: 100%;
+        height: 100%;
+
+        .memory--circle {
+            width: 125px;
+            height: 125px;
+            background-color: $empty-memories-circles;
+            border-radius: 50%;
+
+            &-big {
+                width: 165px;
+                height: 165px;
+                background-color: $empty-memories-circles;
+                border-radius: 50%;
+
+                margin-top: 1rem;
+                margin-left: 3rem;
+            }
+        }
+
+        div {
+            position: absolute;
+
+            &:nth-child(2) {
+                margin-top: 5rem;
+                margin-left: 14rem;
+            }
+
+            &:nth-child(3) {
+                margin-top: 12rem;
+                margin-left: 6rem;
+            }
+        }
+    }
+
+    h1 {
+        position: absolute;
+    }
+}

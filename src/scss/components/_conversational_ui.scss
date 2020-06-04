@@ -1,8 +1,18 @@
 body {
     background-color: $background-color;
 }
-.conversational-UI {
-    .back {
+
+.conversational-ui {
+    form {
+        margin: 0em auto 0 auto;
+        width: 100%;
+        height: 90vh;
+        max-width: 50em;
+        overflow: hidden;
+        position: relative;
+
+        fieldset {
+              .back {
         width: 100%;
         padding: 1em;
         position: absolute;
@@ -19,31 +29,6 @@ body {
             font-family: Avenir-Light;
         }
     }
-    .buttons {
-        // bottom: 5em;
-        // position: fixed;
-        // left: 15vw;
-        // right: 15vw;
-        .button {
-            margin: 1em auto 0 auto;
-            text-align: center;
-            display: block;
-            width: 100%;
-            background-color: #64a9a9;
-            border-radius: 15px;
-            color: #fff;
-            padding: 1em;
-        }
-    }
-    form {
-        margin: 0em auto 0 auto;
-        width: 100%;
-        height: 90vh;
-        max-width: 50em;
-        overflow: hidden;
-        position: relative;
-
-        fieldset {
             margin: 0em auto 0em auto;
             // top: 10em;
             padding: 1em;
@@ -85,11 +70,6 @@ body {
             .input {
                 margin: 1em auto 1em 0;
                 background-color: #fff;
-                // a {
-                //     margin: 1em auto 1em 0;
-                //     color: #fff;
-                //     text-decoration: underline;
-                // }
             }
             .input-button {
                 width: 80vw;
@@ -104,7 +84,7 @@ body {
                 position: absolute;
                 top: 40%;
                 input[type='checkbox'] {
-                    width: 10vw;
+                    width: 10%;
                 }
                 a {
                     margin: 1em auto 1em 0;
@@ -157,8 +137,8 @@ body {
                 width: 80vw;
                 max-width: 30em;
                 margin: 0 auto;
-                transform: translate(0vw, -30vw);
-                transition: all 0.4s cubic-bezier(0.4, 0.25, 0.8, 0.3) 0.05s;
+                transform: translate(0, -30vw);
+                transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
             }
             .input {
                 // max-width: 30vw;
@@ -177,8 +157,8 @@ body {
                 width: 90vw;
                 max-width: 40em;
                 background: transparent;
-                transform: translate(0vw, -30vw);
-                transition: all 0.5s cubic-bezier(0.4, 0.25, 0.8, 0.3) 0.06s;
+                transform: translate(0, -30vw);
+                transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
                 .send-button {
                     opacity: 0;
                 }
@@ -196,8 +176,8 @@ body {
                 // text-align: left;
                 // margin: 1em auto 1em 0;
                 // display: inline-block;
-                transform: translate(0vw, -30vw);
-                transition: all 0.5s cubic-bezier(0.4, 0.25, 0.8, 0.3) 0.06s;
+                  transform: translate(0, -30vw);
+                transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
                 input[type='checkbox'] {
                     width: 10vw;
                 }
@@ -205,7 +185,7 @@ body {
             .buttons {
                 position: absolute;
                 opacity: 0;
-                transform: translate(0vw, -200vw);
+                transform: translate(0, -200vw);
                 transition: all 1s ease-in-out;
                 left: 5%;
                 width: 90vw;
@@ -252,8 +232,8 @@ body {
                 width: 80vw;
                 max-width: 30em;
                 margin: 0 auto;
-                transform: translate(0%, -10%);
-                transition: all 0.3s cubic-bezier(0.1, 0.45, 0.1, 0.85) 0.4s;
+                transform: translate(0, -10%);
+                transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
             }
             .input {
                 opacity: 1;
@@ -270,8 +250,8 @@ body {
                 width: 90vw;
                 max-width: 40em;
                 left: 5%;
-                transform: translate(0%, -10%);
-                transition: all 0.4s cubic-bezier(0.1, 0.45, 0.1, 0.85) 0.5s;
+                transform: translate(0, -10%);
+                transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
                 input[type='text'] {
                     opacity: 1;
                     z-index: 100;
@@ -280,7 +260,7 @@ body {
                     outline: 0;
                     background: transparent;
                     padding: 1em;
-                    margin: 0em auto 0em 0em;
+                    margin: 0 auto 0 0;
                 }
                 .send-button {
                     opacity: 1;
@@ -300,7 +280,7 @@ body {
                     text-decoration: underline;
                 }
             }
-            // .input-button like "open spotify" in text cloud
+            // .input-button like 'open spotify' in text cloud
             .input-button {
                 opacity: 1;
                 position: absolute;
@@ -311,10 +291,10 @@ body {
                 text-align: left;
                 margin: 1em auto 1em 0;
                 display: inline-block;
-                transform: translate(0%, -10%);
-                transition: all 0.4s cubic-bezier(0.1, 0.45, 0.1, 0.85) 0.5s;
+                 transform: translate(0, -10%);
+                transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
                 input[type='checkbox'] {
-                    width: 10vw;
+                    width: 10%;
                 }
                 a {
                     margin: 1em auto 1em 0;
@@ -392,22 +372,22 @@ body {
             ~ .hidden-fieldset {
                 .legend-text {
                     opacity: 0;
-                    transform: translate(0vw, 150vw);
-                    transition: all 0.5s ease-in;
+                    transform: translate(0, 150vw);
+                    transition: all .5s ease-in;
                 }
                 .input-button {
                     opacity: 0;
-                    transform: translate(0vw, 200vw);
-                    transition: all 0.5s ease-in;
+                    transform: translate(0, 200vw);
+                    transition: all .5s ease-in;
                 }
                 .input-text {
                     opacity: 0;
-                    transform: translate(0vw, 200vw);
-                    transition: all 0.5s ease-in;
+                    transform: translate(0, 200vw);
+                    transition: all .5s ease-in;
                 }
                 .buttons {
                     opacity: 0;
-                    transform: translate(0vw, 200vw);
+                    transform: translate(0, 200vw);
                     transition: all 1s ease-in-out;
                 }
                 .output {

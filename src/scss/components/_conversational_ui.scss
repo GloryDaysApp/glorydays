@@ -2,20 +2,23 @@ body {
     background-color: $background-color;
 }
 .conversational-UI {
-    // .overlay {
-    //     height: 20vh;
-    //     width: 100%;
-    //     background-color: #ffffff63;
-    //     position: fixed;
-    //     top: 0;
-    //     z-index: 100;
-    //     background: rgb(255, 255, 255);
-    //     background: linear-gradient(
-    //         180deg,
-    //         rgba(255, 255, 255, 0.8995973389355743) 50%,
-    //         rgba(255, 255, 255, 0) 100%
-    //     );
-    // }
+    .back {
+        width: 100%;
+        padding: 1em;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.8995973389355743) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        a {
+            color: #8bd5d8;
+            font-family: Avenir-Light;
+        }
+    }
     .buttons {
         // bottom: 5em;
         // position: fixed;
@@ -33,7 +36,7 @@ body {
         }
     }
     form {
-        margin: 5em auto 0 auto;
+        margin: 0em auto 0 auto;
         width: 100%;
         height: 90vh;
         max-width: 50em;
@@ -67,7 +70,7 @@ body {
             .legend-text {
                 font-size: 1.5em;
                 position: absolute;
-                // top: 10%;
+                top: 20%;
                 width: 80vw;
                 max-width: 30em;
                 text-align: center;
@@ -99,7 +102,7 @@ body {
                 display: inline-block;
                 // color: #fff;
                 position: absolute;
-                top: 25%;
+                top: 40%;
                 input[type='checkbox'] {
                     width: 10vw;
                 }
@@ -139,15 +142,18 @@ body {
         .hidden-fieldset {
             position: absolute;
             top: 0;
-            height: 85vh;
+            height: 90vh;
             width: 100%;
             max-width: 50em;
             padding: 1em 2.5em 1em 1em;
             z-index: 0;
+            .back {
+                opacity: 0;
+            }
             .legend-text {
                 opacity: 0;
                 position: absolute;
-                top: 1em;
+                top: 20%;
                 width: 80vw;
                 max-width: 30em;
                 margin: 0 auto;
@@ -173,21 +179,15 @@ body {
                 background: transparent;
                 transform: translate(0vw, -30vw);
                 transition: all 0.5s cubic-bezier(0.4, 0.25, 0.8, 0.3) 0.06s;
-                input[type='text'] {
-                    // width: 70vw;
-                    // border: 0;
-                    // border-bottom: 1px solid #3f3f3f;
-                    // outline: 0;
-                    // background: transparent;
-                    // padding: 1em;
-                    // margin: 0em auto 0em 0em;
+                .send-button {
+                    opacity: 0;
                 }
             }
             .input-button {
                 width: 80vw;
                 max-width: 30em;
                 opacity: 0;
-                // top: 15%;
+                top: 40%;
                 position: absolute;
                 text-align: left;
                 margin: 1em auto 1em 0;
@@ -237,15 +237,18 @@ body {
             position: absolute;
             z-index: 99;
             top: 0;
-            height: 85vh;
+            height: 90vh;
             width: 100%;
             max-width: 50em;
             padding: 1em 2.5em 1em 1em;
             overflow: scroll;
+            .back {
+                opacity: 1;
+            }
             .legend-text {
                 opacity: 1;
                 position: absolute;
-                top: 1em;
+                top: 20%;
                 width: 80vw;
                 max-width: 30em;
                 margin: 0 auto;
@@ -303,7 +306,7 @@ body {
                 position: absolute;
                 width: 80vw;
                 max-width: 40em;
-                // top: 15%;
+                top: 40%;
                 padding: 1em;
                 text-align: left;
                 margin: 1em auto 1em 0;
@@ -379,7 +382,7 @@ body {
                 }
             }
             .output:nth-of-type(1) {
-                margin-top: 8em;
+                margin-top: 65%;
             }
             .output:nth-last-of-type(1) {
                 margin: 0em 0em 8em auto;

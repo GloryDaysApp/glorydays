@@ -23,7 +23,9 @@ span {
     line-height: 1.5em;
 }
 
-input {
+input,
+textarea,
+li {
     font-family: Avenir-Light;
     font-size: .8em;
     letter-spacing: 1px;

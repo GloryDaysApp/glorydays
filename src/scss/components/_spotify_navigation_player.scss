@@ -1,5 +1,22 @@
 .spotify--navigation-player {
-    // position: fixed;
-    // top: 0;
-    display: none;
+    position: fixed;
+    bottom: 0;
+    display: block;
+    background-color: #7e7e7e;
+    width: 100vw;
+
+    ul {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+
+        li {
+            color: #fff;
+        }
+
+        li:nth-last-child(1) {
+            position: absolute;
+            right: 0.5em;
+        }
+    }
 }

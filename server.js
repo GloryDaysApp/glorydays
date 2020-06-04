@@ -3,8 +3,8 @@ const config = require('./config');
 const express = require('express'),
     router = require('./scripts/modules/router'),
     app = express(),
-    multer = require('multer'),
-    upload = multer({dest: 'uploads/'}),
+    // multer = require('multer'),
+    // upload = multer({dest: 'uploads/'}),
     caregivers = {id: 'test'};
 
 app.set('view engine', 'ejs')

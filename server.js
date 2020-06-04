@@ -62,7 +62,7 @@ app
 
     .get('/add-memory', async (req, res) => {
         router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
-    })
+    });
 
 
 
@@ -75,6 +75,6 @@ app.get('/spotifylogin', spotifyLogin); // Redirect for Spotify auth
 app.get('/callback', spotifyCallback); // Callback for fetching Spotify tokens
 
 // Spotify song search
-const getSpotifySongs = require('./server/get_spotify_songs.js');
-app.post('/search', getSpotifySongs);
+// const getSpotifySongs = require('./server/get_spotify_songs.js');
+// app.post('/search', getSpotifySongs);
 

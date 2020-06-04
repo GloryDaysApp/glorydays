@@ -1,31 +1,35 @@
 @font-face {
-  font-family: "Avenir-Black";
-  src: url("./fonts/Avenir_Black.ttf"),
+    font-family: 'Avenir-Black';
+    src: url('./fonts/Avenir_Black.ttf');
 }
 
 @font-face {
-  font-family: "Avenir-Light";
-  src: url("./fonts/Avenir_Book.ttf"),
+    font-family: 'Avenir-Light';
+    src: url('./fonts/Avenir_Book.ttf');
 }
 
 @font-face {
-  font-family: "Avenir-Medium";
-  src: url("./fonts/Avenir_Medium.ttf"),
+    font-family: 'Avenir-Medium';
+    src: url('./fonts/Avenir_Medium.ttf');
 }
 
 a,
 label,
 legend,
 span {
-  font-family: Avenir-Medium;
-  font-size: .9em;
-  letter-spacing: 1px;
-  line-height: 1.5em;
+    font-family: Avenir-Medium;
+    font-size: .9em;
+    letter-spacing: 1px;
+    line-height: 1.5em;
 }
 
 input {
-  font-family: Avenir-Light;
-  font-size: .8em;
-  letter-spacing: 1px;
-  line-height: 1.5em;
+    font-family: Avenir-Light;
+    font-size: .8em;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+}
+
+.bold {
+    font-weight: bold;
 }

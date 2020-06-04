@@ -2,20 +2,20 @@ body {
     background-color: $background-color;
 }
 
-.conversational-UI {
+.conversational-ui {
     .buttons {
         position: fixed;
         bottom: 4em;
         // left: 15vw;
         // right: 15vw;
         .button {
-            margin: 1em auto 0 auto;
+            margin: 1em auto 0;
             text-align: center;
             display: block;
             width: 70vw;
-            background-color: #64A9A9;
+            background-color: #64a9a9;
             border-radius: 15px;
-            color: #ffffff;
+            color: #fff;
             padding: 1em;
         }
     }
@@ -38,8 +38,8 @@ body {
             .legend-text {
                 // width: 70%;
                 text-align: center;
-                background-color: #8BD5D5;
-                color: #ffffff;
+                background-color: #8bd5d5;
+                color: #fff;
                 border-radius: 15px 15px 15px 0;
                 padding: 1em;
                 text-align: left;
@@ -50,11 +50,11 @@ body {
             .input {
                 // width: 70%;
                 margin: 1em auto 1em 0;
-                background-color: #ffffff;
+                background-color: #fff;
 
                 a {
                     margin: 1em auto 1em 0;
-                    color: #ffffff;
+                    color: #fff;
                     text-decoration: underline;
                 }
             }
@@ -66,9 +66,9 @@ body {
                 text-align: left;
                 margin: 1em auto 1em 0;
                 display: inline-block;
-                color: #ffffff;
+                color: #fff;
 
-                input[type="checkbox"] {
+                input[type='checkbox'] {
                     width: 10%;
                 }
             }
@@ -76,15 +76,15 @@ body {
             .input-text {
                 box-shadow: 10px 10px 15px -6px #d4d4d4;
 
-                input[type="text"] {
+                input[type='text'] {
                     // width: 70%;
                     // border: 0;
                     // border-bottom: 1px solid #3f3f3f;
                     // outline: 0;
                     // border: 1px solid #3f3f3f;
-                    background-color: #ffffff;
-                    color: #64A9A9;
-                    margin: 0em auto 0em 0em;
+                    background-color: #fff;
+                    color: #64a9a9;
+                    margin: 0 auto 0 0;
                 }
             }
         }
@@ -100,7 +100,7 @@ body {
                 // width: 70vw;
                 max-width: 90vw;
                 margin: 0 auto;
-                transform: translate(0vw, -30vw);
+                transform: translate(0, -30vw);
                 transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
             }
 
@@ -125,17 +125,17 @@ body {
                 border: 1px solid #3f3f3f;
                 width: 100%;
                 background: transparent;
-                transform: translate(0vw, -30vw);
+                transform: translate(0, -30vw);
                 transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
 
-                input[type="text"] {
+                input[type='text'] {
                     width: 70vw;
                     border: 0;
                     // border-bottom: 1px solid #3f3f3f;
                     outline: 0;
                     background: transparent;
                     padding: 1em;
-                    margin: 0em auto 0em 0em;
+                    margin: 0 auto 0 0;
                 }
             }
 
@@ -144,10 +144,10 @@ body {
                 text-align: left;
                 margin: 1em auto 1em 0;
                 display: inline-block;
-                transform: translate(0vw, -30vw);
+                transform: translate(0, -30vw);
                 transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
 
-                input[type="checkbox"] {
+                input[type='checkbox'] {
                     width: 10vw;
                 }
             }
@@ -155,7 +155,7 @@ body {
             .buttons {
                 position: fixed;
                 opacity: 0;
-                transform: translate(0vw, -200vw);
+                transform: translate(0, -200vw);
                 transition: all 1s ease-in-out;
                 left: 0%;
                 width: 100%;
@@ -179,7 +179,7 @@ body {
                 // width: 70vw;
                 max-width: 90vw;
                 margin: 0 auto;
-                transform: translate(0%, -10%);
+                transform: translate(0, -10%);
                 transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
             }
 
@@ -196,10 +196,10 @@ body {
                 position: fixed;
                 bottom: 4em;
                 width: 100%;
-                transform: translate(0%, -10%);
+                transform: translate(0, -10%);
                 transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
 
-                input[type="text"] {
+                input[type='text'] {
                     z-index: 10;
                     width: 70vw;
                     border: 0;
@@ -207,21 +207,21 @@ body {
                     outline: 0;
                     background: transparent;
                     padding: 1em;
-                    margin: 0em auto 0em 0em;
+                    margin: 0 auto 0 0;
                 }
             }
 
-            // .input-button like "open spotify" in text cloud
+            // .input-button like 'open spotify' in text cloud
             .input-button {
                 top: 30%;
                 padding: 1em;
                 text-align: left;
                 margin: 1em auto 1em 0;
                 display: inline-block;
-                transform: translate(0%, -10%);
+                transform: translate(0, -10%);
                 transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
 
-                input[type="checkbox"] {
+                input[type='checkbox'] {
                     width: 10%;
                 }
 
@@ -259,25 +259,25 @@ body {
             ~ .hidden-fieldset {
                 .legend-text {
                     opacity: 0;
-                    transform: translate(0vw, 150vw);
+                    transform: translate(0, 150vw);
                     transition: all .5s ease-in;
                 }
 
                 .input-button {
                     opacity: 0;
-                    transform: translate(0vw, 200vw);
+                    transform: translate(0, 200vw);
                     transition: all .5s ease-in;
                 }
 
                 .input-text {
                     opacity: 0;
-                    transform: translate(0vw, 200vw);
+                    transform: translate(0, 200vw);
                     transition: all .5s ease-in;
                 }
 
                 .buttons {
                     opacity: 0;
-                    transform: translate(0vw, 200vw);
+                    transform: translate(0, 200vw);
                     transition: all 1s ease-in-out;
                 }
             }

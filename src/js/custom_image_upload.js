@@ -1,7 +1,7 @@
-const realFileButton = document.getElementById('real-file');
-const customButton = document.getElementById('custom-button');
-const customText = document.getElementById('custom-text');
-const outputImage = document.getElementById('output-image');
+// const realFileButton = document.getElementById('real-file');
+// const customButton = document.getElementById('custom-button');
+// const customText = document.getElementById('custom-text');
+// const outputImage = document.getElementById('output-image');
 
 if (realFileButton) {
     // trigger the file upload button when clicking on the custom button

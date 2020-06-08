@@ -1,5 +1,4 @@
-function playSong(event, device_id) {
-    const song = event.target.id;
+function playSong(song, device_id) {
     console.log('song: ', song);
 
     // Called when connected to the player created beforehand successfully

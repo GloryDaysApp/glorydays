@@ -1,16 +1,18 @@
-window.onSpotifyWebPlaybackSDKReady = () => {
-    console.log('playSong', playSong);
+let player = null;
+let deviceId = null;
 
-    const player = new Spotify.Player({
+window.onSpotifyWebPlaybackSDKReady = () => {
+    const ACCESS_TOKEN = getCookie('ACCESS_TOKEN');
+    console.log('access_token: ', ACCESS_TOKEN);
+    console.log('joe', document.cookie);
+
+    player = new Spotify.Player({
         name: 'Glory Days Web Player',
         getOAuthToken: callback => {
-            callback('ACCESS TOKEN');
+            callback(ACCESS_TOKEN);
         },
-        volume: 0.1
+        volume: 0.4
     });
-    console.log('player: ', player);
-
-    let deviceId = null;
 
     player.on('ready', ({ device_id }) => {
         console.log('ready');

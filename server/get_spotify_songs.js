@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-
 const getRefreshToken = require('./get_refresh_token.js');
 const cleanData = require('./clean_spotify_data.js');
 
@@ -26,7 +25,6 @@ module.exports = (req, res) => {
 async function search(searchQuery, token) {
     const spotifyToken = token;
     const song = searchQuery;
-
     const url = `https://api.spotify.com/v1/search?q=${song}&type=track,artist`;
     const headers = {
         method: 'GET',
@@ -41,5 +39,3 @@ async function search(searchQuery, token) {
     const data = await response.json();
     return data;
 }
-
-

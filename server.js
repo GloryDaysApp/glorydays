@@ -5,11 +5,16 @@ const express = require('express'),
     app = express(),
     // multer = require('multer'),
     // upload = multer({dest: 'uploads/'}),
-    caregivers = {id: 'test'};
+    caregivers = { id: 'test' };
 
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const cookies = require('cookie-parser');
+
+// Port
+app.listen(config.port, () => {
+    console.log(`Application started on port: ${config.port}`);
+});
 
 // Body parser init
 // parse application/x-www-form-urlencoded
@@ -19,20 +24,30 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Session init
-app.use(session({ secret: process.env.SESSION_KEY, resave: false, saveUninitialized: true }));
+app.use(
+    session({
+        secret: process.env.SESSION_KEY,
+        resave: false,
+        saveUninitialized: true,
+    })
+);
 
 // Cookie parser init
 app.use(cookies());
 
-app.use(session({
-    resave: false,
-    saveUninitialized: true,
-    secret: process.env.SESSION_KEY,
-    port: process.env.PORT,
-    secure: false
-}));
+// Session init
+app.use(
+    session({
+        resave: false,
+        saveUninitialized: true,
+        secret: process.env.SESSION_KEY,
+        port: process.env.PORT,
+        secure: false,
+    })
+);
 
-app.set('view engine', 'ejs')
+app
+    .set('view engine', 'ejs')
     .set('views', 'views')
     .use(express.static('static'))
 
@@ -47,11 +62,9 @@ app.set('view engine', 'ejs')
 
     .get('/add-memory', async (req, res) => {
         router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
-    })
-
-    .listen(config.port, () => {
-        console.log(`Application started on port: ${config.port}`);
     });
+
+
 
 // Spotify Oauth
 const spotifyLogin = require('./server/login.js');
@@ -62,5 +75,6 @@ app.get('/spotifylogin', spotifyLogin); // Redirect for Spotify auth
 app.get('/callback', spotifyCallback); // Callback for fetching Spotify tokens
 
 // Spotify song search
-const getSpotifySongs = require('./server/get_spotify_songs.js');
-app.post('/search', getSpotifySongs);
+// const getSpotifySongs = require('./server/get_spotify_songs.js');
+// app.post('/search', getSpotifySongs);
+

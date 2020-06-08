@@ -43,6 +43,6 @@ module.exports = async (req, res) => {
     }
 };
 
-function encodeToBase64 (text) {
+function encodeToBase64(text) {
     return new Buffer.from(text).toString('base64');
 }

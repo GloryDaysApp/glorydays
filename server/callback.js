@@ -4,8 +4,6 @@ const queryString = require('query-string');
 const { SPOTIFY_REDIRECT_URI, SPOTIFY_CLIENT_SECRET, SPOTIFY_CLIENT_ID } = process.env;
 
 module.exports = async (req, res) => {
-    console.log('running');
-
     const code = req.query.code;
     const queryObject = {
         grant_type: 'authorization_code',
@@ -30,7 +28,9 @@ module.exports = async (req, res) => {
 
         console.log('succesful: ', data);
 
-        res.cookie('ACCESS_TOKEN', data.access_token);
+        // Set age of cookie access_token to 1 hour
+        res.cookie('ACCESS_TOKEN', data.access_token, { maxAge: 3600000, httpOnly: true });
+      
         res.cookie('REFRESH_TOKEN', data.refresh_token);
 
         req.session.token = data.access_token;

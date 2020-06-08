@@ -8,7 +8,6 @@ module.exports = async (req, res) => {
 
     const query = queryString.stringify({
         grant_type: 'refresh_token',
-
         refresh_token: refreshToken
     });
 
@@ -35,7 +34,6 @@ module.exports = async (req, res) => {
 
         // return access token
         return data.access_token;
-
     } catch (err) {
         console.log('error getting refresh token: ', err);
         res.send(err);

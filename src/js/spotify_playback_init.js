@@ -4,7 +4,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
     const player = new Spotify.Player({
         name: 'Glory Days Web Player',
         getOAuthToken: callback => {
-            callback('BQDbtY6Yyg2qsXajCQ56JtwIoKcyyqkFStYsyPVDYjBkugp0TEhv7JFeGI8QQBnMXM_-MQiBt0wsUYd_eMvgxadpgkXN9nhTkB2_Z0tk1Vo8SEJ50SRYu8nkmiPotQkZhklIzzCZ9rk9NomKxYe54c9dsUphNrCmFdTGm280izKizeHKRaQ');
+            callback('ACCESS TOKEN');
         },
         volume: 0.1
     });

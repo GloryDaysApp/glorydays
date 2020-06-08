@@ -2,5 +2,9 @@
 /node_modules/
 /.env
 /static/
+<<<<<<< HEAD
+/package-lock.json
+=======
+>>>>>>> e0b658a2dde2b38be54511fd60556c66985c5793
 .DS_Store
 /package-lock.json

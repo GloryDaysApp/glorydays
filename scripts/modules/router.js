@@ -10,5 +10,4 @@ pageWithData = (res, view, title, data) => {
   });
 };
 
-
 module.exports = { basicPage, pageWithData };

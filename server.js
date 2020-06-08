@@ -5,9 +5,10 @@ const express = require('express'),
     // socket = require('./server/spotify_playback'),
     router = require('./scripts/modules/router'),
     app = express(),
-    multer = require('multer'),
-    upload = multer({ dest: 'uploads/' }),
-    caregivers = { id: 'test' };
+
+    // multer = require('multer'),
+    // upload = multer({dest: 'uploads/'}),
+    caregivers = {id: 'test'};
 
 // const http = require('http');
 // const server = http.createServer(app);
@@ -63,8 +64,8 @@ app
         router.basicPage(res, 'home', 'Home');
     })
 
-    .get('/addMemory.ejs', async (req, res) => {
-        router.pageWithData(res, 'addMemory', 'Herinnering toevoegen', caregivers);
+    .get('/add-memory', async (req, res) => {
+        router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
     })
 
     // Spotify login url

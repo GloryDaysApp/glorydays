@@ -1,0 +1,39 @@
+.navigation-dots-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    right: 1em;
+    position: absolute;
+    top: 40%;
+    z-index: 100;
+
+    .navigation-dot {
+        &::before {
+            background-color: #8bd5d5;
+            border: 0;
+            border-radius: 50%;
+            content: '';
+            display: flex;
+            flex-direction: column;
+            height: .6em;
+            margin: 0 0 .5em;
+            transition: all 0.2s ease-in-out;
+            width: .6em;
+        }
+    }
+
+    .active-navigation-dot {
+        &::before {
+            background-color: #64a9a9;
+            border: 0;
+            border-radius: 50%;
+            content: '';
+            display: flex;
+            display: flex;
+            height: .8em;
+            margin: 0 0 .5em;
+            transition: all 0.2s ease-in-out;
+            width: .8em;
+        }
+    }
+}

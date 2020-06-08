@@ -1,31 +1,21 @@
-<%- include('partials/head') %>
-
-<<<<<<< HEAD
 <header>
+  <%- include('partials/head') %>
   <h1><%= title %></h1>
 </header>
 
-<main>
   <%- include('partials/search') %>
-  <!-- Page Content -->
-</main>
-=======
-  <header>
-
-  </header>
-
-  <main class="">
+  <ul id="results"></ul>
+  
+<main class="conversational-UI">
     <!-- Page Content -->
     <%- include('partials/account-information') %>
     <%- include('partials/memory-checker') %>
 
-      <div class="buttons">
-        <a href="/add-memory" class="button">Herinnering toevoegen</a>
-        <a class="button">Muziek luisteren</a>
-      </div>
+    <div class="buttons">
+      <a href="/add-memory" class="button">Herinnering toevoegen</a>
+      <a class="button">Muziek luisteren</a>
+    </div>
   </main>
 
-  <%- include('partials/navigation') %>
->>>>>>> f592b169299a7b455faee5a045eef4051f563cb5
-
-    <%- include('partials/footer') %>
+<%- include('partials/navigation') %>
+<%- include('partials/footer') %>

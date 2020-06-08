@@ -30,6 +30,7 @@ module.exports = async (req, res) => {
 
         // Set age of cookie access_token to 1 hour
         res.cookie('ACCESS_TOKEN', data.access_token, { maxAge: 3600000, httpOnly: true });
+      
         res.cookie('REFRESH_TOKEN', data.refresh_token);
 
         req.session.token = data.access_token;
@@ -42,7 +43,6 @@ module.exports = async (req, res) => {
     }
 };
 
-
-function encodeToBase64 (text) {
+function encodeToBase64(text) {
     return new Buffer.from(text).toString('base64');
 }

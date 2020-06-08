@@ -8,8 +8,9 @@ module.exports = async (req, res) => {
 
     const query = queryString.stringify({
         grant_type: 'refresh_token',
-        refresh_token: refreshToken,
+        refresh_token: refreshToken
     });
+
     const options = {
         method: 'POST',
         headers: {

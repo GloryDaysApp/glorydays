@@ -1,4 +1,5 @@
 {
+
     "name": "glory-days",
     "version": "1.0.0",
     "description": "",
@@ -63,3 +64,4 @@
         "stylelint-config-standard": "^20.0.0"
     }
 }
+

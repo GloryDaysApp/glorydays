@@ -13,13 +13,13 @@
         .memory--circle {
             width: 125px;
             height: 125px;
-            background-color: $empty-memories-circles;
+            background-color: $lightgrey;
             border-radius: 50%;
 
             &-big {
                 width: 165px;
                 height: 165px;
-                background-color: $empty-memories-circles;
+                background-color: $lightgrey;
                 border-radius: 50%;
 
                 margin-top: 1rem;

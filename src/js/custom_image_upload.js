@@ -18,7 +18,6 @@ if (realFileButton) {
             // show chosen image
             outputImage.classList.remove('hide');
             outputImage.classList.add('show');
-
             outputImage.src = URL.createObjectURL(event.target.files[0]);
             outputImage.onload = () => {
                 URL.revokeObjectURL(outputImage.src); // free memory

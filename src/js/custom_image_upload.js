@@ -3,7 +3,6 @@
 // const customText = document.getElementById('custom-text');
 // const outputImage = document.getElementById('output-image');
 
-<<<<<<< HEAD
 // // trigger the file upload button when clicking on the custom button
 // customButton.addEventListener('click', () => {
 //     realFileButton.click();
@@ -31,7 +30,7 @@
 //         outputImage.classList.add('hide');
 //     }
 // });
-=======
+
 if (realFileButton) {
     // trigger the file upload button when clicking on the custom button
     customButton.addEventListener('click', () => {
@@ -61,4 +60,3 @@ if (realFileButton) {
         }
     });
 }
->>>>>>> f38b15ede575224c6135a07fc7660dbcbe2e591e

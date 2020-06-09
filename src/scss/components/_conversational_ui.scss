@@ -1,44 +1,42 @@
 .conversational-ui {
     form {
-        margin: 0em auto 0 auto;
+        margin: $center-margin;
         width: 100%;
         height: 90vh;
-        max-width: 50em;
+        max-width: 50rem;
         overflow: hidden;
         position: relative;
 
         fieldset {
-              .back {
-        width: 100%;
-        padding: 1em;
-        position: absolute;
-        top: 0;
-        z-index: 100;
-        background: rgb(255, 255, 255);
-        background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.8995973389355743) 50%,
-            rgba(255, 255, 255, 0) 100%
-        );
-        a {
-            color: #8bd5d8;
-            font-family: Avenir-Light;
-        }
-    }
-            margin: 0em auto 0em auto;
-            // top: 10em;
-            padding: 1em;
+            margin: $center-margin;
+            padding: $indent;
             height: 90vh;
             overflow: hidden;
             position: relative;
+
+            .back {
+                width: 100%;
+                padding: $indent;
+                position: absolute;
+                top: 0;
+                z-index: 100;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(180deg, rgba(255, 255, 255, .8995973389355743) 50%, rgba(255, 255, 255, 0) 100%);
+
+                a {
+                    color: #8bd5d8;
+                    font-family: Avenir-Light;
+                }
+            }
+
             .buttons {
                 // Postition:static if JS is not available (progressive enhancement)
                 // position: static;
                 position: absolute;
                 left: 5%;
                 width: 90vw;
-                max-width: 40em;
-                bottom: 8em;
+                max-width: 40rem;
+                bottom: 8rem;
 
                 .button {
                     width: 100%;
@@ -48,51 +46,51 @@
                     text-align: right;
                 }
             }
+
             .legend-text {
-                font-size: 1.5em;
+                font-size: $indent-xl;
                 position: absolute;
                 top: 20%;
                 width: 80vw;
-                max-width: 30em;
+                max-width: 30rem;
                 text-align: center;
-                // background-color: #8bd5d5;
                 color: #7d7d7d;
                 border-radius: 15px 15px 15px 0;
-                padding: 1em;
+                padding: $indent;
                 text-align: left;
-                margin: 0em auto -1em 0;
-                // box-shadow: 10px 10px 15px -9px #929292;
+                margin: 0 auto -($indent) 0;
             }
+
             .input {
-                margin: 1em auto 1em 0;
+                margin: $indent auto $indent 0;
                 background-color: #fff;
             }
+
             .input-button {
                 width: 80vw;
-                max-width: 30em;
-                // background-color: #8bd5d6;
+                max-width: 30rem;
                 border-radius: 15px 15px 15px 0;
-                padding: 1em;
+                padding: $indent;
                 text-align: left;
-                margin: 1em auto 1em 0;
+                margin: $indent auto $indent 0;
                 display: inline-block;
-                // color: #fff;
                 position: absolute;
                 top: 40%;
+
                 input[type='checkbox'] {
                     width: 10%;
                 }
+
                 a {
-                    margin: 1em auto 1em 0;
+                    margin: $indent auto $indent 0;
                     color: #8bd5d6;
-                    // text-decoration: underline;
-                    // border: 3px solid #8bd5d6;
-                    padding: 1em;
+                    padding: $indent;
                     border-radius: 30px;
                     text-align: left;
                     box-shadow: -1px 4px 26px -12px #929292;
                 }
             }
+
             .input-text {
                 align-items: center;
                 box-shadow: -1px 4px 26px -12px #929292;
@@ -100,84 +98,87 @@
                 display: flex;
                 position: absolute;
                 z-index: 100;
-                bottom: 5em;
+                bottom: 5rem;
                 width: 90vw;
-                max-width: 40em;
+                max-width: 40rem;
                 left: 5%;
+
                 input[type='text'] {
                     background-color: #fff;
                     color: #64a9a9;
-                    margin: 0em auto 0em 0em;
+                    margin: 0 auto 0 0;
                     border-radius: 15px;
-                    padding: 1em;
+                    padding: $indent;
                     width: 100%;
                 }
             }
         }
+
         // The hidden-fieldset class comes from JS
         .hidden-fieldset {
             position: absolute;
             top: 0;
             height: 90vh;
             width: 100%;
-            max-width: 50em;
-            padding: 1em 2.5em 1em 1em;
+            max-width: 50rem;
+            padding: $indent 2.5rem $indent $indent;
             z-index: 0;
+
             .back {
                 opacity: 0;
             }
+
             .legend-text {
                 opacity: 0;
                 position: absolute;
                 top: 20%;
                 width: 80vw;
-                max-width: 30em;
+                max-width: 30rem;
                 margin: 0 auto;
                 transform: translate(0, -30vw);
                 transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
             }
+
             .input {
-                // max-width: 30vw;
                 opacity: 0;
-                // max-width: 80vw;
                 margin: 0 auto;
-                // transform: translate(0vw, -30vw);
             }
+
             .input-text {
                 opacity: 0;
                 border-radius: 15px;
                 text-align: left;
                 position: fixed;
-                bottom: 5em;
+                bottom: 5rem;
                 left: 5%;
                 width: 90vw;
-                max-width: 40em;
+                max-width: 40rem;
                 background: transparent;
                 transform: translate(0, -30vw);
                 transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
+
                 .send-button {
                     opacity: 0;
                 }
             }
+
             .input-button {
                 width: 80vw;
-                max-width: 30em;
+                max-width: 30rem;
                 opacity: 0;
                 top: 40%;
                 position: absolute;
                 text-align: left;
-                margin: 1em auto 1em 0;
+                margin: $indent auto $indent 0;
                 display: inline-block;
-                // padding: 1em;
-                // text-align: left;
-                // margin: 1em auto 1em 0;
-                // display: inline-block;
-                  transform: translate(0, -30vw);
+                transform: translate(0, -30vw);
                 transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
+
                 input[type='checkbox'] {
                     width: 10vw;
                 }
             }
+
             .buttons {
                 position: absolute;
                 opacity: 0;
@@ -185,29 +186,33 @@
                 transition: all 1s ease-in-out;
                 left: 5%;
                 width: 90vw;
-                max-width: 40em;
+                max-width: 40rem;
+
                 .button {
                     width: 100%;
-                    // max-width: 40em;
                 }
+
                 .next {
                     opacity: 0;
                 }
+
                 .save {
                     text-align: center;
                 }
             }
 
             .output {
-                max-width: 30em;
+                max-width: 30rem;
                 opacity: 0;
-                transform: translate(0vw, -30vw);
-                transition: all 0.4s cubic-bezier(0.4, 0.25, 0.8, 0.3) 0.05s;
+                transform: translate(0, -30vw);
+                transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
+
                 textarea {
                     opacity: 0;
                 }
             }
         }
+
         // The active-fieldset class comes from JS
         .active-fieldset {
             position: absolute;
@@ -215,39 +220,43 @@
             top: 0;
             height: 90vh;
             width: 100%;
-            max-width: 50em;
-            padding: 1em 2.5em 1em 1em;
+            max-width: 50rem;
+            padding: $indent 2.5rem $indent $indent;
             overflow: scroll;
+
             .back {
                 opacity: 1;
             }
+
             .legend-text {
                 opacity: 1;
                 position: absolute;
                 top: 20%;
                 width: 80vw;
-                max-width: 30em;
+                max-width: 30rem;
                 margin: 0 auto;
                 transform: translate(0, -10%);
                 transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
             }
+
             .input {
                 opacity: 1;
-                // max-width: 80vw;
                 margin: 0 auto;
             }
+
             .input-text {
                 opacity: 1;
                 border-radius: 15px;
                 text-align: left;
                 position: fixed;
                 z-index: 100;
-                bottom: 5em;
+                bottom: 5rem;
                 width: 90vw;
-                max-width: 40em;
+                max-width: 40rem;
                 left: 5%;
                 transform: translate(0, -10%);
                 transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+
                 input[type='text'] {
                     opacity: 1;
                     z-index: 100;
@@ -255,65 +264,69 @@
                     border: 0;
                     outline: 0;
                     background: transparent;
-                    padding: 1em;
+                    padding: $indent;
                     margin: 0 auto 0 0;
                 }
+
                 .send-button {
                     opacity: 1;
                     width: 20%;
                     text-align: center;
-                    // color: #7d7d7d;
-                    // background-color: #64a9a9;
                     color: #64a9a9;
-                    /* width: 100%; */
                     height: 100%;
                     margin: 0;
-                    padding: 1em;
+                    padding: $indent;
                     border-radius: 0 15px 15px 0;
                     text-decoration: none;
                 }
+
                 .send-button:hover {
                     text-decoration: underline;
                 }
             }
+
             // .input-button like 'open spotify' in text cloud
             .input-button {
                 opacity: 1;
                 position: absolute;
                 width: 80vw;
-                max-width: 40em;
+                max-width: 40rem;
                 top: 40%;
-                padding: 1em;
+                padding: $indent;
                 text-align: left;
-                margin: 1em auto 1em 0;
+                margin: $indent auto $indent 0;
                 display: inline-block;
-                 transform: translate(0, -10%);
+                transform: translate(0, -10%);
                 transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+
                 input[type='checkbox'] {
                     width: 10%;
                 }
+
                 a {
-                    margin: 1em auto 1em 0;
+                    margin: $indent auto $indent 0;
                     color: #8bd5d6;
-                    // text-decoration: underline;
-                    // border: 3px solid #8bd5d6;
-                    padding: 1em;
+                    padding: $indent;
                     border-radius: 30px;
                     text-align: left;
                 }
+
                 &--choose-file {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+
                     span {
-                        margin-left: 1rem;
+                        margin-left: $indent;
                     }
                 }
+
                 .output-image {
                     max-width: 250px;
-                    margin-top: 1rem;
+                    margin-top: $indent;
                 }
             }
+
             // .buttons below the page like "Next"
             .buttons {
                 position: absolute;
@@ -321,47 +334,51 @@
                 transition: all 1s ease-in-out;
                 left: 5%;
                 width: 90vw;
-                max-width: 40em;
+                max-width: 40rem;
+
                 .button {
                     width: 100%;
                 }
+
                 .next {
                     opacity: 0;
                 }
+
                 .save {
                     text-align: center;
                 }
             }
 
             .output {
-                max-width: 30em;
-                margin: 0.5em 0 0em auto;
+                max-width: 30rem;
+                margin: .5rem 0 0 auto;
                 display: block;
                 opacity: 1;
                 background-color: transparent;
                 transform: translate(0, -10%);
-                transition: all 0.3s cubic-bezier(0.1, 0.45, 0.1, 0.85) 0.4s;
+                transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
+
                 textarea {
-                    font-size: 1.2em;
+                    font-size: 1.2rem;
                     color: #8bd5d8;
-                    border-radius: 15px 15px 0 15px;
+                    border-radius: 15px 15px 0;
                     text-align: right;
-                    padding: 0.5em 1em;
+                    padding: .5rem $indent;
                     width: 80vw;
                     text-align: right;
-                    max-width: 30em;
+                    max-width: 30rem;
                     margin: 0 0 0 auto;
                     display: block;
                     background-color: transparent;
-                    // background-color: white;
-                    // box-shadow: -1px 4px 26px -12px #929292;
                 }
             }
+
             .output:nth-of-type(1) {
                 margin-top: 65%;
             }
+
             .output:nth-last-of-type(1) {
-                margin: 0em 0em 8em auto;
+                margin: 0 0 8rem auto;
             }
 
             // Animation setting: the next fieldset comes in from below (*the previous fieldset from above, see .hidden-fieldset).
@@ -371,25 +388,29 @@
                     transform: translate(0, 150vw);
                     transition: all .5s ease-in;
                 }
+
                 .input-button {
                     opacity: 0;
                     transform: translate(0, 200vw);
                     transition: all .5s ease-in;
                 }
+
                 .input-text {
                     opacity: 0;
                     transform: translate(0, 200vw);
                     transition: all .5s ease-in;
                 }
+
                 .buttons {
                     opacity: 0;
                     transform: translate(0, 200vw);
                     transition: all 1s ease-in-out;
                 }
+
                 .output {
                     opacity: 0;
-                    transform: translate(0vw, 150vw);
-                    transition: all 0.5s ease-in;
+                    transform: translate(0, 150vw);
+                    transition: all .5s ease-in;
                 }
             }
         }

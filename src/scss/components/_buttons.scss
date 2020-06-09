@@ -29,3 +29,13 @@
         padding: 1em;
     }
 }
+
+.input-button--choose-media {
+    @include input-button-positioning;
+
+    .media-button {
+        border-radius: 4px;
+        width: 75px;
+        height: 75px;
+    }
+}

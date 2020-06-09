@@ -8,12 +8,12 @@
     <form method="GET" enctype="multipart/form-data">
         <fieldset id="input-1">
             <div class="back">
-                    <a href="/">&#8592 terug naar alle herinneringen</a>
+                <a href="/">&#8592 terug naar alle herinneringen</a>
            </div>
             <legend class="legend-text">
                 Voeg muziek toe aan de herinnering
             </legend>
-            <div class="input input-button">
+            <div class="input input-button input-button--normal">
                 <a href="/" class="">Muziekstream openen</a>
             </div>
             <div class="buttons">
@@ -55,57 +55,12 @@
         </fieldset>
 
         <fieldset id="input-4">
-            <legend class="legend-text">Upload een afbeelding</legend>
-            <div class="input input-button">
-                <div class="input-button--choose-file">
-                    <input type="file" id="real-file" hidden="hidden" />
-                    <button type="button" id="custom-button" class="button-icon">
-                        <img src="./camera_icon.png" alt="Image Icon" />
-                    </button>
-                    <span id="custom-text">Nog geen afbeelding gekozen.</span>
-                </div>
-                <img id="output-image" class="output-image hide" />
+            <legend class="legend-text">Waar gaat de herinnering over?</legend>
+            <div class="input input-button input-button--choose-media">
+                <a href="/add-image" class="media-button"><img src="./camera_alt-24px.svg"></a>
             </div>
             <div class="buttons">
                 <a class="button save"> Herinnering opslaan</a>
-            </div>
-        </fieldset>
-
-        <fieldset id="input-5">
-            <legend class="legend-text">Voeg een opname toe</legend>
-            <div class="input input-button">
-                <div class="mic-container">
-                    <div class="circle">
-                        <img class="mic-icon" src="./voice_icon.png" alt="Microphone icon">
-                    </div>
-                    <div class="timer">
-                        <span class="minutes">00</span> <span class="colon">:</span><span class="seconds">00</span>
-                    </div>
-                </div>
-                <audio></audio>
-                <audio id="savedAudio" controls></audio>
-            </div>
-            <div class="buttons">
-                <a class="button save"> Herinnering opslaan</a>
-            </div>
-        </fieldset>
-        
-        <fieldset id="input-6">
-            <legend class="legend-text">
-                Welke verzorgers mogen deze herinnering zien?
-            </legend>
-            <div class="input input-button">
-                <input type="checkbox" id="verzorger-1" />
-                <label for="verzorger-1">Marie</label>
-
-                <input type="checkbox" id="verzorger-2" />
-                <label for="verzorger-2">Pieter</label>
-
-                <input type="checkbox" id="verzorger-3" />
-                <label for="verzorger-3">Noortje</label>
-            </div>
-            <div class="buttons">
-                <a href="" class="button save"> Herinnering opslaan</a>
             </div>
         </fieldset>
         

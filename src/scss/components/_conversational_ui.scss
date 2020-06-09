@@ -12,29 +12,32 @@ body {
         position: relative;
 
         fieldset {
-              .back {
-        width: 100%;
-        padding: 1em;
-        position: absolute;
-        top: 0;
-        z-index: 100;
-        background: rgb(255, 255, 255);
-        background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.8995973389355743) 50%,
-            rgba(255, 255, 255, 0) 100%
-        );
-        a {
-            color: #8bd5d8;
-            font-family: Avenir-Light;
-        }
-    }
+            .back {
+                width: 100%;
+                padding: 1em;
+                position: absolute;
+                top: 0;
+                z-index: 100;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(
+                                180deg,
+                                rgba(255, 255, 255, 0.8995973389355743) 50%,
+                                rgba(255, 255, 255, 0) 100%
+                );
+
+                a {
+                    color: #8bd5d8;
+                    font-family: Avenir-Light;
+                }
+            }
+
             margin: 0em auto 0em auto;
             // top: 10em;
             padding: 1em;
             height: 90vh;
             overflow: hidden;
             position: relative;
+
             .buttons {
                 // Postition:static if JS is not available (progressive enhancement)
                 // position: static;
@@ -52,6 +55,7 @@ body {
                     text-align: right;
                 }
             }
+
             .legend-text {
                 font-size: 1.5em;
                 position: absolute;
@@ -67,36 +71,28 @@ body {
                 margin: 0em auto -1em 0;
                 // box-shadow: 10px 10px 15px -9px #929292;
             }
+
             .input {
                 margin: 1em auto 1em 0;
                 background-color: #fff;
             }
+
             .input-button {
-                width: 80vw;
-                max-width: 30em;
-                // background-color: #8bd5d6;
+                @include input-button-positioning;
+
                 border-radius: 15px 15px 15px 0;
                 padding: 1em;
-                text-align: left;
-                margin: 1em auto 1em 0;
-                display: inline-block;
-                // color: #fff;
-                position: absolute;
-                top: 40%;
+
                 input[type='checkbox'] {
                     width: 10%;
                 }
+
                 a {
-                    margin: 1em auto 1em 0;
-                    color: #8bd5d6;
-                    // text-decoration: underline;
-                    // border: 3px solid #8bd5d6;
-                    padding: 1em;
-                    border-radius: 30px;
-                    text-align: left;
+                    @include link-button;
                     box-shadow: -1px 4px 26px -12px #929292;
                 }
             }
+
             .input-text {
                 align-items: center;
                 box-shadow: -1px 4px 26px -12px #929292;
@@ -108,6 +104,7 @@ body {
                 width: 90vw;
                 max-width: 40em;
                 left: 5%;
+
                 input[type='text'] {
                     background-color: #fff;
                     color: #64a9a9;
@@ -118,6 +115,7 @@ body {
                 }
             }
         }
+
         // The hidden-fieldset class comes from JS
         .hidden-fieldset {
             position: absolute;
@@ -127,9 +125,11 @@ body {
             max-width: 50em;
             padding: 1em 2.5em 1em 1em;
             z-index: 0;
+
             .back {
                 opacity: 0;
             }
+
             .legend-text {
                 opacity: 0;
                 position: absolute;
@@ -140,6 +140,7 @@ body {
                 transform: translate(0, -30vw);
                 transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
             }
+
             .input {
                 // max-width: 30vw;
                 opacity: 0;
@@ -147,6 +148,7 @@ body {
                 margin: 0 auto;
                 // transform: translate(0vw, -30vw);
             }
+
             .input-text {
                 opacity: 0;
                 border-radius: 15px;
@@ -159,29 +161,24 @@ body {
                 background: transparent;
                 transform: translate(0, -30vw);
                 transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
+
                 .send-button {
                     opacity: 0;
                 }
             }
+
             .input-button {
-                width: 80vw;
-                max-width: 30em;
+                @include input-button-positioning;
+
                 opacity: 0;
-                top: 40%;
-                position: absolute;
-                text-align: left;
-                margin: 1em auto 1em 0;
-                display: inline-block;
-                // padding: 1em;
-                // text-align: left;
-                // margin: 1em auto 1em 0;
-                // display: inline-block;
-                  transform: translate(0, -30vw);
+                transform: translate(0, -30vw);
                 transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
+
                 input[type='checkbox'] {
                     width: 10vw;
                 }
             }
+
             .buttons {
                 position: absolute;
                 opacity: 0;
@@ -190,13 +187,16 @@ body {
                 left: 5%;
                 width: 90vw;
                 max-width: 40em;
+
                 .button {
                     width: 100%;
                     // max-width: 40em;
                 }
+
                 .next {
                     opacity: 0;
                 }
+
                 .save {
                     text-align: center;
                 }
@@ -207,11 +207,13 @@ body {
                 opacity: 0;
                 transform: translate(0vw, -30vw);
                 transition: all 0.4s cubic-bezier(0.4, 0.25, 0.8, 0.3) 0.05s;
+
                 textarea {
                     opacity: 0;
                 }
             }
         }
+
         // The active-fieldset class comes from JS
         .active-fieldset {
             position: absolute;
@@ -222,9 +224,11 @@ body {
             max-width: 50em;
             padding: 1em 2.5em 1em 1em;
             overflow: scroll;
+
             .back {
                 opacity: 1;
             }
+
             .legend-text {
                 opacity: 1;
                 position: absolute;
@@ -235,11 +239,13 @@ body {
                 transform: translate(0, -10%);
                 transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
             }
+
             .input {
                 opacity: 1;
                 // max-width: 80vw;
                 margin: 0 auto;
             }
+
             .input-text {
                 opacity: 1;
                 border-radius: 15px;
@@ -252,6 +258,7 @@ body {
                 left: 5%;
                 transform: translate(0, -10%);
                 transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+
                 input[type='text'] {
                     opacity: 1;
                     z-index: 100;
@@ -262,6 +269,7 @@ body {
                     padding: 1em;
                     margin: 0 auto 0 0;
                 }
+
                 .send-button {
                     opacity: 1;
                     width: 20%;
@@ -276,48 +284,44 @@ body {
                     border-radius: 0 15px 15px 0;
                     text-decoration: none;
                 }
+
                 .send-button:hover {
                     text-decoration: underline;
                 }
             }
+
             // .input-button like 'open spotify' in text cloud
             .input-button {
+                @include input-button-positioning;
+
                 opacity: 1;
-                position: absolute;
-                width: 80vw;
-                max-width: 40em;
-                top: 40%;
-                padding: 1em;
-                text-align: left;
-                margin: 1em auto 1em 0;
-                display: inline-block;
-                 transform: translate(0, -10%);
+                transform: translate(0, -10%);
                 transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+
                 input[type='checkbox'] {
                     width: 10%;
                 }
+
                 a {
-                    margin: 1em auto 1em 0;
-                    color: #8bd5d6;
-                    // text-decoration: underline;
-                    // border: 3px solid #8bd5d6;
-                    padding: 1em;
-                    border-radius: 30px;
-                    text-align: left;
+                   @include link-button;
                 }
+
                 &--choose-file {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+
                     span {
                         margin-left: 1rem;
                     }
                 }
+
                 .output-image {
                     max-width: 250px;
                     margin-top: 1rem;
                 }
             }
+
             // .buttons below the page like "Next"
             .buttons {
                 position: absolute;
@@ -326,12 +330,15 @@ body {
                 left: 5%;
                 width: 90vw;
                 max-width: 40em;
+
                 .button {
                     width: 100%;
                 }
+
                 .next {
                     opacity: 0;
                 }
+
                 .save {
                     text-align: center;
                 }
@@ -345,6 +352,7 @@ body {
                 background-color: transparent;
                 transform: translate(0, -10%);
                 transition: all 0.3s cubic-bezier(0.1, 0.45, 0.1, 0.85) 0.4s;
+
                 textarea {
                     font-size: 1.2em;
                     color: #8bd5d8;
@@ -361,9 +369,11 @@ body {
                     // box-shadow: -1px 4px 26px -12px #929292;
                 }
             }
+
             .output:nth-of-type(1) {
                 margin-top: 65%;
             }
+
             .output:nth-last-of-type(1) {
                 margin: 0em 0em 8em auto;
             }
@@ -375,21 +385,25 @@ body {
                     transform: translate(0, 150vw);
                     transition: all .5s ease-in;
                 }
+
                 .input-button {
                     opacity: 0;
                     transform: translate(0, 200vw);
                     transition: all .5s ease-in;
                 }
+
                 .input-text {
                     opacity: 0;
                     transform: translate(0, 200vw);
                     transition: all .5s ease-in;
                 }
+
                 .buttons {
                     opacity: 0;
                     transform: translate(0, 200vw);
                     transition: all 1s ease-in-out;
                 }
+
                 .output {
                     opacity: 0;
                     transform: translate(0vw, 150vw);

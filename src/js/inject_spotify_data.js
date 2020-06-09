@@ -17,7 +17,6 @@ function injectSpotifyData(data) {
     // Add event listener to play song
     const songs = document.getElementsByClassName('song');
     let songsArray = Array.from(songs);
-    console.log('songs: ', songsArray);
 
     if (songsArray.length > 0) {
         songsArray.forEach(song => {
@@ -26,7 +25,6 @@ function injectSpotifyData(data) {
     }
 
     function songCallback(e) {
-        // console.log('clicked! ', this.id);
         playSong(this.id);
     }
 }

@@ -1,11 +1,12 @@
 // Event listener to search for Spotify songs
 const songSubmit = document.getElementById('submit_song');
 const songInput = document.getElementById('input_song');
-console.log(songInput);
 
-songSubmit.addEventListener('click', () => {
-    searchXML(songInput.value);
-});
+if (songSubmit && songInput) {
+    songSubmit.addEventListener('click', () => {
+        searchXML(songInput.value);
+    });
+}
 
 // Search for Spotify songs
 function searchXML(song) {

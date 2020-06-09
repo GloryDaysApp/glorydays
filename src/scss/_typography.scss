@@ -1,16 +1,73 @@
 @font-face {
-    font-family: 'Avenir-Black';
-    src: url('./Avenir_Black.ttf');
+    font-family: 'Source Serif Semibold';
+    src: url('SourceSerifPro-Semibold.eot');
+    src: url('SourceSerifPro-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('SourceSerifPro-Semibold.woff2') format('woff2'),
+        url('SourceSerifPro-Semibold.woff') format('woff'),
+        url('SourceSerifPro-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Avenir-Light';
-    src: url('./Avenir_Book.ttf');
+    font-family: 'Source Serif Regular';
+    src: url('SourceSerifPro-Regular.eot');
+    src: url('SourceSerifPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SourceSerifPro-Regular.woff2') format('woff2'),
+        url('SourceSerifPro-Regular.woff') format('woff'),
+        url('SourceSerifPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Avenir-Medium';
-    src: url('./AvenirLTStd-Medium.ttf');
+    font-family: 'Source Serif Bold';
+    src: url('SourceSerifPro-Bold.eot');
+    src: url('SourceSerifPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SourceSerifPro-Bold.woff2') format('woff2'),
+        url('SourceSerifPro-Bold.woff') format('woff'),
+        url('SourceSerifPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Semibold';
+    src: url('SourceSansPro-SemiBold.eot');
+    src: url('SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('SourceSansPro-SemiBold.woff2') format('woff2'),
+        url('SourceSansPro-SemiBold.woff') format('woff'),
+        url('SourceSansPro-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Regular';
+    src: url('SourceSansPro-Regular.eot');
+    src: url('SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SourceSansPro-Regular.woff2') format('woff2'),
+        url('SourceSansPro-Regular.woff') format('woff'),
+        url('SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Bold';
+    src: url('SourceSansPro-Bold.eot');
+    src: url('SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SourceSansPro-Bold.woff2') format('woff2'),
+        url('SourceSansPro-Bold.woff') format('woff'),
+        url('SourceSansPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 html {
@@ -42,22 +99,27 @@ li {
 
 h1 {
     font-size: 1.75rem; // 28px
+    font-family: 'Source Serif Semibold', serif;
 }
 
 h2 {
     font-size: 1.5rem; // 24px
+    font-family: 'Source Sans Semibold', sans-serif;
 }
 
 h3 {
     font-size: 1.375rem; // 22px
+    font-family: 'Source Sans Bold', sans-serif;
 }
 
 h4 {
     font-size: 1.25rem; // 20px
+    font-family: 'Source Sans Regular', sans-serif;
 }
 
 h5 {
     font-size: 1.125rem; // 18px
+    font-family: 'Source Sans Regular', sans-serif;
 }
 
 h1,
@@ -70,4 +132,5 @@ h5 {
 
 p {
     font-size: 1rem; // 16px
+    font-family: 'Source Sans Regular', sans-serif;
 }

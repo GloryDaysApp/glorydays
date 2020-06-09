@@ -1,0 +1,31 @@
+<%- include('partials/head') %>
+
+<header></header>
+
+<main class="conversational-ui">
+
+    <!-- Page Content -->
+    <form method="GET" enctype="multipart/form-data">
+        <fieldset id="input-1">
+            <div class="back">
+                <a href="/add-memory">&#8592 terug naar herinnering</a>
+            </div>
+            <legend class="legend-text">Upload een afbeelding</legend>
+            <div class="input input-button">
+                <div class="input-button--choose-file">
+                    <input type="file" id="real-file" hidden="hidden" />
+                    <button type="button" id="custom-button" class="button-icon">
+                        <img src="./icons/camera_alt-24px.svg" alt="Image Icon" />
+                    </button>
+                    <span id="custom-text">Nog geen afbeelding gekozen.</span>
+                </div>
+                <img id="output-image" class="output-image hide" />
+            </div>
+        </fieldset>
+    </form>
+    <%- include('partials/spotify-navigation-player') %>
+</main>
+
+<!-- <%- include('partials/navigation') %>  -->
+<%- include('partials/footer') %>
+

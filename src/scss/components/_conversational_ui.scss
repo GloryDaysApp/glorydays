@@ -69,6 +69,7 @@
             .input-button {
                 @include input-button-positioning;
 
+                display: inline-block;
                 border-radius: 15px 15px 15px 0;
                 padding: $indent;
 
@@ -80,6 +81,28 @@
                     @include link-button;
                     box-shadow: -1px 4px 26px -12px $grey;
                 }
+
+                &--choose-file {
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        margin-top: $indent;
+                    }
+                }
+
+                .output-image {
+                    max-width: 250px;
+                    max-height: 200px;
+                    margin-top: $indent;
+                    border-radius: 4px;
+                    right: -1.5rem;
+                    position: absolute;
+                }
+            }
+
+            .input-button--choose-media {
+                display: flex;
             }
 
             .input-text {
@@ -154,15 +177,19 @@
             }
 
             .input-button {
-                @include input-button-positioning;
-
-                opacity: 0;
-                transform: translate(0, -30vw);
-                transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
-
                 input[type='checkbox'] {
                     width: 10vw;
                 }
+            }
+
+            .input-button,
+            .input-button--choose-media {
+                @include input-button-positioning;
+
+                display: inline-block;
+                opacity: 0;
+                transform: translate(0, -30vw);
+                transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
             }
 
             .buttons {
@@ -273,11 +300,7 @@
 
             // .input-button like 'open spotify' in text cloud
             .input-button {
-                @include input-button-positioning;
-
-                opacity: 1;
-                transform: translate(0, -10%);
-                transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+                display: inline-block;
 
                 input[type='checkbox'] {
                     width: 10%;
@@ -286,21 +309,15 @@
                 a {
                     @include link-button;
                 }
+            }
 
-                &--choose-file {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
+            .input-button--choose-media,
+            .input-button {
+                @include input-button-positioning;
 
-                    span {
-                        margin-left: $indent;
-                    }
-                }
-
-                .output-image {
-                    max-width: 250px;
-                    margin-top: $indent;
-                }
+                opacity: 1;
+                transform: translate(0, -10%);
+                transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
             }
 
             // .buttons below the page like "Next"
@@ -365,7 +382,8 @@
                     transition: all .5s ease-in;
                 }
 
-                .input-button {
+                .input-button,
+                .input-button--choose-media {
                     opacity: 0;
                     transform: translate(0, 200vw);
                     transition: all .5s ease-in;

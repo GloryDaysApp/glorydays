@@ -1,5 +1,5 @@
 .button {
-    background-color: #b6f2ff;
+    background-color: $lightblue;
     display: block;
     padding: .5em .2em;
     width: 10em;
@@ -23,19 +23,18 @@
         text-align: center;
         display: block;
         width: 70vw;
-        background-color: #64a9a9;
+        background-color: $lightblue;
         border-radius: 15px;
-        color: #fff;
+        color: $white;
         padding: 1em;
     }
 }
 
-.input-button--choose-media {
-    @include input-button-positioning;
+.button-icon,
+.media-button {
+    @include media-button;
+}
 
-    .media-button {
-        border-radius: 4px;
-        width: 75px;
-        height: 75px;
-    }
+.media-button {
+    margin: $indent 0 $indent $indent;
 }

@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
         console.log('succesful: ', data);
 
         // Set age of cookie access_token to 1 hour
-        res.cookie('ACCESS_TOKEN', data.access_token, { maxAge: 3600000, httpOnly: true });
+        res.cookie('ACCESS_TOKEN', data.access_token, { maxAge: 3600000 });
       
         res.cookie('REFRESH_TOKEN', data.refresh_token);
 

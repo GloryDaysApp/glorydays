@@ -1,5 +1,4 @@
 const config = require('./config');
-const socket = require('socket.io');
 
 const express = require('express'),
     // socket = require('./server/spotify_playback'),
@@ -44,17 +43,35 @@ app
     .set('views', 'views')
     .use(express.static('static'))
 
+    // Check if ACCESS_TOKEN exists. If not, fetch a new one with the refresh token.
     .get('/', async (req, res) => {
-        router.basicPage(res, 'home', 'Home');
+        if (req.cookies.ACCESS_TOKEN) {
+            router.basicPage(res, 'home', 'Home');
+        } else {
+            getRefreshToken(req, res).then(() => {
+                router.basicPage(res, 'home', 'Home');
+            });
+        }
     })
 
-    // Spotify login url
     .get('/login', async (req, res) => {
-        router.basicPage(res, 'login', 'Login');
+        if (req.cookies.ACCESS_TOKEN) {
+            router.basicPage(res, 'login', 'Login');
+        } else {
+            getRefreshToken(req, res).then(() => {
+                router.basicPage(res, 'login', 'Login');
+            });
+        }  
     })
 
     .get('/add-memory', async (req, res) => {
-        router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
+        if (req.cookies.ACCESS_TOKEN) {
+            router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
+        } else {
+            getRefreshToken(req, res).then(() => {
+                router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
+            });
+        }
     });
 
 // Spotify Oauth
@@ -72,7 +89,3 @@ app.get('/refresh', getRefreshToken); // Callback for fetching Spotify tokens
 // Spotify song search
 // const getSpotifySongs = require('./server/get_spotify_songs.js');
 // app.post('/search', getSpotifySongs);
-
-// Spotify song search
-const getSpotifySongs = require('./server/get_spotify_songs.js');
-app.post('/search', getSpotifySongs);

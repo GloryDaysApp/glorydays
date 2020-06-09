@@ -3,8 +3,6 @@ let deviceId = null;
 
 window.onSpotifyWebPlaybackSDKReady = () => {
     const ACCESS_TOKEN = getCookie('ACCESS_TOKEN');
-    console.log('access_token: ', ACCESS_TOKEN);
-    console.log('joe', document.cookie);
 
     player = new Spotify.Player({
         name: 'Glory Days Web Player',
@@ -15,7 +13,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
     });
 
     player.on('ready', ({ device_id }) => {
-        console.log('ready');
+        console.log('spotify web playback ready with id: ', device_id);
         deviceId = device_id;
     });
 

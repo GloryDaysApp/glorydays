@@ -5,7 +5,6 @@ const { SPOTIFY_CLIENT_SECRET, SPOTIFY_CLIENT_ID } = process.env;
 
 module.exports = async (req, res) => {
     const refreshToken = req.cookies.REFRESH_TOKEN;
-    console.log('running');
 
     const query = queryString.stringify({
         grant_type: 'refresh_token',
@@ -26,8 +25,6 @@ module.exports = async (req, res) => {
     try {
         const response = await fetch(url, options);
         const data = await response.json();
-
-        console.log('fetched access: ', data.access_token);
 
         // Store acces_token as cookie, with an expiring date of 1 hour
         res.cookie('ACCESS_TOKEN', data.access_token, {

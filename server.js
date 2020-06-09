@@ -82,6 +82,26 @@ app
                 router.pageWithData(res, 'add-image', 'Afbeelding toevoegen', caregivers);
             });
         }
+    })
+
+    .get('/add-voice-recording', async (req, res) => {
+        if (req.cookies.ACCESS_TOKEN) {
+            router.pageWithData(res, 'add-voice-recording', 'Spraak memo opnemen', caregivers);
+        } else {
+            getRefreshToken(req, res).then(() => {
+                router.pageWithData(res, 'add-voice-recording', 'Spraak memo opnemen', caregivers);
+            });
+        }
+    })
+
+    .get('/add-text', async (req, res) => {
+        if (req.cookies.ACCESS_TOKEN) {
+            router.pageWithData(res, 'add-text', 'Tekst toevoegen', caregivers);
+        } else {
+            getRefreshToken(req, res).then(() => {
+                router.pageWithData(res, 'add-text', 'Tekst toevoegen', caregivers);
+            });
+        }
     });
 
 // Spotify Oauth

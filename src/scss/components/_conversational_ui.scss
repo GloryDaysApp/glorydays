@@ -24,7 +24,7 @@
                 background: linear-gradient(180deg, rgba(255, 255, 255, .8995973389355743) 50%, rgba(255, 255, 255, 0) 100%);
 
                 a {
-                    color: #8bd5d8;
+                    color: $lightblue;
                     font-family: Avenir-Light;
                 }
             }
@@ -41,7 +41,7 @@
                 .button {
                     width: 100%;
                     background-color: transparent;
-                    color: #7e7e7e;
+                    color: $grey;
                     text-decoration: underline;
                     text-align: right;
                 }
@@ -54,7 +54,7 @@
                 width: 80vw;
                 max-width: 30rem;
                 text-align: center;
-                color: #7d7d7d;
+                color: $grey;
                 border-radius: 15px 15px 15px 0;
                 padding: $indent;
                 text-align: left;
@@ -63,7 +63,7 @@
 
             .input {
                 margin: $indent auto $indent 0;
-                background-color: #fff;
+                background-color: $white;
             }
 
             .input-button {
@@ -78,13 +78,13 @@
 
                 a {
                     @include link-button;
-                    box-shadow: -1px 4px 26px -12px #929292;
+                    box-shadow: -1px 4px 26px -12px $grey;
                 }
             }
 
             .input-text {
                 align-items: center;
-                box-shadow: -1px 4px 26px -12px #929292;
+                box-shadow: -1px 4px 26px -12px $grey;
                 border-radius: 15px;
                 display: flex;
                 position: absolute;
@@ -95,8 +95,8 @@
                 left: 5%;
 
                 input[type='text'] {
-                    background-color: #fff;
-                    color: #64a9a9;
+                    background-color: $white;
+                    color: $lightblue;
                     margin: 0 auto 0 0;
                     border-radius: 15px;
                     padding: $indent;
@@ -258,7 +258,7 @@
                     opacity: 1;
                     width: 20%;
                     text-align: center;
-                    color: #64a9a9;
+                    color: $lightblue;
                     height: 100%;
                     margin: 0;
                     padding: $indent;
@@ -284,12 +284,7 @@
                 }
 
                 a {
-                    margin: $indent auto $indent 0;
-                    color: #8bd5d6;
-                    padding: $indent;
-                    border-radius: 30px;
-                    text-align: left;
-                   @include link-button;
+                    @include link-button;
                 }
 
                 &--choose-file {
@@ -341,7 +336,7 @@
 
                 textarea {
                     font-size: 1.2rem;
-                    color: #8bd5d8;
+                    color: $lightblue;
                     border-radius: 15px 15px 0;
                     text-align: right;
                     padding: .5rem $indent;

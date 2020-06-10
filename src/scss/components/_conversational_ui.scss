@@ -1,3 +1,4 @@
+// master
 .conversational-ui {
     form {
         margin: $center-margin;
@@ -24,7 +25,7 @@
                 background: linear-gradient(180deg, rgba(255, 255, 255, .8995973389355743) 50%, rgba(255, 255, 255, 0) 100%);
 
                 a {
-                    color: #8bd5d8;
+                    color: $lightblue;
                     font-family: Avenir-Light;
                 }
             }
@@ -36,12 +37,12 @@
                 left: 5%;
                 width: 90vw;
                 max-width: 40rem;
-                bottom: 8rem;
+                //bottom: 8rem;
 
                 .button {
                     width: 100%;
                     background-color: transparent;
-                    color: #7e7e7e;
+                    color: $grey;
                     text-decoration: underline;
                     text-align: right;
                 }
@@ -54,41 +55,34 @@
                 width: 80vw;
                 max-width: 30rem;
                 text-align: center;
-                color: #7d7d7d;
+                color: $grey;
                 border-radius: 15px 15px 15px 0;
                 padding: $indent;
                 text-align: left;
                 margin: 0 auto -($indent) 0;
-            
+
             }
 
             .input {
                 margin: $indent auto $indent 0;
-                background-color: #fff;
+                background-color: $white;
             }
 
             .input-button {
-                width: 80vw;
-                max-width: 30rem;
+                @include input-button-positioning;
+
+                display: inline-block;
                 border-radius: 15px 15px 15px 0;
                 padding: $indent;
-                text-align: left;
-                margin: $indent auto $indent 0;
-                display: inline-block;
-                position: absolute;
-                top: 40%;
 
                 input[type='radio'] {
                     width: 10%;
                 }
 
                 a {
-                    margin: $indent auto $indent 0;
-                    color: #8bd5d6;
-                    padding: $indent;
-                    border-radius: 30px;
-                    text-align: left;
-                    box-shadow: -1px 4px 26px -12px #929292;
+                    @include link-button;
+
+                    box-shadow: -1px 4px 26px -12px $grey;
                 }
 
                 ul {
@@ -100,7 +94,7 @@
 
                         input[type='checkbox'] {
                             display: none;
-                            
+
                             &:checked {
                                 + label svg .cls-1 {
                                     fill: #ffed83;
@@ -117,15 +111,15 @@
                             width: 2.5rem;
                             transition-duration: 0.2s;
                             transform-origin: 50% 50%;
-                        }        
+                        }
                     }
-                
+
                 }
             }
 
             .input-text {
                 align-items: center;
-                box-shadow: -1px 4px 26px -12px #929292;
+                box-shadow: -1px 4px 26px -12px $grey;
                 border-radius: 15px;
                 display: flex;
                 position: absolute;
@@ -136,8 +130,8 @@
                 left: 5%;
 
                 input[type='text'] {
-                    background-color: #fff;
-                    color: #64a9a9;
+                    background-color: $white;
+                    color: $lightblue;
                     margin: 0 auto 0 0;
                     border-radius: 15px;
                     padding: $indent;
@@ -319,44 +313,24 @@
         }
 
         // .input-button like 'open spotify' in text cloud
+        .input-button--choose-media,
         .input-button {
+            @include input-button-positioning;
+
             opacity: 1;
-            position: absolute;
-            width: 80vw;
-            max-width: 40rem;
-            top: 40%;
-            padding: $indent;
-            text-align: left;
-            margin: $indent auto $indent 0;
-            display: inline-block;
             transform: translate(0, -10%);
             transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+        }
+
+        .input-button {
+            display: inline-block;
 
             input[type='checkbox'] {
                 width: 10%;
             }
 
             a {
-                margin: $indent auto $indent 0;
-                color: #8bd5d6;
-                padding: $indent;
-                border-radius: 30px;
-                text-align: left;
-            }
-
-            &--choose-file {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-
-                span {
-                    margin-left: $indent;
-                }
-            }
-
-            .output-image {
-                max-width: 250px;
-                margin-top: $indent;
+                @include link-button;
             }
         }
 
@@ -422,6 +396,7 @@
                 transition: all .5s ease-in;
             }
 
+            .input-button--choose-media,
             .input-button {
                 opacity: 0;
                 transform: translate(0, 200vw);
@@ -448,4 +423,3 @@
         }
     }
 }
-

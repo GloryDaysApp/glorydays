@@ -1,6 +1,7 @@
 nav {
     position: fixed;
     bottom: 0;
+    background-color: $white;
 
     ul {
         width: 100%;
@@ -8,13 +9,38 @@ nav {
         justify-content: space-around;
         position: fixed;
         bottom: 0;
-        border-top: 1px solid #8bd5d6;
         padding: 1em 0;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+        background-color: $white;
+        align-items: baseline;
 
         a {
-            font-family: Avenir-Light;
-            font-size: .8em;
-            color: #64a9a9;
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                p {
+                    color: $grey;
+                }
+                
+                svg {
+                    color: $grey;
+                    padding: 0 0 0.5em;
+                    width: 2em;
+                    height: 2em;
+                }
+            }
+
+            .active-navigation {
+                p {
+                    color: $lightblue;
+                }
+                
+                svg .cls-1 {
+                    fill: $lightblue;
+                }
+            }
         }
     }
 }

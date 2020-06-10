@@ -46,10 +46,20 @@ app
     // Check if ACCESS_TOKEN exists. If not, fetch a new one with the refresh token.
     .get('/', async (req, res) => {
         if (req.cookies.ACCESS_TOKEN) {
-            router.basicPage(res, 'home', 'Home');
+            router.basicPage(res, 'memories-overview', 'Herinneringen');
         } else {
             getRefreshToken(req, res).then(() => {
-                router.basicPage(res, 'home', 'Home');
+                router.basicPage(res, 'memories-overview', 'Herinneringen');
+            });
+        }
+    })
+
+    .get('/memories-overview', async (req, res) => {
+        if (req.cookies.ACCESS_TOKEN) {
+            router.basicPage(res, 'memories-overview', 'Herinneringen');
+        } else {
+            getRefreshToken(req, res).then(() => {
+                router.basicPage(res, 'memories-overview', 'Herinneringen');
             });
         }
     })
@@ -70,6 +80,16 @@ app
         } else {
             getRefreshToken(req, res).then(() => {
                 router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
+            });
+        }
+    })
+
+    .get('/settings', async (req, res) => {
+        if (req.cookies.ACCESS_TOKEN) {
+            router.basicPage(res, 'settings', 'Instellingen');
+        } else {
+            getRefreshToken(req, res).then(() => {
+                router.basicPage(res, 'settings', 'Instellingen');
             });
         }
     });

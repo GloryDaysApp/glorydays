@@ -46,10 +46,20 @@ app
     // Check if ACCESS_TOKEN exists. If not, fetch a new one with the refresh token.
     .get('/', async (req, res) => {
         if (req.cookies.ACCESS_TOKEN) {
-            router.basicPage(res, 'home', 'Home');
+            router.basicPage(res, 'memories-overview', 'Herinneringen');
         } else {
             getRefreshToken(req, res).then(() => {
-                router.basicPage(res, 'home', 'Home');
+                router.basicPage(res, 'memories-overview', 'Herinneringen');
+            });
+        }
+    })
+
+    .get('/memories-overview', async (req, res) => {
+        if (req.cookies.ACCESS_TOKEN) {
+            router.basicPage(res, 'memories-overview', 'Herinneringen');
+        } else {
+            getRefreshToken(req, res).then(() => {
+                router.basicPage(res, 'memories-overview', 'Herinneringen');
             });
         }
     })
@@ -74,32 +84,12 @@ app
         }
     })
 
-    .get('/add-image', async (req, res) => {
+    .get('/settings', async (req, res) => {
         if (req.cookies.ACCESS_TOKEN) {
-            router.pageWithData(res, 'add-image', 'Afbeelding toevoegen', caregivers);
+            router.basicPage(res, 'settings', 'Instellingen');
         } else {
             getRefreshToken(req, res).then(() => {
-                router.pageWithData(res, 'add-image', 'Afbeelding toevoegen', caregivers);
-            });
-        }
-    })
-
-    .get('/add-voice-recording', async (req, res) => {
-        if (req.cookies.ACCESS_TOKEN) {
-            router.pageWithData(res, 'add-voice-recording', 'Spraak memo opnemen', caregivers);
-        } else {
-            getRefreshToken(req, res).then(() => {
-                router.pageWithData(res, 'add-voice-recording', 'Spraak memo opnemen', caregivers);
-            });
-        }
-    })
-
-    .get('/add-text', async (req, res) => {
-        if (req.cookies.ACCESS_TOKEN) {
-            router.pageWithData(res, 'add-text', 'Tekst toevoegen', caregivers);
-        } else {
-            getRefreshToken(req, res).then(() => {
-                router.pageWithData(res, 'add-text', 'Tekst toevoegen', caregivers);
+                router.basicPage(res, 'settings', 'Instellingen');
             });
         }
     });

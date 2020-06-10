@@ -1,13 +1,46 @@
 <nav>
-  <ul>
-    <a href="/">
-      <li>Herinneringen</li>
-    </a>
-    <a href="">
-      <li>Muziek</li>
-    </a>
-    <a href="">
-      <li>Instellingen</li>
-    </a>
-  </ul>
+    <ul>
+        <a href="/memories-overview">
+            <% if(title == 'Herinneringen'){ %> <% console.log('herinneringen navigatie') %>
+            <li class="active-navigation">
+                    <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20.21"><defs><style>.cls-1{fill:#777;}</style></defs><title>memories</title><path class="cls-1" d="M9,9.55A13.19,13.19,0,0,0,2.32,6.2,2,2,0,0,0,0,8.18v6.24C0,16.1.72,17,1.71,17.11A13.09,13.09,0,0,1,8.34,20a1.05,1.05,0,0,0,1.27,0,13.17,13.17,0,0,1,6.68-2.9,2.1,2.1,0,0,0,1.71-2V8.18a2,2,0,0,0-2.32-2A13.19,13.19,0,0,0,9,9.55ZM9,6A3,3,0,1,0,6,3,3,3,0,0,0,9,6Z" transform="translate(0 0)"/></svg>
+                <p>Herinneringen</p>
+            </li>
+            <% } else { %>
+            <!-- The html-formatter adds a standart closing </li> element. To prefent problems, I wrote the code dubble -->
+            <li class="">
+                    <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20.21"><defs><style>.cls-1{fill:#777;}</style></defs><title>memories</title><path class="cls-1" d="M9,9.55A13.19,13.19,0,0,0,2.32,6.2,2,2,0,0,0,0,8.18v6.24C0,16.1.72,17,1.71,17.11A13.09,13.09,0,0,1,8.34,20a1.05,1.05,0,0,0,1.27,0,13.17,13.17,0,0,1,6.68-2.9,2.1,2.1,0,0,0,1.71-2V8.18a2,2,0,0,0-2.32-2A13.19,13.19,0,0,0,9,9.55ZM9,6A3,3,0,1,0,6,3,3,3,0,0,0,9,6Z" transform="translate(0 0)"/></svg>
+                <p>Herinneringen</p>
+            </li>
+            <% } %>
+        </a>
+        <a href="/music-overview">
+            <% if(title == 'Muziek'){ %> <% console.log('Muziek navigatie') %>
+            <li class="active-navigation">
+                    <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18"><defs><style>.cls-1{fill:#777;}</style></defs><title>music</title><path class="cls-1" d="M6,2v8.55a3.94,3.94,0,0,0-3.33-.32,4,4,0,0,0,2,7.72A4.1,4.1,0,0,0,8,13.85V4h2a2,2,0,0,0,0-4H8A2,2,0,0,0,6,2Z" transform="translate(0 0)"/></svg>
+                <p>Muziek</p>
+            </li>
+            <% } else { %>
+            <!-- The html-formatter adds a standart closing </li> element. To prefent problems, I wrote the code dubble -->
+            <li class="">
+                    <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18"><defs><style>.cls-1{fill:#777;}</style></defs><title>music</title><path class="cls-1" d="M6,2v8.55a3.94,3.94,0,0,0-3.33-.32,4,4,0,0,0,2,7.72A4.1,4.1,0,0,0,8,13.85V4h2a2,2,0,0,0,0-4H8A2,2,0,0,0,6,2Z" transform="translate(0 0)"/></svg>
+                <p>Muziek</p>
+            </li>
+            <% } %>
+        </a>
+        <a href="/settings">
+            <% if(title == 'Instellingen'){ %> <% console.log('Instellingen navigatie') %>
+            <li class="active-navigation">
+                <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs><style>.cls-1{fill:#777;}</style></defs><title>settings</title><path class="cls-1" d="M3,18a1,1,0,0,0,1,1H9V17H4A1,1,0,0,0,3,18ZM3,6A1,1,0,0,0,4,7h9V5H4A1,1,0,0,0,3,6ZM13,20V19h7a1,1,0,0,0,0-2H13V16a1,1,0,0,0-2,0v4a1,1,0,0,0,2,0ZM7,10v1H4a1,1,0,0,0,0,2H7v1a1,1,0,0,0,2,0V10a1,1,0,0,0-2,0Zm14,2a1,1,0,0,0-1-1H11v2h9A1,1,0,0,0,21,12ZM16,9a1,1,0,0,0,1-1V7h3a1,1,0,0,0,0-2H17V4a1,1,0,0,0-2,0V8A1,1,0,0,0,16,9Z" transform="translate(-3 -3)"/></svg>
+                <p>Instellingen</p>
+            </li>
+            <% } else { %>
+             <!-- The html-formatter adds a standart closing </li> element. To prefent problems, I wrote the code dubble -->
+            <li class="">
+                <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs><style>.cls-1{fill:#777;}</style></defs><title>settings</title><path class="cls-1" d="M3,18a1,1,0,0,0,1,1H9V17H4A1,1,0,0,0,3,18ZM3,6A1,1,0,0,0,4,7h9V5H4A1,1,0,0,0,3,6ZM13,20V19h7a1,1,0,0,0,0-2H13V16a1,1,0,0,0-2,0v4a1,1,0,0,0,2,0ZM7,10v1H4a1,1,0,0,0,0,2H7v1a1,1,0,0,0,2,0V10a1,1,0,0,0-2,0Zm14,2a1,1,0,0,0-1-1H11v2h9A1,1,0,0,0,21,12ZM16,9a1,1,0,0,0,1-1V7h3a1,1,0,0,0,0-2H17V4a1,1,0,0,0-2,0V8A1,1,0,0,0,16,9Z" transform="translate(-3 -3)"/></svg>
+                <p>Instellingen</p>
+            </li>
+            <% } %>
+        </a>
+    </ul>
 </nav>

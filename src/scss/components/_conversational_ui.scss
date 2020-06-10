@@ -59,6 +59,7 @@
                 padding: $indent;
                 text-align: left;
                 margin: 0 auto -($indent) 0;
+            
             }
 
             .input {
@@ -73,7 +74,7 @@
                 border-radius: 15px 15px 15px 0;
                 padding: $indent;
 
-                input[type='checkbox'] {
+                input[type='radio'] {
                     width: 10%;
                 }
 
@@ -99,6 +100,37 @@
                     right: -1.5rem;
                     position: absolute;
                 }
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        display: inline-block;
+                        margin: .2rem;
+
+                        input[type='checkbox'] {
+                            display: none;
+                            
+                            &:checked {
+                                + label svg .cls-1 {
+                                    fill: #ffed83;
+                                }
+                            }
+                        }
+
+                        label {
+                            cursor: pointer;
+                        }
+
+                        svg {
+                            height: 2.5rem;
+                            width: 2.5rem;
+                            transition-duration: 0.2s;
+                            transform-origin: 50% 50%;
+                        }        
+                    }
+                
+                }
             }
 
             .input-text {
@@ -123,53 +155,84 @@
                 }
             }
         }
+    }
 
-        // The hidden-fieldset class comes from JS
-        .hidden-fieldset {
+    // The hidden-fieldset class comes from JS
+    .hidden-fieldset {
+        position: absolute;
+        top: 0;
+        height: 90vh;
+        width: 100%;
+        max-width: 50rem;
+        padding: $indent 2.5rem $indent $indent;
+        z-index: 0;
+
+        .back {
+            opacity: 0;
+        }
+
+        .legend-text {
+            opacity: 0;
             position: absolute;
-            top: 0;
-            height: 90vh;
-            width: 100%;
-            max-width: 50rem;
-            padding: $indent 2.5rem $indent $indent;
-            z-index: 0;
+            top: 20%;
+            width: 80vw;
+            max-width: 30rem;
+            margin: 0 auto;
+            transform: translate(0, -30vw);
+            transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
+        }
 
-            .back {
+        .input {
+            opacity: 0;
+            margin: 0 auto;
+        }
+
+        .input-text {
+            opacity: 0;
+            border-radius: 15px;
+            text-align: left;
+            position: fixed;
+            bottom: 5rem;
+            left: 5%;
+            width: 90vw;
+            max-width: 40rem;
+            background: transparent;
+            transform: translate(0, -30vw);
+            transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
+
+            .send-button {
                 opacity: 0;
             }
+        }
 
-            .legend-text {
-                opacity: 0;
-                position: absolute;
-                top: 10%;
-                width: 80vw;
-                max-width: 30rem;
-                margin: 0 auto;
-                transform: translate(0, -30vw);
-                transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
+        .input-button {
+            width: 80vw;
+            max-width: 30rem;
+            opacity: 0;
+            top: 40%;
+            position: absolute;
+            text-align: left;
+            margin: $indent auto $indent 0;
+            display: inline-block;
+            transform: translate(0, -30vw);
+            transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
+
+            input[type='checkbox'] {
+                width: 10vw;
             }
+        }
 
-            .input {
-                opacity: 0;
-                margin: 0 auto;
-            }
+        .buttons {
+            position: absolute;
+            opacity: 0;
+            transform: translate(0, -200vw);
+            transition: all 1s ease-in-out;
+            left: 5%;
+            width: 90vw;
+            max-width: 40rem;
 
-            .input-text {
-                opacity: 0;
-                border-radius: 15px;
-                text-align: left;
-                position: fixed;
-                bottom: 5rem;
-                left: 5%;
-                width: 90vw;
-                max-width: 40rem;
-                background: transparent;
-                transform: translate(0, -30vw);
-                transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
-
-                .send-button {
-                    opacity: 0;
-                }
+            .button {
+                width: 100%;
             }
 
             .input-button {
@@ -196,48 +259,72 @@
                 left: 5%;
                 width: 90vw;
                 max-width: 40rem;
-
-                .button {
-                    width: 100%;
-                }
-
-                .next {
-                    opacity: 0;
-                }
-
-                .save {
-                    text-align: center;
-                }
+            .next {
+                opacity: 0;
             }
 
-            .output {
-                max-width: 30rem;
-                opacity: 0;
-                transform: translate(0, -30vw);
-                transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
-
-                textarea {
-                    opacity: 0;
-                }
+            .save {
+                text-align: center;
             }
         }
 
-        // The active-fieldset class comes from JS
-        .active-fieldset {
-            position: absolute;
-            z-index: 99;
-            top: 0;
-            height: 90vh;
-            width: 100%;
-            max-width: 50rem;
-            padding: $indent 2.5rem $indent $indent;
-            overflow: scroll;
+        .output {
+            max-width: 30rem;
+            opacity: 0;
+            transform: translate(0, -30vw);
+            transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
 
-            .back {
-                opacity: 1;
+            textarea {
+                opacity: 0;
             }
+        }
+    }
 
-            .legend-text {
+    // The active-fieldset class comes from JS
+    .active-fieldset {
+        position: absolute;
+        z-index: 99;
+        top: 0;
+        height: 90vh;
+        width: 100%;
+        max-width: 50rem;
+        padding: $indent 2.5rem $indent $indent;
+        overflow: scroll;
+
+        .back {
+            opacity: 1;
+        }
+
+        .legend-text {
+            opacity: 1;
+            position: absolute;
+            top: 20%;
+            width: 80vw;
+            max-width: 30rem;
+            margin: 0 auto;
+            transform: translate(0, -10%);
+            transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
+        }
+
+        .input {
+            opacity: 1;
+            margin: 0 auto;
+        }
+
+        .input-text {
+            opacity: 1;
+            border-radius: 15px;
+            text-align: left;
+            position: fixed;
+            z-index: 100;
+            bottom: 5rem;
+            width: 90vw;
+            max-width: 40rem;
+            left: 5%;
+            transform: translate(0, -10%);
+            transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+
+            input[type='text'] {
                 opacity: 1;
                 position: absolute;
                 top: 10%;
@@ -246,11 +333,25 @@
                 margin: 0 auto;
                 transform: translate(0, -10%);
                 transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
+                z-index: 100;
+                width: 70vw;
+                border: 0;
+                outline: 0;
+                background: transparent;
+                padding: $indent;
+                margin: 0 auto 0 0;
             }
 
-            .input {
+            .send-button {
                 opacity: 1;
-                margin: 0 auto;
+                width: 20%;
+                text-align: center;
+                color: #64a9a9;
+                height: 100%;
+                margin: 0;
+                padding: $indent;
+                border-radius: 0 15px 15px 0;
+                text-decoration: none;
             }
 
             .input-text {
@@ -287,11 +388,29 @@
                     padding: $indent;
                     border-radius: 0 15px 15px 0;
                     text-decoration: none;
-                }
+                  
+                    &:hover {
+                        text-decoration: underline;
+                    }
+              }
+        }
 
-                .send-button:hover {
-                    text-decoration: underline;
-                }
+        // .input-button like 'open spotify' in text cloud
+        .input-button {
+            opacity: 1;
+            position: absolute;
+            width: 80vw;
+            max-width: 40rem;
+            top: 40%;
+            padding: $indent;
+            text-align: left;
+            margin: $indent auto $indent 0;
+            display: inline-block;
+            transform: translate(0, -10%);
+            transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+
+            input[type='checkbox'] {
+                width: 10%;
             }
 
             // .input-button like 'open spotify' in text cloud
@@ -315,34 +434,50 @@
                 transform: translate(0, -10%);
                 transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
             }
+        }
 
-            // .buttons below the page like "Next"
-            .buttons {
-                position: absolute;
-                opacity: 1;
-                transition: all 1s ease-in-out;
-                left: 5%;
-                width: 90vw;
-                max-width: 40rem;
+        // .buttons below the page like "Next"
+        .buttons {
+            position: absolute;
+            opacity: 1;
+            transition: all 1s ease-in-out;
+            left: 5%;
+            width: 90vw;
+            max-width: 40rem;
 
-                .button {
-                    width: 100%;
-                }
-
-                .next {
-                    opacity: 0;
-                }
-
-                .save {
-                    text-align: center;
-                }
+            .button {
+                width: 100%;
             }
 
-            .output {
+            .next {
+                opacity: 0;
+            }
+
+            .save {
+                text-align: center;
+            }
+        }
+
+        .output {
+            max-width: 30rem;
+            margin: .5rem 0 0 auto;
+            display: block;
+            opacity: 1;
+            background-color: transparent;
+            transform: translate(0, -10%);
+            transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
+
+            textarea {
+                font-size: 1.2rem;
+                color: #8bd5d8;
+                border-radius: 15px 15px 0;
+                text-align: right;
+                padding: .5rem $indent;
+                width: 80vw;
+                text-align: right;
                 max-width: 30rem;
-                margin: .5rem 0 0 auto;
+                margin: 0 0 0 auto;
                 display: block;
-                opacity: 1;
                 background-color: transparent;
                 transform: translate(0, -10%);
                 transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
@@ -361,22 +496,23 @@
                     background-color: transparent;
                 }
             }
+        }
 
-            .output:nth-of-type(1) {
-                margin-top: 65%;
+        .output:nth-of-type(1) {
+            margin-top: 65%;
+        }
+
+        .output:nth-last-of-type(1) {
+            margin: 0 0 8rem auto;
+        }
+
+        // Animation setting: the next fieldset comes in from below (*the previous fieldset from above, see .hidden-fieldset).
+        ~ .hidden-fieldset {
+            .legend-text {
+                opacity: 0;
+                transform: translate(0, 150vw);
+                transition: all .5s ease-in;
             }
-
-            .output:nth-last-of-type(1) {
-                margin: 0 0 8rem auto;
-            }
-
-            // Animation setting: the next fieldset comes in from below (*the previous fieldset from above, see .hidden-fieldset).
-            ~ .hidden-fieldset {
-                .legend-text {
-                    opacity: 0;
-                    transform: translate(0, 150vw);
-                    transition: all .5s ease-in;
-                }
 
                 .input-button,
                 .input-button--choose-media {
@@ -385,24 +521,24 @@
                     transition: all .5s ease-in;
                 }
 
-                .input-text {
-                    opacity: 0;
-                    transform: translate(0, 200vw);
-                    transition: all .5s ease-in;
-                }
+            .input-text {
+                opacity: 0;
+                transform: translate(0, 200vw);
+                transition: all .5s ease-in;
+            }
 
-                .buttons {
-                    opacity: 0;
-                    transform: translate(0, 200vw);
-                    transition: all 1s ease-in-out;
-                }
+            .buttons {
+                opacity: 0;
+                transform: translate(0, 200vw);
+                transition: all 1s ease-in-out;
+            }
 
-                .output {
-                    opacity: 0;
-                    transform: translate(0, 150vw);
-                    transition: all .5s ease-in;
-                }
+            .output {
+                opacity: 0;
+                transform: translate(0, 150vw);
+                transition: all .5s ease-in;
             }
         }
     }
 }
+

@@ -98,6 +98,12 @@
                         display: inline-block;
                         margin: .2rem;
 
+                        &:hover {
+                            + label svg .cls-1 {
+                                fill: #ffed83;
+                            }
+                        }
+
                         input[type='checkbox'] {
                             display: none;
                             

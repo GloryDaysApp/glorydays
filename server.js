@@ -90,7 +90,7 @@ app
         } else {
             getRefreshToken(req, res).then(() => {
                 router.basicPage(res, 'settings', 'Instellingen');
-            })
+            });
 
         }
     })

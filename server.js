@@ -71,7 +71,7 @@ app
             getRefreshToken(req, res).then(() => {
                 router.basicPage(res, 'login', 'Login');
             });
-        }  
+        }
     })
 
     .get('/add-memory', async (req, res) => {
@@ -90,6 +90,16 @@ app
         } else {
             getRefreshToken(req, res).then(() => {
                 router.basicPage(res, 'settings', 'Instellingen');
+            })
+
+        }
+    })
+    .get('/music-overview', async (req, res) => {
+        if (req.cookies.ACCESS_TOKEN) {
+            router.pageWithData(res, 'music-overview', 'Vind opgeslagen en nieuwe muziek');
+        } else {
+            getRefreshToken(req, res).then(() => {
+                router.pageWithData(res, 'music-overview', 'Vind opgeslagen en nieuwe muziek');
             });
         }
     });

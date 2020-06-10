@@ -26,6 +26,8 @@ function searchXML(song) {
     xhr.onload = () => {
         const responseObject = xhr.response;
         const data = cleanData(responseObject);
-        injectSpotifyData(data);
+
+        const results = document.getElementsByClassName('results')[0];
+        injectSpotifyData(data, results, 3, '<h1>Bedoelde je één van deze nummers?</h1>');
     };
 }

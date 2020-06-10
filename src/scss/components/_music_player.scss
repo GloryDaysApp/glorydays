@@ -2,10 +2,11 @@
     padding-left: 0.4rem;
     display: flex;
     position: fixed;
-    bottom: 48px;
+    bottom: 70px;
     width: 100%;
     background-color: $brokenwhite;
     visibility: hidden;
+    transition: height 2s ease-in-out;
 
     #song-information {
         width: 80%
@@ -32,5 +33,38 @@
 
     &.visible {
         visibility: visible;
+    }
+}
+
+.music-player--small.big {
+    height: 80vh;
+    transition: height 2s ease-in-out;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+
+    #song-information {
+        width: 100%;
+
+        .song {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                margin-bottom: 30px;
+                width: 80%;
+                max-width: 80%;
+            }
+
+            .song-information {
+                text-align: center;
+            }
+        }
+    }
+
+    .controls {
+        width: 100%;
+        margin-top: 30px;
     }
 }

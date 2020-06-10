@@ -1,9 +1,17 @@
-function showPlayerSmall (song) {
+const musicPlayer = document.getElementsByClassName('music-player--small')[0];
+const songInformation = document.getElementById('song-information');
+
+songInformation.addEventListener('click', transformMusicPlayer);
+
+function transformMusicPlayer() {
+    musicPlayer.classList.add('big');
+}
+
+function showPlayerSmall(song) {
     // Make player visible
-    document.getElementsByClassName('music-player--small')[0].classList.add('visible');
+    musicPlayer.classList.add('visible');
 
     // Clear player and add song in it
-    const songInformation = document.getElementById('song-information');
     songInformation.innerHTML = '';
     songInformation.append(song);
 
@@ -21,7 +29,7 @@ controls.addEventListener('click', togglePausePlay);
 
 let playState = false;
 
-function togglePausePlay () {
+function togglePausePlay() {
     // Get control img element
     let control = controls.children;
     control = control[0];

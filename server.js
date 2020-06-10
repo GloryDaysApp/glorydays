@@ -90,7 +90,7 @@ app
         } else {
             getRefreshToken(req, res).then(() => {
                 router.pageWithData(res, 'music-overview', 'Vind opgeslagen en nieuwe muziek');
-            })
+            });
         }
     })
 

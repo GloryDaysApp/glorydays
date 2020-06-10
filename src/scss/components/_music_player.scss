@@ -1,0 +1,36 @@
+.music-player--small {
+    padding-left: 0.4rem;
+    display: flex;
+    position: fixed;
+    bottom: 48px;
+    width: 100%;
+    background-color: $brokenwhite;
+    visibility: hidden;
+
+    #song-information {
+        width: 80%
+    }
+
+    .song {
+        margin: .4rem 0;
+
+        img {
+            min-width: 55px;
+        }
+    }
+
+    .controls {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 20px;
+        }
+    }
+
+    &.visible {
+        visibility: visible;
+    }
+}

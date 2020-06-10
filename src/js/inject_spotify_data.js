@@ -1,18 +1,28 @@
-function injectSpotifyData(data) {
-    console.log('cleaned data: ', data);
-    const results = document.getElementById('results');
-
+function injectSpotifyData(data, location, length, title = '') {
     // Clear results
-    results.innerHTML = '';
+    location.innerHTML = title;
+
+    console.log(data);
 
     // Insert results
-    data.tracks.forEach(song => {
-        let li = document.createElement('li');
-        li.innerHTML = song.name;
-        li.id = song.id;
-        li.className = 'song';
-        results.appendChild(li);
-    });
+    for (let i = 0; i < length; i++) {
+        // Create an info container element
+        const info = document.createElement('div');
+
+        info.innerHTML = 
+            `<img src="${data.tracks[i].imageSmall}" alt="album cover">
+             <div class="song-information">
+                <p>${data.tracks[i].name}</p>
+                <p>${data.tracks[i].artists}</p>
+             </div>`;
+
+        // Set id of div to song id and add class 'song' to every div
+        info.id = data.tracks[i].id;
+        info.className = 'song';
+
+        // Push divs to given location 
+        location.appendChild(info);
+    }
 
     // Add event listener to play song
     const songs = document.getElementsByClassName('song');
@@ -26,5 +36,10 @@ function injectSpotifyData(data) {
 
     function songCallback(e) {
         playSong(this.id);
+
+        // Clone object and show in player
+        const song = this.cloneNode(true);
+        console.log(song);
+        showPlayerSmall(song);
     }
 }

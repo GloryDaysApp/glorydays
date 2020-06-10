@@ -1,18 +1,15 @@
 <header>
     <%- include('partials/head') %>
-    <h1><%= title %></h1>
 </header>  
-    <main class="spotify-overview">
-        <h1>Hier kun je een nieuw nummer vinden.</h1>
-        <section class="playlist">
-        </section>
+    <div class="container">
+        <main class="spotify-overview">
+            <h1>Hier kun je een nieuw nummer vinden.</h1>
+            <%- include('partials/playlist') %>
 
-        <section class="playlist">
-        </section>
-
-        <%- include('partials/search') %>
-        <ul id="results"></ul>
-    </main>
-  
+            <%- include('partials/search') %>
+            <div class="results"></div>
+        </main>
+    </div>
+    <%- include('partials/music-player-small') %>
   <%- include('partials/navigation') %>
   <%- include('partials/footer') %>

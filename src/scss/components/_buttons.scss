@@ -29,3 +29,21 @@
         padding: 1em;
     }
 }
+
+.button--empty {
+    position: relative;
+    color: $lightblue;
+    padding-right: 25px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url('/arrow_right.svg') no-repeat;
+        background-size: 22px;
+        width: 22px;
+        height: 22px;
+    }
+}

@@ -13,7 +13,7 @@
             <legend class="legend-text">
                 Voeg muziek toe aan de herinnering
             </legend>
-            <div class="input input-button input-button--normal">
+            <div class="input input-button">
                 <a href="/" class="">Muziekstream openen</a>
             </div>
             <div class="buttons">
@@ -57,12 +57,48 @@
         <fieldset id="input-4">
             <legend class="legend-text">Waar gaat de herinnering over?</legend>
             <div class="input input-button--choose-media">
-                <a href="/add-image" class="media-button"><img src="./icons/camera_alt-24px.svg"></a>
-                <a href="/add-voice-recording" class="media-button"><img src="./icons/mic-24px.svg"></a>
-                <a href="/add-text" class="media-button"><img src="./icons/text_fields-24px.svg"></a>
+                <div class="buttons--choose-media">
+                    <button class="media-button" id="button--add-image"><img src="./icons/camera_alt-24px.svg"></button>
+                    <button class="media-button" id="button--add-voice-recording"><img src="./icons/mic-24px.svg"></button>
+                    <button class="media-button" id="button--add-text"><img src="./icons/text_fields-24px.svg"></button>
+                </div>
+                <div class="output--add-image" id="output--add-image">
+                    <div class="input-button--choose-file">
+                        <input type="file" id="real-file" hidden="hidden" />
+                        <button type="button" id="custom-button" class="button">
+                            <!--                        <img src="./icons/camera_alt-24px.svg" alt="Image Icon" />-->
+                            Kies een afbeelding
+                        </button>
+                        <span id="custom-text">Nog geen afbeelding gekozen.</span>
+                    </div>
+                    <img id="output-image" class="output-image hide" />
+                </div>
+                <div class="output--add-voice-recoding" id="output--add-voice-recoding">
+                    <div class="mic-container">
+                        <div class="circle">
+                            <img class="mic-icon" src="./voice_icon.png" alt="Microphone icon">
+                        </div>
+                        <div class="timer">
+                            <span class="minutes">00</span> <span class="colon">:</span><span class="seconds">00</span>
+                        </div>
+                    </div>
+                    <audio></audio>
+                    <audio id="savedAudio" controls></audio>
+                </div>
+                <div class="output--add-text" id="output--add-text">
+                    <div class="input input-text">
+                        <input
+                                id="description"
+                                type="text"
+                                placeholder="De herinnering gaat over"
+                                value=""
+                                maxlength="40"
+                        />
+                    </div>
+                </div>
             </div>
             <div class="buttons">
-                <a class="button save"> Herinnering opslaan</a>
+                <a href="#input-5" class="button next "> Volgende</a>
             </div>
         </fieldset>
 

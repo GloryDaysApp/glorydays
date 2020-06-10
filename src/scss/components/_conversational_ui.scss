@@ -36,7 +36,7 @@
                 left: 5%;
                 width: 90vw;
                 max-width: 40rem;
-                bottom: 8rem;
+                //bottom: 8rem;
 
                 .button {
                     width: 100%;
@@ -101,10 +101,6 @@
                 }
             }
 
-            .input-button--choose-media {
-                display: flex;
-            }
-
             .input-text {
                 align-items: center;
                 box-shadow: -1px 4px 26px -12px $grey;
@@ -145,7 +141,7 @@
             .legend-text {
                 opacity: 0;
                 position: absolute;
-                top: 20%;
+                top: 10%;
                 width: 80vw;
                 max-width: 30rem;
                 margin: 0 auto;
@@ -244,7 +240,7 @@
             .legend-text {
                 opacity: 1;
                 position: absolute;
-                top: 20%;
+                top: 10%;
                 width: 80vw;
                 max-width: 30rem;
                 margin: 0 auto;

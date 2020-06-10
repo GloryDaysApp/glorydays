@@ -24,7 +24,7 @@
                 background: linear-gradient(180deg, rgba(255, 255, 255, .8995973389355743) 50%, rgba(255, 255, 255, 0) 100%);
 
                 a {
-                    color: #8bd5d8;
+                    color: $lightblue;
                     font-family: Avenir-Light;
                 }
             }
@@ -36,12 +36,12 @@
                 left: 5%;
                 width: 90vw;
                 max-width: 40rem;
-                bottom: 8rem;
+                //bottom: 8rem;
 
                 .button {
                     width: 100%;
                     background-color: transparent;
-                    color: #7e7e7e;
+                    color: $grey;
                     text-decoration: underline;
                     text-align: right;
                 }
@@ -54,7 +54,7 @@
                 width: 80vw;
                 max-width: 30rem;
                 text-align: center;
-                color: #7d7d7d;
+                color: $grey;
                 border-radius: 15px 15px 15px 0;
                 padding: $indent;
                 text-align: left;
@@ -64,31 +64,41 @@
 
             .input {
                 margin: $indent auto $indent 0;
-                background-color: #fff;
+                background-color: $white;
             }
 
             .input-button {
-                width: 80vw;
-                max-width: 30rem;
+                @include input-button-positioning;
+
+                display: inline-block;
                 border-radius: 15px 15px 15px 0;
                 padding: $indent;
-                text-align: left;
-                margin: $indent auto $indent 0;
-                display: inline-block;
-                position: absolute;
-                top: 40%;
 
                 input[type='radio'] {
                     width: 10%;
                 }
 
                 a {
-                    margin: $indent auto $indent 0;
-                    color: #8bd5d6;
-                    padding: $indent;
-                    border-radius: 30px;
-                    text-align: left;
-                    box-shadow: -1px 4px 26px -12px #929292;
+                    @include link-button;
+                    box-shadow: -1px 4px 26px -12px $grey;
+                }
+
+                &--choose-file {
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        margin-top: $indent;
+                    }
+                }
+
+                .output-image {
+                    max-width: 250px;
+                    max-height: 200px;
+                    margin-top: $indent;
+                    border-radius: 4px;
+                    right: -1.5rem;
+                    position: absolute;
                 }
 
                 ul {
@@ -125,7 +135,7 @@
 
             .input-text {
                 align-items: center;
-                box-shadow: -1px 4px 26px -12px #929292;
+                box-shadow: -1px 4px 26px -12px $grey;
                 border-radius: 15px;
                 display: flex;
                 position: absolute;
@@ -136,8 +146,8 @@
                 left: 5%;
 
                 input[type='text'] {
-                    background-color: #fff;
-                    color: #64a9a9;
+                    background-color: $white;
+                    color: $lightblue;
                     margin: 0 auto 0 0;
                     border-radius: 15px;
                     padding: $indent;
@@ -225,6 +235,30 @@
                 width: 100%;
             }
 
+            .input-button {
+                input[type='checkbox'] {
+                    width: 10vw;
+                }
+            }
+
+            .input-button,
+            .input-button--choose-media {
+                @include input-button-positioning;
+
+                display: inline-block;
+                opacity: 0;
+                transform: translate(0, -30vw);
+                transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
+            }
+
+            .buttons {
+                position: absolute;
+                opacity: 0;
+                transform: translate(0, -200vw);
+                transition: all 1s ease-in-out;
+                left: 5%;
+                width: 90vw;
+                max-width: 40rem;
             .next {
                 opacity: 0;
             }
@@ -292,6 +326,13 @@
 
             input[type='text'] {
                 opacity: 1;
+                position: absolute;
+                top: 10%;
+                width: 80vw;
+                max-width: 30rem;
+                margin: 0 auto;
+                transform: translate(0, -10%);
+                transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
                 z-index: 100;
                 width: 70vw;
                 border: 0;
@@ -313,9 +354,45 @@
                 text-decoration: none;
             }
 
-            .send-button:hover {
-                text-decoration: underline;
-            }
+            .input-text {
+                opacity: 1;
+                border-radius: 15px;
+                text-align: left;
+                position: fixed;
+                z-index: 100;
+                bottom: 5rem;
+                width: 90vw;
+                max-width: 40rem;
+                left: 5%;
+                transform: translate(0, -10%);
+                transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+
+                input[type='text'] {
+                    opacity: 1;
+                    z-index: 100;
+                    width: 70vw;
+                    border: 0;
+                    outline: 0;
+                    background: transparent;
+                    padding: $indent;
+                    margin: 0 auto 0 0;
+                }
+
+                .send-button {
+                    opacity: 1;
+                    width: 20%;
+                    text-align: center;
+                    color: $lightblue;
+                    height: 100%;
+                    margin: 0;
+                    padding: $indent;
+                    border-radius: 0 15px 15px 0;
+                    text-decoration: none;
+                  
+                    &:hover {
+                        text-decoration: underline;
+                    }
+              }
         }
 
         // .input-button like 'open spotify' in text cloud
@@ -336,27 +413,26 @@
                 width: 10%;
             }
 
-            a {
-                margin: $indent auto $indent 0;
-                color: #8bd5d6;
-                padding: $indent;
-                border-radius: 30px;
-                text-align: left;
-            }
+            // .input-button like 'open spotify' in text cloud
+            .input-button {
+                display: inline-block;
 
-            &--choose-file {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+                input[type='checkbox'] {
+                    width: 10%;
+                }
 
-                span {
-                    margin-left: $indent;
+                a {
+                    @include link-button;
                 }
             }
 
-            .output-image {
-                max-width: 250px;
-                margin-top: $indent;
+            .input-button--choose-media,
+            .input-button {
+                @include input-button-positioning;
+
+                opacity: 1;
+                transform: translate(0, -10%);
+                transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
             }
         }
 
@@ -403,6 +479,22 @@
                 margin: 0 0 0 auto;
                 display: block;
                 background-color: transparent;
+                transform: translate(0, -10%);
+                transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
+
+                textarea {
+                    font-size: 1.2rem;
+                    color: $lightblue;
+                    border-radius: 15px 15px 0;
+                    text-align: right;
+                    padding: .5rem $indent;
+                    width: 80vw;
+                    text-align: right;
+                    max-width: 30rem;
+                    margin: 0 0 0 auto;
+                    display: block;
+                    background-color: transparent;
+                }
             }
         }
 
@@ -422,11 +514,12 @@
                 transition: all .5s ease-in;
             }
 
-            .input-button {
-                opacity: 0;
-                transform: translate(0, 200vw);
-                transition: all .5s ease-in;
-            }
+                .input-button,
+                .input-button--choose-media {
+                    opacity: 0;
+                    transform: translate(0, 200vw);
+                    transition: all .5s ease-in;
+                }
 
             .input-text {
                 opacity: 0;

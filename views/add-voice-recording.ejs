@@ -1,0 +1,36 @@
+<%- include('partials/head') %>
+
+<header></header>
+
+<main class="conversational-ui">
+
+    <!-- Page Content -->
+    <form method="GET" enctype="multipart/form-data">
+        <fieldset id="input-1">
+            <div class="back">
+                <a href="/add-memory">&#8592 terug naar herinnering</a>
+            </div>
+            <legend class="legend-text">Voeg een opname toe</legend>
+            <div class="input input-button">
+                <div class="mic-container">
+                    <div class="circle">
+                        <img class="mic-icon" src="./voice_icon.png" alt="Microphone icon">
+                    </div>
+                    <div class="timer">
+                        <span class="minutes">00</span> <span class="colon">:</span><span class="seconds">00</span>
+                    </div>
+                </div>
+                <audio></audio>
+                <audio id="savedAudio" controls></audio>
+            </div>
+            <div class="buttons">
+                <a class="button save"> Herinnering opslaan</a>
+            </div>
+        </fieldset>
+    </form>
+    <%- include('partials/spotify-navigation-player') %>
+</main>
+
+<!-- <%- include('partials/navigation') %>  -->
+<%- include('partials/footer') %>
+

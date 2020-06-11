@@ -24,7 +24,7 @@
         <fieldset id="input-2">
             <legend class="legend-text">Welk gevoel kregen jullie? </legend>
             <div class="input input-button" id="emotions">
-                <ul>
+                <ul id="checkboxes">
                     <li>
                         <input type="checkbox" id="emotion1" />
                         <label for="emotion1"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +210,8 @@
             <div class="input input-button--choose-media">
                 <div class="buttons--choose-media">
                     <button class="media-button" id="button--add-image"><img src="./icons/camera_alt-24px.svg"></button>
-                    <button class="media-button" id="button--add-voice-recording"><img src="./icons/mic-24px.svg"></button>
+                    <button class="media-button" id="button--add-voice-recording"><img
+                            src="./icons/mic-24px.svg"></button>
                     <button class="media-button" id="button--add-text"><img src="./icons/text_fields-24px.svg"></button>
                 </div>
                 <div class="output--add-image" id="output--add-image">
@@ -238,13 +239,8 @@
                 </div>
                 <div class="output--add-text" id="output--add-text">
                     <div class="input input-text">
-                        <input
-                                id="description"
-                                type="text"
-                                placeholder="De herinnering gaat over"
-                                value=""
-                                maxlength="40"
-                        />
+                        <input id="description" type="text" placeholder="De herinnering gaat over" value=""
+                            maxlength="40" />
                     </div>
                 </div>
             </div>

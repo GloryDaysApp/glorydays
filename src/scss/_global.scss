@@ -1,11 +1,12 @@
 body {
+    position: relative;
     background-color: $white;
 }
 
 .container {
     padding: $indent-xxxl $indent;
     margin: $center-margin;
-    max-width: $max-width;
+    // max-width: $max-width;
 }
 
 .hide {

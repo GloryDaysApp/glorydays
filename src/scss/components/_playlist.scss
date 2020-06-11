@@ -1,0 +1,58 @@
+.spotify-overview {
+    > h1 {
+        padding-bottom: $indent-m;
+    }   
+}
+
+.playlist {
+    margin: $indent-m 0 $indent-xxxl;
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .albums {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        width: 100%;
+        margin: $indent-s 0 $indent-xxs;
+    }
+
+    img {
+        width: calc(20% - 10px);
+        margin: 0 5px;
+        border-radius: 8px;
+    }
+
+    .button--empty {
+        display: block;
+        text-align: right;
+    }
+}
+
+.song {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: $indent-s 0;
+
+    img {
+        width: 20%;
+        max-width: 60px;
+        border-radius: 8px;
+    }
+
+    .song-information {
+        width: calc(80% - 10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+        height: 100%;
+
+        p:first-of-type {
+            font-family: 'Source Sans Bold',sans-serif;
+        }
+    }
+}

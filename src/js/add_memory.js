@@ -22,14 +22,19 @@ function addTextBaloon(index) {
         let valueInitialInputField = initialInputFieldArray[index].value;
         const initialInputField1 = initialInputFieldArray[index];
         const initialInputField = initialInputArray[index];
+        
         if (valueInitialInputField != '') {
-            initialInputField.insertAdjacentHTML('beforebegin', `
-        <div class='output'><textarea class='output-textarea' rows='1'>${valueInitialInputField}</textarea></div>
-        `);
+        
+            if(initialInputField1.id== 'keywords'){
+                initialInputField.insertAdjacentHTML('beforebegin', `
+                <div class='output'><textarea class='output-textarea output-keyword' rows='1' style='width:${valueInitialInputField.length - .5}em;'>${valueInitialInputField}</textarea></div>`);
+            }
+            else{
+                initialInputField.insertAdjacentHTML('beforebegin', `
+                <div class='output'><textarea class='output-textarea' rows='1'>${valueInitialInputField}</textarea></div>`);
+            }
         }
-        console.log(initialInputFieldArray[index].value);
         initialInputFieldArray[index].value = '';
-        console.log(initialInputFieldArray[index].value);
     };
 }
 

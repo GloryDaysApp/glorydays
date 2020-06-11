@@ -88,7 +88,6 @@ app
         }
     })
 
-
     .get('/memory-details', async (req, res) => {
         if (req.cookies.ACCESS_TOKEN) {
             router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers);

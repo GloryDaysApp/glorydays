@@ -2,7 +2,7 @@
 
 <header></header>
 
-<main class="conversational-ui">
+<main class="conversational-ui" id="navigation-state--player-only">
 
     <!-- Page Content -->
     <form method="GET" enctype="multipart/form-data">
@@ -272,8 +272,7 @@
 
         <%- include('partials/scroll-buttons') %>
     </form>
-    <%- include('partials/spotify-navigation-player') %>
 </main>
 
-<!-- <%- include('partials/navigation') %>  -->
+<%- include('partials/navigation-holder') %>
 <%- include('partials/footer') %>

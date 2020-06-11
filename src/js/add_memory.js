@@ -1,18 +1,22 @@
 function AddSendButtonToInputTextFields() {
     const inputTextFields = Array.from(document.querySelectorAll('.input-text'));
-    inputTextFields.forEach((element, index) => {
-        inputTextFields[index].insertAdjacentHTML('beforeend', `
-      <a class='send-button' id='send-button-${index}'>Stuur</a> 
-      `);
-    });
+    if (inputTextFields) {
+        inputTextFields.forEach((element, index) => {
+            inputTextFields[index].insertAdjacentHTML('beforeend', `
+        <a class='send-button' id='send-button-${index}'>Stuur</a> 
+        `);
+        });
+    }
     checkClickedInputSendButton();
 }
 
 function checkClickedInputSendButton() {
     const inputSendButtonsArray = Array.from(document.querySelectorAll('.send-button'));
-    inputSendButtonsArray.forEach((element, index) => {
-        inputSendButtonsArray[index].addEventListener('click', addTextBaloon(index));
-    });
+    if (inputSendButtonsArray) {
+        inputSendButtonsArray.forEach((element, index) => {
+            inputSendButtonsArray[index].addEventListener('click', addTextBaloon(index));
+        });
+    }
 }
 
 function addTextBaloon(index) {

@@ -1,9 +1,13 @@
 const slider = document.getElementById('myRange');
 const output = document.getElementById('demo');
-output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
-slider.oninput = function () {
-    output.innerHTML = this.value;
-    let value = this.value;
-};
+if (slider) {
+    // Display the default slider value
+    output.innerHTML = slider.value;
+
+    slider.oninput = function () {
+        output.innerHTML = this.value;
+        let value = this.value;
+    };
+}

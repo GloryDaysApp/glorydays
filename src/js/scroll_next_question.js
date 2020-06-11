@@ -10,7 +10,9 @@ const textFields = document.querySelectorAll('.input-field');
 const currentFieldset = document.getElementsByClassName('active-fieldset');
 const currentDot = document.getElementsByClassName('active-navigation-dot');
 
-checkboxes.addEventListener('change', checkboxChecked);
+if (checkboxes) {
+    checkboxes.addEventListener('change', checkboxChecked);
+}
 
 // Function to check if checkbox is checked, and go to the next question
 function checkboxChecked() {
@@ -24,8 +26,10 @@ function checkboxChecked() {
     }
 }
 
-for (let i = 0; i < textFields.length; i++) {
-    textFields[i].addEventListener('change', nextQuestion);
+if (textFields) {
+    for (let i = 0; i < textFields.length; i++) {
+        textFields[i].addEventListener('change', nextQuestion);
+    }
 }
 
 // Function to check if input text has a value, and go to the next question

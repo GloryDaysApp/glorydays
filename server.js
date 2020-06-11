@@ -100,10 +100,10 @@ app
 
     .get('/music-overview', async (req, res) => {
         if (req.cookies.ACCESS_TOKEN) {
-            router.pageWithData(res, 'music-overview', 'Vind opgeslagen en nieuwe muziek');
+            router.pageWithData(res, 'music-overview', 'Muziek');
         } else {
             getRefreshToken(req, res).then(() => {
-                router.pageWithData(res, 'music-overview', 'Vind opgeslagen en nieuwe muziek');
+                router.pageWithData(res, 'music-overview', 'Muziek');
             });
         }
     })

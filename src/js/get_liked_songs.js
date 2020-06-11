@@ -19,7 +19,9 @@ function getLikedSongs () {
         injectAlbumCovers(data);
 
         const playlist = document.getElementById('playlist-large');
-        injectSpotifyData(data, playlist, 50, '<h1>Jouw favoriete nummers</h1>');
+        if (playlist) {
+            injectSpotifyData(data, playlist, 50, '<h1>Jouw favoriete nummers</h1>');
+        }
     };
 }
 
@@ -28,14 +30,16 @@ function injectAlbumCovers (data) {
     const albums = document.getElementsByClassName('albums')[0];
 
     // Clear results
-    albums.innerHTML = '';
+    if (albums) {
+        albums.innerHTML = '';
 
-    // Insert the first 5 album covers
-    for (let i = 0; i < 5; i++) {
-        let img = document.createElement('img');
-        img.src = data[i].imageSmall;
-        img.alt = 'album cover from a song of your liked songs';
-        albums.appendChild(img);
+        // Insert the first 5 album covers
+        for (let i = 0; i < 5; i++) {
+            let img = document.createElement('img');
+            img.src = data[i].imageSmall;
+            img.alt = 'album cover from a song of your liked songs';
+            albums.appendChild(img);
+        }
     }
 }
 

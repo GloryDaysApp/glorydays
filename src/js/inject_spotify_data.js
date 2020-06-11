@@ -10,14 +10,14 @@ function injectSpotifyData(data, location, length, title = '') {
         const info = document.createElement('div');
 
         info.innerHTML = 
-            `<img src="${data.tracks[i].imageSmall}" alt="album cover">
+            `<img src="${data[i].imageSmall}" alt="album cover">
              <div class="song-information">
-                <p>${data.tracks[i].name}</p>
-                <p>${data.tracks[i].artists}</p>
+                <p>${data[i].name}</p>
+                <p>${data[i].artists}</p>
              </div>`;
 
         // Set id of div to song id and add class 'song' to every div
-        info.id = data.tracks[i].id;
+        info.id = data[i].id;
         info.className = 'song';
 
         // Push divs to given location 

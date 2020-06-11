@@ -3,7 +3,7 @@ function cleanSpotifyLikedSongs (data) {
         const track = item.track;
     
         return {
-            'song': track.name,
+            'name': track.name,
             'artists': track.artists.map(artist => artist.name),
             'id': track.id,
             'imageSmall': track.album.images.length > 0 ? track.album.images[1].url : null,

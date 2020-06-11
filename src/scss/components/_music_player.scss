@@ -1,4 +1,5 @@
 .music-player--small {
+    height: 73px;
     padding-left: 0.4rem;
     display: flex;
     position: fixed;
@@ -6,17 +7,17 @@
     width: 100%;
     background-color: $brokenwhite;
     visibility: hidden;
-    transition: height 2s ease-in-out;
+    transition: height .7s ease-in-out;
 
-    #song-information {
-        width: 80%
+    .song-info {
+        width: 80%;
     }
 
     .song {
         margin: .4rem 0;
 
         img {
-            min-width: 55px;
+            width: 55px;
         }
     }
 
@@ -28,23 +29,47 @@
 
         img {
             width: 20px;
+            transition: width .7s ease-in-out .2s;
         }
     }
 
     &.visible {
         visibility: visible;
     }
+
+    .back {
+        position: relative;
+        margin-left: 65px;
+        display: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url('./icons/arrow_back.svg') no-repeat;
+            background-size: 22px;
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    .button {
+        margin: 0 auto;
+        display: none;
+    }
 }
 
 .music-player--small.big {
-    height: 80vh;
-    transition: height 2s ease-in-out;
-    justify-content: center;
+    height: 90vh;
+    transition: all .7s ease-in-out;
+    justify-content: space-around;
     display: flex;
     flex-direction: column;
     padding-left: 0;
 
-    #song-information {
+    .song-info {
         width: 100%;
 
         .song {
@@ -55,6 +80,7 @@
                 margin-bottom: 30px;
                 width: 80%;
                 max-width: 80%;
+                transition: width .4s ease-in-out .2s;
             }
 
             .song-information {
@@ -65,6 +91,13 @@
 
     .controls {
         width: 100%;
-        margin-top: 30px;
     }
+
+    .back {
+        display: block;
+    }
+
+    .button {
+        display: block;
+    } 
 }

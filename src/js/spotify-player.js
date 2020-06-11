@@ -1,10 +1,16 @@
+// Transform the music player to big and small
 const musicPlayer = document.getElementsByClassName('music-player--small')[0];
 const songInformation = document.getElementById('song-information');
+const back = document.getElementById('back');
 
-songInformation.addEventListener('click', transformMusicPlayer);
-
-function transformMusicPlayer() {
+songInformation.addEventListener('click', transformMusicPlayerBig);
+function transformMusicPlayerBig() {
     musicPlayer.classList.add('big');
+}
+
+back.addEventListener('click', transformMusicPlayerSmall);
+function transformMusicPlayerSmall() {
+    musicPlayer.classList.remove('big');
 }
 
 function showPlayerSmall(song) {
@@ -48,4 +54,17 @@ function togglePausePlay() {
         control.src = pause;
         playState = false;
     }
+}
+
+// Toggle visibility of favorite songs
+const playlistLarge = document.getElementsByClassName('playlist-large')[0];
+
+document.getElementById('playlist-small').addEventListener('click', showPlaylist);
+function showPlaylist() {
+    playlistLarge.classList.add('visible');
+}
+
+document.getElementById('back-overview').addEventListener('click', hidePlaylist);
+function hidePlaylist() {
+    playlistLarge.classList.remove('visible');
 }

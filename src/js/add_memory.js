@@ -27,7 +27,7 @@ function addTextBaloon(index) {
         
             if(initialInputField1.id== 'keywords'){
                 initialInputField.insertAdjacentHTML('beforebegin', `
-                <div class='output'><textarea class='output-textarea output-keyword' rows='1' style='width:${valueInitialInputField.length +1}em;'>${valueInitialInputField}</textarea></div>`);
+                <div class='output'><textarea class='output-textarea output-keyword' rows='1' style='width:${valueInitialInputField.length + 1}em;'>${valueInitialInputField}</textarea></div>`);
             }
             else{
                 initialInputField.insertAdjacentHTML('beforebegin', `

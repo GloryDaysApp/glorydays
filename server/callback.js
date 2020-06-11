@@ -33,9 +33,6 @@ module.exports = async (req, res) => {
       
         res.cookie('REFRESH_TOKEN', data.refresh_token);
 
-        req.session.token = data.access_token;
-        console.log('token: ', req.session.token);
-
         res.redirect('/');
     } catch (err) {
         console.log('error verifying: ', err);

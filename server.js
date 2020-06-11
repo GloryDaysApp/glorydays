@@ -71,7 +71,7 @@ app
             getRefreshToken(req, res).then(() => {
                 router.basicPage(res, 'login', 'Login');
             });
-        }  
+        }
     })
 
     .get('/add-memory', async (req, res) => {

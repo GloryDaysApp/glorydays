@@ -2,7 +2,7 @@
 
 <header></header>
 
-<main class="conversational-ui">
+<main class="conversational-ui" id="navigation-state--player-only">
 
     <!-- Page Content -->
     <form method="GET" enctype="multipart/form-data">
@@ -174,9 +174,9 @@
         </fieldset>
 
         <fieldset id="input-3">
-            <legend class="legend-text">Welke steekwoorden willen jullie aan de herinnering toevoegen? </legend>
+            <legend class="legend-text">Voeg steekwoorden toe aan deze herinnering. </legend>
             <div class="input input-text">
-                <input id="title" type="text" placeholder="Titel" maxlength="40" />
+                <input id="keywords" type="text" placeholder="Titel" maxlength="15" />
             </div>
             <div class="buttons">
                 <a href="#input-4" class="button next"> Volgende</a>
@@ -272,8 +272,7 @@
 
         <%- include('partials/scroll-buttons') %>
     </form>
-    <%- include('partials/spotify-navigation-player') %>
 </main>
 
-<!-- <%- include('partials/navigation') %>  -->
+<%- include('partials/navigation-holder') %>
 <%- include('partials/footer') %>

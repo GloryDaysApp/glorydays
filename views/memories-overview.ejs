@@ -6,7 +6,7 @@
   <%- include('partials/search') %>
   <ul id="results"></ul>
   
-<main class="conversational-UI">
+<main class="memories-overview" id="navigation-state--nav-only">
     <!-- Page Content -->
     <%- include('partials/account-information') %>
     <%- include('partials/memory-checker') %>
@@ -15,7 +15,7 @@
       <a href="/add-memory" class="button">Herinnering toevoegen</a>
       <a class="button">Muziek luisteren</a>
     </div>
-  </main>
+</main>
 
-<%- include('partials/navigation') %>
+<%- include('partials/navigation-holder') %>
 <%- include('partials/footer') %>

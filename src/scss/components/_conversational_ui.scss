@@ -368,7 +368,7 @@
             textarea {
                 font-size: 1.2rem;
                 color: #8bd5d8;
-                border-radius: 15px 15px 0;
+                border-radius: 30px;
                 text-align: right;
                 padding: .5rem $indent;
                 width: 80vw;
@@ -377,6 +377,12 @@
                 margin: 0 0 0 auto;
                 display: block;
                 background-color: transparent;
+                resize: none;
+            }
+            .output-keyword{
+                background-color: $lightblue;
+                color: $white;
+                text-align: center;
             }
         }
 

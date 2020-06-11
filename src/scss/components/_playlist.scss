@@ -1,8 +1,8 @@
-// .spotify-overview {
-//     & > h1 {
-//         padding-bottom: $indent-m;
-//     }   
-// }
+.spotify-overview {
+    > h1 {
+        padding-bottom: $indent-m;
+    }   
+}
 
 .playlist {
     margin: $indent-m 0 $indent-xxxl;

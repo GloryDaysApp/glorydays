@@ -4,6 +4,7 @@ function getLikedSongs () {
 
     const xhr = new XMLHttpRequest();
     const cors = 'https://cors-anywhere.herokuapp.com/';
+  
     xhr.open('GET', `${cors}https://api.spotify.com/v1/me/tracks?limit=50`, true);
     xhr.setRequestHeader('Accept', 'application/json');
     xhr.setRequestHeader('Content-Type', 'application/json');

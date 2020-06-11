@@ -11,7 +11,6 @@ function transformMusicPlayerBig() {
 back.addEventListener('click', transformMusicPlayerSmall);
 function transformMusicPlayerSmall() {
     musicPlayer.classList.remove('big');
-}
 
 function showPlayerSmall(song) {
     // Make player visible
@@ -58,8 +57,8 @@ function togglePausePlay() {
 
 // Toggle visibility of favorite songs
 const playlistLarge = document.getElementsByClassName('playlist-large')[0];
-
 document.getElementById('playlist-small').addEventListener('click', showPlaylist);
+  
 function showPlaylist() {
     playlistLarge.classList.add('visible');
 }

@@ -7,10 +7,12 @@ const express = require('express'),
 
     // multer = require('multer'),
     // upload = multer({dest: 'uploads/'}),
-    caregivers = { id: 'test' };
+    caregivers = {
+        id: 'test'
+    };
 
 const bodyParser = require('body-parser');
-const session = require('express-session');
+// const session = require('express-session');
 const cookies = require('cookie-parser');
 
 // Port
@@ -20,20 +22,22 @@ app.listen(config.port, () => {
 
 // Body parser init
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 // parse application/json
 app.use(bodyParser.json());
 
 // Session init
-app.use(
-    session({
-        resave: false,
-        saveUninitialized: true,
-        secret: process.env.SESSION_KEY,
-        port: process.env.PORT,
-        secure: false,
-    })
-);
+// app.use(
+//     session({
+//         resave: false,
+//         saveUninitialized: true,
+//         secret: process.env.SESSION_KEY,
+//         port: process.env.PORT,
+//         secure: false,
+//     })
+// );
 
 // Cookie parser init
 app.use(cookies());
@@ -80,6 +84,16 @@ app
         } else {
             getRefreshToken(req, res).then(() => {
                 router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
+            });
+        }
+    })
+
+    .get('/memory-details', async (req, res) => {
+        if (req.cookies.ACCESS_TOKEN) {
+            router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers);
+        } else {
+            getRefreshToken(req, res).then(() => {
+                router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers);
             });
         }
     })

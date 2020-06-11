@@ -1,21 +1,9 @@
-<header>
   <%- include('partials/head') %>
-  <h1><%= title %></h1>
-</header>
-
-  <%- include('partials/search') %>
-  <ul id="results"></ul>
-  
-<main class="memories-overview" id="navigation-state--nav-only">
+  <main class="container memories-overview" id="navigation-state--nav-only">
     <!-- Page Content -->
     <%- include('partials/account-information') %>
     <%- include('partials/memory-checker') %>
+  </main>
 
-    <div class="buttons">
-      <a href="/add-memory" class="button">Herinnering toevoegen</a>
-      <a class="button">Muziek luisteren</a>
-    </div>
-</main>
-
-<%- include('partials/navigation-holder') %>
-<%- include('partials/footer') %>
+  <%- include('partials/navigation-holder') %>
+  <%- include('partials/footer') %>

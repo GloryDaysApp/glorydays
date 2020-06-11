@@ -1,0 +1,55 @@
+.conversational-ui {
+    form {
+        fieldset {
+            .input-button {
+                &--choose-media {
+                    z-index: 999;
+                }
+
+                &--choose-file {
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        margin-top: $indent;
+                    }
+                }
+            }
+
+            .buttons--choose-media {
+                display: flex;
+            }
+
+            .output--add-image,
+            .output--add-voice-recoding,
+            .output--add-text {
+                display: none;
+
+                &.active {
+                    display: block;
+                    margin-left: $indent;
+                    position: absolute;
+                }
+            }
+
+            .output--add-image {
+                .output-image {
+                    max-width: 250px;
+                    max-height: 200px;
+                    margin-top: $indent;
+                    border-radius: 4px;
+                    right: -6rem;
+                    position: absolute;
+                }
+            }
+
+            .output--add-text {
+                .input-text {
+                    position: absolute;
+                    bottom: -19rem;
+                    left: -($indent);
+                }
+            }
+        }
+    }
+}

@@ -2,14 +2,14 @@
 
 <header></header>
 
-<main class="conversational-ui">
+<main class="conversational-ui" id="navigation-state--player-only">
 
     <!-- Page Content -->
     <form method="GET" enctype="multipart/form-data">
         <fieldset id="input-1">
             <div class="back">
-                    <a href="/">&#8592 terug naar alle herinneringen</a>
-           </div>
+                <a href="/">&#8592 terug naar alle herinneringen</a>
+            </div>
             <legend class="legend-text">
                 Voeg muziek toe aan de herinnering
             </legend>
@@ -22,96 +22,237 @@
         </fieldset>
 
         <fieldset id="input-2">
-            <legend class="legend-text">Geef de herinnering een titel</legend>
-            <div class="input input-text">
-                <input
-                    id="title"
-                    type="text"
-                    placeholder="Titel"
-                    maxlength="40"
-                />
+            <legend class="legend-text">Welk gevoel kregen jullie? </legend>
+            <div class="input input-button" id="emotions">
+                <ul>
+                    <li>
+                        <input type="checkbox" id="emotion1" />
+                        <label for="emotion1"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 127 127">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #C8CACB;
+                                        }
+
+                                        .cls-2 {
+                                            fill: none;
+                                            stroke: #000;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 5.67px;
+                                        }
+
+                                        .cls-3 {
+                                            fill: #fff;
+                                        }
+                                    </style>
+                                </defs>
+                                <path class="cls-1"
+                                    d="M562.5,295.1A63.5,63.5,0,1,1,499,358.6a63.46,63.46,0,0,1,63.5-63.5"
+                                    transform="translate(-499 -295.1)" />
+                                <path class="cls-2" d="M530.5,346.6a15.67,15.67,0,0,1,22,0"
+                                    transform="translate(-499 -295.1)" />
+                                <path class="cls-2" d="M572.6,347a15.67,15.67,0,0,1,22,0"
+                                    transform="translate(-499 -295.1)" />
+                                <path
+                                    d="M593.5,369.6c.6,17.8-13.6,32.7-31,33-17.7.3-32.7-14.8-32-33a122.74,122.74,0,0,0,32,4A125.75,125.75,0,0,0,593.5,369.6Z"
+                                    transform="translate(-499 -295.1)" />
+                                <path class="cls-3"
+                                    d="M592,372.1a4.45,4.45,0,0,1,0,2c-1.4,7.2-18.7,9.9-29.2,10-11.5.1-29.3-2.7-30.8-10a4.45,4.45,0,0,1,0-2,111.69,111.69,0,0,0,60,0Z"
+                                    transform="translate(-499 -295.1)" />
+                            </svg></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="emotion2" />
+                        <label for="emotion2"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 127 127">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #C8CACB;
+                                        }
+
+                                        .cls-2 {
+                                            fill: none;
+                                            stroke: #000;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 5.67px;
+                                        }
+                                    </style>
+                                </defs>
+                                <circle class="cls-1" cx="63.5" cy="63.5" r="63.5" />
+                                <circle cx="45" cy="49" r="8" />
+                                <circle cx="82" cy="50" r="8" />
+                                <path class="cls-2" d="M537.7,1243.8c.7,1,9.7,13.5,25.5,13,14.5-.5,22.6-11.7,23.5-13"
+                                    transform="translate(-499.2 -1154.8)" />
+                            </svg></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="emotion3" />
+                        <label for="emotion3"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 127 127">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #C8CACB;
+                                        }
+
+                                        .cls-2 {
+                                            fill: none;
+                                            stroke: #000;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 5.67px;
+                                        }
+                                    </style>
+                                </defs>
+                                <circle class="cls-1" cx="63.5" cy="63.5" r="63.5" />
+                                <circle cx="45" cy="49" r="8" />
+                                <circle cx="82" cy="50" r="8" />
+                                <line class="cls-2" x1="39" y1="91" x2="88" y2="91" />
+                            </svg></label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="emotion4" />
+                        <label for="emotion4"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 127 127">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #C8CACB;
+                                        }
+
+                                        .cls-2 {
+                                            fill: none;
+                                            stroke: #000;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 5.67px;
+                                        }
+                                    </style>
+                                </defs>
+                                <circle class="cls-1" cx="63.5" cy="63.5" r="63.5" />
+                                <circle cx="45" cy="49" r="8" />
+                                <circle cx="82" cy="50" r="8" />
+                                <path class="cls-2" d="M538.7,1256.8c.7-1,9.7-13.5,25.5-13,14.5.5,22.6,11.7,23.5,13"
+                                    transform="translate(-499.2 -1154.8)" />
+                            </svg></label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="emotion5" />
+                        <label for="emotion5"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 127 127">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                            fill: #C8CACB;
+                                        }
+
+                                        .cls-2 {
+                                            fill: none;
+                                            stroke: #000;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 5.67px;
+                                        }
+                                    </style>
+                                </defs>
+                                <circle class="cls-1" cx="63.5" cy="63.5" r="63.5" />
+                                <path class="cls-2" d="M531.3,1206.4a15.67,15.67,0,0,1,22,0"
+                                    transform="translate(-499.2 -1154.8)" />
+                                <path class="cls-2" d="M573.5,1206.8a15.67,15.67,0,0,1,22,0"
+                                    transform="translate(-499.2 -1154.8)" />
+                                <path class="cls-2" d="M537.9,1256.8c.7-1,9.7-13.5,25.5-13,14.5.5,22.6,11.7,23.5,13"
+                                    transform="translate(-499.2 -1154.8)" />
+                            </svg></label>
+                    </li>
+                </ul>
             </div>
             <div class="buttons">
                 <a href="#input-3" class="button next"> Volgende</a>
+                <button class="button">Opslaan en sluiten</button>
             </div>
         </fieldset>
 
         <fieldset id="input-3">
-            <legend class="legend-text">
-                Waar gaat deze herinnering over?
-            </legend>
+            <legend class="legend-text">Welke steekwoorden willen jullie aan de herinnering toevoegen? </legend>
             <div class="input input-text">
-                <input
-                    id="description"
-                    type="text"
-                    placeholder="De herinnering gaat over"
-                    value=""
-                    maxlength="40"
-                />
+                <input id="title" type="text" placeholder="Titel" maxlength="40" />
             </div>
             <div class="buttons">
-                <a href="#input-4" class="button next "> Volgende</a>
+                <a href="#input-4" class="button next"> Volgende</a>
             </div>
         </fieldset>
 
         <fieldset id="input-4">
-            <legend class="legend-text">Upload een afbeelding</legend>
-            <div class="input input-button">
-                <div class="input-button--choose-file">
-                    <input type="file" id="real-file" hidden="hidden" />
-                    <button
-                        type="button"
-                        id="custom-button"
-                        class="button-icon"
-                    >
-                        <img src="./camera_icon.png" alt="Image Icon" />
-                    </button>
-                    <span id="custom-text">Nog geen afbeelding gekozen.</span>
-                </div>
-                <img id="output-image" class="output-image hide" />
+            <legend class="legend-text">Geef de herinnering een titel</legend>
+            <div class="input input-text">
+                <input id="title" type="text" placeholder="Titel" maxlength="40" />
             </div>
             <div class="buttons">
-                <a href="#input-5" class="button next "> Volgende</a>
+                <a href="#input-5" class="button next"> Volgende</a>
             </div>
         </fieldset>
 
-      
-  <fieldset id="input-5">
-            <legend class="legend-text">Upload een afbeelding</legend>
-            <div class="input input-button">
-                <div class="input-button--choose-file">
-                    <input type="file" id="real-file" hidden="hidden" />
-                    <button type="button" id="custom-button" class="button-icon">
-                        <img src="./camera_icon.png" alt="Image Icon" />
-                    </button>
-                    <span id="custom-text">Nog geen afbeelding gekozen.</span>
-                </div>
-                <img id="output-image" class="output-image hide" />
+        <fieldset id="input-5">
+            <legend class="legend-text">
+                Waar gaat deze herinnering over?
+            </legend>
+            <div class="input input-text">
+                <input id="description" type="text" placeholder="De herinnering gaat over" value="" maxlength="40" />
             </div>
             <div class="buttons">
-                <a class="button save"> Herinnering opslaan</a>
+                <a href="#input-6" class="button next "> Volgende</a>
             </div>
         </fieldset>
 
         <fieldset id="input-6">
-            <legend class="legend-text">Voeg een opname toe</legend>
-            <div class="input input-button">
-                <div class="mic-container">
-                    <div class="circle">
-                        <img class="mic-icon" src="./voice_icon.png" alt="Microphone icon">
+            <legend class="legend-text">Waar gaat de herinnering over?</legend>
+            <div class="input input-button--choose-media">
+                <div class="buttons--choose-media">
+                    <button class="media-button" id="button--add-image"><img src="./icons/camera_alt-24px.svg"></button>
+                    <button class="media-button" id="button--add-voice-recording"><img src="./icons/mic-24px.svg"></button>
+                    <button class="media-button" id="button--add-text"><img src="./icons/text_fields-24px.svg"></button>
+                </div>
+                <div class="output--add-image" id="output--add-image">
+                    <div class="input-button--choose-file">
+                        <input type="file" id="real-file" hidden="hidden" />
+                        <button type="button" id="custom-button" class="button">
+                            <!--                        <img src="./icons/camera_alt-24px.svg" alt="Image Icon" />-->
+                            Kies een afbeelding
+                        </button>
+                        <span id="custom-text">Nog geen afbeelding gekozen.</span>
                     </div>
-                    <div class="timer">
-                        <span class="minutes">00</span> <span class="colon">:</span><span class="seconds">00</span>
+                    <img id="output-image" class="output-image hide" />
+                </div>
+                <div class="output--add-voice-recoding" id="output--add-voice-recoding">
+                    <div class="mic-container">
+                        <div class="circle">
+                            <img class="mic-icon" src="./voice_icon.png" alt="Microphone icon">
+                        </div>
+                        <div class="timer">
+                            <span class="minutes">00</span> <span class="colon">:</span><span class="seconds">00</span>
+                        </div>
+                    </div>
+                    <audio></audio>
+                    <audio id="savedAudio" controls></audio>
+                </div>
+                <div class="output--add-text" id="output--add-text">
+                    <div class="input input-text">
+                        <input
+                                id="description"
+                                type="text"
+                                placeholder="De herinnering gaat over"
+                                value=""
+                                maxlength="40"
+                        />
                     </div>
                 </div>
-                <audio></audio>
-                <audio id="savedAudio" controls></audio>
             </div>
             <div class="buttons">
-                <a class="button save"> Herinnering opslaan</a>
+                <a href="#input-7" class="button next "> Volgende</a>
             </div>
         </fieldset>
-        
+
         <fieldset id="input-7">
             <legend class="legend-text">
                 Welke verzorgers mogen deze herinnering zien?
@@ -119,10 +260,8 @@
             <div class="input input-button">
                 <input type="checkbox" id="verzorger-1" />
                 <label for="verzorger-1">Marie</label>
-
                 <input type="checkbox" id="verzorger-2" />
                 <label for="verzorger-2">Pieter</label>
-
                 <input type="checkbox" id="verzorger-3" />
                 <label for="verzorger-3">Noortje</label>
             </div>
@@ -130,12 +269,10 @@
                 <a href="" class="button save"> Herinnering opslaan</a>
             </div>
         </fieldset>
-        
+
         <%- include('partials/scroll-buttons') %>
     </form>
-    <%- include('partials/spotify-navigation-player') %>
 </main>
 
-<!-- <%- include('partials/navigation') %>  -->
+<%- include('partials/navigation-holder') %>
 <%- include('partials/footer') %>
-

@@ -11,6 +11,7 @@ function transformMusicPlayerBig() {
 back.addEventListener('click', transformMusicPlayerSmall);
 function transformMusicPlayerSmall() {
     musicPlayer.classList.remove('big');
+}
 
 function showPlayerSmall(song) {
     // Make player visible

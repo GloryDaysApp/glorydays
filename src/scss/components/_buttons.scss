@@ -1,10 +1,14 @@
 .button {
-    background-color: #b6f2ff;
+    background-color: $lightblue;
     display: block;
-    padding: .5em .2em;
-    width: 10em;
+    padding: $indent-xxxs $indent;
+    /* width: 10rem; */
     overflow-wrap: break-word;
     text-align: center;
+    border: 0;
+    border-radius: 50px;
+    color: $white;
+    width: 55vw;
 }
 
 .button-icon {
@@ -15,17 +19,45 @@
 
 .buttons {
     position: fixed;
-    bottom: 4em;
+    bottom: $indent;
     width: 100%;
 
     .button {
-        margin: 1em auto 0;
+        margin: 1rem auto 0;
         text-align: center;
         display: block;
         width: 70vw;
-        background-color: #64a9a9;
+        background-color: $lightblue;
         border-radius: 15px;
-        color: #fff;
-        padding: 1em;
+        color: $white;
+        padding: 1rem;
     }
+} 
+
+.button--empty {
+    position: relative;
+    color: $lightblue;
+    padding-right: 25px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url('/arrow_right.svg') no-repeat;
+        background-size: 22px;
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.button-icon,
+.media-button {
+    @include media-button;
+}
+
+.media-button {
+    margin: $indent 0 $indent $indent;
+    border: 0;
 }

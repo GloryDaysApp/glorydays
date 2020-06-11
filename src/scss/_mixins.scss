@@ -1,0 +1,30 @@
+@mixin link-button {
+    margin: 1em auto 1em 0;
+    color: $lightblue;
+    padding: 1em;
+    border-radius: 30px;
+    text-align: left;
+}
+
+@mixin input-button-positioning {
+    width: 80vw;
+    max-width: 30em;
+    position: absolute;
+    top: 30%;
+    text-align: left;
+    margin: 1em auto 1em 0;
+}
+
+@mixin media-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width: 75px;
+    height: 75px;
+    background-color: $lightgrey;
+
+    img {
+        height: 52px;
+    }
+}

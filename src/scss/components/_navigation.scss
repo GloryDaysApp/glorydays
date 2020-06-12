@@ -44,3 +44,44 @@ nav {
         }
     }
 }
+
+#navigation-state--all{
+    form fieldset {
+        .buttons {
+            bottom: 14em;
+        }
+        .input-text{
+            bottom: 11em;
+        }
+    }
+}
+
+#navigation-state--nav-only{
+    form fieldset {
+        .buttons {
+            bottom: 10em;
+        }
+        .input-text{
+            bottom: 8em;
+        }
+    }
+}
+
+#navigation-state--player-only{
+    form fieldset {
+        .buttons {
+            bottom: 10em;
+        }
+        .input-text{
+            bottom: 8em;
+        }
+    }
+}
+
+#navigation-state--nav-only{
+    form fieldset.navigation-state--buttons-only {
+        .buttons {
+            bottom: 6rem;
+        }
+    }
+}

@@ -72,7 +72,7 @@
 
 .button-icon,
 .media-button {
-    @include media-button;
+    @include icon-button--square;
 }
 
 .media-button {

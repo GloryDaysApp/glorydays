@@ -48,10 +48,10 @@ nav {
 #navigation-state--all{
     form fieldset {
         .buttons {
-            bottom: 14em;
+            bottom: 14rem;
         }
         .input-text{
-            bottom: 11em;
+            bottom: 11rem;
         }
     }
 }
@@ -59,10 +59,10 @@ nav {
 #navigation-state--nav-only{
     form fieldset {
         .buttons {
-            bottom: 10em;
+            bottom: 10rem;
         }
         .input-text{
-            bottom: 8em;
+            bottom: 8rem;
         }
     }
 }
@@ -73,12 +73,31 @@ nav {
             bottom: 10em;
         }
         .input-text{
-            bottom: 8em;
+            bottom: 8rem;
         }
     }
 }
 
 #navigation-state--nav-only{
+    form fieldset.navigation-state--buttons-only {
+        .buttons {
+            bottom: 6rem;
+        }
+    }
+}
+
+#navigation-state--nav-only{
+    form fieldset.navigation-state--button-input {
+        .buttons {
+            bottom: 8rem;
+        }
+        .input-text{
+            bottom: 5rem;
+        }
+    }
+}
+
+#navigation-state--player-only{
     form fieldset.navigation-state--buttons-only {
         .buttons {
             bottom: 6rem;

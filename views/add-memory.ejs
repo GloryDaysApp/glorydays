@@ -4,8 +4,8 @@
     <!-- Page Content -->
     <form method="GET" enctype="multipart/form-data">
         <div class="back">
-                <a href="/">&#8592 terug naar alle herinneringen</a>
-            </div>
+            <a href="/">&#8592 terug naar alle herinneringen</a>
+        </div>
         <fieldset id="input-1" class="navigation-state--buttons-only">
             <legend class="legend-text">
                 Voeg muziek toe aan de herinnering
@@ -14,11 +14,11 @@
                 <!-- <a href="/" class="button button-primair">Muziekstream openen</a> -->
             </div>
             <div class="buttons">
-                    <a href="/" class="button button-primair">Muziekstream openen</a>
+                <a href="/" class="button button-muziekstream">Muziekstream openen</a>
                 <a href="#input-2" class="button next button-secundair"> Overslaan</a>
             </div>
         </fieldset>
-        <fieldset id="input-2">
+        <fieldset id="input-2" class="navigation-state--buttons-only">
             <legend class="legend-text">Welk gevoel kregen jullie? </legend>
             <div class="input" id="emotions">
                 <ul id="checkboxes">
@@ -163,47 +163,50 @@
                 </ul>
             </div>
             <div class="buttons">
-                <a href="/memories-overview" class="button button-primair">Opslaan</a>
                 <a href="#input-3" class="button button-secundair">Volgende</a>
+                <a href="/memories-overview" class="button button-primair"><img src="/icons/save.svg"
+                        alt="save check"></a>
             </div>
         </fieldset>
-        <fieldset id="input-3">
+        <fieldset id="input-3" class="navigation-state--button-input">
             <legend class="legend-text">Voeg steekwoorden toe aan deze herinnering. </legend>
             <div class="input input-text">
                 <input id="keywords" class="input-field" type="text" placeholder="Titel" maxlength="15" />
                 <img src="/icons/send.svg" alt="send button">
             </div>
             <div class="buttons">
-                <a href="/memories-overview" class="button button-primair">Opslaan</a>
                 <a href="#input-4" class="button button-secundair">Volgende</a>
+                <a href="/memories-overview" class="button button-primair"><img src="/icons/save.svg"
+                        alt="save check"></a>
             </div>
         </fieldset>
-        <fieldset id="input-4">
+        <fieldset id="input-4" class="navigation-state--button-input">
             <legend class="legend-text">Geef de herinnering een titel</legend>
             <div class="input input-text">
                 <input id="title" class="input-field" type="text" placeholder="Titel" maxlength="40" />
                 <img src="/icons/send.svg" alt="send button">
             </div>
             <div class="buttons">
-                <a href="/memories-overview" class="button button-primair">Opslaan</a>
                 <a href="#input-5" class="button button-secundair">Volgende</a>
+                <a href="/memories-overview" class="button button-primair"><img src="/icons/save.svg"
+                        alt="save check"></a>
             </div>
         </fieldset>
-        <fieldset id="input-5">
+        <!-- <fieldset id="input-5" class="navigation-state--button-input">
             <legend class="legend-text">
                 Waar gaat deze herinnering over?
             </legend>
             <div class="input input-text">
                 <input id="description" class="input-field" type="text" placeholder="De herinnering gaat over" value=""
                     maxlength="40" />
-                    <img src="/icons/send.svg" alt="send button">
+                <img src="/icons/send.svg" alt="send button">
             </div>
             <div class="buttons">
-                <a href="/memories-overview" class="button button-primair">Opslaan</a>
                 <a href="#input-6" class="button button-secundair">Volgende</a>
+                <a href="/memories-overview" class="button button-test"><img src="/icons/save.svg" alt="save check"></a>
             </div>
-        </fieldset>
-        <fieldset id="input-6">
+        </fieldset> -->
+        <fieldset id="input-5">
             <legend class="legend-text">Waar gaat de herinnering over?</legend>
             <div class="input input-button--choose-media">
                 <div class="buttons--choose-media">
@@ -239,12 +242,13 @@
                     <div class="input input-text">
                         <input id="description" type="text" placeholder="De herinnering gaat over" value=""
                             maxlength="40" />
-                            <img src="/icons/send.svg" alt="send button">
+                        <img src="/icons/send.svg" alt="send button">
                     </div>
                 </div>
             </div>
             <div class="buttons">
-                <a href="/memories-overview" class="button button-primair">Opslaan</a>
+                <a href="/memories-overview" class="button button-primair"><img src="/icons/save.svg"
+                        alt="save check"></a>
             </div>
         </fieldset>
         <!-- <fieldset id="input-7">

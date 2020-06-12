@@ -1,9 +1,6 @@
 <%- include('partials/head') %>
-
 <header></header>
-
 <main class="conversational-ui" id="navigation-state--player-only">
-
     <!-- Page Content -->
     <form method="GET" enctype="multipart/form-data">
         <fieldset id="input-1">
@@ -20,7 +17,6 @@
                 <a href="#input-2" class="button next"> Overslaan</a>
             </div>
         </fieldset>
-
         <fieldset id="input-2">
             <legend class="legend-text">Welk gevoel kregen jullie? </legend>
             <div class="input input-button" id="emotions">
@@ -111,7 +107,6 @@
                                 <line class="cls-2" x1="39" y1="91" x2="88" y2="91" />
                             </svg></label>
                     </li>
-
                     <li>
                         <input type="checkbox" id="emotion4" />
                         <label for="emotion4"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +132,6 @@
                                     transform="translate(-499.2 -1154.8)" />
                             </svg></label>
                     </li>
-
                     <li>
                         <input type="checkbox" id="emotion5" />
                         <label for="emotion5"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +166,6 @@
                 <button class="button">Opslaan en sluiten</button>
             </div>
         </fieldset>
-
         <fieldset id="input-3">
             <legend class="legend-text">Voeg steekwoorden toe aan deze herinnering. </legend>
             <div class="input input-text">
@@ -182,7 +175,6 @@
                 <a href="#input-4" class="button next"> Volgende</a>
             </div>
         </fieldset>
-
         <fieldset id="input-4">
             <legend class="legend-text">Geef de herinnering een titel</legend>
             <div class="input input-text">
@@ -192,7 +184,6 @@
                 <a href="#input-5" class="button next"> Volgende</a>
             </div>
         </fieldset>
-
         <fieldset id="input-5">
             <legend class="legend-text">
                 Waar gaat deze herinnering over?
@@ -205,7 +196,6 @@
                 <a href="#input-6" class="button next"> Volgende</a>
             </div>
         </fieldset>
-
         <fieldset id="input-6">
             <legend class="legend-text">Waar gaat de herinnering over?</legend>
             <div class="input input-button--choose-media">
@@ -249,7 +239,6 @@
                 <a href="#input-7" class="button next "> Volgende</a>
             </div>
         </fieldset>
-
         <fieldset id="input-7">
             <legend class="legend-text">
                 Welke verzorgers mogen deze herinnering zien?
@@ -266,10 +255,8 @@
                 <a href="" class="button save"> Herinnering opslaan</a>
             </div>
         </fieldset>
-
         <%- include('partials/scroll-buttons') %>
     </form>
 </main>
-
 <%- include('partials/navigation-holder') %>
 <%- include('partials/footer') %>

@@ -42,7 +42,6 @@ function nextQuestion(e) {
 
             changeActiveState();
 
-            console.log('heeeee marjolein hoe gaat die met jou?');
         }, 1000);
     }
 }
@@ -59,5 +58,7 @@ function changeActiveState() {
     // Navigation dot sidebar
     currentDot[0].nextElementSibling.classList.add('active-navigation-dot');
     currentDot[0].classList.remove('active-navigation-dot');
+
+
 }
 

@@ -27,6 +27,8 @@
             width: 100vw;
             overflow: hidden;
             position: relative;
+
+            
             // margin: $center-margin;
             // padding: $indent;
             // height: 100vh;
@@ -75,7 +77,21 @@
                 text-align: left;
                 // margin: 2em auto -($indent) 0;
                 margin: 1em 0;
+
+                // opacity: 0;
+                // transform:scale(0.5);
+                // transition:.25s.25s;
+
+                transition: transform 1s ease-in-out; /* our nice transition */
+                transform: translateX(-100%);
+                animation-delay: 2s;
             }
+            
+            legend.observed {
+                // opacity: 1;
+                // transform:scale(1);
+                transform: translateX(0);
+              }
 
             .input {
                 margin: $indent auto $indent 0;

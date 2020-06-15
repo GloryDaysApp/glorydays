@@ -116,6 +116,6 @@ app.get('/callback', spotifyCallback); // Callback for fetching Spotify tokens
 const getRefreshToken = require('./server/get_refresh_token.js');
 app.get('/refresh', getRefreshToken); // Callback for fetching Spotify tokens
 
-// Spotify song search
-// const getSpotifySongs = require('./server/get_spotify_songs.js');
-// app.post('/search', getSpotifySongs);
+// Save data to database
+const submitMemory = require('./server/submit_memory.js');
+app.post('/submit-memory', submitMemory);

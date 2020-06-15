@@ -42,7 +42,7 @@ function nextQuestion(e) {
 
             changeActiveState();
 
-            console.log('heeeee marjolein hoe gaat die met jou?');
+            // console.log('heeeee marjolein hoe gaat die met jou?');
         }, 1000);
     }
 }

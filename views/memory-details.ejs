@@ -1,0 +1,38 @@
+<header>
+    <%- include('partials/head') %>
+    <!-- <h1><%= title %></h1> -->
+</header>
+
+<section class="container container--details" id="navigation-state--nav-only">
+    <div class="container--details-back">
+        <a href="/"><img src="arrow_back.png" alt="Arrow back icon">
+            Terug naar herinneringen</a>
+    </div>
+
+    <h1>Bruiloft Sandra & Tim</h1>
+    <p>Toegevoegd door op <span class="date"> 15-05-2020</span></p>
+    <p>We waren op de bruiloft van Tim en Sandra
+        toen jij een grap maakte over Tim zijn
+        nieuwe kapsel.</p>
+    <img src="bruiloft_tim_sandra.png" alt="Bruiloft Tim en Sandra afbeelding">
+
+    <h2>Emoties</h2>
+    <div class="slidecontainer">
+        <p>Value: <span id="demo"></span></p>
+
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <span>text</span> <span>text</span>
+    </div>
+
+    <h2>Steekwoorden </h2>
+    <span class="catchword">bruiloft</span> <span class="catchword">liefde</span>
+
+    <a class="share-btn" id="share-btn"><img src="share.svg" alt="Share icon"></a>
+    <a class="edit-btn"><img src="edit.svg" alt="Edit icon"></a>
+
+    <!-- The (in)visible share  -->
+    <div class="overlay"></div>
+</section>
+
+<%- include('partials/navigation-holder') %>
+<%- include('partials/footer') %>

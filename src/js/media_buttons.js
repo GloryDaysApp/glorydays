@@ -8,7 +8,7 @@ const addImageButton = document.getElementById('button--add-image'),
 if (addImageButton && addVoiceRecordingButton && addTextButton) {
     addImageButton.addEventListener('click', (event) => {
         event.preventDefault();
-        console.log('image button click');
+        // console.log('image button click');
 
         addVoiceRecordingOutput.classList.remove('active');
         addTextOutput.classList.remove('active');
@@ -17,7 +17,7 @@ if (addImageButton && addVoiceRecordingButton && addTextButton) {
 
     addVoiceRecordingButton.addEventListener('click', (event) => {
         event.preventDefault();
-        console.log('voice button click');
+        // console.log('voice button click');
 
         addImageOutput.classList.remove('active');
         addTextOutput.classList.remove('active');
@@ -26,7 +26,7 @@ if (addImageButton && addVoiceRecordingButton && addTextButton) {
 
     addTextButton.addEventListener('click', (event) => {
         event.preventDefault();
-        console.log('text button click');
+        // console.log('text button click');
 
         addImageOutput.classList.remove('active');
         addVoiceRecordingOutput.classList.remove('active');

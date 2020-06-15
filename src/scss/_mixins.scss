@@ -1,6 +1,6 @@
 @mixin link-button {
     margin: 1em auto 1em 0;
-    color: $lightblue;
+    color: $glory-blue;
     padding: 1em;
     border-radius: 30px;
     text-align: left;
@@ -15,7 +15,7 @@
     margin: 1em auto 1em 0;
 }
 
-@mixin media-button {
+@mixin icon-button--square {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,4 +27,8 @@
     img {
         height: 52px;
     }
+}
+
+@mixin overlay-gradient($color) {
+    background: linear-gradient($color 80%, $color) 10%;
 }

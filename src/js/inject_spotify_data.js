@@ -39,7 +39,6 @@ function injectSpotifyData(data, location, length, title = '') {
 
         // Clone object and show in player
         const song = this.cloneNode(true);
-        console.log(song);
         showPlayerSmall(song);
     }
 }

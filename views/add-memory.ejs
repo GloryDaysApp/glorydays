@@ -1,9 +1,6 @@
 <%- include('partials/head') %>
-
 <header></header>
-
 <main class="conversational-ui" id="navigation-state--player-only">
-
     <!-- Page Content -->
     <form method="GET" enctype="multipart/form-data" action="submit-memory">
         <fieldset id="input-1">
@@ -20,11 +17,10 @@
                 <a href="#input-2" class="button next"> Overslaan</a>
             </div>
         </fieldset>
-
         <fieldset id="input-2">
             <legend class="legend-text">Welk gevoel kregen jullie? </legend>
             <div class="input input-button" id="emotions">
-                <ul>
+                <ul id="checkboxes">
                     <li>
                         <input type="checkbox" id="emotion1" />
                         <label for="emotion1"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +107,6 @@
                                 <line class="cls-2" x1="39" y1="91" x2="88" y2="91" />
                             </svg></label>
                     </li>
-
                     <li>
                         <input type="checkbox" id="emotion4" />
                         <label for="emotion4"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +132,6 @@
                                     transform="translate(-499.2 -1154.8)" />
                             </svg></label>
                     </li>
-
                     <li>
                         <input type="checkbox" id="emotion5" />
                         <label for="emotion5"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
@@ -172,45 +166,43 @@
                 <button class="button">Opslaan en sluiten</button>
             </div>
         </fieldset>
-
         <fieldset id="input-3">
             <legend class="legend-text">Voeg steekwoorden toe aan deze herinnering. </legend>
             <div class="input input-text">
-                <input id="keywords" type="text" placeholder="Titel" maxlength="15" />
+                <input id="keywords" class="input-field" type="text" placeholder="Titel" maxlength="15" />
             </div>
             <div class="buttons">
                 <a href="#input-4" class="button next"> Volgende</a>
             </div>
         </fieldset>
-
         <fieldset id="input-4">
             <legend class="legend-text">Geef de herinnering een titel</legend>
             <div class="input input-text">
-                <input id="title" type="text" placeholder="Titel" maxlength="40" />
+                <input id="title" class="input-field" type="text" placeholder="Titel" maxlength="40" />
             </div>
             <div class="buttons">
                 <a href="#input-5" class="button next"> Volgende</a>
             </div>
         </fieldset>
-
         <fieldset id="input-5">
             <legend class="legend-text">
                 Waar gaat deze herinnering over?
             </legend>
             <div class="input input-text">
-                <input id="description" type="text" placeholder="De herinnering gaat over" value="" maxlength="40" />
+                <input id="description" class="input-field" type="text" placeholder="De herinnering gaat over" value=""
+                    maxlength="40" />
             </div>
             <div class="buttons">
-                <a href="#input-6" class="button next "> Volgende</a>
+                <a href="#input-6" class="button next"> Volgende</a>
             </div>
         </fieldset>
-
         <fieldset id="input-6">
             <legend class="legend-text">Waar gaat de herinnering over?</legend>
             <div class="input input-button--choose-media">
                 <div class="buttons--choose-media">
                     <button class="media-button" id="button--add-image"><img src="./icons/camera_alt-24px.svg"></button>
-                    <button class="media-button" id="button--add-voice-recording"><img src="./icons/mic-24px.svg"></button>
+                    <button class="media-button" id="button--add-voice-recording"><img
+                            src="./icons/mic-24px.svg"></button>
                     <button class="media-button" id="button--add-text"><img src="./icons/text_fields-24px.svg"></button>
                 </div>
                 <div class="output--add-image" id="output--add-image">
@@ -238,13 +230,8 @@
                 </div>
                 <div class="output--add-text" id="output--add-text">
                     <div class="input input-text">
-                        <input
-                                id="description"
-                                type="text"
-                                placeholder="De herinnering gaat over"
-                                value=""
-                                maxlength="40"
-                        />
+                        <input id="description" type="text" placeholder="De herinnering gaat over" value=""
+                            maxlength="40" />
                     </div>
                 </div>
             </div>
@@ -252,7 +239,6 @@
                 <a href="#input-7" class="button next "> Volgende</a>
             </div>
         </fieldset>
-
         <fieldset id="input-7">
             <legend class="legend-text">
                 Welke verzorgers mogen deze herinnering zien?
@@ -269,10 +255,8 @@
                 <a href="" class="button save"> Herinnering opslaan</a>
             </div>
         </fieldset>
-
         <%- include('partials/scroll-buttons') %>
     </form>
 </main>
-
 <%- include('partials/navigation-holder') %>
 <%- include('partials/footer') %>

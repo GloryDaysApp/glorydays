@@ -28,3 +28,7 @@
         height: 52px;
     }
 }
+
+@mixin overlay-gradient($color) {
+    background: linear-gradient($color 80%, $color) 10%;
+}

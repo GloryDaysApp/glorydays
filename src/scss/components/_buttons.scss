@@ -1,5 +1,5 @@
 .button {
-    background-color: $lightblue;
+    background-color: $glory-blue;
     display: block;
     padding: $indent-xxxs $indent;
     /* width: 10rem; */
@@ -27,7 +27,7 @@
         text-align: center;
         display: block;
         width: 70vw;
-        background-color: $lightblue;
+        background-color: $glory-blue;
         border-radius: 15px;
         color: $white;
         padding: 1rem;
@@ -36,7 +36,7 @@
 
 .button--empty {
     position: relative;
-    color: $lightblue;
+    color: $glory-blue;
     padding-right: 25px;
 
     &::after {
@@ -54,7 +54,7 @@
 
 .button--empty {
     position: relative;
-    color: $lightblue;
+    color: $glory-blue;
     padding-right: 25px;
 
     &::after {

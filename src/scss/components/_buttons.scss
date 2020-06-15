@@ -5,71 +5,31 @@
     bottom: 0;
     left: 5%;
     right: 5%;
-}   
+}  
+
+.one-button {
+    justify-content: flex-end;
+}
   
    .button {
     overflow-wrap: break-word;
     text-align: center;
-    // border: 0;
-    /* width: 10rem; */
-    // color: $white;
-    // width: 55vw;
+    border-radius: 50px;
+    width: 43vw;
+    padding: $indent-xs $indent;
+    margin: .5rem 0;
 }
 
 .button-primair {
-    // background-color: $glory-salmon;
-    // color: $white;
-    // width: 50px;
-    // height: 50px;
-
-    all: unset;
     background-color: $lightblue;
-    width: 50px;
-    height: 50px;
-    // position: fixed;
-    z-index: 2;
-    bottom: 5rem;
-    right: 1rem;
-    border-radius: 50px;
-
-    img {
-        // width: 30px;
-        // height: 30px;
-        // align-items: center;
-        // border-radius: 50%;
-        // padding: 1rem;
-    width: 23px;
-    height: 23px;
-    margin: 13px 1px 0;
-    }
+    color: $white;
 }
-
-// .button-test{
-//     // background-color: $glory-salmon;
-//     // color: $white;
-//     // width: 50px;
-//     // height: 50px;
-
-//     all: unset;
-//     background-color: $lightblue;
-//     width: 50vw;
-//     color: white;
-//     // position: fixed;
-//     z-index: 2;
-//     bottom: 5rem;
-//     right: 1rem;
-//     border-radius: 50px;
-
-// }
 
 .button-secundair {
     background-color: $white;
     color: $darkgreen;
+    // text-decoration: underline;
     border: 1px solid $darkgreen;
-    width: 70vw;
-    padding: $indent-xs $indent;
-    border-radius: 50px;
-    margin: .5rem 0;
 }
 
 .button-icon {
@@ -81,28 +41,13 @@
 .button-muziekstream {
     background-color: $glory-salmon;
     width: 70vw;
-    padding: $indent-xs $indent;
+    padding: 1rem 1.5rem;
     border-radius: 50px;
     color: $white;
     margin: .5rem 0;
+    text-align: start;
+    font-size: 1.2rem;
 }
-
-// .buttons {
-//     // position: fixed;
-//     bottom: $indent;
-//     width: 100%;
-
-//     .button {
-//         margin: 1rem auto 0;
-//         text-align: center;
-//         display: block;
-//         width: 70vw;
-//         background-color: $lightblue;
-//         border-radius: 30px;
-//         color: $white;
-//         padding: 1rem;
-//     }
-// } 
 
 .button--empty {
     position: relative;
@@ -143,9 +88,19 @@
 .button-icon,
 .media-button {
     @include icon-button--square;
+    // background-color: $white;
+    // border: 1px solid $lightgrey;
 }
 
 .media-button {
     margin: $indent 0 $indent $indent;
     border: 0;
+}
+
+.button-add-image {
+    background-color: $lightblue;
+    padding: 0.8rem 1rem;
+    width: 45vw;
+    border: none;
+    color: $white;
 }

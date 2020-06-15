@@ -22,6 +22,7 @@ nav {
                 
                 p {
                     color: $grey;
+                    font-size: 0.8rem;
                 }
                 
                 svg {
@@ -48,10 +49,16 @@ nav {
 #navigation-state--all{
     form fieldset {
         .buttons {
-            bottom: 14rem;
+            bottom: 13rem;
         }
         .input-text{
-            bottom: 11rem;
+            bottom: 10rem;
+        }
+    }
+
+    form fieldset.navigation-state--buttons-only {
+        .buttons {
+            bottom: 9.5rem;
         }
     }
 }
@@ -81,7 +88,7 @@ nav {
 #navigation-state--nav-only{
     form fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 6rem;
+            bottom: 5rem;
         }
     }
 }
@@ -89,10 +96,10 @@ nav {
 #navigation-state--nav-only{
     form fieldset.navigation-state--button-input {
         .buttons {
-            bottom: 8rem;
+            bottom: 8.5rem;
         }
         .input-text{
-            bottom: 5rem;
+            bottom: 5.5rem;
         }
     }
 }

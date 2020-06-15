@@ -4,6 +4,7 @@
             .input-button {
                 &--choose-media {
                     z-index: 999;
+                    margin-left: 1rem;
                 }
 
                 &--choose-file {
@@ -29,6 +30,7 @@
                     display: block;
                     margin-left: $indent;
                     position: absolute;
+                    margin-top: 2rem;
                 }
             }
 
@@ -44,10 +46,18 @@
             }
 
             .output--add-text {
-                .input-text {
-                    position: absolute;
-                    bottom: -19rem;
-                    left: -($indent);
+                .text-add-media {
+                    width: 70vw;
+                    padding: 10px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    border-radius: 30px;
+                    text-align: left;
+                    border: 1px solid $lightgrey;
+    
+                    input[type='text'] {
+                        width: 90%;
+                    }
                 }
             }
         }

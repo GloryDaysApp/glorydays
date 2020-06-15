@@ -1,6 +1,7 @@
 // master
 .conversational-ui {
     overflow-x: hidden;
+
     form {
         display: flex;    
         overflow: auto;
@@ -21,7 +22,7 @@
         fieldset {
             text-align: center;
             scroll-snap-align: center;
-            flex:none;
+            flex: none;
             height: 100%;
             width: 100vw;
             overflow: hidden;
@@ -66,8 +67,8 @@
             // }
 
             .legend-text {
-                font-size: $indent-xl;
-                width: 80vw;
+                // font-size: $indent-xl;
+                width: 90vw;
                 max-width: 40rem;
                 color: $darkgreen;
                 padding: 3em 0em 1em 1em;
@@ -103,14 +104,18 @@
                         }
 
                         svg {
-                            height: 2.5rem;
-                            width: 2.5rem;
+                            width: 3rem;
                             transition-duration: 0.2s;
                             transform-origin: 50% 50%;
                         }
                     }
 
                 }
+            }
+
+            .input-muziekstream {
+                text-align: start;
+                margin: $indent auto $indent 2rem;
             }
 
             .input-button {
@@ -149,14 +154,15 @@
                 padding: 10px 20px;
                 display: flex;
                 justify-content: space-between;
-                border-radius: 15px;
+                border-radius: 30px;
                 text-align: left;
-                box-shadow: -1px 4px 26px -12px #929292;
-
-
+                // box-shadow: -1px 4px 26px -12px #929292;
+                // background-color: #f3f3f3;
+                border: 1px solid $lightgrey;
 
                 input[type='text'] {
                     width: 90%;
+                    // background-color: #f3f3f3;
                     // background-color: $white;
                     // color: $lightblue;
                     // margin: 0 auto 0 0;

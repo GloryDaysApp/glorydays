@@ -10,11 +10,11 @@
             <legend class="legend-text">
                 Voeg muziek toe aan de herinnering
             </legend>
-            <div class="input">
+            <div class="input input-muziekstream">
+                <a href="/" class="button button-muziekstream">Muziekstream openen</a>
                 <!-- <a href="/" class="button button-primair">Muziekstream openen</a> -->
             </div>
-            <div class="buttons">
-                <a href="/" class="button button-muziekstream">Muziekstream openen</a>
+            <div class="buttons one-button">
                 <a href="#input-2" class="button next button-secundair"> Overslaan</a>
             </div>
         </fieldset>
@@ -163,9 +163,8 @@
                 </ul>
             </div>
             <div class="buttons">
-                <a href="#input-3" class="button button-secundair">Volgende</a>
-                <a href="/memories-overview" class="button button-primair"><img src="/icons/save.svg"
-                        alt="save check"></a>
+                <a href="/memories-overview" class="button button-secundair">Opslaan</a>
+                <a href="#input-3" class="button button-primair">Volgende</a>
             </div>
         </fieldset>
         <fieldset id="input-3" class="navigation-state--button-input">
@@ -175,9 +174,8 @@
                 <img src="/icons/send.svg" alt="send button">
             </div>
             <div class="buttons">
-                <a href="#input-4" class="button button-secundair">Volgende</a>
-                <a href="/memories-overview" class="button button-primair"><img src="/icons/save.svg"
-                        alt="save check"></a>
+                <a href="/memories-overview" class="button button-secundair">Opslaan</a>
+                <a href="#input-4" class="button button-primair">Volgende</a>
             </div>
         </fieldset>
         <fieldset id="input-4" class="navigation-state--button-input">
@@ -187,9 +185,8 @@
                 <img src="/icons/send.svg" alt="send button">
             </div>
             <div class="buttons">
-                <a href="#input-5" class="button button-secundair">Volgende</a>
-                <a href="/memories-overview" class="button button-primair"><img src="/icons/save.svg"
-                        alt="save check"></a>
+                <a href="/memories-overview" class="button button-secundair">Opslaan</a>
+                <a href="#input-5" class="button button-primair">Volgende</a>
             </div>
         </fieldset>
         <!-- <fieldset id="input-5" class="navigation-state--button-input">
@@ -206,7 +203,7 @@
                 <a href="/memories-overview" class="button button-test"><img src="/icons/save.svg" alt="save check"></a>
             </div>
         </fieldset> -->
-        <fieldset id="input-5">
+        <fieldset id="input-5" class="navigation-state--buttons-only">
             <legend class="legend-text">Waar gaat de herinnering over?</legend>
             <div class="input input-button--choose-media">
                 <div class="buttons--choose-media">
@@ -218,7 +215,7 @@
                 <div class="output--add-image" id="output--add-image">
                     <div class="input-button--choose-file">
                         <input type="file" id="real-file" hidden="hidden" />
-                        <button type="button" id="custom-button" class="button">
+                        <button type="button" id="custom-button" class="button button-add-image">
                             <!--                        <img src="./icons/camera_alt-24px.svg" alt="Image Icon" />-->
                             Kies een afbeelding
                         </button>
@@ -239,16 +236,15 @@
                     <audio id="savedAudio" controls></audio>
                 </div>
                 <div class="output--add-text" id="output--add-text">
-                    <div class="input input-text">
+                    <div class="input text-add-media">
                         <input id="description" type="text" placeholder="De herinnering gaat over" value=""
                             maxlength="40" />
                         <img src="/icons/send.svg" alt="send button">
                     </div>
                 </div>
             </div>
-            <div class="buttons">
-                <a href="/memories-overview" class="button button-primair"><img src="/icons/save.svg"
-                        alt="save check"></a>
+            <div class="buttons one-button">
+                <a href="/memories-overview" class="button button-primair">Opslaan</a>
             </div>
         </fieldset>
         <!-- <fieldset id="input-7">

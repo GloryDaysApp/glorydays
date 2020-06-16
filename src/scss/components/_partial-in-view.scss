@@ -1,0 +1,13 @@
+.partial-in-view-hidden {
+    display: none;
+}
+
+.partial-in-view-active {
+    display: block;
+    position: absolute;
+    background-color: $white;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+

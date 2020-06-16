@@ -1,8 +1,9 @@
 <header>
     <%- include('partials/head') %>
 </header>  
+<main class="partial-music" id="navigation-state--all">
     <%- include('partials/playlist-large') %>
-    <div class="container" id="navigation-state--all">
+    <div class="container">
         <main class="spotify-overview">
             <h1>Hier kun je een nieuw nummer vinden.</h1>
             <%- include('partials/playlist-small') %>
@@ -11,5 +12,18 @@
             <div class="results"></div>
         </main>
     </div>
+</main>
+ 
+      <div class="partial-in-view" id="memories-overview">
+            <%- include('memories-overview') %>
+            <%- include('settings') %>
+
+          </div>
+    
+      
   <%- include('partials/navigation-holder') %>
+
   <%- include('partials/footer') %>
+
+
+   

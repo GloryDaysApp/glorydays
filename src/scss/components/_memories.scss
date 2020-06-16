@@ -4,7 +4,7 @@
     align-items: center;
 
     height: 350px;
-    margin-top: 2rem;
+    margin-top: $indent-xxxl;
 
     .memory--circles {
         width: 100%;
@@ -22,7 +22,7 @@
                 background-color: $lightgrey;
                 border-radius: 50%;
 
-                margin-top: 1rem;
+                margin-top: $indent;
                 margin-left: 3rem;
             }
         }
@@ -132,7 +132,7 @@
                 z-index: 1;
                 top: 8.5rem;
                 font-size: 16px;
-                margin-left: 0.5rem;
+                margin-left: .5rem;
                 color: #fff;
             }
         }
@@ -146,7 +146,7 @@
         position: fixed;
         z-index: 2;
         bottom: 5rem;
-        right: 1rem;
+        right: $indent;
         border-radius: 50px;
 
         img {
@@ -160,22 +160,22 @@
 // Detail page with memory
 .container--details {
     .container--details-back {
-        margin-bottom: 2rem;
+        margin-bottom: $indent-xxxl;
 
         a {
-            padding-left: 2rem;
+            padding-left: $indent-xxxl;
         }
 
         img {
             position: absolute;
-            left: 1rem;
+            left: $indent;
             width: 23px;
             height: 23px;
         }
     }
 
     p {
-        margin-bottom: 1rem;
+        margin-bottom: $indent;
         color: $grey;
     }
 
@@ -194,13 +194,13 @@
     img {
         width: 100%;
         height: auto;
-        margin-bottom: 1rem;
+        margin-bottom: $indent;
     }
 
     .slidecontainer {
         display: flex;
         flex-direction: row;
-        margin-top: 1rem 0 2rem;
+        margin-top: $indent 0 $indent-xxxl;
         align-items: center;
 
         .slider-heart,
@@ -212,7 +212,7 @@
             border-radius: 4px;
             background: #d3d3d3;
             outline: none;
-            margin: 0 1rem;
+            margin: 0 $indent;
 
             &::-webkit-slider-thumb {
                 appearance: none;
@@ -258,7 +258,7 @@
 
     .list-item {
         font-family: 'Source Sans Regular', sans-serif;
-        font-size: 0.8em;
+        font-size: .8em;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -280,19 +280,19 @@
 
     h2 {
         font-size: 18px;
-        margin: 2rem 0 1rem;
+        margin: $indent-xxxl 0 $indent;
     }
 
     .container-catchword {
-        margin-bottom: 2rem;
+        margin-bottom: $indent-xxxl;
 
         .catchword {
             background: $glory-blue;
             color: #fff;
             padding: 8px;
             border-radius: 50px;
-            margin-right: 1rem;
-            margin-top: 1rem;
+            margin-right: $indent;
+            margin-top: $indent;
         }
     }
 
@@ -306,7 +306,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50px;
-            margin: 0 -10px 0 1rem;
+            margin: 0 -10px 0 $indent;
             padding: 13px 11px;
 
             img {
@@ -322,6 +322,6 @@
     }
 
     .edit-btn {
-        right: 1rem;
+        right: $indent;
     }
 }

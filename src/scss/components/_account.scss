@@ -1,8 +1,8 @@
 .account {
     display: flex;
     flex-direction: row;
-    padding: .5rem;
-    margin-bottom: 1rem;
+    padding: $indent-xxxs;
+    margin-bottom: $indent;
 
     &--avatar {
         width: 54px;
@@ -22,6 +22,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-left: .5rem;
+        margin-left: $indent-xxxs;
     }
 }

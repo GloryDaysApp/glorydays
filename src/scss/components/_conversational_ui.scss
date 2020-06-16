@@ -40,7 +40,7 @@
                 width: 90vw;
                 max-width: 40rem;
                 color: $darkgreen;
-                padding: 2.5em 0 1em 1em;
+                padding: 2.5rem 0 $indent $indent;
                 text-align: left;
                 transition: transform 1s ease-in-out;
                 transform: translateX(-100%);
@@ -55,7 +55,7 @@
             }
 
             .input {
-                margin: 2rem auto $indent 0;
+                margin: $indent-xxxl auto $indent 0;
                 background-color: $white;
 
                 ul {
@@ -81,7 +81,7 @@
 
                         svg {
                             width: 3rem;
-                            transition-duration: 0.2s;
+                            transition-duration: .2s;
                             transform-origin: 50% 50%;
                         }
                     }
@@ -91,7 +91,7 @@
 
             .input-muziekstream {
                 text-align: start;
-                margin: 2rem auto $indent 2rem;
+                margin: $indent-xxxl auto $indent $indent-xxxl;
             }
 
             .input-button {
@@ -134,7 +134,7 @@
 
 .output {
     max-width: 30rem;
-    margin: .5rem 3rem 0 auto;
+    margin: $indent-xxxs 3rem 0 auto;
     display: block;
 
     input {
@@ -142,7 +142,7 @@
         color: #8bd5d8;
         border-radius: 30px;
         text-align: right;
-        padding: .5rem $indent;
+        padding: $indent-xxxs $indent;
         width: 80vw;
         text-align: right;
         max-width: 30rem;

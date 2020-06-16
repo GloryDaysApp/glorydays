@@ -7,7 +7,7 @@
     z-index: 100;
 
     ul {
-        padding: 1em;
+        padding: $indent;
         display: flex;
         flex-direction: column;
 
@@ -17,7 +17,7 @@
 
         li:nth-last-child(1) {
             position: absolute;
-            right: 0.5em;
+            right: $indent-xxxs;
         }
     }
 }

@@ -10,7 +10,7 @@ nav {
         position: fixed;
         bottom: 0;
         padding: 1em 0;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .16);
         background-color: $white;
         align-items: baseline;
 
@@ -22,12 +22,12 @@ nav {
                 
                 p {
                     color: $grey;
-                    font-size: 0.8rem;
+                    font-size: .8rem;
                 }
                 
                 svg {
                     color: $grey;
-                    padding: 0 0 0.5em;
+                    padding: 0 0 .5em;
                     width: 2em;
                     height: 2em;
                 }

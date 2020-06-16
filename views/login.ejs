@@ -1,17 +1,18 @@
 <%- include('partials/head') %>
 
-<header>
-    <h1><%= title %></h1>
-</header>
-
 <main>
-   <div class="container">
-     <h1>Please login to Spotify</h1>
-     <p>In order for you to play Spotify Song Roulette, we need your Spotify data. This data will be used for this game and this game only.</p>
-     <form action="/spotifylogin">
-       <button type="submit">Login to spotify</button>
-     </form>
-   </div>
+  <div class="container login-text">
+    <h1>Inloggen met Spotify</h1>
+    <p>Om muziek te kunnen streamen kunt u inloggen op spotify. Dit zal alleen gebruikt worden voor het vinden en
+      afspelen van muziek. </p>
+    <form action="/spotifylogin">
+      <!-- <button type="submit" class="button button-login">Inloggen met Spotify</button>
+      <button class="button button-secundair">Inloggen met Spotify</button> -->
+      <div class="inlog-buttons">
+        <button type="submit" class="button button-login">Inloggen met Spotify</button>
+        <a href="/" class="button button-terug button-secundair">Terug naar overzicht</a>
+      </div>
+    </form>
 </main>
 
 <%- include('partials/footer') %>

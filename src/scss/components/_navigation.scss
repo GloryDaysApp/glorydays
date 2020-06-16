@@ -22,6 +22,7 @@ nav {
                 
                 p {
                     color: $grey;
+                    font-size: 0.8rem;
                 }
                 
                 svg {
@@ -41,6 +42,76 @@ nav {
                     fill: $glory-blue;
                 }
             }
+        }
+    }
+}
+
+#navigation-state--all {
+    form fieldset {
+        .buttons {
+            bottom: 13rem;
+        }
+
+        .input-text {
+            bottom: 10rem;
+        }
+    }
+
+    form fieldset.navigation-state--buttons-only {
+        .buttons {
+            bottom: 9.5rem;
+        }
+    }
+}
+
+#navigation-state--nav-only {
+    form fieldset {
+        .buttons {
+            bottom: 10rem;
+        }
+
+        .input-text {
+            bottom: 8rem;
+        }
+    }
+}
+
+#navigation-state--player-only {
+    form fieldset {
+        .buttons {
+            bottom: 10em;
+        }
+        
+        .input-text {
+            bottom: 8rem;
+        }
+    }
+}
+
+#navigation-state--nav-only {
+    form fieldset.navigation-state--buttons-only {
+        .buttons {
+            bottom: 5rem;
+        }
+    }
+}
+
+#navigation-state--nav-only {
+    form fieldset.navigation-state--button-input {
+        .buttons {
+            bottom: 8.5rem;
+        }
+
+        .input-text {
+            bottom: 5.5rem;
+        }
+    }
+}
+
+#navigation-state--player-only {
+    form fieldset.navigation-state--buttons-only {
+        .buttons {
+            bottom: 6rem;
         }
     }
 }

@@ -1,89 +1,115 @@
 // master
 .conversational-ui {
-    form {
-        margin: $center-margin;
+    overflow-x: hidden;
+  
+    .back {
         width: 100%;
-        height: 90vh;
-        max-width: 50rem;
-        overflow: hidden;
-        position: relative;
+        padding: $indent;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(180deg, rgba(255, 255, 255, .8995973389355743) 50%, rgba(255, 255, 255, 0) 100%);
+
+        a {
+            color: $glory-blue;
+            font-family: Avenir-Light;
+        }
+    }
+    
+    form {
+        display: flex;
+        overflow: auto;
+        flex: none;
+        width: 100vw;
+        height: 100vh;
+        flex-flow: column nowrap;
+        scroll-snap-type: y mandatory;
+        // margin: $center-margin;
+        // max-width: 50rem;
+        // overflow: hidden;
+        // position: relative;
+        // flex:none;
+        // flex-direction: column;
+        // flex-wrap: nowrap;
+        // -webkit-overflow-scrolling: touch;
 
         fieldset {
-            margin: $center-margin;
-            padding: $indent;
-            height: 90vh;
+            text-align: center;
+            scroll-snap-align: center;
+            flex: none;
+            height: 101%;
+            width: 100vw;
             overflow: hidden;
             position: relative;
+            top: 1em;
+            // margin: $center-margin;
+            // padding: $indent;
+            // height: 100vh;
+            // text-align: center;
+            // position: relative;
 
-            .back {
-                width: 100%;
-                padding: $indent;
-                position: absolute;
-                top: 0;
-                z-index: 100;
-                background: rgb(255, 255, 255);
-                background: linear-gradient(180deg, rgba(255, 255, 255, .8995973389355743) 50%, rgba(255, 255, 255, 0) 100%);
+            // .back {
+            //     width: 100%;
+            //     padding: $indent;
+            //     // position: absolute;
+            //     // top: 0;
+            //     // z-index: 100;
+            //     background: rgb(255, 255, 255);
+            //     background: linear-gradient(180deg, rgba(255, 255, 255, .8995973389355743) 50%, rgba(255, 255, 255, 0) 100%);
 
-                a {
-                    color: $glory-blue;
-                    font-family: Avenir-Light;
-                }
-            }
+            //     a {
+            //         color: $lightblue;
+            //         font-family: Avenir-Light;
+            //     }
+            // }
 
-            .buttons {
-                // Postition:static if JS is not available (progressive enhancement)
-                // position: static;
-                position: absolute;
-                left: 5%;
-                width: 90vw;
-                max-width: 40rem;
-                //bottom: 8rem;
+            // .buttons {
+            //     // Postition:static if JS is not available (progressive enhancement)
+            //     // position: static;
+            //     position: absolute;
+            //     // left: 5%;
+            //     // width: 90vw;
+            //     // max-width: 40rem;
+            //     //bottom: 8rem;
 
-                .button {
-                    width: 100%;
-                    background-color: transparent;
-                    color: $grey;
-                    text-decoration: underline;
-                    text-align: right;
-                }
-            }
+            //     .button {
+            //         // width: 100%;
+            //         // background-color: transparent;
+            //         // color: $grey;
+            //         // text-decoration: underline;
+            //         // text-align: right;
+            //     }
+            // }
 
             .legend-text {
-                font-size: $indent-xl;
-                position: absolute;
-                top: 20%;
-                width: 80vw;
-                max-width: 30rem;
-                text-align: center;
-                color: $grey;
-                border-radius: 15px 15px 15px 0;
-                padding: $indent;
+                width: 90vw;
+                max-width: 40rem;
+                color: $darkgreen;
+                padding: 2.5em 0 1em 1em;
                 text-align: left;
-                margin: 0 auto -($indent) 0;
-
+                // margin: 2em auto -($indent) 0;
+                // margin: 1em 0;
+                // opacity: 0;
+                // transform:scale(0.5);
+                // transition:.25s.25s;
+                transition: transform 1s ease-in-out; /* our nice transition */
+                transform: translateX(-100%);
+                animation-delay: 2s;
+                // position: relative;
+                // top: 1em;
+            }
+            
+            
+            legend.observed {
+                // opacity: 1;
+                // transform:scale(1);
+                transform: translateX(0);
             }
 
             .input {
-                margin: $indent auto $indent 0;
+                margin: 2rem auto $indent 0;
                 background-color: $white;
-            }
-
-            .input-button {
-                @include input-button-positioning;
-
-                display: inline-block;
-                border-radius: 15px 15px 15px 0;
-                padding: $indent;
-
-                input[type='radio'] {
-                    width: 10%;
-                }
-
-                a {
-                    @include link-button;
-
-                    box-shadow: -1px 4px 26px -12px $grey;
-                }
 
                 ul {
                     list-style: none;
@@ -107,8 +133,7 @@
                         }
 
                         svg {
-                            height: 2.5rem;
-                            width: 2.5rem;
+                            width: 3rem;
                             transition-duration: 0.2s;
                             transform-origin: 50% 50%;
                         }
@@ -117,316 +142,349 @@
                 }
             }
 
+            .input-muziekstream {
+                text-align: start;
+                margin: 2rem auto $indent 2rem;
+            }
+
+            .input-button {
+                @include input-button-positioning;
+                display: inline-block;
+                border-radius: 30px;
+                padding: $indent;
+
+                input[type='checkbox'] {
+                    width: 10%;
+                }
+
+                a {
+                    @include link-button;
+                    // box-shadow: -1px 4px 26px -12px $grey;
+                }
+            }
+
             .input-text {
-                align-items: center;
-                box-shadow: -1px 4px 26px -12px $grey;
-                border-radius: 15px;
-                display: flex;
+                // align-items: center;
+                // box-shadow: -1px 4px 26px -12px $grey;
+                // border-radius: 30px;
+                // display: flex;
+                // // position: absolute;
+                // z-index: 100;
+                // bottom: 5rem;
+                // width: 90vw;
+                // max-width: 40rem;
+                // left: 5%;
                 position: absolute;
-                z-index: 100;
-                bottom: 5rem;
-                width: 90vw;
-                max-width: 40rem;
+                bottom: 10rem;
                 left: 5%;
+                right: 5%;
+                width: 90vw;
+                margin: 0 auto;
+                padding: 0 20px;
+                display: flex;
+                justify-content: space-between;
+                border-radius: 30px;
+                text-align: left;
+                // box-shadow: -1px 4px 26px -12px #929292;
+                // background-color: #f3f3f3;
+                border: 1px solid $lightgrey;
 
                 input[type='text'] {
-                    background-color: $white;
-                    color: $glory-blue;
-                    margin: 0 auto 0 0;
-                    border-radius: 15px;
-                    padding: $indent;
-                    width: 100%;
+                    width: 90%;
+                    line-height: 2.5rem;
+                    // background-color: #f3f3f3;
+                    // background-color: $white;
+                    // color: $lightblue;
+                    // margin: 0 auto 0 0;
+                    // border-radius: 30px;
+                    // padding: $indent;
+                    // width: 100%;
                 }
             }
         }
     }
+}
 
-    // The hidden-fieldset class comes from JS
-    .hidden-fieldset {
-        position: absolute;
-        top: 0;
-        height: 90vh;
-        width: 100%;
-        max-width: 50rem;
-        padding: $indent 2.5rem $indent $indent;
-        z-index: 0;
+// The hidden-fieldset class comes from JS
+//     .hidden-fieldset {
+//         position: absolute;
+//         top: 0;
+//         height: 90vh;
+//         width: 100%;
+//         max-width: 50rem;
+//         padding: $indent 2.5rem $indent $indent;
+//         z-index: 0;
 
-        .back {
-            opacity: 0;
-        }
+//         .back {
+//             opacity: 0;
+//         }
 
-        .legend-text {
-            opacity: 0;
-            position: absolute;
-            top: 20%;
-            width: 80vw;
-            max-width: 30rem;
-            margin: 0 auto;
-            transform: translate(0, -30vw);
-            transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
-        }
+//         .legend-text {
+//             opacity: 0;
+//             position: absolute;
+//             top: 20%;
+//             width: 80vw;
+//             max-width: 30rem;
+//             margin: 0 auto;
+//             transform: translate(0, -30vw);
+//             transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
+//         }
 
-        .input {
-            opacity: 0;
-            margin: 0 auto;
-        }
+//         .input {
+//             opacity: 0;
+//             margin: 0 auto;
+//         }
 
-        .input-text {
-            opacity: 0;
-            border-radius: 15px;
-            text-align: left;
-            position: fixed;
-            bottom: 5rem;
-            left: 5%;
-            width: 90vw;
-            max-width: 40rem;
-            background: transparent;
-            transform: translate(0, -30vw);
-            transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
+//         .input-text {
+//             opacity: 0;
+//             border-radius: 30px;
+//             text-align: left;
+//             position: fixed;
+//             bottom: 5rem;
+//             left: 5%;
+//             width: 90vw;
+//             max-width: 40rem;
+//             background: transparent;
+//             transform: translate(0, -30vw);
+//             transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
 
-            .send-button {
-                opacity: 0;
-            }
-        }
+//             .send-button {
+//                 opacity: 0;
+//             }
+//         }
 
-        .input-button {
-            width: 80vw;
-            max-width: 30rem;
-            opacity: 0;
-            top: 40%;
-            position: absolute;
-            text-align: left;
-            margin: $indent auto $indent 0;
-            display: inline-block;
-            transform: translate(0, -30vw);
-            transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
+//         .input-button {
+//             width: 80vw;
+//             max-width: 30rem;
+//             opacity: 0;
+//             top: 40%;
+//             position: absolute;
+//             text-align: left;
+//             margin: $indent auto $indent 0;
+//             display: inline-block;
+//             transform: translate(0, -30vw);
+//             transition: all .5s cubic-bezier(.4, .25, .8, .3) .06s;
 
-            input[type='checkbox'] {
-                width: 10vw;
-            }
-        }
+//             input[type='checkbox'] {
+//                 width: 10vw;
+//             }
+//         }
 
-        .buttons {
-            position: absolute;
-            opacity: 0;
-            transform: translate(0, -200vw);
-            transition: all 1s ease-in-out;
-            left: 5%;
-            width: 90vw;
-            max-width: 40rem;
+//         .buttons {
+//             position: absolute;
+//             opacity: 0;
+//             transform: translate(0, -200vw);
+//             transition: all 1s ease-in-out;
+//             left: 5%;
+//             width: 90vw;
+//             max-width: 40rem;
+//             .button {
+//                 // width: 100%;
+//             }
 
-            .button {
-                width: 100%;
-            }
+//             .next {
+//                 display: none;
+//             }
 
-            .next {
-                opacity: 0;
-            }
+//             .save {
+//                 text-align: center;
+//             }
+//         }
 
-            .save {
-                text-align: center;
-            }
-        }
+//         .output {
+//             max-width: 30rem;
+//             opacity: 0;
+//             transform: translate(0, -30vw);
+//             transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
 
-        .output {
-            max-width: 30rem;
-            opacity: 0;
-            transform: translate(0, -30vw);
-            transition: all .4s cubic-bezier(.4, .25, .8, .3) .05s;
+//             textarea {
+//                 opacity: 0;
+//             }
+//         }
+//     }
 
-            textarea {
-                opacity: 0;
-            }
-        }
+//     // The active-fieldset class comes from JS
+//     .active-fieldset {
+//         position: absolute;
+//         z-index: 99;
+//         top: 0;
+//         height: 90vh;
+//         width: 100%;
+//         max-width: 50rem;
+//         padding: $indent 2.5rem $indent $indent;
+//         overflow: scroll;
+
+//         .back {
+//             opacity: 1;
+//         }
+
+//         .legend-text {
+//             opacity: 1;
+//             position: absolute;
+//             top: 20%;
+//             width: 80vw;
+//             max-width: 30rem;
+//             margin: 0 auto;
+//             transform: translate(0, -10%);
+//             transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
+//         }
+
+//         .input {
+//             opacity: 1;
+//             margin: 0 auto;
+//         }
+
+//         .input-text {
+//             opacity: 1;
+//             border-radius: 30px;
+//             text-align: left;
+//             position: fixed;
+//             z-index: 100;
+//             bottom: 5rem;
+//             width: 90vw;
+//             max-width: 40rem;
+//             left: 5%;
+//             transform: translate(0, -10%);
+//             transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+
+//             input[type='text'] {
+//                 opacity: 1;
+//                 z-index: 100;
+//                 width: 70vw;
+//                 border: 0;
+//                 outline: 0;
+//                 background: transparent;
+//                 padding: $indent;
+//                 margin: 0 auto 0 0;
+//             }
+
+//             .send-button {
+//                 opacity: 1;
+//                 width: 20%;
+//                 text-align: center;
+//                 color: #64a9a9;
+//                 height: 100%;
+//                 margin: 0;
+//                 padding: $indent;
+//                 border-radius: 30px;
+//                 text-decoration: none;
+//             }
+
+//             .send-button:hover {
+//                 text-decoration: underline;
+//             }
+//         }
+
+//         // .input-button like 'open spotify' in text cloud
+//         .input-button--choose-media,
+//         .input-button {
+//             @include input-button-positioning;
+
+//             opacity: 1;
+//             transform: translate(0, -10%);
+//             transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
+//         }
+
+//         .input-button {
+//             display: inline-block;
+
+//             input[type='checkbox'] {
+//                 width: 10%;
+//             }
+
+//             a {
+//                 @include link-button;
+//             }
+//         }
+
+//         // .buttons below the page like "Next"
+//         .buttons {
+//             position: absolute;
+//             opacity: 1;
+//             transition: all 1s ease-in-out;
+//             // left: 5%;
+//             // width: 90vw;
+//             // max-width: 40rem;
+
+//             .button {
+//                 // width: 100%;
+//             }
+
+//             .next {
+//                 display: none;
+//             }
+
+//             .save {
+//                 text-align: center;
+//             }
+//         }
+
+.output {
+    max-width: 30rem;
+    margin: .5rem 3rem 0 auto;
+    display: block;
+
+    input {
+        font-size: 1.2rem;
+        color: #8bd5d8;
+        border-radius: 30px;
+        text-align: right;
+        padding: .5rem $indent;
+        width: 80vw;
+        text-align: right;
+        max-width: 30rem;
+        margin: 0 0 0 auto;
+        display: block;
+        background-color: transparent;
     }
 
-    // The active-fieldset class comes from JS
-    .active-fieldset {
-        position: absolute;
-        z-index: 99;
-        top: 0;
-        height: 90vh;
-        width: 100%;
-        max-width: 50rem;
-        padding: $indent 2.5rem $indent $indent;
-        overflow: scroll;
-
-        .back {
-            opacity: 1;
-        }
-
-        .legend-text {
-            opacity: 1;
-            position: absolute;
-            top: 20%;
-            width: 80vw;
-            max-width: 30rem;
-            margin: 0 auto;
-            transform: translate(0, -10%);
-            transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
-        }
-
-        .input {
-            opacity: 1;
-            margin: 0 auto;
-        }
-
-        .input-text {
-            opacity: 1;
-            border-radius: 15px;
-            text-align: left;
-            position: fixed;
-            z-index: 100;
-            bottom: 5rem;
-            width: 90vw;
-            max-width: 40rem;
-            left: 5%;
-            transform: translate(0, -10%);
-            transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
-
-            input[type='text'] {
-                opacity: 1;
-                z-index: 100;
-                width: 70vw;
-                border: 0;
-                outline: 0;
-                background: transparent;
-                padding: $indent;
-                margin: 0 auto 0 0;
-            }
-
-            .send-button {
-                opacity: 1;
-                width: 20%;
-                text-align: center;
-                color: #64a9a9;
-                height: 100%;
-                margin: 0;
-                padding: $indent;
-                border-radius: 0 15px 15px 0;
-                text-decoration: none;
-            }
-
-            .send-button:hover {
-                text-decoration: underline;
-            }
-        }
-
-        // .input-button like 'open spotify' in text cloud
-        .input-button--choose-media,
-        .input-button {
-            @include input-button-positioning;
-
-            opacity: 1;
-            transform: translate(0, -10%);
-            transition: all .4s cubic-bezier(.1, .45, .1, .85) .5s;
-        }
-
-        .input-button {
-            display: inline-block;
-
-            input[type='checkbox'] {
-                width: 10%;
-            }
-
-            a {
-                @include link-button;
-            }
-        }
-
-        // .buttons below the page like "Next"
-        .buttons {
-            position: absolute;
-            opacity: 1;
-            transition: all 1s ease-in-out;
-            left: 5%;
-            width: 90vw;
-            max-width: 40rem;
-
-            .button {
-                width: 100%;
-            }
-
-            .next {
-                opacity: 0;
-            }
-
-            .save {
-                text-align: center;
-            }
-        }
-
-        .output {
-            max-width: 30rem;
-            margin: .5rem 0 0 auto;
-            display: block;
-            opacity: 1;
-            background-color: transparent;
-            transform: translate(0, -10%);
-            transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
-
-            textarea {
-                font-size: 1.2rem;
-                color: #8bd5d8;
-                border-radius: 30px;
-                text-align: right;
-                padding: .5rem $indent;
-                width: 80vw;
-                text-align: right;
-                max-width: 30rem;
-                margin: 0 0 0 auto;
-                display: block;
-                background-color: transparent;
-                resize: none;
-            }
-
-            .output-keyword {
-                background-color: $glory-blue;
-                color: $white;
-                text-align: center;
-            }
-        }
-
-        .output:nth-of-type(1) {
-            margin-top: 65%;
-        }
-
-        .output:nth-last-of-type(1) {
-            margin: 0 0 8rem auto;
-        }
-
-        // Animation setting: the next fieldset comes in from below (*the previous fieldset from above, see .hidden-fieldset).
-        ~ .hidden-fieldset {
-            .legend-text {
-                opacity: 0;
-                transform: translate(0, 150vw);
-                transition: all .5s ease-in;
-            }
-
-            .input-button--choose-media,
-            .input-button {
-                opacity: 0;
-                transform: translate(0, 200vw);
-                transition: all .5s ease-in;
-            }
-
-            .input-text {
-                opacity: 0;
-                transform: translate(0, 200vw);
-                transition: all .5s ease-in;
-            }
-
-            .buttons {
-                opacity: 0;
-                transform: translate(0, 200vw);
-                transition: all 1s ease-in-out;
-            }
-
-            .output {
-                opacity: 0;
-                transform: translate(0, 150vw);
-                transition: all .5s ease-in;
-            }
-        }
+    .output-keyword {
+        background-color: $glory-blue;
+        color: $white;
+        text-align: center;
     }
 }
+
+//         .output:nth-of-type(1) {
+//             margin-top: 65%;
+//         }
+
+//         .output:nth-last-of-type(1) {
+//             margin: 0 0 8rem auto;
+//         }
+
+//         // Animation setting: the next fieldset comes in from below (*the previous fieldset from above, see .hidden-fieldset).
+//         ~ .hidden-fieldset {
+//             .legend-text {
+//                 opacity: 0;
+//                 transform: translate(0, 150vw);
+//                 transition: all .5s ease-in;
+//             }
+
+//             .input-button--choose-media,
+//             .input-button {
+//                 opacity: 0;
+//                 transform: translate(0, 200vw);
+//                 transition: all .5s ease-in;
+//             }
+
+//             .input-text {
+//                 opacity: 0;
+//                 transform: translate(0, 200vw);
+//                 transition: all .5s ease-in;
+//             }
+
+//             .buttons {
+//                 opacity: 0;
+//                 transform: translate(0, 200vw);
+//                 transition: all 1s ease-in-out;
+//             }
+
+//             .output {
+//                 opacity: 0;
+//                 transform: translate(0, 150vw);
+//                 transition: all .5s ease-in;
+//             }
+//         }
+// }
+

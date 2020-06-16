@@ -2,14 +2,14 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    right: 1em;
+    right: 1rem;
     position: absolute;
     top: 40%;
     z-index: 100;
 
     .navigation-dot {
         &::before {
-            background-color: #8bd5d5;
+            background-color: $lightgrey;
             border: 0;
             border-radius: 50%;
             content: '';
@@ -24,7 +24,7 @@
 
     .active-navigation-dot {
         &::before {
-            background-color: #64a9a9;
+            background-color: $glory-blue;
             border: 0;
             border-radius: 50%;
             content: '';

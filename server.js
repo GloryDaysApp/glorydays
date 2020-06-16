@@ -92,10 +92,10 @@ app
 
     .get('/add-memory', async (req, res) => {
         if (req.cookies.ACCESS_TOKEN) {
-            router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
+            router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers);
         } else {
             getRefreshToken(req, res).then(() => {
-                router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
+                router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers);
             });
         }
     })
@@ -166,10 +166,9 @@ app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
 
     // Create new memory
     let memory = {
-        title: req.body.title !== '' ? req.body.title : null,
-        description: req.body.description !== '' ? req.body.description : null,
-        // keywords: req.body.keywords.length > 0 ? req.body.keywords.map(keyword => keyword) : null
-        keywords: req.body.keywords !== null ? req.body.keywords : null,
+        title: req.body.title.length > 0 ? req.body.title.filter(text => text !== '') : null,
+        description: req.body.description.length > 0 ? req.body.description.filter(desc => desc !== '') : null,
+        keywords: req.body.keywords.length > 0 ? req.body.keywords.filter(keyword => keyword !== '') : null,
         media: []
     };
 

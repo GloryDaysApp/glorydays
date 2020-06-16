@@ -37,8 +37,14 @@ const memory = new Schema({
     },
     emotion: String,
     intensity: String, 
-    description: String,
-    title: String, 
+    description: {
+        type: Array,
+        default: []
+    },
+    title: {
+        type: Array,
+        default: []
+    },
     keywords: {
         type: Array,
         default: []

@@ -1,14 +1,35 @@
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    right: 5%;
+}  
+
+.one-button {
+    justify-content: flex-end;
+}
+  
 .button {
-    background-color: $glory-blue;
-    display: block;
-    padding: $indent-xxxs $indent;
-    /* width: 10rem; */
     overflow-wrap: break-word;
     text-align: center;
-    border: 0;
     border-radius: 50px;
+    width: 43vw;
+    padding: $indent-xs $indent;
+    margin: .5rem 0;
+}
+
+.button-primair {
+    background-color: $glory-blue;
     color: $white;
-    width: 55vw;
+}
+
+.button-secundair {
+    background-color: $white;
+    color: $darkgreen;
+    // text-decoration: underline;
+    border: 1px solid $darkgreen;
 }
 
 .button-icon {
@@ -17,22 +38,18 @@
     border-radius: 4px;
 }
 
-.buttons {
-    position: fixed;
-    bottom: $indent;
-    width: 100%;
+// Add music 
 
-    .button {
-        margin: 1rem auto 0;
-        text-align: center;
-        display: block;
-        width: 70vw;
-        background-color: $glory-blue;
-        border-radius: 15px;
-        color: $white;
-        padding: 1rem;
-    }
-} 
+.button-muziekstream {
+    background-color: $glory-salmon;
+    width: 70vw;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    color: $white;
+    margin: .5rem 0;
+    text-align: start;
+    font-size: 1.2rem;
+}
 
 .button--empty {
     position: relative;
@@ -73,9 +90,19 @@
 .button-icon,
 .media-button {
     @include icon-button--square;
+    // background-color: $white;
+    // border: 1px solid $lightgrey;
 }
 
 .media-button {
     margin: $indent 0 $indent $indent;
     border: 0;
+}
+
+.button-add-image {
+    background-color: $glory-blue;
+    padding: 0.8rem 1rem;
+    width: 45vw;
+    border: none;
+    color: $white;
 }

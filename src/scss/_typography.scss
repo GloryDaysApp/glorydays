@@ -76,7 +76,6 @@ html {
 
 a,
 label,
-legend,
 span {
     font-family: 'Source Sans Regular', sans-serif;
     font-size: 0.9em;
@@ -93,9 +92,11 @@ li {
     font-weight: bold;
 }
 
-h1 {
-    font-size: 1.75rem; // 28px
+h1,
+legend {
+    font-size: 2rem; // 28px
     font-family: 'Source Serif Semibold', serif;
+    line-height: 2.3rem;
 }
 
 h2 {
@@ -127,6 +128,12 @@ h5 {
 }
 
 p {
+    font-size: 1rem; // 16px
+    font-family: 'Source Sans Regular', sans-serif;
+}
+
+button,
+.button {
     font-size: 1rem; // 16px
     font-family: 'Source Sans Regular', sans-serif;
 }

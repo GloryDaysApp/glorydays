@@ -80,10 +80,10 @@ app
 
     .get('/add-memory', async (req, res) => {
         if (req.cookies.ACCESS_TOKEN) {
-            router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
+            router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers);
         } else {
             getRefreshToken(req, res).then(() => {
-                router.pageWithData(res, 'add-memory', 'Herinnering toevoegen', caregivers);
+                router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers);
             });
         }
     })

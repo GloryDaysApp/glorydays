@@ -50,18 +50,18 @@ nav {
     form {
         fieldset {
             .buttons {
-                bottom: 13em;
+                bottom: 26vh;
             }
 
             .input-text {
-                bottom: 10em;
+                bottom: 20vh;
             }
         }
     }
 
     fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 9.5em;
+            bottom: 19vh;
         }
     }
 
@@ -95,7 +95,7 @@ nav {
 .navigation-state--nav-only {
     form fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 5em;
+            bottom: 10vh;
         }
     }
 }
@@ -103,11 +103,11 @@ nav {
 .navigation-state--nav-only {
     form fieldset.navigation-state--button-input {
         .buttons {
-            bottom: 8.5rem;
+            bottom: 17vh;
         }
 
         .input-text {
-            bottom: 5.5em;
+            bottom: 11vh;
         }
     }
 }

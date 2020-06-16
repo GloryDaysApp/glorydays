@@ -1,18 +1,18 @@
 @mixin link-button {
-    margin: 1em auto 1em 0;
+    margin: $indent auto $indent 0;
     color: $glory-blue;
-    padding: 1em;
+    padding: $indent;
     border-radius: 30px;
     text-align: left;
 }
 
 @mixin input-button-positioning {
     width: 80vw;
-    max-width: 30em;
+    max-width: 30rem;
     position: absolute;
     top: 30%;
     text-align: left;
-    margin: 1em auto 1em 0;
+    margin: $indent auto $indent 0;
 }
 
 @mixin icon-button--square {

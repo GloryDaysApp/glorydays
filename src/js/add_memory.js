@@ -38,7 +38,7 @@ function addTextBaloon(index) {
                 <div class='output'><textarea class='output-textarea' rows='1'>${valueInitialInputField}</textarea></div>`);
             }
         }
-        initialInputFieldArray[index].value = '';
+        // initialInputFieldArray[index].value = '';
     };
 }
 

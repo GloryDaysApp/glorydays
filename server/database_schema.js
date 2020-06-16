@@ -37,7 +37,9 @@ const memory = new Schema({
     },
     emotion: String,
     intensity: String, 
-    catchWords: {
+    description: String,
+    title: String, 
+    keywords: {
         type: Array,
         default: []
     },
@@ -48,7 +50,7 @@ const memory = new Schema({
 });
 
 // // Model
-const Account = mongoose.model('Room', account);
-const Memory = mongoose.model('User', memory);
+const Account = mongoose.model('Account', account);
+const Memory = mongoose.model('Memory', memory);
 
 module.exports = { Account, Memory };

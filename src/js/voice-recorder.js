@@ -93,7 +93,7 @@ navigator.mediaDevices.getUserMedia(constraintObj)
 // Add a timer
 const minutes = document.querySelector('.minutes');
 const seconds = document.querySelector('.seconds');
-let timerTime = 00;
+let timerTime = '00';
 let isRunning = false;
 let interval;
 

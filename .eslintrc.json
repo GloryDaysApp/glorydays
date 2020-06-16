@@ -14,7 +14,7 @@
         "ecmaVersion": 11,
         "sourceType": "script",
         "ecmaFeatures": {
-            "globalReturn": true
+            "globalReturn": true,
         }
     },
     "rules": {
@@ -36,7 +36,6 @@
         ],
         "no-undef": "off",
         "no-unused-vars": "off",
-        "no-useless-escape": "off",
-        "no-octal": "off"
+        "no-useless-escape": "off"
     }
 }

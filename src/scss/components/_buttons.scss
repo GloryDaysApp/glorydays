@@ -17,7 +17,7 @@
     border-radius: 50px;
     width: 43vw;
     padding: $indent-xs $indent;
-    margin: .5rem 0;
+    margin: $indent-xxxs 0;
 }
 
 .button-primair {
@@ -34,7 +34,7 @@
 
 .button-icon {
     border: 0;
-    padding: .5rem;
+    padding: $indent-xxxs;
     border-radius: 4px;
 }
 
@@ -43,10 +43,10 @@
 .button-muziekstream {
     background-color: $glory-salmon;
     width: 70vw;
-    padding: 1rem 1.5rem;
+    padding: $indent $indent-xl;
     border-radius: 50px;
     color: $white;
-    margin: .5rem 0;
+    margin: $indent-xxxs 0;
     text-align: start;
     font-size: 1.2rem;
 }
@@ -101,7 +101,7 @@
 
 .button-add-image {
     background-color: $glory-blue;
-    padding: 0.8rem 1rem;
+    padding: .8rem $indent;
     width: 45vw;
     border: 0;
     color: $white;

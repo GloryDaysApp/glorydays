@@ -4,7 +4,7 @@ const navigation = document.getElementById('navigation'),
     onlyNavigation = document.getElementById('navigation-state--nav-only'),
     onlyNavigationPlayer = document.getElementById('navigation-state--player-only');
 
-if(onlyNavigation) {
+if (onlyNavigation) {
     // show navigation only
     if (navigationPlayer) {
         navigationPlayer.classList.add('hide');

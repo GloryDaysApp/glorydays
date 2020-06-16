@@ -1,5 +1,4 @@
 // Login page buttons
-
 .inlog-buttons {
     display: flex;
     flex-direction: column;
@@ -15,7 +14,7 @@
     margin: 2rem 0 0;
     text-align: center;
     font-size: 1.2rem;
-    border: none;
+    border: 0;
 }
 
 .button-terug {
@@ -25,6 +24,7 @@
 
 .login-text {
     width: 95vw;
+    
     p {
         margin-top: 1rem;
     }

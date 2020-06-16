@@ -61,22 +61,30 @@ app
 
     // Check if ACCESS_TOKEN exists. If not, fetch a new one with the refresh token.
     .get('/', async (req, res) => {
-        if (req.cookies.ACCESS_TOKEN) {
-            router.basicPage(res, 'memories-overview', 'Herinneringen');
+        if (!req.cookies.REFRESH_TOKEN) {
+            res.redirect('/login');
         } else {
-            getRefreshToken(req, res).then(() => {
+            if (req.cookies.ACCESS_TOKEN) {
                 router.basicPage(res, 'memories-overview', 'Herinneringen');
-            });
+            } else {
+                getRefreshToken(req, res).then(() => {
+                    router.basicPage(res, 'memories-overview', 'Herinneringen');
+                });
+            }
         }
     })
 
     .get('/memories-overview', async (req, res) => {
-        if (req.cookies.ACCESS_TOKEN) {
-            router.basicPage(res, 'memories-overview', 'Herinneringen');
+        if (!req.cookies.REFRESH_TOKEN) {
+            res.redirect('/login');
         } else {
-            getRefreshToken(req, res).then(() => {
+            if (req.cookies.ACCESS_TOKEN) {
                 router.basicPage(res, 'memories-overview', 'Herinneringen');
-            });
+            } else {
+                getRefreshToken(req, res).then(() => {
+                    router.basicPage(res, 'memories-overview', 'Herinneringen');
+                });
+            }
         }
     })
 
@@ -91,42 +99,58 @@ app
     })
 
     .get('/add-memory', async (req, res) => {
-        if (req.cookies.ACCESS_TOKEN) {
-            router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers);
+        if (!req.cookies.REFRESH_TOKEN) {
+            res.redirect('/login');
         } else {
-            getRefreshToken(req, res).then(() => {
+            if (req.cookies.ACCESS_TOKEN) {
                 router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers);
-            });
+            } else {
+                getRefreshToken(req, res).then(() => {
+                    router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers);
+                });
+            }
         }
     })
 
     .get('/memory-details', async (req, res) => {
-        if (req.cookies.ACCESS_TOKEN) {
-            router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers);
+        if (!req.cookies.REFRESH_TOKEN) {
+            res.redirect('/login');
         } else {
-            getRefreshToken(req, res).then(() => {
+            if (req.cookies.ACCESS_TOKEN) {
                 router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers);
-            });
+            } else {
+                getRefreshToken(req, res).then(() => {
+                    router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers);
+                });
+            }
         }
     })
 
     .get('/music-overview', async (req, res) => {
-        if (req.cookies.ACCESS_TOKEN) {
-            router.pageWithData(res, 'music-overview', 'Muziek');
+        if (!req.cookies.REFRESH_TOKEN) {
+            res.redirect('/login');
         } else {
-            getRefreshToken(req, res).then(() => {
+            if (req.cookies.ACCESS_TOKEN) {
                 router.pageWithData(res, 'music-overview', 'Muziek');
-            });
+            } else {
+                getRefreshToken(req, res).then(() => {
+                    router.pageWithData(res, 'music-overview', 'Muziek');
+                });
+            }
         }
     })
 
     .get('/settings', async (req, res) => {
-        if (req.cookies.ACCESS_TOKEN) {
-            router.basicPage(res, 'settings', 'Instellingen');
+        if (!req.cookies.REFRESH_TOKEN) {
+            res.redirect('/login');
         } else {
-            getRefreshToken(req, res).then(() => {
+            if (req.cookies.ACCESS_TOKEN) {
                 router.basicPage(res, 'settings', 'Instellingen');
-            });
+            } else {
+                getRefreshToken(req, res).then(() => {
+                    router.basicPage(res, 'settings', 'Instellingen');
+                });
+            }
         }
     });
 

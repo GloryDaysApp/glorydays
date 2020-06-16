@@ -46,25 +46,29 @@ nav {
     }
 }
 
-#navigation-state--all {
-    form fieldset {
-        .buttons {
-            bottom: 13rem;
-        }
+.navigation-state--all {
+    form {
+        fieldset {
+            .buttons {
+                bottom: 26vh;
+            }
 
-        .input-text {
-            bottom: 10rem;
+            .input-text {
+                bottom: 20vh;
+            }
         }
     }
 
-    form fieldset.navigation-state--buttons-only {
+    fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 9.5rem;
+            bottom: 19vh;
         }
     }
+
+    
 }
 
-#navigation-state--nav-only {
+.navigation-state--nav-only {
     form fieldset {
         .buttons {
             bottom: 10rem;
@@ -76,10 +80,10 @@ nav {
     }
 }
 
-#navigation-state--player-only {
+.navigation-state--player-only {
     form fieldset {
         .buttons {
-            bottom: 10em;
+            bottom: 10rem;
         }
         
         .input-text {
@@ -88,27 +92,27 @@ nav {
     }
 }
 
-#navigation-state--nav-only {
+.navigation-state--nav-only {
     form fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 5rem;
+            bottom: 10vh;
         }
     }
 }
 
-#navigation-state--nav-only {
+.navigation-state--nav-only {
     form fieldset.navigation-state--button-input {
         .buttons {
-            bottom: 8.5rem;
+            bottom: 17vh;
         }
 
         .input-text {
-            bottom: 5.5rem;
+            bottom: 11vh;
         }
     }
 }
 
-#navigation-state--player-only {
+.navigation-state--player-only {
     form fieldset.navigation-state--buttons-only {
         .buttons {
             bottom: 6rem;

@@ -4,10 +4,10 @@ const navigation = document.getElementById('navigation'),
     onlyNavigation = document.getElementById('navigation-state--nav-only'),
     onlyNavigationPlayer = document.getElementById('navigation-state--player-only');
 
-if(onlyNavigation) {
+if (onlyNavigation) {
     // show navigation only
     navigationPlayer.classList.add('hide');
-} else if(onlyNavigationPlayer) {
+} else if (onlyNavigationPlayer) {
     // show navigation player only
     navigation.classList.add('hide');
 } else {

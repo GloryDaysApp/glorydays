@@ -53,10 +53,10 @@ searchNewLink();
 // changeActiveClass();
 
 // Active navigation dot is bigger
-function ActivateNavigationDot(target){
+function ActivateNavigationDot(target) {
     const navigationDotArray = Array.from(document.querySelectorAll('.navigation-dot'));
-    if(target.id.includes('input')){
-        const activeDot = document.querySelector('#navigation-'+ target.id);
+    if (target.id.includes('input')) {
+        const activeDot = document.querySelector('#navigation-' + target.id);
         navigationDotArray.forEach((element) => {
             element.classList.remove('active-navigation-dot');
         });

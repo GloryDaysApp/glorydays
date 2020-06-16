@@ -1,6 +1,6 @@
 <%- include('partials/head') %>
 <header></header>
-<main class="conversational-ui" id="navigation-state--nav-only">
+<main class="conversational-ui navigation-state--nav-only" id="navigation-state--nav-only">
     <!-- Page Content -->
     <form method="GET" enctype="multipart/form-data">
         <!-- <div class="back">
@@ -165,7 +165,8 @@
         <fieldset id="input-3" class="navigation-state--button-input">
             <legend class="legend-text">Wat zijn steekwoorden die passen bij deze herinnering? </legend>
             <div class="input input-text">
-                <input name="keywords" id="keywords" class="input-field" type="text" placeholder="Titel" maxlength="15" />
+                <input name="keywords" id="keywords" class="input-field" type="text" placeholder="Titel"
+                    maxlength="15" />
             </div>
             <div class="buttons">
                 <a href="/memories-overview" class="button button-secundair">Opslaan</a>
@@ -186,21 +187,22 @@
         <fieldset id="input-5" class="navigation-state--button-input">
             <legend class="legend-text">Hoe zou je de herinnering omschrijven?</legend>
             <div class="input input-text">
-                <input name="description" id="description" class="input-field" type="text" placeholder="De herinnering gaat over" value=""
-                    maxlength="40" />
+                <input name="description" id="description" class="input-field" type="text"
+                    placeholder="De herinnering gaat over" value="" maxlength="40" />
             </div>
             <div class="buttons">
-                    <a href="/memories-overview" class="button button-secundair">Opslaan</a>
-                    <a href="#input-6" class="button button-primair">Volgende</a>
+                <a href="/memories-overview" class="button button-secundair">Opslaan</a>
+                <a href="#input-6" class="button button-primair">Volgende</a>
             </div>
-        </fieldset> 
+        </fieldset>
 
         <fieldset id="input-6" class="navigation-state--buttons-only">
             <legend class="legend-text">Wil je foto's of een spraakbericht toevoegen aan de herinnering?</legend>
             <div class="input input-button--choose-media">
                 <div class="buttons--choose-media">
                     <button class="media-button" id="button--add-image"><img src="./icons/camera_alt-24px.svg"></button>
-                    <button class="media-button" id="button--add-voice-recording"><img src="./icons/mic-24px.svg"></button>
+                    <button class="media-button" id="button--add-voice-recording"><img
+                            src="./icons/mic-24px.svg"></button>
                     <!-- <button class="media-button" id="button--add-text"><img src="./icons/text_fields-24px.svg"></button> -->
                 </div>
                 <div class="output--add-image" id="output--add-image">

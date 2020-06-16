@@ -49,12 +49,18 @@ app
 
     // Check if ACCESS_TOKEN exists. If not, fetch a new one with the refresh token.
     .get('/', async (req, res) => {
-        if (req.cookies.ACCESS_TOKEN) {
-            router.basicPage(res, 'memories-overview', 'Herinneringen');
+        console.log('access token:', req.cookies.ACCESS_TOKEN);
+
+        if (!req.cookies.ACCESS_TOKEN) {
+            res.redirect('/login');
         } else {
-            getRefreshToken(req, res).then(() => {
+            if (req.cookies.ACCESS_TOKEN) {
                 router.basicPage(res, 'memories-overview', 'Herinneringen');
-            });
+            } else {
+                getRefreshToken(req, res).then(() => {
+                    router.basicPage(res, 'memories-overview', 'Herinneringen');
+                });
+            }
         }
     })
 

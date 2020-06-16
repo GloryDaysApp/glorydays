@@ -1,7 +1,22 @@
 // master
 .conversational-ui {
     overflow-x: hidden;
+  
+    .back {
+        width: 100%;
+        padding: $indent;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(180deg, rgba(255, 255, 255, .8995973389355743) 50%, rgba(255, 255, 255, 0) 100%);
 
+        a {
+            color: $glory-blue;
+            font-family: Avenir-Light;
+        }
+    }
+    
     form {
         display: flex;
         overflow: auto;
@@ -68,7 +83,6 @@
             // }
 
             .legend-text {
-                // font-size: $indent-xl;
                 width: 90vw;
                 max-width: 40rem;
                 color: $darkgreen;
@@ -425,7 +439,7 @@
             }
 
             .output-keyword {
-                background-color: $lightblue;
+                background-color: $glory-blue;
                 color: $white;
                 text-align: center;
             }

@@ -1,4 +1,5 @@
 const config = require('./config');
+const mongoose = require('mongoose');
 
 const express = require('express'),
     // socket = require('./server/spotify_playback'),
@@ -23,7 +24,7 @@ app.listen(config.port, () => {
 // Body parser init
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
-    extended: false
+    extended: true
 }));
 // parse application/json
 app.use(bodyParser.json());
@@ -41,6 +42,17 @@ app.use(bodyParser.json());
 
 // Cookie parser init
 app.use(cookies());
+
+// Mongoose setup
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rtw_database', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+}).catch(err => console.log(err));
+
+mongoose.connection.on('connected', () => {
+    console.log('mongoose is connected');
+});
 
 app
     .set('view engine', 'ejs')
@@ -154,6 +166,56 @@ app.get('/callback', spotifyCallback); // Callback for fetching Spotify tokens
 const getRefreshToken = require('./server/get_refresh_token.js');
 app.get('/refresh', getRefreshToken); // Callback for fetching Spotify tokens
 
-// Spotify song search
-// const getSpotifySongs = require('./server/get_spotify_songs.js');
-// app.post('/search', getSpotifySongs);
+// Save data to database
+// const submitMemory = require('./server/submit_memory.js');
+// app.post('/submit-memory', submitMemory);
+
+const { Account, Memory } = require('./server/database_schema.js');
+const multer = require('multer');
+
+// Multer setup
+const storage = multer.diskStorage({
+    destination: (req, res, cb) => {
+        cb(null, './static/');
+    },
+    filename: (req, file, cb) => {
+        cb(null, new Date().toISOString() + file.originalname);
+    }
+});
+
+const upload = multer({ storage: storage });
+
+app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
+    // console.log(req.file, req.body);
+
+    // Create new memory
+    let memory = {
+        title: req.body.title.length > 0 ? req.body.title.filter(text => text !== '') : null,
+        description: req.body.description.length > 0 ? req.body.description.filter(desc => desc !== '') : null,
+        keywords: req.body.keywords.length > 0 ? req.body.keywords.filter(keyword => keyword !== '') : null,
+        media: []
+    };
+
+    // Store media
+    if (req.file) {
+        const image = {
+            name: req.file.filename,
+            path: `/${req.file.filename}`
+        };
+
+        console.log(image);
+
+        memory.media.push(image);
+    }
+
+    // Save new user to database
+    const newMemory = new Memory(memory);
+
+    newMemory.save(err => {
+        if (err) {
+            console.log('save failed: ', err);
+        } else {
+            console.log('memory has been saved');
+        }
+    });
+});

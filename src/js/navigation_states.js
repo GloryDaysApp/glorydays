@@ -6,12 +6,18 @@ const navigation = document.getElementById('navigation'),
 
 if (onlyNavigation) {
     // show navigation only
-    navigationPlayer.classList.add('hide');
-} else if (onlyNavigationPlayer) {
+    if (navigationPlayer) {
+        navigationPlayer.classList.add('hide');
+    }
+} else if(onlyNavigationPlayer) {
     // show navigation player only
-    navigation.classList.add('hide');
+    if (navigation) {
+        navigation.classList.add('hide');
+    }
 } else {
     // show navigation and navigation player
     const navHeight = navigationList.offsetHeight;
-    navigationPlayer.style.bottom = `${navHeight}px`;
+    if (navigationPlayer) {
+        navigationPlayer.style.bottom = `${navHeight}px`;
+    }
 }

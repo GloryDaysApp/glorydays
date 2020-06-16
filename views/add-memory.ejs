@@ -2,7 +2,7 @@
 <header></header>
 <main class="conversational-ui navigation-state--nav-only" id="navigation-state--nav-only">
     <!-- Page Content -->
-    <form method="GET" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data" action="/submit-memory">
         <!-- <div class="back">
             <a href="/">&#8592 terug naar alle herinneringen</a>
         </div> -->
@@ -20,7 +20,7 @@
             <div class="input" id="emotions">
                 <ul id="checkboxes">
                     <li>
-                        <input type="checkbox" id="emotion1" />
+                        <input type="checkbox" id="emotion1" name="5"/>
                         <label for="emotion1">
                             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 127 127">
@@ -55,7 +55,7 @@
                             </svg></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="emotion2" />
+                        <input type="checkbox" id="emotion2" name="4"/>
                         <label for="emotion2"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 127 127">
                                 <defs>
@@ -80,7 +80,7 @@
                             </svg></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="emotion3" />
+                        <input type="checkbox" id="emotion3" name="3"/>
                         <label for="emotion3"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 127 127">
                                 <defs>
@@ -104,7 +104,7 @@
                             </svg></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="emotion4" />
+                        <input type="checkbox" id="emotion4" name="2"/>
                         <label for="emotion4"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 127 127">
                                 <defs>
@@ -129,7 +129,7 @@
                             </svg></label>
                     </li>
                     <li>
-                        <input type="checkbox" id="emotion5" />
+                        <input type="checkbox" id="emotion5" name="1"/>
                         <label for="emotion5"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 127 127">
                                 <defs>
@@ -207,7 +207,7 @@
                 </div>
                 <div class="output--add-image" id="output--add-image">
                     <div class="input-button--choose-file">
-                        <input type="file" id="real-file" hidden="hidden" />
+                        <input type="file" id="real-file" hidden="hidden" name="image-upload"/>
                         <button type="button" id="custom-button" class="button button-add-image">
                             <!--                        <img src="./icons/camera_alt-24px.svg" alt="Image Icon" />-->
                             Kies een afbeelding
@@ -237,7 +237,7 @@
                 </div>
             </div>
             <div class="buttons one-button">
-                <a href="/memories-overview" class="button button-primair">Opslaan</a>
+                <input type="submit" class="button button-primair">Opslaan</input>
             </div>
         </fieldset>
         <!-- <fieldset id="input-7">
@@ -245,15 +245,15 @@
                 Welke verzorgers mogen deze herinnering zien?
             </legend>
             <div class="input input-button">
-                <input type="checkbox" id="verzorger-1" />
+                <input type="checkbox" id="verzorger-1" value="verzorger-1"/>
                 <label for="verzorger-1">Marie</label>
-                <input type="checkbox" id="verzorger-2" />
+                <input type="checkbox" id="verzorger-2" value="verzorger-2"/>
                 <label for="verzorger-2">Pieter</label>
-                <input type="checkbox" id="verzorger-3" />
+                <input type="checkbox" id="verzorger-3" value="verzorger-3"/>
                 <label for="verzorger-3">Noortje</label>
             </div>
             <div class="buttons">
-                <a href="" class="button save"> Herinnering opslaan</a>
+                <input type="submit" class="button save">Herinnering opslaan</input>
             </div>
         </fieldset> -->
         <%- include('partials/scroll-buttons') %>

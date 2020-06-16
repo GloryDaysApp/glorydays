@@ -49,8 +49,6 @@ app
 
     // Check if ACCESS_TOKEN exists. If not, fetch a new one with the refresh token.
     .get('/', async (req, res) => {
-        console.log('access token:', req.cookies.ACCESS_TOKEN);
-
         if (!req.cookies.ACCESS_TOKEN) {
             res.redirect('/login');
         } else {

@@ -58,6 +58,11 @@
     .button {
         margin: 0 auto;
         display: none;
+
+        &.button-primair {
+            width: 80vw;
+            padding: 1rem;
+        }
     }
 }
 

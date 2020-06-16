@@ -46,12 +46,13 @@ nav {
     }
 }
 
-#navigation-state--all{
+#navigation-state--all {
     form fieldset {
         .buttons {
             bottom: 13rem;
         }
-        .input-text{
+
+        .input-text {
             bottom: 10rem;
         }
     }
@@ -63,29 +64,31 @@ nav {
     }
 }
 
-#navigation-state--nav-only{
+#navigation-state--nav-only {
     form fieldset {
         .buttons {
             bottom: 10rem;
         }
-        .input-text{
+
+        .input-text {
             bottom: 8rem;
         }
     }
 }
 
-#navigation-state--player-only{
+#navigation-state--player-only {
     form fieldset {
         .buttons {
             bottom: 10em;
         }
-        .input-text{
+        
+        .input-text {
             bottom: 8rem;
         }
     }
 }
 
-#navigation-state--nav-only{
+#navigation-state--nav-only {
     form fieldset.navigation-state--buttons-only {
         .buttons {
             bottom: 5rem;
@@ -93,18 +96,19 @@ nav {
     }
 }
 
-#navigation-state--nav-only{
+#navigation-state--nav-only {
     form fieldset.navigation-state--button-input {
         .buttons {
             bottom: 8.5rem;
         }
-        .input-text{
+
+        .input-text {
             bottom: 5.5rem;
         }
     }
 }
 
-#navigation-state--player-only{
+#navigation-state--player-only {
     form fieldset.navigation-state--buttons-only {
         .buttons {
             bottom: 6rem;

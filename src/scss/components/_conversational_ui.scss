@@ -3,7 +3,7 @@
     overflow-x: hidden;
 
     form {
-        display: flex;    
+        display: flex;
         overflow: auto;
         flex: none;
         width: 100vw;
@@ -23,12 +23,11 @@
             text-align: center;
             scroll-snap-align: center;
             flex: none;
-            height: 100%;
+            height: 101%;
             width: 100vw;
             overflow: hidden;
             position: relative;
-
-            
+            top: 1em;
             // margin: $center-margin;
             // padding: $indent;
             // height: 100vh;
@@ -73,31 +72,31 @@
                 width: 90vw;
                 max-width: 40rem;
                 color: $darkgreen;
-                padding: 3em 0em 1em 1em;
+                padding: 2.5em 0em 1em 1em;
                 text-align: left;
                 // margin: 2em auto -($indent) 0;
-                margin: 1em 0;
-
+                // margin: 1em 0;
                 // opacity: 0;
                 // transform:scale(0.5);
                 // transition:.25s.25s;
-
                 transition: transform 1s ease-in-out; /* our nice transition */
                 transform: translateX(-100%);
                 animation-delay: 2s;
+                // position: relative;
+                // top: 1em;
             }
+            
             
             legend.observed {
                 // opacity: 1;
                 // transform:scale(1);
                 transform: translateX(0);
-              }
+            }
 
             .input {
-                margin: $indent auto $indent 0;
+                margin: 2rem auto $indent 0;
                 background-color: $white;
 
-            
                 ul {
                     list-style: none;
 
@@ -131,7 +130,7 @@
 
             .input-muziekstream {
                 text-align: start;
-                margin: $indent auto $indent 2rem;
+                margin: 2rem auto $indent 2rem;
             }
 
             .input-button {
@@ -164,10 +163,10 @@
                 position: absolute;
                 bottom: 10rem;
                 left: 5%;
-                right:5%;
+                right: 5%;
                 width: 90vw;
                 margin: 0 auto;
-                padding: 10px 20px;
+                padding: 0px 20px;
                 display: flex;
                 justify-content: space-between;
                 border-radius: 30px;
@@ -178,6 +177,7 @@
 
                 input[type='text'] {
                     width: 90%;
+                    line-height: 2.5rem;
                     // background-color: #f3f3f3;
                     // background-color: $white;
                     // color: $lightblue;
@@ -405,36 +405,31 @@
 //             }
 //         }
 
-//         .output {
-//             max-width: 30rem;
-//             margin: .5rem 0 0 auto;
-//             display: block;
-//             opacity: 1;
-//             background-color: transparent;
-//             transform: translate(0, -10%);
-//             transition: all .3s cubic-bezier(.1, .45, .1, .85) .4s;
+        .output {
+            max-width: 30rem;
+            margin: .5rem 3rem 0 auto;
+            display: block;
 
-//             textarea {
-//                 font-size: 1.2rem;
-//                 color: #8bd5d8;
-//                 border-radius: 30px;
-//                 text-align: right;
-//                 padding: .5rem $indent;
-//                 width: 80vw;
-//                 text-align: right;
-//                 max-width: 30rem;
-//                 margin: 0 0 0 auto;
-//                 display: block;
-//                 background-color: transparent;
-//                 resize: none;
-//             }
+            input {
+                font-size: 1.2rem;
+                color: #8bd5d8;
+                border-radius: 30px;
+                text-align: right;
+                padding: .5rem $indent;
+                width: 80vw;
+                text-align: right;
+                max-width: 30rem;
+                margin: 0 0 0 auto;
+                display: block;
+                background-color: transparent;
+            }
 
-//             .output-keyword {
-//                 background-color: $lightblue;
-//                 color: $white;
-//                 text-align: center;
-//             }
-//         }
+            .output-keyword {
+                background-color: $lightblue;
+                color: $white;
+                text-align: center;
+            }
+        }
 
 //         .output:nth-of-type(1) {
 //             margin-top: 65%;

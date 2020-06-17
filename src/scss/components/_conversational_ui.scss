@@ -1,6 +1,10 @@
 // master
 .conversational-ui {
+    display: none;
     overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
   
     .back {
         width: 100%;

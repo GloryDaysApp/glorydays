@@ -85,3 +85,12 @@ if (backOverview) {
 function hidePlaylist() {
     playlistLarge.classList.remove('visible');
 }
+
+
+// Add memory reveal / hide
+const addMemoryContainer = document.getElementsByClassName('conversational-ui')[0]
+document.getElementById('add-memory').addEventListener('click', revealMemoryContainer);
+
+function revealMemoryContainer() {
+    addMemoryContainer.classList.add('show');
+}

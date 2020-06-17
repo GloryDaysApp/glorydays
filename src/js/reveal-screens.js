@@ -75,7 +75,7 @@ const playListSmall = document.getElementById('playlist-small');
 if (playListSmall) {
     playListSmall.addEventListener('click', showPlaylist);
 }
-  
+
 function showPlaylist() {
     playlistLarge.classList.add('visible');
 }
@@ -89,3 +89,28 @@ if (backOverview) {
 function hidePlaylist() {
     playlistLarge.classList.remove('visible');
 }
+
+
+// Add memory reveal / hide
+const addMemoryContainer = document.getElementsByClassName('conversational-ui')[0];
+document.getElementById('add-memory').addEventListener('click', revealMemoryContainer);
+
+function revealMemoryContainer() {
+    musicPlayer.classList.remove('big');
+    addMemoryContainer.classList.add('show');
+}
+
+// Add memory without music "overslaan"
+
+const addMemoryWithoutMusicButton = document.getElementById('add-memory-without-music');
+// const conversationalUI = document.getElementsByClassName('conversational-ui');
+
+if (addMemoryWithoutMusicButton) {
+    addMemoryWithoutMusicButton.addEventListener('click', revealMemoryContainer);
+}
+
+// function addMemoryWithoutMusic() {
+//     console.log('added class show');
+//     // addMemoryWithoutMusicButton.classList.add('show');
+//     // revealMemoryContainer();
+// }

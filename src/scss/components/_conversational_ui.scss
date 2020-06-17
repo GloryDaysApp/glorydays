@@ -1,6 +1,11 @@
 // master
 .conversational-ui {
+    background-color: $white;
+    display: none;
     overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
   
     .back {
         width: 100%;
@@ -92,11 +97,6 @@
                 }
             }
 
-            .input-muziekstream {
-                text-align: start;
-                margin: $indent-xxxl auto $indent $indent-xxxl;
-            }
-
             .input-button {
                 @include input-button-positioning;
                 display: inline-block;
@@ -159,5 +159,11 @@
         color: $white;
         text-align: center;
     }
+}
+
+
+.conversational-ui.show {
+    display: block;
+    z-index: 1000;
 }
 

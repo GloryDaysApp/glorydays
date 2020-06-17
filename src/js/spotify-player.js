@@ -2,6 +2,7 @@
 const musicPlayer = document.getElementsByClassName('music-player--small')[0];
 const songInformation = document.getElementById('song-information');
 const back = document.getElementById('back');
+const mainContainer = document.getElementsByClassName('container--main');
 
 if (songInformation) {
     songInformation.addEventListener('click', transformMusicPlayerBig);
@@ -22,6 +23,9 @@ function transformMusicPlayerSmall() {
 function showPlayerSmall(song) {
     // Make player visible
     musicPlayer.classList.add('visible');
+    // Remove id for showing only the nav and add id for showing nav + music player
+    mainContainer[0].removeAttribute('id');
+    mainContainer[0].setAttribute('id', 'navigation-state--all');
 
     // Clear player and add song in it
     songInformation.innerHTML = '';

@@ -2,6 +2,7 @@
 const musicPlayer = document.getElementsByClassName('music-player--small')[0];
 const songInformation = document.getElementById('song-information');
 const back = document.getElementById('back');
+const mainContainer = document.getElementsByClassName('container--main');
 
 if (songInformation) {
     songInformation.addEventListener('click', transformMusicPlayerBig);
@@ -22,6 +23,9 @@ function transformMusicPlayerSmall() {
 function showPlayerSmall(song) {
     // Make player visible
     musicPlayer.classList.add('visible');
+    // Remove id for showing only the nav and add id for showing nav + music player
+    mainContainer[0].removeAttribute('id');
+    mainContainer[0].setAttribute('id', 'navigation-state--all');
 
     // Clear player and add song in it
     songInformation.innerHTML = '';
@@ -71,7 +75,7 @@ const playListSmall = document.getElementById('playlist-small');
 if (playListSmall) {
     playListSmall.addEventListener('click', showPlaylist);
 }
-  
+
 function showPlaylist() {
     playlistLarge.classList.add('visible');
 }
@@ -85,3 +89,28 @@ if (backOverview) {
 function hidePlaylist() {
     playlistLarge.classList.remove('visible');
 }
+
+
+// Add memory reveal / hide
+const addMemoryContainer = document.getElementsByClassName('conversational-ui')[0];
+document.getElementById('add-memory').addEventListener('click', revealMemoryContainer);
+
+function revealMemoryContainer() {
+    musicPlayer.classList.remove('big');
+    addMemoryContainer.classList.add('show');
+}
+
+// Add memory without music "overslaan"
+
+const addMemoryWithoutMusicButton = document.getElementById('add-memory-without-music');
+// const conversationalUI = document.getElementsByClassName('conversational-ui');
+
+if (addMemoryWithoutMusicButton) {
+    addMemoryWithoutMusicButton.addEventListener('click', revealMemoryContainer);
+}
+
+// function addMemoryWithoutMusic() {
+//     console.log('added class show');
+//     // addMemoryWithoutMusicButton.classList.add('show');
+//     // revealMemoryContainer();
+// }

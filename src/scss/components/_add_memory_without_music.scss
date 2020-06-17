@@ -1,0 +1,27 @@
+.add-music {
+    display: block;
+    text-align: center;
+    scroll-snap-align: center;
+    flex: none;
+    height: 87vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    top: 1em;
+
+    h1 {
+        width: 90vw;
+        max-width: 40rem;
+        color: $darkgreen;
+        padding: 2.5rem 0 $indent $indent;
+        text-align: left;
+        // transition: transform 1s ease-in-out;
+        // transform: translateX(-100%);
+        // animation-delay: 2s;
+    }
+
+    .input-muziekstream {
+        text-align: start;
+        margin: $indent-xxxl auto $indent $indent-xxxl;
+    }
+}

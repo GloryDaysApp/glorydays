@@ -55,7 +55,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        max-height: 500px;
+        // max-height: 500px;
         overflow: scroll;
 
         .container--memories-memory {
@@ -145,7 +145,7 @@
         height: 50px;
         position: fixed;
         z-index: 2;
-        bottom: 5rem;
+        // bottom: 90px;
         right: $indent;
         border-radius: 50px;
 

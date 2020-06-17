@@ -55,7 +55,6 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        max-height: 500px;
         overflow: scroll;
 
         .container--memories-memory {
@@ -69,8 +68,8 @@
                 height: 100%;
                 border-radius: 4px;
                 position: relative;
-                bottom: 16.5px;
-                opacity: .75;
+                bottom: 162.5px;
+                opacity: 0.75;
 
                 &--glory-green {
                     @include overlay-gradient($glory-green);
@@ -93,44 +92,18 @@
                 }
             }
 
-            &:nth-child(1) {
-                /* Fallback color */
-                // background: rgba(66, 245, 191, 0.4);
-                background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
-                    url('Rolling_Stone.png');
-                // background: linear-gradient(rgba(66, 245, 191, 0.4) 80%, rgba(24, 92, 71, 0.5)) 10%, url(Rolling_Stone.png);
-                background-blend-mode: saturation;
-                background-size: cover;
-            }
-
-            &:nth-child(2) {
-                background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('Like_A_Rolling_Stone.jpg');
-                background-blend-mode: saturation;
-                background-size: cover;
-            }
-
-            &:nth-child(3) {
-                background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('After_Math.jpg');
-                background-blend-mode: saturation;
-                background-size: cover;
-            }
-
-            &:nth-child(4) {
-                background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('Here_Comes_The_Sun.jpg');
-                background-blend-mode: saturation;
-                background-size: cover;
-            }
-
-            &:nth-child(5) {
-                background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('Here_Comes_The_Sun.jpg');
-                background-blend-mode: saturation;
-                background-size: cover;
+            img {
+                border-radius: 4px;
+                width: 100%;
+                height: 100%;
+                filter: saturate(0);
+                object-fit: cover;
             }
 
             h2 {
                 position: relative;
                 z-index: 1;
-                top: 8.5rem;
+                top: 9.5rem;
                 font-size: 16px;
                 margin-left: 0.5rem;
                 color: #fff;
@@ -147,6 +120,7 @@
         z-index: 2;
         bottom: 5rem;
         right: 1rem;
+        border: solid 4px #fff;
         border-radius: 50px;
 
         img {
@@ -200,7 +174,6 @@
     .slidecontainer {
         display: flex;
         flex-direction: row;
-        margin-top: 1rem 0 2rem;
         align-items: center;
 
         .slider-heart,
@@ -254,6 +227,7 @@
 
     .lightning {
         width: 19px;
+        margin-right: 6px;
     }
 
     .list-item {
@@ -284,19 +258,22 @@
     }
 
     .container-catchword {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
 
         .catchword {
             background: $glory-blue;
             color: #fff;
             padding: 8px;
             border-radius: 50px;
-            margin-right: 1rem;
+            margin-right: 4px;
             margin-top: 1rem;
         }
     }
 
     .container-btn {
+        position: fixed;
+        bottom: 0.9rem;
+        right: 2rem;
         margin: 0 0 5rem 13rem;
 
         .share-btn,
@@ -312,7 +289,7 @@
             img {
                 width: 23px;
                 height: 23px;
-                margin-bottom: -4px;
+                margin-bottom: -6px;
             }
         }
     }

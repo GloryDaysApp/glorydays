@@ -1,31 +1,37 @@
 let constraintObj = {
     // set audio on true to get the audio
-    audio: true
+    audio: true,
+    video: false
 };
 
 // Handling older browsers that might implement getUserMedia in some way
-if (!navigator.mediaDevices) {
-    navigator.mediaDevices = {};
-    navigator.mediaDevices.getUserMedia = function (constraintObj) {
-        let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-        if (!getUserMedia) {
-            return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
-        }
-        return new Promise(function (resolve, reject) {
-            getUserMedia.call(navigator, constraintObj, resolve, reject);
-        });
-    };
-} else {
-    navigator.mediaDevices.enumerateDevices()
-        .then(devices => {
-            devices.forEach(device => {
-                console.log(device.kind.toUpperCase(), device.label);
+function askPermission() {
+    if (!navigator.mediaDevices) {
+        navigator.mediaDevices = {};
+        navigator.mediaDevices.getUserMedia = function (constraintObj) {
+            let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+            if (!getUserMedia) {
+                return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+            }
+            return new Promise(function (resolve, reject) {
+                getUserMedia.call(navigator, constraintObj, resolve, reject);
             });
-        })
-        .catch(err => {
-            console.log(err.name, err.message);
-        });
+        };
+    } else {
+        console.log('test');
+        navigator.mediaDevices.enumerateDevices()
+            .then(devices => {
+                devices.forEach(device => {
+                    console.log(device.kind.toUpperCase(), device.label);
+                });
+            })
+            .catch(err => {
+                console.log(err.name, err.message);
+            });
+    }
 }
+
+
 
 // This is how you acces the microphone with the getUserMedia method from the mediaDevices API
 navigator.mediaDevices.getUserMedia(constraintObj)
@@ -40,7 +46,7 @@ navigator.mediaDevices.getUserMedia(constraintObj)
         }
 
         // Variables for saving the audio
-        let vidSave = document.getElementById('savedAudio');
+        let saveAudioInElement = document.getElementById('savedAudio');
 
         // MediaRecorder is another API to record and listens to audioStreamObj
         // The audioStreamObj is passed in the MediaRecorder object
@@ -53,6 +59,7 @@ navigator.mediaDevices.getUserMedia(constraintObj)
         const micContainer = document.getElementsByClassName('mic-container')[0];
 
         micContainer.addEventListener('click', (e) => {
+            askPermission();
             let elem = e.target;
             elem.classList.toggle('active');
             console.log(elem.classList);
@@ -75,12 +82,13 @@ navigator.mediaDevices.getUserMedia(constraintObj)
         mediaRecorder.onstop = () => {
             // The Blob object represents a blob, which is a file-like object of immutable, raw data
             let blob = new Blob(chunks, {
-                'type': 'video/mp4;'
+                'type': 'audio/mp4;'
             });
             // Save memory for the next time that you record
             chunks = [];
             let audioURL = window.URL.createObjectURL(blob);
-            vidSave.src = audioURL;
+            saveAudioInElement.src = audioURL;
+            console.log('audiourl', audioURL);
             console.log('chunks', chunks);
         };
 
@@ -93,7 +101,7 @@ navigator.mediaDevices.getUserMedia(constraintObj)
 // Add a timer
 const minutes = document.querySelector('.minutes');
 const seconds = document.querySelector('.seconds');
-let timerTime = 00;
+let timerTime = '00';
 let isRunning = false;
 let interval;
 
@@ -116,7 +124,6 @@ function stopTimer() {
 // Set the timer to 0
 function resetTimer() {
     stopTimer();
-
     timerTime = 0;
     minutes.innerText = '00';
     seconds.innerText = '01';
@@ -128,7 +135,6 @@ function incrementTimer() {
 
     const numOfMinutes = Math.floor(timerTime / 60);
     const numOfSeconds = timerTime % 60;
-
     minutes.innerText = pad(numOfMinutes);
     seconds.innerText = pad(numOfSeconds);
 }

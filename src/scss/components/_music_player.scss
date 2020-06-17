@@ -67,12 +67,13 @@
 }
 
 .music-player--small.big {
-    height: calc(100% - 73px);
+    height: calc(100vh - 73px);
     transition: all .7s ease-in-out;
     justify-content: space-around;
     display: flex;
     flex-direction: column;
     padding-left: 0;
+    top: 0;
 
     .song-info {
         width: 100%;

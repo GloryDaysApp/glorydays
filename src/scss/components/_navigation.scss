@@ -52,21 +52,29 @@ nav {
 }
 
 .navigation-state--all {
-    form {
-        fieldset {
-            .buttons {
-                bottom: 210px;
-            }
+    fieldset {
+        .buttons {
+            bottom: calc((210px +100vh) - calc(100vh - 100%));
+        }
 
-            .input-text {
-                bottom: 165px;
-            }
+        .input-text {
+            bottom: calc((65px +100vh) - calc(100vh - 100%));
+        }
+    }
+
+    form fieldset.navigation-state--button-input {
+        .buttons {
+            bottom: calc((210px +100vh) - calc(100vh - 100%));
+        }
+
+        .input-text {
+            bottom: calc((165px +100vh) - calc(100vh - 100%));
         }
     }
 
     fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 90px;
+            bottom: calc((165px +100vh) - calc(100vh - 100%));
         }
     }
 }
@@ -74,86 +82,140 @@ nav {
 .navigation-state--nav-only {
     form fieldset {
         .buttons {
-            bottom: 140px;
+            bottom: calc((140px +100vh) - calc(100vh - 100%));
         }
 
         .input-text {
-            bottom: 95px;
+            bottom: calc((95px +100vh) - calc(100vh - 100%));
         }
     }
-}
 
-.navigation-state--player-only {
-    form fieldset {
+    form fieldset.navigation-state--button-input {
         .buttons {
-            bottom: 140px;
+            bottom: calc((140px +100vh) - calc(100vh - 100%));
         }
-        
+
         .input-text {
-            bottom: 95px;
+            bottom: calc((95px +100vh) - calc(100vh - 100%));
+        }
+    }
+
+    form fieldset.navigation-state--buttons-only {
+        .buttons {
+            // bottom: 90px;
+            bottom: calc((90px +100vh) - calc(100vh - 100%));
         }
     }
     
-    .search {
-        bottom: 95px;
-    }
-}
-
-.navigation-state--nav-only {
-    form fieldset.navigation-state--buttons-only {
-        .buttons {
-            bottom: 90px;
-        }
-    }
-}
-
-.navigation-state--nav-only {
-    form fieldset.navigation-state--button-input {
-        .buttons {
-            bottom: 140px;
-        }
-
-        .input-text {
-            bottom: 95px;
-        }
+    .navigation-state--buttons-only {
+            // bottom: 90px;
+        bottom: calc((100px +100vh) - calc(100vh - 100%));
     }
 }
 
 .navigation-state--player-only {
+    form fieldset {
+        .buttons {
+            bottom: calc((140px +100vh) - calc(100vh - 100%));
+        }
+        
+        .input-text {
+            bottom: calc((95px +100vh) - calc(100vh - 100%));
+        }
+    }
+
+    form fieldset.navigation-state--button-input {
+        .buttons {
+            bottom: calc((140px +100vh) - calc(100vh - 100%));
+        }
+
+        .input-text {
+            bottom: calc((95px +100vh) - calc(100vh - 100%));
+        }
+    }
+    
     form fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 90px;
+            bottom: calc((90px +100vh) - calc(100vh - 100%));
         }
     }
 }
 
+
 #navigation-state--all {
     .search {
-        bottom: 165px;
+        bottom: calc((165px +100vh) - calc(100vh - 100%));
     }
 
     a.add-btn {
-        bottom: 160px;
+        bottom: calc((160px +100vh) - calc(100vh - 100%));
+    }
+
+    form fieldset.navigation-state--button-input {
+        .buttons {
+            bottom: calc((210px +100vh) - calc(100vh - 100%));
+        }
+
+        .input-text {
+            bottom: calc((165px +100vh) - calc(100vh - 100%));
+        }
+    }
+
+    fieldset.navigation-state--buttons-only {
+        .buttons {
+            bottom: calc((165px +100vh) - calc(100vh - 100%));
+        }
     }
 }
 
 #navigation-state--nav-only {
     .search {
-        bottom: 95px;
+        bottom: calc((95px +100vh) - calc(100vh - 100%));
     }
 
     a.add-btn {
-        bottom: 90px;
+        bottom: calc((90px +100vh) - calc(100vh - 100%));
     }
 
+    form fieldset.navigation-state--button-input {
+        .buttons {
+            bottom: calc((140px +100vh) - calc(100vh - 100%));
+        }
+
+        .input-text {
+            bottom: calc((95px +100vh) - calc(100vh - 100%));
+        }
+    }
+
+    form fieldset.navigation-state--buttons-only {
+        .buttons {
+            bottom: calc((90px +100vh) - calc(100vh - 100%));
+        }
+    }
 }
 
 #navigation-state--player-only {
     .search {
-        bottom: 95px;
+        bottom: calc((95px +100vh) - calc(100vh - 100%));
     }
 
     a.add-btn {
-        bottom: 90px;
+        bottom: calc((90px +100vh) - calc(100vh - 100%));
+    }
+
+    form fieldset.navigation-state--button-input {
+        .buttons {
+            bottom: calc((140px +100vh) - calc(100vh - 100%));
+        }
+
+        .input-text {
+            bottom: calc((95px +100vh) - calc(100vh - 100%));
+        }
+    }
+
+    form fieldset.navigation-state--buttons-only {
+        .buttons {
+            bottom: calc((90px +100vh) - calc(100vh - 100%));
+        }
     }
 }

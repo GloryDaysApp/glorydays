@@ -92,6 +92,23 @@ const addMemoryContainer = document.getElementsByClassName('conversational-ui')[
 document.getElementById('add-memory').addEventListener('click', revealMemoryContainer);
 
 function revealMemoryContainer() {
+    appendSongInformation();
+
     musicPlayer.classList.remove('big');
     addMemoryContainer.classList.add('show');
+}
+
+function appendSongInformation() {
+    // Store song data
+    let songInfo =  document.getElementById('song-information');
+    if (songInformation) {
+        // memory.song.id = songInfo.firstChild.id;
+        // memory.song.albumCover = songInfo.firstChild.firstChild.src;
+        // memory.song.name = songInfo.firstChild.lastChild.children[0].textContent;
+        // memory.song.artist = songInfo.firstChild.lastChild.children[1].textContent;
+        document.getElementById('song-id').value = songInfo.firstChild.id;
+        document.getElementById('song-album-cover').value = songInfo.firstChild.firstChild.src;
+        document.getElementById('song-name').value = songInfo.firstChild.lastChild.children[0].textContent;
+        document.getElementById('song-artist').value = songInfo.firstChild.lastChild.children[1].textContent; 
+    }
 }

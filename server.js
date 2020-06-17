@@ -189,28 +189,46 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+// Store data to database
 app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
-    // console.log(req.file, req.body);
-
     // Create new memory
     let memory = {
         title: req.body.title.length > 0 ? req.body.title.filter(text => text !== '') : null,
         description: req.body.description.length > 0 ? req.body.description.filter(desc => desc !== '') : null,
         keywords: req.body.keywords.length > 0 ? req.body.keywords.filter(keyword => keyword !== '') : null,
-        media: []
+        media: [],
+        song: {}
     };
 
     // Store media
     if (req.file) {
         const image = {
+            type: 'image',
             name: req.file.filename,
             path: `/${req.file.filename}`
         };
 
-        console.log(image);
-
         memory.media.push(image);
     }
+
+    console.log(req.body.audioRecording);
+
+    if (req.body.audioRecording !== '') {
+        const audio = {
+            type: 'audio',
+            src: req.body.audioRecording
+        };
+
+        memory.media.push(audio);
+    }
+    
+    // Store song data
+    memory.song.id = req.body.songId !== '' ? req.body.songId : null;
+    memory.song.albumCover = req.body.songAlbumCover !== '' ? req.body.songAlbumCover : null;
+    memory.song.name = req.body.songName !== '' ? req.body.songName : null;
+    memory.song.artist = req.body.songArtist !== '' ? req.body.songArtist : null;
+
+    res.send(memory);
 
     // Save new user to database
     const newMemory = new Memory(memory);

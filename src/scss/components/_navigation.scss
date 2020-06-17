@@ -55,18 +55,18 @@ nav {
     form {
         fieldset {
             .buttons {
-                bottom: 210px;
+                margin-bottom: 210px;
             }
 
             .input-text {
-                bottom: 165px;
+                margin-bottom: 165px;
             }
         }
     }
 
     fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 90px;
+            margin-bottom: 90px;
         }
     }
 }
@@ -74,11 +74,11 @@ nav {
 .navigation-state--nav-only {
     form fieldset {
         .buttons {
-            bottom: 140px;
+            margin-bottom: 140px;
         }
 
         .input-text {
-            bottom: 95px;
+            margin-bottom: 95px;
         }
     }
 }
@@ -86,23 +86,23 @@ nav {
 .navigation-state--player-only {
     form fieldset {
         .buttons {
-            bottom: 140px;
+            margin-bottom: 140px;
         }
         
         .input-text {
-            bottom: 95px;
+            margin-bottom: 95px;
         }
     }
     
     .search {
-        bottom: 95px;
+        margin-bottom: 95px;
     }
 }
 
 .navigation-state--nav-only {
     form fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 90px;
+            margin-bottom: 90px;
         }
     }
 }
@@ -110,11 +110,11 @@ nav {
 .navigation-state--nav-only {
     form fieldset.navigation-state--button-input {
         .buttons {
-            bottom: 140px;
+            margin-bottom: 140px;
         }
 
         .input-text {
-            bottom: 95px;
+            margin-bottom: 95px;
         }
     }
 }
@@ -122,38 +122,38 @@ nav {
 .navigation-state--player-only {
     form fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 90px;
+            margin-bottom: 90px;
         }
     }
 }
 
 #navigation-state--all {
     .search {
-        bottom: 165px;
+        margin-bottom: 165px;
     }
 
     a.add-btn {
-        bottom: 160px;
+        margin-bottom: 160px;
     }
 }
 
 #navigation-state--nav-only {
     .search {
-        bottom: 95px;
+        margin-bottom: 95px;
     }
 
     a.add-btn {
-        bottom: 90px;
+        margin-bottom: 90px;
     }
 
 }
 
 #navigation-state--player-only {
     .search {
-        bottom: 95px;
+        margin-bottom: 95px;
     }
 
     a.add-btn {
-        bottom: 90px;
+        margin-bottom: 90px;
     }
 }

@@ -95,3 +95,18 @@ function revealMemoryContainer() {
     musicPlayer.classList.remove('big');
     addMemoryContainer.classList.add('show');
 }
+
+// Add memory without music "overslaan"
+
+const addMemoryWithoutMusicButton = document.getElementById('add-memory-without-music');
+// const conversationalUI = document.getElementsByClassName('conversational-ui');
+
+if (addMemoryWithoutMusicButton) {
+    addMemoryWithoutMusicButton.addEventListener('click', revealMemoryContainer);
+}
+
+// function addMemoryWithoutMusic() {
+//     console.log('added class show');
+//     // addMemoryWithoutMusicButton.classList.add('show');
+//     // revealMemoryContainer();
+// }

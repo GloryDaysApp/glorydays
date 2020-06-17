@@ -94,11 +94,6 @@
                 }
             }
 
-            .input-muziekstream {
-                text-align: start;
-                margin: $indent-xxxl auto $indent $indent-xxxl;
-            }
-
             .input-button {
                 @include input-button-positioning;
                 display: inline-block;

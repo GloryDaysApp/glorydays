@@ -1,16 +1,19 @@
 .search {
     position: absolute;
-    bottom: 10rem;
+    // bottom: 140px;
     width: 90vw;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    border-radius: 15px;
+    border-radius: 30px;
     text-align: left;
-    box-shadow: -1px 4px 26px -12px #929292;
+    border: 1px solid $lightgrey;
+    left: 5%;
+    right: 5%;
 
     input {
         width: 90%;
+        line-height: 2.5rem;
     }
 }

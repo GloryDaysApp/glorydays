@@ -2,12 +2,9 @@ const config = require('./config');
 const mongoose = require('mongoose');
 
 const express = require('express'),
-    // socket = require('./server/spotify_playback'),
     router = require('./scripts/modules/router'),
+    revManifest = require('./static/rev-manifest'),
     app = express(),
-
-    // multer = require('multer'),
-    // upload = multer({dest: 'uploads/'}),
     caregivers = {
         id: 'test'
     };
@@ -28,17 +25,6 @@ app.use(bodyParser.urlencoded({
 }));
 // parse application/json
 app.use(bodyParser.json());
-
-// Session init
-// app.use(
-//     session({
-//         resave: false,
-//         saveUninitialized: true,
-//         secret: process.env.SESSION_KEY,
-//         port: process.env.PORT,
-//         secure: false,
-//     })
-// );
 
 // Cookie parser init
 app.use(cookies());
@@ -65,10 +51,10 @@ app
             res.redirect('/login');
         } else {
             if (req.cookies.ACCESS_TOKEN) {
-                router.basicPage(res, 'memories-overview', 'Herinneringen');
+                router.basicPage(res, 'memories-overview', 'Herinneringen', revManifest);
             } else {
                 getRefreshToken(req, res).then(() => {
-                    router.basicPage(res, 'memories-overview', 'Herinneringen');
+                    router.basicPage(res, 'memories-overview', 'Herinneringen', revManifest);
                 });
             }
         }
@@ -79,10 +65,10 @@ app
             res.redirect('/login');
         } else {
             if (req.cookies.ACCESS_TOKEN) {
-                router.basicPage(res, 'memories-overview', 'Herinneringen');
+                router.basicPage(res, 'memories-overview', 'Herinneringen', revManifest);
             } else {
                 getRefreshToken(req, res).then(() => {
-                    router.basicPage(res, 'memories-overview', 'Herinneringen');
+                    router.basicPage(res, 'memories-overview', 'Herinneringen', revManifest);
                 });
             }
         }
@@ -90,10 +76,10 @@ app
 
     .get('/login', async (req, res) => {
         if (req.cookies.ACCESS_TOKEN) {
-            router.basicPage(res, 'login', 'Login');
+            router.basicPage(res, 'login', 'Login', revManifest);
         } else {
             getRefreshToken(req, res).then(() => {
-                router.basicPage(res, 'login', 'Login');
+                router.basicPage(res, 'login', 'Login', revManifest);
             });
         }
     })
@@ -103,10 +89,10 @@ app
             res.redirect('/login');
         } else {
             if (req.cookies.ACCESS_TOKEN) {
-                router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers);
+                router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers, revManifest);
             } else {
                 getRefreshToken(req, res).then(() => {
-                    router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers);
+                    router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers, revManifest);
                 });
             }
         }
@@ -117,10 +103,10 @@ app
             res.redirect('/login');
         } else {
             if (req.cookies.ACCESS_TOKEN) {
-                router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers);
+                router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, revManifest);
             } else {
                 getRefreshToken(req, res).then(() => {
-                    router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers);
+                    router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, revManifest);
                 });
             }
         }
@@ -131,10 +117,10 @@ app
             res.redirect('/login');
         } else {
             if (req.cookies.ACCESS_TOKEN) {
-                router.pageWithData(res, 'music-overview', 'Muziek');
+                router.pageWithData(res, 'music-overview', 'Muziek', revManifest);
             } else {
                 getRefreshToken(req, res).then(() => {
-                    router.pageWithData(res, 'music-overview', 'Muziek');
+                    router.pageWithData(res, 'music-overview', 'Muziek', revManifest);
                 });
             }
         }
@@ -145,17 +131,17 @@ app
             res.redirect('/login');
         } else {
             if (req.cookies.ACCESS_TOKEN) {
-                router.basicPage(res, 'settings', 'Instellingen');
+                router.basicPage(res, 'settings', 'Instellingen', revManifest);
             } else {
                 getRefreshToken(req, res).then(() => {
-                    router.basicPage(res, 'settings', 'Instellingen');
+                    router.basicPage(res, 'settings', 'Instellingen', revManifest);
                 });
             }
         }
     })
 
     .get('/offline', (req, res) => {
-        router.basicPage(res, 'offline', 'Oeps! Er is iets misgegaan');
+        router.basicPage(res, 'offline', 'Oeps! Er is iets misgegaan', revManifest);
     });
 
 // Spotify Oauth

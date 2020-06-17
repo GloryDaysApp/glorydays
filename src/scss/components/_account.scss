@@ -1,7 +1,7 @@
 .account {
     display: flex;
     flex-direction: row;
-    padding: $indent-xxxs;
+    // padding: $indent-xxxs;
     margin-bottom: $indent;
 
     &--avatar {
@@ -14,7 +14,7 @@
         border-radius: 50%;
 
         img {
-            height: 32px;
+            height: 25px;
         }
     }
 

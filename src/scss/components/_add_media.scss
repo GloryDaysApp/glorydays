@@ -12,7 +12,7 @@
                     flex-direction: column;
 
                     span {
-                        margin-top: $indent;
+                        margin-top: $indent-xxxs;
                     }
                 }
             }
@@ -40,7 +40,7 @@
                     max-height: 200px;
                     margin-top: $indent;
                     border-radius: 4px;
-                    right: -($indent-xxxl);
+                    right: -9rem;
                     position: absolute;
                 }
             }

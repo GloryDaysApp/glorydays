@@ -2,7 +2,10 @@ nav {
     position: fixed;
     bottom: 0;
     background-color: $white;
-
+    height: 73px;
+    max-height: 73px;
+    width: 100%;
+    overflow: hidden;
 
     ul {
         width: 100%;
@@ -11,10 +14,10 @@ nav {
         justify-content: space-around;
         position: fixed;
         bottom: 0;
-        padding: 1em 0;
+        padding: 0;
         box-shadow: 0 0 10px rgba(0, 0, 0, .16);
         background-color: $white;
-        align-items: baseline;
+        align-items: center;
 
         a {
             li {
@@ -66,8 +69,6 @@ nav {
             bottom: 90px;
         }
     }
-
-    
 }
 
 .navigation-state--nav-only {
@@ -91,6 +92,10 @@ nav {
         .input-text {
             bottom: 95px;
         }
+    }
+    
+    .search {
+        bottom: 95px;
     }
 }
 
@@ -119,5 +124,36 @@ nav {
         .buttons {
             bottom: 90px;
         }
+    }
+}
+
+#navigation-state--all {
+    .search {
+        bottom: 165px;
+    }
+
+    a.add-btn {
+        bottom: 160px;
+    }
+}
+
+#navigation-state--nav-only {
+    .search {
+        bottom: 95px;
+    }
+
+    a.add-btn {
+        bottom: 90px;
+    }
+
+}
+
+#navigation-state--player-only {
+    .search {
+        bottom: 95px;
+    }
+
+    a.add-btn {
+        bottom: 90px;
     }
 }

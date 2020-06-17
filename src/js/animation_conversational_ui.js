@@ -4,6 +4,7 @@ const elements = document.querySelectorAll('legend');
 const fieldsets = document.querySelectorAll('fieldset');
 
 elements.forEach(element => {
+    element.classList.add('legend-animation');
     observer.observe(element);
 });
 
@@ -16,6 +17,7 @@ function showArticles(entries, observer) {
         const target = entry.target;
         const targetClass = entry.target.classList;
         targetClass.remove('observed');
+        
         if (entry.isIntersecting) {
             targetClass.add('observed');
             ActivateNavigationDot(target);

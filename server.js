@@ -152,6 +152,10 @@ app
                 });
             }
         }
+    })
+
+    .get('/offline', (req, res) => {
+        router.basicPage(res, 'offline', 'Oeps! Er is iets misgegaan');
     });
 
 // Spotify Oauth

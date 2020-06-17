@@ -16,8 +16,8 @@ if (onlyNavigation) {
     }
 } else {
     // show navigation and navigation player
-    const navHeight = navigationList.offsetHeight;
-    if (navigationPlayer) {
+    if (navigationPlayer && navigationList) {
+        const navHeight = navigationList.offsetHeight;
         navigationPlayer.style.bottom = `${navHeight}px`;
     }
 }

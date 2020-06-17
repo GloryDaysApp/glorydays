@@ -3,8 +3,10 @@ nav {
     bottom: 0;
     background-color: $white;
 
+
     ul {
         width: 100%;
+        height: 73px;
         display: flex;
         justify-content: space-around;
         position: fixed;
@@ -50,18 +52,18 @@ nav {
     form {
         fieldset {
             .buttons {
-                bottom: 26vh;
+                bottom: 210px;
             }
 
             .input-text {
-                bottom: 20vh;
+                bottom: 165px;
             }
         }
     }
 
     fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 19vh;
+            bottom: 90px;
         }
     }
 
@@ -71,11 +73,11 @@ nav {
 .navigation-state--nav-only {
     form fieldset {
         .buttons {
-            bottom: 10rem;
+            bottom: 140px;
         }
 
         .input-text {
-            bottom: 8rem;
+            bottom: 95px;
         }
     }
 }
@@ -83,11 +85,11 @@ nav {
 .navigation-state--player-only {
     form fieldset {
         .buttons {
-            bottom: 10rem;
+            bottom: 140px;
         }
         
         .input-text {
-            bottom: 8rem;
+            bottom: 95px;
         }
     }
 }
@@ -95,7 +97,7 @@ nav {
 .navigation-state--nav-only {
     form fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 10vh;
+            bottom: 90px;
         }
     }
 }
@@ -103,11 +105,11 @@ nav {
 .navigation-state--nav-only {
     form fieldset.navigation-state--button-input {
         .buttons {
-            bottom: 17vh;
+            bottom: 140px;
         }
 
         .input-text {
-            bottom: 11vh;
+            bottom: 95px;
         }
     }
 }
@@ -115,7 +117,7 @@ nav {
 .navigation-state--player-only {
     form fieldset.navigation-state--buttons-only {
         .buttons {
-            bottom: 6rem;
+            bottom: 90px;
         }
     }
 }

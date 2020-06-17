@@ -1,5 +1,6 @@
 // master
 .conversational-ui {
+    background-color: $white;
     display: none;
     overflow-x: hidden;
     position: absolute;
@@ -160,5 +161,11 @@
         color: $white;
         text-align: center;
     }
+}
+
+
+.conversational-ui.show {
+    display: block;
+    z-index: 1000;
 }
 

@@ -71,7 +71,7 @@ const playListSmall = document.getElementById('playlist-small');
 if (playListSmall) {
     playListSmall.addEventListener('click', showPlaylist);
 }
-  
+
 function showPlaylist() {
     playlistLarge.classList.add('visible');
 }
@@ -88,9 +88,10 @@ function hidePlaylist() {
 
 
 // Add memory reveal / hide
-const addMemoryContainer = document.getElementsByClassName('conversational-ui')[0]
+const addMemoryContainer = document.getElementsByClassName('conversational-ui')[0];
 document.getElementById('add-memory').addEventListener('click', revealMemoryContainer);
 
 function revealMemoryContainer() {
+    musicPlayer.classList.remove('big');
     addMemoryContainer.classList.add('show');
 }

@@ -35,7 +35,7 @@
             text-align: center;
             scroll-snap-align: center;
             flex: none;
-            height: 101%;
+            height: calc(101vh - calc(101vh - 100%));
             width: 100vw;
             overflow: hidden;
             position: relative;

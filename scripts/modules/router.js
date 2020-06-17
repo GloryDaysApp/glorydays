@@ -1,12 +1,14 @@
-const basicPage = (res, view, title) => {
+const basicPage = (res, view, title, revManifest) => {
     res.render(view, {
         title,
+        revManifest
     });
 };
-pageWithData = (res, view, title, data) => {
+pageWithData = (res, view, title, data, revManifest) => {
     res.render(view, {
         title,
-        data
+        data,
+        revManifest
     });
 };
 

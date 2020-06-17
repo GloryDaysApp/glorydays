@@ -14,7 +14,7 @@
         "ecmaVersion": 11,
         "sourceType": "script",
         "ecmaFeatures": {
-            "globalReturn": true,
+            "globalReturn": true
         }
     },
     "rules": {

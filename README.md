@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  ![glorydays_vid](https://user-images.githubusercontent.com/43337909/85061985-05e90200-b1a8-11ea-83db-0dbe21ced3e9.gif)
+  <img src="https://user-images.githubusercontent.com/43337909/85061985-05e90200-b1a8-11ea-83db-0dbe21ced3e9.gif" alt="gif">
 
 </p>
 

@@ -204,43 +204,6 @@ Nu de OAuth is geslaagd kun je door middel van Scopes features aan de applicatie
 
 Per functionaliteit is het van belang om uit te zoeken welke Scope hiervoor nodig is in de [Authorization Scopes](https://developer.spotify.com/documentation/general/guides/scopes/). 
 
-## Muziek Afspelen
-
-Om een voorbeeld te geven heeft u voor het afspelen van een nummer de [Start/Resume a User’s Playback Scope](https://developer.spotify.com/documentation/web-api/reference/player/start-a-users-playback/) nodig. Vervolgens voert u een fetch uit waarbij u het Id van het nummer meegeeft waardoor hij kan worden afgespeelt. 
-
-```javascript
-// Play song
- socket.on("playSong", function (myObject) {
-   // Fetch for streaming spotify to play a track
-   fetch(`https://api.spotify.com/v1/me/player/play`, {
-     method: "PUT",
-     headers: {
-       "Content-Type": "application/json",
-       Authorization: `Bearer ${myObject.accessToken}`,
-     },
-     body: JSON.stringify({
-       uris: [`spotify:track:${myObject.id}`],
-       title: [`spotify:track:${myObject.name}`],
-     }),
-   }).then(async (response) => {
-     tracksData = await response.json();
-     if (response.status == 403) {
-       socket.emit(
-         "server message",
-         "Server: You don't have a spotify premium account. You can chat with people but you can't listen to the party music."
-       );
-     }
-     if (response.status == 404) {
-       socket.emit(
-         "server message",
-         "Server: We can't find an active device please open your spotify application on your own device and start a random track to active the session."
-       );
-     }
-   });
- });
-});
-```
-
 ## SDK
 
 ...

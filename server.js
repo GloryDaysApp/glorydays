@@ -249,8 +249,6 @@ app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
     memory.song.name = req.body.songName !== '' ? req.body.songName : null;
     memory.song.artist = req.body.songArtist !== '' ? req.body.songArtist : null;
 
-    console.log(memory.song);
-
     // Save new user to database
     const newMemory = new Memory(memory);
 

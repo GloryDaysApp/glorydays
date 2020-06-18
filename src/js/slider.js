@@ -11,12 +11,19 @@ if (sliderHeart) {
         let value = this.value;
         changeHeartColor(value);
     };
+
+    // Change slider on load
+    outputSliderHeart.innerHTML = sliderHeart.value + ' | 10';
+    let value = sliderHeart.value;
+    console.log('value:', sliderHeart);
+    changeHeartColor(value);
 }
 
 const sliderLightning = document.getElementById('range-lightning');
 const outputSliderLightning = document.getElementById('value-lightning');
 const lightning = document.getElementById('lightning-path');
 let valueDescrLightning = document.getElementById('value-descr-lightning');
+
 if (sliderLightning) {
     // Display the default slider value
     outputSliderLightning.innerHTML = sliderLightning.value + ' | 10';
@@ -25,6 +32,12 @@ if (sliderLightning) {
         let value = this.value;
         changeLightningColor(value);
     };
+
+    // Change slider on load
+    outputSliderLightning.innerHTML = sliderLightning.value + ' | 10';
+    let value = sliderLightning.value;
+    console.log('value:', sliderLightning);
+    changeLightningColor(value);
 }
 
 // Change the fill color of the heart icon based on the slider value

@@ -29,3 +29,19 @@ function playSong(song, device_id) {
         spotify_uri: `spotify:track:${song}`,
     });
 }
+
+
+const songClick = document.getElementsByClassName('song-click')[0];
+console.log('hi', songClick);
+
+
+if (songClick) {
+    console.log('hoi', songClick);
+    songClick.addEventListener('click', playing);
+}
+
+function playing(e) {
+    document.getElementById('play-btn').src = '/pause_icon_blue.svg';
+    playSong(this.id);
+    console.log('joe',document.getElementById('play-btn'));
+}

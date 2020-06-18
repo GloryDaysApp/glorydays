@@ -36,6 +36,7 @@
             scroll-snap-align: center;
             flex: none;
             height: 101vh;
+            height: calc(var(--vh, 1vh) * 100 + 1vh);
             width: 100vw;
             overflow: hidden;
             position: relative;

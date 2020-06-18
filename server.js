@@ -161,8 +161,8 @@ app
                     .findOne({memoryId: myId})
                     .then((data) => {
                         console.log('DATA SINGLE ', data);
-                        let dataNew = JSON.stringify(data);
-                        router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, dataNew, revManifest);
+                        data = data.toJSON();
+                        router.pageWithData(res, 'memory-details', 'Herinnering details', data, revManifest);
                     })
                     .catch((err) => {
                         console.log('couldnt get memories from database', err);
@@ -174,7 +174,7 @@ app
                         .then((data) => {
                             console.log('data ', data);
                             let dataNew = JSON.stringify(data);
-                            router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, dataNew, revManifest);
+                            router.pageWithData(res, 'memory-details', 'Herinnering details', data, revManifest);
                         })
                         .catch((err) => {
                             console.log('couldnt get memories from database', err);

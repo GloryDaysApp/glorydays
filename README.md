@@ -151,21 +151,100 @@ Voer de volgende opdracht uit om de logs te zien wanneer er iets mis is gegaan:
 
 # Spotify API
 
-Voor het verkrijgen en afspelen van muziek hebben wij de [Spotify API](https://developer.spotify.com/documentation/web-api/) gebruikt. In dit hoofdstuk zullen wij u vertellen hoe deze precies in elkaar zit.
+In het concept hebben we veel te maken met het zoeken en toevoegen van muziek. Voor de applicatie gebruiken we de [WebAPI van Spotify](https://developer.spotify.com/documentation/web-api/). Deze API is gratis te gebruiken, zolang dit niet voor commerciële doeleinden wordt gebruikt. Om te beginnen heb je een [Spotify Developer account](https://developer.spotify.com/) nodig. 
+
+De gebruiker van de applicatie heeft een premium Spotify account nodig. Om te beginnen zal de gebruiker moeten inloggen bij Spotify. 
+
+<img width="1145" alt="Spotify Login Scherm" src="https://user-images.githubusercontent.com/65908596/85026767-601e9e80-b179-11ea-9004-5c2822a748bf.png">
+
+Zodra de gebruiker in ingelogd zal de autorisatie starten. 
+
+## Oauth
+
+Om de OAuth 2.0 voor de Spotify API te gebruiken, heb je de volgende variabelen nodig:
+- Client ID
+- Client Secret
+- Redirect URI
+
+Deze variabelen zijn terug te vinden in het [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/login). De Spotify Redirect-URI moet worden ingesteld in uw SPotify-dashboard. Deze URI moet hetzelfde zijn als uw callback-URI. Anders zal de OAuth niet slagen. Het is belangrijk om te onthouden dat deze URI zal veranderen zodra u de applicatie wilt deployen. Daarnaast mogen de Client Id en de Client Secret nooit zichtbaar zijn in Github. 
+
+Deze kun je  bijvoorbeeld opslaan in een dotenv bestand. Hier is een voorbeeld van hoe wij dit hebben aangepakt;
 
 <details>
- <summary>Data</summary>
-
-```json
-{
-
-}
+  <summary>.env.example</summary>
+  
 ```
+CLIENT_ID='client id from your Spotify Developer account'
+CLIENT_SECRET='client from your Spotify Developer account'
+REDIRECT_URI='redirect URL'
+```
+  
 </details>
+
+## OAuth flow
+
+<img width="1176" alt="OAuth flow" src="https://user-images.githubusercontent.com/65908596/85027043-c1467200-b179-11ea-94dc-eec95d5be53e.png">
+
+1. Stuur de gebruiker naar Spotify en vraag hem toestemming te geven aan de applicatie om zijn of haar Spotify-gegevens in te lezen.
+2. Spotify keert terug naar de applicatie op een ingestelde callback-URL(redirect URI).
+3. Doe een verzoek tot de acces en refresh token met een fetch, inclusief .env gegevens. 
+4. Nu kunt u de Spotify-gegevens van de gebruiker ophalen via een fetch met de accestoken. 
+
+## Scopes
+
+Nu de OAuth is geslaagd kun je door middel van Scopes features aan de applicatie toevoegen. De features voor onze applicatie zijn;
+
+- Muziek zoeken
+- Muziek afspelen
+- Nummer toevoegen aan favorieten
+- Nummer toevoegen aan herinnering. 
+
+Per functionaliteit is het van belang om uit te zoeken welke Scope hiervoor nodig is in de [Authorization Scopes](https://developer.spotify.com/documentation/general/guides/scopes/). 
+
+## Muziek Afspelen
+
+Om een voorbeeld te geven heeft u voor het afspelen van een nummer de [Start/Resume a User’s Playback Scope](https://developer.spotify.com/documentation/web-api/reference/player/start-a-users-playback/) nodig. Vervolgens voert u een fetch uit waarbij u het Id van het nummer meegeeft waardoor hij kan worden afgespeelt. 
+
+```javascript
+// Play song
+ socket.on("playSong", function (myObject) {
+   // Fetch for streaming spotify to play a track
+   fetch(`https://api.spotify.com/v1/me/player/play`, {
+     method: "PUT",
+     headers: {
+       "Content-Type": "application/json",
+       Authorization: `Bearer ${myObject.accessToken}`,
+     },
+     body: JSON.stringify({
+       uris: [`spotify:track:${myObject.id}`],
+       title: [`spotify:track:${myObject.name}`],
+     }),
+   }).then(async (response) => {
+     tracksData = await response.json();
+     if (response.status == 403) {
+       socket.emit(
+         "server message",
+         "Server: You don't have a spotify premium account. You can chat with people but you can't listen to the party music."
+       );
+     }
+     if (response.status == 404) {
+       socket.emit(
+         "server message",
+         "Server: We can't find an active device please open your spotify application on your own device and start a random track to active the session."
+       );
+     }
+   });
+ });
+});
+```
+
+## SDK
+
+...
 
 # Datamodel
 
-
+...
 
 # Documentatie
 

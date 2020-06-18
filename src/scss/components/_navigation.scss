@@ -55,31 +55,31 @@ nav {
     fieldset {
         .buttons {
             bottom: 210px;
-            bottom: calc(210px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(210px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
 
         .input-text {
             bottom: 65px;
-            bottom: calc(65px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(65px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 
     form fieldset.navigation-state--button-input {
         .buttons {
             bottom: 210px;
-            bottom: calc(210px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(210px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
 
         .input-text {
             bottom: 165px;
-            bottom: calc(165px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(165px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 
     fieldset.navigation-state--buttons-only {
         .buttons {
             bottom: 165px;
-            bottom: calc(165px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(165px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 }
@@ -88,24 +88,24 @@ nav {
     form fieldset {
         .buttons {
             bottom: 140px;
-            bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
 
         .input-text {
             bottom: 95px;
-            bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 
     form fieldset.navigation-state--button-input {
         .buttons {
             bottom: 140px;
-            bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
 
         .input-text {
             bottom: 95px;
-            bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 
@@ -113,14 +113,13 @@ nav {
         .buttons {
             // bottom: 90px;
             bottom: 90px;
-            bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
     
     .navigation-state--buttons-only {
-            // bottom: 90px;
         bottom: 100px;
-        bottom: calc(100px + calc(100vh - calc(var(--vh, 2vh) * 100)));
+        // bottom: calc(100px + calc(100vh - calc(var(--vh, 2vh) * 100)));
     }
 }
 
@@ -128,31 +127,31 @@ nav {
     form fieldset {
         .buttons {
             bottom: 140px;
-            bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
         
         .input-text {
             bottom: 95px;
-            bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 
     form fieldset.navigation-state--button-input {
         .buttons {
             bottom: 140px;
-            bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
 
         .input-text {
             bottom: 95px;
-            bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
     
     form fieldset.navigation-state--buttons-only {
         .buttons {
             bottom: 90px;
-            bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 }
@@ -161,30 +160,30 @@ nav {
 #navigation-state--all {
     .search {
         bottom: 165px;
-        bottom: calc(165px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+        // bottom: calc(165px + calc(100vh - calc(var(--vh, 1vh) * 100)));
     }
 
     a.add-btn {
         bottom: 160px;
-        bottom: calc(160px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+        // bottom: calc(160px + calc(100vh - calc(var(--vh, 1vh) * 100)));
     }
 
     form fieldset.navigation-state--button-input {
         .buttons {
             bottom: 210px;
-            bottom: calc(210px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(210px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
 
         .input-text {
             bottom: 165px;
-            bottom: calc(165px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(165px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 
     fieldset.navigation-state--buttons-only {
         .buttons {
             bottom: 165px;
-            bottom: calc(165px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(165px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 }
@@ -192,30 +191,30 @@ nav {
 #navigation-state--nav-only {
     .search {
         bottom: 95px;
-        bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+        // bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
     }
 
     a.add-btn {
         bottom: 90px;
-        bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+        // bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
     }
 
     form fieldset.navigation-state--button-input {
         .buttons {
             bottom: 140px;
-            bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
 
         .input-text {
             bottom: 95px;
-            bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 
     form fieldset.navigation-state--buttons-only {
         .buttons {
             bottom: 90px;
-            bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 }
@@ -223,30 +222,30 @@ nav {
 #navigation-state--player-only {
     .search {
         bottom: 95px;
-        bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+        // bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
     }
 
     a.add-btn {
         bottom: 90px;
-        bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+        // bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
     }
 
     form fieldset.navigation-state--button-input {
         .buttons {
             bottom:140px;
-            bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(140px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
 
         .input-text {
             bottom: 95px;
-            bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(95px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 
     form fieldset.navigation-state--buttons-only {
         .buttons {
             bottom: 90px;
-            bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
+            // bottom: calc(90px + calc(100vh - calc(var(--vh, 1vh) * 100)));
         }
     }
 }

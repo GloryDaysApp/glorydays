@@ -32,6 +32,7 @@
   * [Development](#Development)
   * [Production](#Production)
 * [Dependencies](#Dependencies)
+  * [Dev dependencies](#Dev-dependencies)
 * [Spotify API](#Spotify-Api)
   * [Oauth](#Oauth)
     * [OAuth flow](#OAuth-flow)

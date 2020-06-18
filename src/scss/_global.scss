@@ -7,6 +7,9 @@ body {
     padding: $indent-xxxl $indent;
     margin: $center-margin;
     // max-width: $max-width;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
 }
 
 .hide {

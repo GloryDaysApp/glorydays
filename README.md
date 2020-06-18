@@ -27,7 +27,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/MarjoleinAardewijn"><img src="https://avatars1.githubusercontent.com/u/23479038?v=4" width="100px;" alt=""/><br /><sub><b>MarjoleinAardewijn</b></sub></a><br /><a href="https://github.com/GloryDaysApp/glorydays/commits?author=MarjoleinAardewijn" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/MarjoleinAardewijn"><img src="https://avatars1.githubusercontent.com/u/23479038?v=4" width="100px;" alt=""/><br /><sub><b>MarjoleinAardewijn</b></sub></a><br /><a href="https://github.com/GloryDaysApp/glorydays/commits?author=MarjoleinAardewijn" title="Code">💻</a> <a href="#infra-MarjoleinAardewijn" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/GloryDaysApp/glorydays/issues?q=author%3AMarjoleinAardewijn" title="Bug reports">🐛</a> <a href="#a11y-MarjoleinAardewijn" title="Accessibility">️️️️♿️</a> <a href="#content-MarjoleinAardewijn" title="Content">🖋</a> <a href="https://github.com/GloryDaysApp/glorydays/commits?author=MarjoleinAardewijn" title="Documentation">📖</a> <a href="#design-MarjoleinAardewijn" title="Design">🎨</a> <a href="#ideas-MarjoleinAardewijn" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-MarjoleinAardewijn" title="Maintenance">🚧</a> <a href="#question-MarjoleinAardewijn" title="Answering Questions">💬</a> <a href="#tutorial-MarjoleinAardewijn" title="Tutorials">✅</a> <a href="https://github.com/GloryDaysApp/glorydays/commits?author=MarjoleinAardewijn" title="Tests">⚠️</a></td>
   </tr>
 </table>
 

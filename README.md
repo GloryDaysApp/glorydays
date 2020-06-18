@@ -263,7 +263,73 @@ De Spotify Web SDK is een beta versie van een client-side Javascript library van
 
 # Datamodel
 
-...
+Voor het opslaan en de management van data maken we gebruik van Mongodb: een niet-relationele database. Zo houden we onze data gestructureerd en breekt de webapp niet wanneer de server uitvalt. Voor Mongodb gebruiken we Mongoose om het werkbaar te maken binnen onze code. Mongoose heeft een schema nodig, zodat Mongodb wat voor data in de database terecht komt. Door dit vaste patroon is het veiliger en meer solide. Onze Mongoose datamodel ziet er als volgt uit:
+```javascript
+const mongoose = require('mongoose');
+
+// Mongoose schema
+const Schema = mongoose.Schema;
+
+const account = new Schema({
+    name: String,
+    email: String,
+    password: String,
+    age: Number,
+    country: String,
+    photo: String,
+    genres: {
+        type: Array,
+        default: []
+    },
+    ages: {
+        type: Array,
+        default: []
+    },
+    artists: {
+        type: Array,
+        default: []
+    },
+    spotifyRefreshToken: String,
+    spotifyAccessToken: String,
+    careTakers: {
+        type: Array,
+        default: []
+    }
+});
+
+const memory = new Schema({
+    memoryId: String,
+    song: {
+        type: Array,
+        default: []
+    },
+    emotion: String,
+    energy: String, 
+    description: {
+        type: Array,
+        default: []
+    },
+    title: {
+        type: Array,
+        default: []
+    },
+    keywords: {
+        type: Array,
+        default: []
+    },
+    media: {
+        type: Array,
+        default: []
+    }
+});
+
+// // Model
+const Account = mongoose.model('Account', account);
+const Memory = mongoose.model('Memory', memory);
+
+module.exports = { Account, Memory };
+```
+
 
 # Documentatie
 

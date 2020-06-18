@@ -31,13 +31,19 @@
 * [Installatie](#Installatie)
   * [Development](#Development)
   * [Production](#Production)
+* [Dependencies](#Dependencies)
 * [Spotify API](#Spotify-Api)
+  * [Oauth](#Oauth)
+    * [OAuth flow](#OAuth flow)
+  * [Scopes](#Scopes)
+  * [SDK](#SDK)
 * [Datamodel](#Datamodel)
 * [Documentatie](#Documentatie)
   * [Design rationale](#Design-rationale)
   * [Product biografie](#Product-biografie)
   * [Code afspraken](#Code-afspraken)
 * [Contributors](#contributors-)
+* [Feature Wensenlijst](#Feature-Wensenlijst)
 
 # Omschrijving 
 
@@ -188,7 +194,7 @@ MONGODB_URI='uri to mongoos DB'
   
 </details>
 
-## OAuth flow
+### OAuth flow
 
 <img width="1176" alt="OAuth flow" src="https://user-images.githubusercontent.com/65908596/85027043-c1467200-b179-11ea-94dc-eec95d5be53e.png">
 
@@ -240,7 +246,7 @@ Om ervoor te zorgen dat al onze code consistent is hebben wij allemaal afspraken
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Bedankt aan deze geweldige mensen ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -259,4 +265,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+Dit project volgt de specificatie van [all-contributors](https://github.com/all-contributors/all-contributors). Bijdragen van welke aard dan ook zijn welkom!
+
+# Feature Wensenlijst

@@ -1,37 +1,36 @@
 <header>
-    <%- include('partials/head') %>
-    <!-- <h1><%= title %></h1> -->
+  <%- include('partials/head') %>
+  <!-- <h1><%= title %></h1> -->
 </header>
 
 <section class="container container--details" id="navigation-state--nav-only">
     <div class="container--details-back">
-<!--        <a href="/"><img src="arrow_back.png" alt="Arrow back icon">-->
-<!--            Terug naar herinneringen</a>-->
         <p class="back">Terug naar herinneringen</p>
     </div>
 
-    <h1>Bruiloft Sandra & Tim</h1>
-    <p>Toegevoegd door op <span class="date"> 15-05-2020</span></p>
-    <p>We waren op de bruiloft van Tim en Sandra
-        toen jij een grap maakte over Tim zijn
-        nieuwe kapsel.</p>
-    <img src="bruiloft_tim_sandra.png" alt="Bruiloft Tim en Sandra afbeelding">
+  <h1>Bruiloft Sandra & Tim</h1>
+  <p>Toegevoegd door op <span class="date"> 15-05-2020</span></p>
+  <p>
+    We waren op de bruiloft van Tim en Sandra toen jij een grap maakte over Tim
+    zijn nieuwe kapsel.
+  </p>
+  <img src="bruiloft_tim_sandra.png" alt="Bruiloft Tim en Sandra afbeelding" />
 
-    <h2>Alex's ervaring van de herinnering</h2>
+  <h2>Alex's ervaring van de herinnering</h2>
+  <%- include('partials/sliders') %>
 
-    <%- include('partials/sliders') %>
+  <div class="container-catchword">
+    <h2>Steekwoorden</h2>
+    <span class="catchword">bruiloft</span>
+    <span class="catchword">liefde</span>
+  </div>
 
-    <div class="container-catchword">
-        <h2>Steekwoorden </h2>
-        <span class="catchword">bruiloft</span>
-        <span class="catchword">liefde</span>
-    </div>
-
-    <div class="container-btn">
-        <a class="share-btn" id="share-btn"><img src="share.svg" alt="Share icon"></a>
-        <a class="edit-btn"><img src="edit.svg" alt="Edit icon"></a>
-    </div>
+  <div class="container-btn">
+    <a class="share-btn" id="share-btn"
+      ><img src="share.svg" alt="Share icon"
+    /></a>
+    <a class="edit-btn"><img src="edit.svg" alt="Edit icon" /></a>
+  </div>
 </section>
 
-<%- include('partials/navigation-holder') %>
-<%- include('partials/footer') %>
+<%- include('partials/navigation-holder') %> <%- include('partials/footer') %>

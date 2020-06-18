@@ -5,9 +5,9 @@ let valueDescrHeart = document.getElementById('value-descr-heart');
 
 if (sliderHeart) {
     // Display the default slider value
-    outputSliderHeart.innerHTML = sliderHeart.value + ' | 10';
+    outputSliderHeart.innerHTML = sliderHeart.value + ' | 5';
     sliderHeart.oninput = function () {
-        outputSliderHeart.innerHTML = this.value + ' | 10';
+        outputSliderHeart.innerHTML = this.value + ' | 5';
         let value = this.value;
         changeHeartColor(value);
     };
@@ -19,9 +19,9 @@ const lightning = document.getElementById('lightning-path');
 let valueDescrLightning = document.getElementById('value-descr-lightning');
 if (sliderLightning) {
     // Display the default slider value
-    outputSliderLightning.innerHTML = sliderLightning.value + ' | 10';
+    outputSliderLightning.innerHTML = sliderLightning.value + ' | 5';
     sliderLightning.oninput = function () {
-        outputSliderLightning.innerHTML = this.value + ' | 10';
+        outputSliderLightning.innerHTML = this.value + ' | 5';
         let value = this.value;
         changeLightningColor(value);
     };
@@ -29,23 +29,23 @@ if (sliderLightning) {
 
 // Change the fill color of the heart icon based on the slider value
 function changeHeartColor(value) {
-    if (value == 0) {
+    if (value == 1) {
         removeHeartClasses();
         heart.classList.add('heart--glory-red');
         valueDescrHeart.innerHTML = 'verdrietig';
-    } else if (value == 2.5) {
+    } else if (value == 2) {
         removeHeartClasses();
         heart.classList.add('heart--glory-salmon');
         valueDescrHeart.innerHTML = 'somber';
-    } else if (value == 5) {
+    } else if (value == 3) {
         removeHeartClasses();
         heart.classList.add('heart--glory-grey');
         valueDescrHeart.innerHTML = 'normaal';
-    } else if (value == 7.5) {
+    } else if (value == 4) {
         removeHeartClasses();
         heart.classList.add('heart--glory-blue');
         valueDescrHeart.innerHTML = 'blij';
-    } else if (value == 10) {
+    } else if (value == 5) {
         removeHeartClasses();
         heart.classList.add('heart--glory-green');
         valueDescrHeart.innerHTML = 'gelukkig';
@@ -68,23 +68,23 @@ function removeHeartClasses() {
 
 // Change the fill color of the lightning icon based on the slider value
 function changeLightningColor(value) {
-    if (value == 0) {
+    if (value == 1) {
         removeLightningClasses();
         lightning.classList.add('lightning--glory-red');
         valueDescrLightning.innerHTML = 'slaperig';
-    } else if (value == 2.5) {
+    } else if (value == 2) {
         removeLightningClasses();
         lightning.classList.add('lightning--glory-salmon');
         valueDescrLightning.innerHTML = 'moe';
-    } else if (value == 5) {
+    } else if (value == 3) {
         removeLightningClasses();
         lightning.classList.add('lightning--glory-grey');
         valueDescrLightning.innerHTML = 'normaal';
-    } else if (value == 7.5) {
+    } else if (value == 4) {
         removeLightningClasses();
         lightning.classList.add('lightning--glory-blue');
         valueDescrLightning.innerHTML = 'actief';
-    } else if (value == 10) {
+    } else if (value == 5) {
         removeLightningClasses();
         lightning.classList.add('lightning--glory-green');
         valueDescrLightning.innerHTML = 'energievol';

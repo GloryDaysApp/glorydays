@@ -42,6 +42,24 @@
         "question",
         "test"
       ]
+    },
+    {
+      "login": "marissaverdonck",
+      "name": "marissaverdonck",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/43657951?v=4",
+      "profile": "https://github.com/marissaverdonck",
+      "contributions": [
+        "code",
+        "bug",
+        "a11y",
+        "content",
+        "doc",
+        "design",
+        "ideas",
+        "maintenance",
+        "question",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,

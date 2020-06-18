@@ -65,10 +65,29 @@ app
             res.redirect('/login');
         } else {
             if (req.cookies.ACCESS_TOKEN) {
-                router.basicPage(res, 'memories-overview', 'Herinneringen', revManifest);
+                Memory
+                    .find({})
+                    .then((data) => {
+                        console.log('data ', data);
+                        router.pageWithData(res, 'memories-overview', 'Herinneringen', data, revManifest);
+                    })
+                    .catch((err) => {
+                        console.log('couldnt get memories from database', err);
+                    });
+
+                
             } else {
                 getRefreshToken(req, res).then(() => {
-                    router.basicPage(res, 'memories-overview', 'Herinneringen', revManifest);
+                    Memory
+                        .find({})
+                        .then((data) => {
+                            console.log('data ', data);
+                            data = JSON.stringify(data);
+                            router.pageWithData(res, 'memories-overview', 'Herinneringen', data, revManifest);
+                        })
+                        .catch((err) => {
+                            console.log('couldnt get memories from database', err);
+                        });
                 });
             }
         }
@@ -98,15 +117,34 @@ app
         }
     })
 
-    .get('/memory-details', async (req, res) => {
+    .get('/:id', async (req, res) => {
         if (!req.cookies.REFRESH_TOKEN) {
             res.redirect('/login');
         } else {
             if (req.cookies.ACCESS_TOKEN) {
-                router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, revManifest);
+                console.log(req.params.id);
+                // Memory
+                //     .findOne({ _id: req.params.id })
+                //     .then((data) => {
+                //         console.log('DATA SINGLE ', data);
+                //         data = JSON.stringify(data);
+                //         router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, data, revManifest);
+                //     })
+                //     .catch((err) => {
+                //         console.log('couldnt get memories from database', err);
+                //     });
             } else {
                 getRefreshToken(req, res).then(() => {
-                    router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, revManifest);
+                    // Memory
+                    //     .find({ _id: req.params.id })
+                    //     .then((data) => {
+                    //         console.log('data ', data);
+                    //         data = JSON.stringify(data);
+                    //         router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, data, revManifest);
+                    //     })
+                    //     .catch((err) => {
+                    //         console.log('couldnt get memories from database', err);
+                    //     });
                 });
             }
         }
@@ -177,13 +215,18 @@ const upload = multer({ storage: storage });
 
 // Store data to database
 app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
+
+    console.log(Array.isArray(req.body.keywords));
+
     // Create new memory
     let memory = {
         title: req.body.title.length > 0 ? req.body.title.filter(text => text !== '') : null,
         description: req.body.description.length > 0 ? req.body.description.filter(desc => desc !== '') : null,
         keywords: req.body.keywords.length > 0 ? req.body.keywords.filter(keyword => keyword !== '') : null,
         media: [],
-        song: {}
+        song: {},
+        emotion: req.body.emotion !== '' ? req.body.emotion : null,
+        energy: req.body.energy !== '' ? req.body.energy : null
     };
 
     // Store media
@@ -196,25 +239,12 @@ app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
 
         memory.media.push(image);
     }
-
-    console.log(req.body.audioRecording);
-
-    if (req.body.audioRecording !== '') {
-        const audio = {
-            type: 'audio',
-            src: req.body.audioRecording
-        };
-
-        memory.media.push(audio);
-    }
     
     // Store song data
     memory.song.id = req.body.songId !== '' ? req.body.songId : null;
     memory.song.albumCover = req.body.songAlbumCover !== '' ? req.body.songAlbumCover : null;
     memory.song.name = req.body.songName !== '' ? req.body.songName : null;
     memory.song.artist = req.body.songArtist !== '' ? req.body.songArtist : null;
-
-    res.send(memory);
 
     // Save new user to database
     const newMemory = new Memory(memory);

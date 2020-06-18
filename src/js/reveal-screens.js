@@ -93,7 +93,11 @@ function hidePlaylist() {
 
 // Add memory reveal / hide
 const addMemoryContainer = document.getElementsByClassName('conversational-ui')[0];
-document.getElementById('add-memory').addEventListener('click', revealMemoryContainer);
+const addMemory = document.getElementById('add-memory');
+
+if (addMemory) {
+    addMemory.addEventListener('click', revealMemoryContainer);
+}
 
 function revealMemoryContainer() {
     appendSongInformation();

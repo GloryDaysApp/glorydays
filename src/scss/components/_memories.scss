@@ -92,39 +92,39 @@
                 }
             }
 
-            &:nth-child(1) {
-                /* Fallback color */
-                // background: rgba(66, 245, 191, 0.4);
-                background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
-                    url('Rolling_Stone.png');
-                // background: linear-gradient(rgba(66, 245, 191, 0.4) 80%, rgba(24, 92, 71, 0.5)) 10%, url(Rolling_Stone.png);
-                background-blend-mode: saturation;
-                background-size: cover;
-            }
+            // &:nth-child(1) {
+            //     /* Fallback color */
+            //     // background: rgba(66, 245, 191, 0.4);
+            //     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),
+            //         url('Rolling_Stone.png');
+            //     // background: linear-gradient(rgba(66, 245, 191, 0.4) 80%, rgba(24, 92, 71, 0.5)) 10%, url(Rolling_Stone.png);
+            //     background-blend-mode: saturation;
+            //     background-size: cover;
+            // }
 
-            &:nth-child(2) {
-                background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('Like_A_Rolling_Stone.jpg');
-                background-blend-mode: saturation;
-                background-size: cover;
-            }
+            // &:nth-child(2) {
+            //     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('Like_A_Rolling_Stone.jpg');
+            //     background-blend-mode: saturation;
+            //     background-size: cover;
+            // }
 
-            &:nth-child(3) {
-                background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('After_Math.jpg');
-                background-blend-mode: saturation;
-                background-size: cover;
-            }
+            // &:nth-child(3) {
+            //     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('After_Math.jpg');
+            //     background-blend-mode: saturation;
+            //     background-size: cover;
+            // }
 
-            &:nth-child(4) {
-                background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('Here_Comes_The_Sun.jpg');
-                background-blend-mode: saturation;
-                background-size: cover;
-            }
+            // &:nth-child(4) {
+            //     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('Here_Comes_The_Sun.jpg');
+            //     background-blend-mode: saturation;
+            //     background-size: cover;
+            // }
 
-            &:nth-child(5) {
-                background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('Here_Comes_The_Sun.jpg');
-                background-blend-mode: saturation;
-                background-size: cover;
-            }
+            // &:nth-child(5) {
+            //     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url('Here_Comes_The_Sun.jpg');
+            //     background-blend-mode: saturation;
+            //     background-size: cover;
+            // }
 
             h2 {
                 position: relative;
@@ -251,5 +251,46 @@
 
     .edit-btn {
         right: $indent;
+    }
+}
+
+.container-added-memories {
+    .container--memories.new {
+        .container--memories-memory {
+            position: relative;
+            margin: 0.625rem;
+            width: calc(50% - 1.25rem);
+            min-height: 90px;
+        }
+
+        h2 {
+            position: absolute;
+            bottom: $indent-xs;
+            left: $indent-xs;
+            right: auto;
+            top: auto;
+            width: 80%;
+            margin-left: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            filter: grayscale(100%);
+        }
     }
 }

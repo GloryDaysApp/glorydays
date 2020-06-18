@@ -25,6 +25,8 @@
 # Inhoudsopgave
 
 * [Omschrijving](#Omschrijving)
+  * [Doel](#Doel)
+  * [Het team](#Het-team)
 * [Installatie](#Installatie)
   * [Development](#Development)
   * [Production](#Production)
@@ -37,6 +39,17 @@
 * [Contributors](#contributors-)
 
 # Omschrijving 
+
+Wereldwijd zijn er zo’n 50 miljoen Alzheimer patiënten. Ook in Nederland is het veel voorkomend. De ziekte treft mensen van uiteenlopende leeftijden, maar vooral ouderen krijgen ermee te maken. Alzheimer zorgt ervoor dat de hersenen worden aangetast, waardoor de persoonlijkheid vervaagd en herinneringen verdwijnen. Helaas is er op dit moment nog geen geneesmiddel voor deze slopende ziekte. 
+
+Omdat de zoektocht naar een geneesmiddel tot nu toe nog geen succes heeft opgeleverd, hebben farmaceuten ervoor gekozen om alle energie te gaan steken in de preventie in plaats van het genezen.
+
+Ondanks dat een medicijn ver weg is, kunnen we het verloop van de ziekte aangenamer maken met behulp van muziek. Onderzoek heeft namelijk aangetoond dat aan muziek gekoppelde herinneringen op een relatief ‘veilige’ plek in het menselijk brein worden opgeslagen. Het regelmatig beluisteren en beoefenen van muziek heeft een positief effect op de ontwikkeling van Alzheimer. Wanneer muziek persoonlijk en betekenisvol is voor het individu, beloven deze positieve effecten nog groter te worden.
+
+## Doel
+
+Aan ons de opdracht om een applicatie te ontwikkelen waarbij we het leven van Alzheimer patiënten en de mensen eromheen verbeteren. Denk hierbij bijvoorbeeld aan verzorgers, familieleden of vrienden. Muziek, waar persoonlijke herinneringen aan zijn gekoppeld, wordt opgehaald om mooie momenten te creëren in het heden over het verleden. Zo wordt de emotionele gemoedstoestand mogelijk verbeterd. Daarnaast kunnen we deze ervaring gebruiken om de relatie tussen patiënt en vriend/familie/verzorger te verbeteren.
+
 
 ## Het team
 

@@ -58,76 +58,81 @@
         margin-bottom: 5rem;
 
         .container--memories-memory {
-            width: calc(50% - 10px);
-            height: 10rem;
-            margin: $indent-xs 5px 0;
+            position: relative;
+            margin: .3rem;
+            width: calc(50% - .6rem);
+            min-height: 130px;
+        }
+
+        h2 {
+            position: absolute;
+            bottom: $indent-xxs;
+            left: $indent-xxs;
+            width: 80%;
+            z-index: 1;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
             border-radius: 4px;
+            height: 100%;
+            opacity: 50%;
 
-            .overlay {
-                width: 100%;
-                height: 100%;
-                border-radius: 4px;
-                position: relative;
-                bottom: 162.5px;
-                opacity: 0.75;
-
-                &--glory-green {
-                    @include overlay-gradient($glory-green);
-                }
-
-                &--glory-blue {
-                    @include overlay-gradient($glory-blue);
-                }
-
-                &--glory-grey {
-                    @include overlay-gradient($glory-grey);
-                }
-
-                &--glory-salmon {
-                    @include overlay-gradient($glory-salmon);
-                }
-
-                &--glory-red {
-                    @include overlay-gradient($glory-red);
-                }
+            &--glory-green {
+                @include overlay-gradient($glory-green);
             }
 
-            img {
-                border-radius: 4px;
-                width: 100%;
-                height: 100%;
-                filter: saturate(0);
-                object-fit: cover;
+            &--glory-blue {
+                @include overlay-gradient($glory-blue);
             }
 
-            h2 {
-                position: relative;
-                z-index: 1;
-                top: 9.5rem;
-                font-size: 16px;
-                margin-left: .5rem;
-                color: #fff;
+            &--glory-grey {
+                @include overlay-gradient($glory-grey);
+            }
+
+            &--glory-salmon {
+                @include overlay-gradient($glory-salmon);
+            }
+
+            &--glory-red {
+                @include overlay-gradient($glory-red);
             }
         }
-    }
-
-    .add-btn {
-        all: unset;
-        background-color: $glory-salmon;
-        width: 50px;
-        height: 50px;
-        position: fixed;
-        z-index: 2;
-        bottom: 5rem;
-        right: $indent;
-        border: solid 4px #fff;
-        border-radius: 50px;
 
         img {
-            width: 23px;
-            height: 23px;
-            margin: 13px 0 0 12.5px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            filter: grayscale(100%);
         }
+    }
+}
+
+.add-btn {
+    all: unset;
+    background-color: $glory-salmon;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 2;
+    bottom: 5rem;
+    right: $indent;
+    border: solid 4px #fff;
+    border-radius: 50px;
+
+    img {
+        width: 23px;
+        height: 23px;
+        margin: 13px 0 0 12.5px;
     }
 }
 
@@ -138,10 +143,21 @@
 
         .back {
             @include back-icon;
-
             position: relative;
             margin-left: $indent-xxxl;
             display: block;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: -30px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: url('icons/arrow_back.svg') no-repeat;
+                background-size: 16px;
+                width: 16px;
+                height: 16px;
+            }
         }
     }
 
@@ -150,10 +166,65 @@
         color: $grey;
     }
 
-    img {
+    .song-information {
+        position: relative;
         width: 100%;
-        height: auto;
-        margin-bottom: $indent;
+        min-height: 300px;
+        max-width: 350px;
+        border-radius: 4px;
+
+        .background-image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: $indent;
+        }
+
+        .overlay {
+            @include overlay-gradient($darkgrey);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 60%;
+            border-radius: 4px;
+        }
+
+        p {
+            position: absolute;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            color: $white;
+            letter-spacing: 1px;
+            text-align: center;
+
+            &.title {
+                top: 35%;
+                font-size: 1.25rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+
+            &.artist {
+                top: 45%;
+                font-size: 1rem;
+            }
+        }
+        
+        .play {
+            position: absolute;
+            left: 50%;
+            top: 65%;
+            transform: translate(-50%, -50%);
+            max-width: 30px;
+        }
     }
 
     .list-item {

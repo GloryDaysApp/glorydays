@@ -1,6 +1,4 @@
 function playSong(song, device_id) {
-    console.log('song: ', song);
-
     // Called when connected to the player created beforehand successfully
 
     const play = ({
@@ -28,4 +26,17 @@ function playSong(song, device_id) {
         playerInstance: player,
         spotify_uri: `spotify:track:${song}`,
     });
+}
+
+
+const songClick = document.getElementsByClassName('song-click')[0];
+
+if (songClick) {
+    songClick.addEventListener('click', playing);
+}
+
+function playing(e) {
+    document.getElementById('play-btn').src = '/pause_icon_blue.svg';
+    playSong(this.id);
+    console.log('joe',document.getElementById('play-btn'));
 }

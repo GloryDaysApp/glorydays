@@ -16,7 +16,6 @@ module.exports = (req, res) => {
             //     const cleanedData = cleanData(data);
             //     console.log(cleanedData);
             // });
-            console.log('fetched access token: ', ACCESS_TOKEN);
         });
     }
     

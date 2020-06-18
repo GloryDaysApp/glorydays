@@ -33,7 +33,7 @@ module.exports = async (req, res) => {
       
         res.cookie('REFRESH_TOKEN', data.refresh_token);
 
-        res.redirect('/');
+        res.redirect('/memories-overview');
     } catch (err) {
         console.log('error verifying: ', err);
         res.send(err);

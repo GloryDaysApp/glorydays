@@ -15,7 +15,7 @@ function checkClickedInputSendButton() {
     if (inputSendButtonsArray) {
         inputSendButtonsArray.forEach((element, index) => {
             inputSendButtonsArray[index].addEventListener('click', addTextBaloon(index));
-            inputSendButtonsArray[index].addEventListener('keyup', onKeyEnter(event));
+            // inputSendButtonsArray[index].addEventListener('keyup', onKeyEnter(event));
         });
     }
 }
@@ -47,13 +47,21 @@ function addTextBaloon(index) {
     };
 }
 
-function onKeyEnter(event) {
-    console.log('hallo hgh');
-    if (event.keyCode === 13) {
-        // Cancel the default action, if needed
-        event.preventDefault();
-        console.log('hallo hgh');
-    }
-}
+// function onKeyEnter(event) {
+//     // console.log('hallo hgh');
+//     console.log(event);
+//     // if (window.event.keyCode === 13) {
+//     //     // Cancel the default action, if needed
+//     //     event.preventDefault();
+//     //     console.log('hallo hgh');
+//     // }
+
+
+//     // event.preventDefault();
+//     // if (event.keyCode === 13) {
+//     //     inputSendButtonsArray[index].click();
+//     // }
+//     // });
+// }
 
 AddSendButtonToInputTextFields();

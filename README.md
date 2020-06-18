@@ -26,7 +26,7 @@
 
 * [Omschrijving](#Omschrijving)
   * [Doel](#Doel)
-  * [Het team](#Het-team)
+  * [Core functionaliteit](#Core-functionaliteit)
 * [Installatie](#Installatie)
   * [Development](#Development)
   * [Production](#Production)
@@ -50,11 +50,9 @@ Ondanks dat een medicijn ver weg is, kunnen we het verloop van de ziekte aangena
 
 Aan ons de opdracht om een applicatie te ontwikkelen waarbij we het leven van Alzheimer patiënten en de mensen eromheen verbeteren. Denk hierbij bijvoorbeeld aan verzorgers, familieleden of vrienden. Muziek, waar persoonlijke herinneringen aan zijn gekoppeld, wordt opgehaald om mooie momenten te creëren in het heden over het verleden. Zo wordt de emotionele gemoedstoestand mogelijk verbeterd. Daarnaast kunnen we deze ervaring gebruiken om de relatie tussen patiënt en vriend/familie/verzorger te verbeteren.
 
+## Core functionaliteit
 
-## Het team
-
-Het development team bestaat uit de volgende leden:
-
+De gebruiker moet via een muziek streaming platform nummers kunnen opzoeken en afspelen. Om deze vervolgens te kunnen liken of op te slaan als herinnering. Bij deze herinneringen kan tekst, audio en foto worden toegevoegd. Deze opgeslagen herinneringen en nummers kunnen terug worden gekeken/geluisterd.
 
 # Installatie
 

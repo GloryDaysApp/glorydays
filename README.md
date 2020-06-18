@@ -149,6 +149,10 @@ Voer de volgende opdracht uit om de logs te zien wanneer er iets mis is gegaan:
 ```
 </details>
 
+# Dependencies
+
+... link naar npm package website ...
+
 # Spotify API
 
 In het concept hebben we veel te maken met het zoeken en toevoegen van muziek. Voor de applicatie gebruiken we de [WebAPI van Spotify](https://developer.spotify.com/documentation/web-api/). Deze API is gratis te gebruiken, zolang dit niet voor commerciële doeleinden wordt gebruikt. Om te beginnen heb je een [Spotify Developer account](https://developer.spotify.com/) nodig. 

@@ -1,15 +1,25 @@
 <header>
     <%- include('partials/head') %>
-</header>  
-    <%- include('partials/playlist-large') %>
-    <div class="container" id="navigation-state--all">
-        <main class="spotify-overview">
-            <h1>Hier kun je een nieuw nummer vinden.</h1>
-            <%- include('partials/playlist-small') %>
 
-            <%- include('partials/search') %>
-            <div class="results"></div>
-        </main>
-    </div>
-  <%- include('partials/navigation-holder') %>
-  <%- include('partials/footer') %>
+    <!-- </header>
+<%- include('partials/playlist-large') %>
+<div class="container" id="navigation-state--all">
+    <main class="spotify-overview">
+        <h1>Hier kun je een nieuw nummer vinden.</h1>
+        <%- include('partials/playlist-small') %> -->
+
+</header>
+<%- include('partials/playlist-large') %>
+<div class="container container--main" id="navigation-state--nav-only">
+    <main class="spotify-overview">
+        <h1>Hier kun je een nieuw nummer vinden.</h1>
+        <%- include('partials/playlist-small') %>
+
+        <%- include('partials/search') %>
+        <div class="results"></div>
+    </main>
+</div>
+<%- include('partials/add-memory') %>
+
+<%- include('partials/navigation-holder') %>
+<%- include('partials/footer') %>

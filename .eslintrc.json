@@ -36,8 +36,6 @@
         ],
         "no-undef": "off",
         "no-unused-vars": "off",
-        "no-useless-escape": "off",
-        "no-octal": "off",
-        "strict": "off"
+        "no-useless-escape": "off"
     }
 }

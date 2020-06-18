@@ -4,7 +4,7 @@
     align-items: center;
 
     height: 350px;
-    margin-top: 2rem;
+    margin-top: $indent-xxxl;
 
     .memory--circles {
         width: 100%;
@@ -22,7 +22,7 @@
                 background-color: $lightgrey;
                 border-radius: 50%;
 
-                margin-top: 1rem;
+                margin-top: $indent;
                 margin-left: 3rem;
             }
         }
@@ -55,7 +55,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        overflow: scroll;
+        margin-bottom: 5rem;
 
         .container--memories-memory {
             width: calc(50% - 10px);
@@ -105,7 +105,7 @@
                 z-index: 1;
                 top: 9.5rem;
                 font-size: 16px;
-                margin-left: 0.5rem;
+                margin-left: .5rem;
                 color: #fff;
             }
         }
@@ -119,7 +119,7 @@
         position: fixed;
         z-index: 2;
         bottom: 5rem;
-        right: 1rem;
+        right: $indent;
         border: solid 4px #fff;
         border-radius: 50px;
 
@@ -134,105 +134,34 @@
 // Detail page with memory
 .container--details {
     .container--details-back {
-        margin-bottom: 2rem;
+        margin-bottom: $indent-xxxl;
 
         a {
-            padding-left: 2rem;
+            padding-left: $indent-xxxl;
         }
 
         img {
             position: absolute;
-            left: 1rem;
+            left: $indent;
             width: 23px;
             height: 23px;
         }
     }
 
     p {
-        margin-bottom: 1rem;
+        margin-bottom: $indent;
         color: $grey;
-    }
-
-    .container-slider-value {
-        display: flex;
-        flex-direction: column;
-        order: 10;
-        align-items: center;
-
-        .value-heart,
-        .value-lightning {
-            margin-bottom: 10px;
-        }
     }
 
     img {
         width: 100%;
         height: auto;
-        margin-bottom: 1rem;
-    }
-
-    .slidecontainer {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        .slider-heart,
-        .slider-lightning {
-            order: 2;
-            appearance: none;
-            width: 65%;
-            height: 5px;
-            border-radius: 4px;
-            background: #d3d3d3;
-            outline: none;
-            margin: 0 1rem;
-
-            &::-webkit-slider-thumb {
-                appearance: none;
-                width: 23px;
-                height: 23px;
-                border-radius: 50%;
-                background: $glory-blue;
-                cursor: pointer;
-            }
-        }
-    }
-
-    .heart,
-    .lightning {
-        width: 25px;
-        height: auto;
-        fill: $glory-grey;
-
-        &--glory-green {
-            fill: $glory-green;
-        }
-
-        &--glory-blue {
-            fill: $glory-blue;
-        }
-
-        &--glory-grey {
-            fill: $glory-grey;
-        }
-
-        &--glory-salmon {
-            fill: $glory-salmon;
-        }
-
-        &--glory-red {
-            fill: $glory-red;
-        }
-    }
-
-    .lightning {
-        width: 19px;
-        margin-right: 6px;
+        margin-bottom: $indent;
     }
 
     .list-item {
         font-family: 'Source Sans Regular', sans-serif;
-        font-size: 0.8em;
+        font-size: .8em;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -254,7 +183,7 @@
 
     h2 {
         font-size: 18px;
-        margin: 2rem 0 1rem;
+        margin: $indent-xxxl 0 $indent;
     }
 
     .container-catchword {
@@ -266,7 +195,7 @@
             padding: 8px;
             border-radius: 50px;
             margin-right: 4px;
-            margin-top: 1rem;
+            margin-top: $indent;
         }
     }
 
@@ -283,7 +212,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50px;
-            margin: 0 -10px 0 1rem;
+            margin: 0 -10px 0 $indent;
             padding: 13px 11px;
 
             img {
@@ -299,6 +228,6 @@
     }
 
     .edit-btn {
-        right: 1rem;
+        right: $indent;
     }
 }

@@ -6,6 +6,7 @@
         "selector-max-compound-selectors": null,
         "order/properties-alphabetical-order": null,
         "selector-no-qualifying-type": null,
-        "number-leading-zero": null
+        "number-leading-zero": null,
+        "property-no-vendor-prefix": null
     }
 }

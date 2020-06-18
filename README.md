@@ -256,9 +256,9 @@ Nu de OAuth is geslaagd kun je door middel van Scopes features aan de applicatie
 
 Per functionaliteit is het van belang om uit te zoeken welke Scope hiervoor nodig is in de [Authorization Scopes](https://developer.spotify.com/documentation/general/guides/scopes/). 
 
-## SDK
+## Spotfiy Web Playback SDK
 
-De Spotify Web SDK is een beta versie van een client-side Javascript library van Spotify. Met de library kan je een Spotify Player creëren in de browser. Hiermee kan je nummers afspelen, zonder dat Spotify geopend hoeft te zijn. Hiervoor heb je de uit de OAuth verkregen `ACCESS_TOKEN` nodig. Wanneer de webplayer is geïnitialiseerd, kun je nummers afspelen door de `song id` mee te geven. Met de speler kun je afspelen, en local playback (pauzeren, volgende, etc.) controleren. In het geval van Glory Days is een nummer afspelen en pauzeren functioneel. Dit wordt later uitgebreid.
+De Spotify Web SDK is een beta versie van een client-side Javascript library van Spotify. Met de library kan je een Spotify Player creëren in de browser. Hiermee kan je nummers afspelen, zonder dat Spotify geopend hoeft te zijn. Hiervoor heb je de uit de OAuth verkregen `ACCESS_TOKEN` nodig. Wanneer de webplayer is geïnitialiseerd, kun je nummers afspelen door de `song id` mee te geven. Met de speler kun je afspelen, en local playback (pauzeren, volgende, etc.) controleren. In het geval van Glory Days is een nummer afspelen en pauzeren functioneel. Dit wordt later uitgebreid. Om meer te lezen over de technische implicaties, kun je de [documentatie van Spotiy Web Player SDK](https://developer.spotify.com/documentation/web-playback-sdk/) raadplegen.
 
 # Datamodel
 

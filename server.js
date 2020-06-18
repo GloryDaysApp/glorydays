@@ -51,10 +51,26 @@ app
             res.redirect('/login');
         } else {
             if (req.cookies.ACCESS_TOKEN) {
-                router.basicPage(res, 'memories-overview', 'Herinneringen', revManifest);
+                Memory
+                    .find({})
+                    .then((data) => {
+                        console.log('data ', data);
+                        router.pageWithData(res, 'memories-overview', 'Herinneringen', data, revManifest);
+                    })
+                    .catch((err) => {
+                        console.log('couldnt get memories from database', err);
+                    });
             } else {
                 getRefreshToken(req, res).then(() => {
-                    router.basicPage(res, 'memories-overview', 'Herinneringen', revManifest);
+                    Memory
+                        .find({})
+                        .then((data) => {
+                            console.log('data ', data);
+                            router.pageWithData(res, 'memories-overview', 'Herinneringen', data, revManifest);
+                        })
+                        .catch((err) => {
+                            console.log('couldnt get memories from database', err);
+                        });
                 });
             }
         }

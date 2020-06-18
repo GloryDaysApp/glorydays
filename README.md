@@ -218,20 +218,20 @@ Om de OAuth 2.0 voor de Spotify API te gebruiken, heb je de volgende variabelen 
 - Client Secret
 - Redirect URI
 
-Deze variabelen zijn terug te vinden in het [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/login). De Spotify Redirect-URI moet worden ingesteld in uw SPotify-dashboard. Deze URI moet hetzelfde zijn als uw callback-URI. Anders zal de OAuth niet slagen. Het is belangrijk om te onthouden dat deze URI zal veranderen zodra u de applicatie wilt deployen. Daarnaast mogen de Client Id en de Client Secret nooit zichtbaar zijn in Github. 
+Deze variabelen zijn terug te vinden in het [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/login). De Spotify Redirect-URI moet worden ingesteld in uw Spotify-dashboard. Deze URI moet hetzelfde zijn als uw callback-URI. Anders zal de OAuth niet slagen. Het is belangrijk om te onthouden dat deze URI zal veranderen zodra u de applicatie wilt deployen. Daarnaast mogen de Client Id en de Client Secret nooit zichtbaar zijn in Github (net zoals andere gevoelige data). 
 
-Deze kun je  bijvoorbeeld opslaan in een dotenv bestand. Hier is een voorbeeld van hoe wij dit hebben aangepakt;
+Deze kun je bijvoorbeeld opslaan in een dotenv bestand en deze in je .gitignore zetten zodat hij niet op Github komt te staan. Hier is een voorbeeld van hoe wij dit hebben aangepakt;
 
 <details>
   <summary>.env.example</summary>
   
 ```
-PORT='port number'
+PORT=3030
 SPOTIFY_REDIRECT_URI='caalback URI'
 SPOTIFY_CLIENT_ID='client id from your Spotify Developer account'
 SPOTIFY_CLIENT_SECRET='client secret from your Spotify Developer account'
 SESSION_KEY='session key'
-MONGODB_URI='uri to mongoos DB'
+MONGODB_URI='URI to mongoose DB'
 ```
   
 </details>

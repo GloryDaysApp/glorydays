@@ -174,9 +174,12 @@ Deze kun je  bijvoorbeeld opslaan in een dotenv bestand. Hier is een voorbeeld v
   <summary>.env.example</summary>
   
 ```
-CLIENT_ID='client id from your Spotify Developer account'
-CLIENT_SECRET='client from your Spotify Developer account'
-REDIRECT_URI='redirect URL'
+PORT='port number'
+SPOTIFY_REDIRECT_URI='caalback URI'
+SPOTIFY_CLIENT_ID='client id from your Spotify Developer account'
+SPOTIFY_CLIENT_SECRET='client secret from your Spotify Developer account'
+SESSION_KEY='session key'
+MONGODB_URI='uri to mongoos DB'
 ```
   
 </details>

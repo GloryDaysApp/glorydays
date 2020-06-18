@@ -34,7 +34,7 @@
 * [Dependencies](#Dependencies)
 * [Spotify API](#Spotify-Api)
   * [Oauth](#Oauth)
-    * [OAuth flow](#OAuth flow)
+    * [OAuth flow](#OAuth-flow)
   * [Scopes](#Scopes)
   * [SDK](#SDK)
 * [Datamodel](#Datamodel)

@@ -39,20 +39,10 @@
 
     .back {
         position: relative;
-        margin-left: 65px;
+        margin-left: 3rem;
         display: none;
 
-        &::after {
-            content: '';
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: url('./icons/arrow_back.svg') no-repeat;
-            background-size: 22px;
-            width: 22px;
-            height: 22px;
-        }
+        @include back-icon;
     }
 
     .button {

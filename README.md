@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://glory-days.herokuapp.com/">
-   ![glorydays_vid](https://user-images.githubusercontent.com/43337909/85061931-e94cca00-b1a7-11ea-9e6d-b1dfc6478cc8.gif)
+    <img src="https://img.shields.io/badge/demo-LIVE-brightgreen.svg?style=flat-square" alt="Demo">
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/GloryDaysApp/glorydays/blob/master/LICENSE">
@@ -19,7 +19,8 @@
 </p>
 
 <p align="center">
-  <img width="360" alt="App Home Screen" src="https://user-images.githubusercontent.com/23479038/85011274-93553380-b161-11ea-8b3f-14d4255cbd3e.png">
+  ![glorydays_vid](https://user-images.githubusercontent.com/43337909/85061985-05e90200-b1a8-11ea-83db-0dbe21ced3e9.gif)
+
 </p>
 
 # Inhoudsopgave

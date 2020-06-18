@@ -49,11 +49,11 @@ Ondanks dat een medicijn ver weg is, kunnen we het verloop van de ziekte aangena
 
 ## Doel
 
-Aan ons de opdracht om een applicatie te ontwikkelen waarbij we het leven van Alzheimer patiënten en de mensen eromheen verbeteren. Denk hierbij bijvoorbeeld aan verzorgers, familieleden of vrienden. Muziek, waar persoonlijke herinneringen aan zijn gekoppeld, wordt opgehaald om mooie momenten te creëren in het heden over het verleden. Zo wordt de emotionele gemoedstoestand mogelijk verbeterd. Daarnaast kunnen we deze ervaring gebruiken om de relatie tussen patiënt en vriend/familie/verzorger te verbeteren.
+Wij hebben de applicatie Glory Days ontwikkeld met als doel om de band tussen vrienden, familie of verzorgers van Alzheimer patiënten te versterken. De app wordt hierbij niet gebruikt door de patiënt, maar door de vrienden, familie of verzorgers. Die kunnen vervolgens op zoek gaan naar herinneringen middels muziek. Als een muzieknummer gekoppeld is aan een unieke herinnering, dan kan dit opgeslagen worden om later terug te luisteren. Hierbij kan de gebruiker aangeven hoe de patiënt de herinnering ervaart. Op deze manier proberen wij bijzondere momenten te creëren.
 
 ## Core functionaliteit
 
-De gebruiker moet via een muziek streaming platform nummers kunnen opzoeken en afspelen. Om deze vervolgens te kunnen liken of op te slaan als herinnering. Bij deze herinneringen kan tekst, audio en foto worden toegevoegd. Deze opgeslagen herinneringen en nummers kunnen terug worden gekeken/geluisterd.
+De gebruiker moet via een muziek streaming platform nummers kunnen opzoeken en afspelen. Om deze vervolgens te kunnen liken of op te slaan als herinnering. Bij deze herinneringen kan tekst, audio en foto worden toegevoegd. Deze opgeslagen herinneringen en nummers kunnen terug worden gekeken en of geluisterd.
 
 # User scenario
 

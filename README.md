@@ -25,6 +25,10 @@
 * [Spotify API](#Spotify-Api)
 * [Datamodel](#Datamodel)
 * [Documentatie](#Documentatie)
+  * [Design rationale](#Design-rationale)
+  * [Product biografie](#Product-biografie)
+  * [Code afspraken](#Code-afspraken)
+* [Contributors](#contributors-)
 
 # Omschrijving 
 

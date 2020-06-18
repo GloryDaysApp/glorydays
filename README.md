@@ -157,8 +157,49 @@ Voer de volgende opdracht uit om de logs te zien wanneer er iets mis is gegaan:
 
 # Dependencies
 
-... link naar npm package website ...
+De core Node.js packages die gebruikt worden in de app zijn:
 
+| Naam  | NPM Package Link  |
+| ----- | ----------------- |
+| Cookie parser  | [cookie-parser](https://www.npmjs.com/package/cookie-parser) |
+| Dotenv | [dotenv](https://www.npmjs.com/package/dotenv) |
+| EJS | [ejs](https://www.npmjs.com/package/ejs) |
+| Express | [express](https://www.npmjs.com/package/express) |
+| Express Session | [express-session](https://www.npmjs.com/package/express-session) |
+| FS | [fs](https://www.npmjs.com/package/fs) |
+| Heroku | [heroku](https://www.npmjs.com/package/heroku) |
+| Mongoose | [mongoose](https://www.npmjs.com/package/mongoose) |
+| Multer | [multer](https://www.npmjs.com/package/multer) |
+| Node Fetch | [node-fetch](https://www.npmjs.com/package/node-fetch) |
+| NPM Rull All| [npm-run-all](https://www.npmjs.com/package/npm-run-all) |
+| Query String | [query-string](https://www.npmjs.com/package/query-string) |
+| Rimraf | [rimraf](https://www.npmjs.com/package/rimraf) |
+
+## Dev dependencies
+
+De Node.js packages die voor development in de app gebruikt worden zijn:
+
+| Naam  | NPM Package Link  |
+| ----- | ----------------- |
+| Chokidar CLI | [chokidar-cli](https://www.npmjs.com/package/hokidar-cli) |
+| Concurrently | [concurrently](https://www.npmjs.com/package/concurrently) |
+| ESLint | [eslint](https://www.npmjs.com/package/eslint) |
+| Gulp | [gulp](https://www.npmjs.com/package/gulp) |
+| Gulp Autoprefixer | [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) |
+| Gulp Clean CSS | [gulp-clean-css](https://www.npmjs.com/package/gulp-clean-css) |
+| Gulp Concat | [gulp-concat](https://www.npmjs.com/package/gulp-concat) |
+| Gulp Filter | [gulp-filter](https://www.npmjs.com/package/gulp-filter) |
+| Gulp Minify | [gulp-minify](https://www.npmjs.com/package/gulp-minify) |
+| Gulp Rev | [gulp-rev](https://www.npmjs.com/package/gulp-rev) |
+| Gulp Rev CSS URL | [gulp-rev-css-url](https://www.npmjs.com/package/gulp-rev-css-url) |
+| Gulp Rev Replace | [gulp-rev-replace](https://www.npmjs.com/package/gulp-rev-replace) |
+| Gulp Sass | [gulp-sass](https://www.npmjs.com/package/gulp-sass) |
+| Nodemon | [nodemon](https://www.npmjs.com/package/nodemon) |
+| NPX | [npx](https://www.npmjs.com/package/npx) |
+| Stylelint | [stylelint](https://www.npmjs.com/package/stylelint) |
+| Stylelint Config Standaard | [stylelint-config-standard](https://www.npmjs.com/package/stylelint-config-standard) |
+| Stylelint Config Sass Guidelines | [stylelint-config-sass-guidelines](https://www.npmjs.com/package/stylelint-config-sass-guidelines) |
+       
 # Spotify API
 
 In het concept hebben we veel te maken met het zoeken en toevoegen van muziek. Voor de applicatie gebruiken we de [WebAPI van Spotify](https://developer.spotify.com/documentation/web-api/). Deze API is gratis te gebruiken, zolang dit niet voor commerciële doeleinden wordt gebruikt. Om te beginnen heb je een [Spotify Developer account](https://developer.spotify.com/) nodig. 

@@ -1,6 +1,6 @@
 # Glory Days app
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Omschrijving 
@@ -29,6 +29,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/MarjoleinAardewijn"><img src="https://avatars1.githubusercontent.com/u/23479038?v=4" width="100px;" alt=""/><br /><sub><b>MarjoleinAardewijn</b></sub></a><br /><a href="https://github.com/GloryDaysApp/glorydays/commits?author=MarjoleinAardewijn" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Coenmathijssen"><img src="https://avatars3.githubusercontent.com/u/43337909?v=4" width="100px;" alt=""/><br /><sub><b>Coenmathijssen</b></sub></a><br /><a href="https://github.com/GloryDaysApp/glorydays/commits?author=Coenmathijssen" title="Code">💻</a> <a href="https://github.com/GloryDaysApp/glorydays/issues?q=author%3ACoenmathijssen" title="Bug reports">🐛</a> <a href="#a11y-Coenmathijssen" title="Accessibility">️️️️♿️</a> <a href="#content-Coenmathijssen" title="Content">🖋</a> <a href="https://github.com/GloryDaysApp/glorydays/commits?author=Coenmathijssen" title="Documentation">📖</a> <a href="#design-Coenmathijssen" title="Design">🎨</a> <a href="#ideas-Coenmathijssen" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-Coenmathijssen" title="Maintenance">🚧</a> <a href="#question-Coenmathijssen" title="Answering Questions">💬</a> <a href="https://github.com/GloryDaysApp/glorydays/commits?author=Coenmathijssen" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/marissaverdonck"><img src="https://avatars3.githubusercontent.com/u/43657951?v=4" width="100px;" alt=""/><br /><sub><b>marissaverdonck</b></sub></a><br /><a href="https://github.com/GloryDaysApp/glorydays/commits?author=marissaverdonck" title="Code">💻</a> <a href="https://github.com/GloryDaysApp/glorydays/issues?q=author%3Amarissaverdonck" title="Bug reports">🐛</a> <a href="#a11y-marissaverdonck" title="Accessibility">️️️️♿️</a> <a href="#content-marissaverdonck" title="Content">🖋</a> <a href="https://github.com/GloryDaysApp/glorydays/commits?author=marissaverdonck" title="Documentation">📖</a> <a href="#design-marissaverdonck" title="Design">🎨</a> <a href="#ideas-marissaverdonck" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-marissaverdonck" title="Maintenance">🚧</a> <a href="#question-marissaverdonck" title="Answering Questions">💬</a> <a href="https://github.com/GloryDaysApp/glorydays/commits?author=marissaverdonck" title="Tests">⚠️</a></td>
   </tr>
 </table>
 

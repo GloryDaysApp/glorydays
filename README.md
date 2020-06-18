@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://glory-days.herokuapp.com/">
-    <img src="https://img.shields.io/badge/demo-LIVE-brightgreen.svg?style=flat-square" alt="Demo" style="max-width: 100px">
+    <img src="https://img.shields.io/badge/demo-LIVE-brightgreen.svg?style=flat-square" alt="Demo" style="max-width: 50px;">
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/GloryDaysApp/glorydays/blob/master/LICENSE">

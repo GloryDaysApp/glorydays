@@ -27,6 +27,7 @@
 * [Omschrijving](#Omschrijving)
   * [Doel](#Doel)
   * [Core functionaliteit](#Core-functionaliteit)
+* [User Scenario](#User-scenario)
 * [Installatie](#Installatie)
   * [Development](#Development)
   * [Production](#Production)
@@ -53,6 +54,23 @@ Aan ons de opdracht om een applicatie te ontwikkelen waarbij we het leven van Al
 ## Core functionaliteit
 
 De gebruiker moet via een muziek streaming platform nummers kunnen opzoeken en afspelen. Om deze vervolgens te kunnen liken of op te slaan als herinnering. Bij deze herinneringen kan tekst, audio en foto worden toegevoegd. Deze opgeslagen herinneringen en nummers kunnen terug worden gekeken/geluisterd.
+
+# User scenario
+
+_**Wie is de gebruiker?**_
+Een Alzheimer patiënt, zijn verzorg(st)ers, familieleden en vrienden.
+
+_**Wat wil de gebruiker?**_
+Herinneringen opslaan en ophalen door middel van muziek.
+
+_**Waar gaat de gebruiker het gebruiken?**_
+Thuis of buiten (in de buurt van het huis).
+
+_**Waarom wil de gebruiker het gebruiken?**_
+De band tussen vrienden/familie/verzorger versterken door middel van het ophalen van herinneringen met muziek. Om de emotionele toestand positief te beïnvloeden. Om cognitieve vaardigheden minder hard af te laten glijden.
+
+_**Hoe gaat de gebruiker het gebruiken?**_
+De verzorger zal een nummer opzoeken via de telefoon voor de patiënt. De patiënt krijgt optioneel bijbehorende afbeeldingen/video/audio te zien/horen. Bij de juiste muziek kunnen gerelateerde herinneringen op worden gehaald en vast worden gelegd binnen de app. Herinneringen kunnen te allen tijde terug worden gekeken. 
 
 # Installatie
 

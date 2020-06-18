@@ -65,10 +65,28 @@ app
             res.redirect('/login');
         } else {
             if (req.cookies.ACCESS_TOKEN) {
-                router.basicPage(res, 'memories-overview', 'Herinneringen', revManifest);
+                Memory
+                    .find({})
+                    .then((data) => {
+                        console.log('data ', data);
+                        router.pageWithData(res, 'memories-overview', 'Herinneringen', data, revManifest);
+                    })
+                    .catch((err) => {
+                        console.log('couldnt get memories from database', err);
+                    });
+                
             } else {
                 getRefreshToken(req, res).then(() => {
-                    router.basicPage(res, 'memories-overview', 'Herinneringen', revManifest);
+                    Memory
+                        .find({})
+                        .then((data) => {
+                            console.log('data ', data);
+                            data = JSON.stringify(data);
+                            router.pageWithData(res, 'memories-overview', 'Herinneringen', data, revManifest);
+                        })
+                        .catch((err) => {
+                            console.log('couldnt get memories from database', err);
+                        });
                 });
             }
         }
@@ -93,20 +111,6 @@ app
             } else {
                 getRefreshToken(req, res).then(() => {
                     router.pageWithData(res, 'add-memory', 'Herinneringen', caregivers, revManifest);
-                });
-            }
-        }
-    })
-
-    .get('/memory-details', async (req, res) => {
-        if (!req.cookies.REFRESH_TOKEN) {
-            res.redirect('/login');
-        } else {
-            if (req.cookies.ACCESS_TOKEN) {
-                router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, revManifest);
-            } else {
-                getRefreshToken(req, res).then(() => {
-                    router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, revManifest);
                 });
             }
         }
@@ -142,6 +146,42 @@ app
 
     .get('/offline', (req, res) => {
         router.basicPage(res, 'offline', 'Oeps! Er is iets misgegaan', revManifest);
+    })
+
+    .get('/:id(\\d+)/', async (req, res) => {
+        let myId = req.params.id;
+        console.log('pls ', myId);
+
+        if (!req.cookies.REFRESH_TOKEN) {
+            res.redirect('/login');
+            
+        } else {
+            if (req.cookies.ACCESS_TOKEN) {
+                Memory
+                    .findOne({memoryId: myId})
+                    .then((data) => {
+                        console.log('DATA SINGLE ', data);
+                        let dataNew = JSON.stringify(data);
+                        router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, dataNew, revManifest);
+                    })
+                    .catch((err) => {
+                        console.log('couldnt get memories from database', err);
+                    });
+            } else {
+                getRefreshToken(req, res).then(() => {
+                    Memory
+                        .findOne({memoryId: myId})
+                        .then((data) => {
+                            console.log('data ', data);
+                            let dataNew = JSON.stringify(data);
+                            router.pageWithData(res, 'memory-details', 'Herinnering details', caregivers, dataNew, revManifest);
+                        })
+                        .catch((err) => {
+                            console.log('couldnt get memories from database', err);
+                        });
+                });
+            }
+        }
     });
 
 // Spotify Oauth
@@ -175,28 +215,41 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+// Store data to database
 app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
-    // console.log(req.file, req.body);
+
+    console.log(Array.isArray(req.body.keywords));
 
     // Create new memory
     let memory = {
+        memoryId: generateId(),
         title: req.body.title.length > 0 ? req.body.title.filter(text => text !== '') : null,
         description: req.body.description.length > 0 ? req.body.description.filter(desc => desc !== '') : null,
         keywords: req.body.keywords.length > 0 ? req.body.keywords.filter(keyword => keyword !== '') : null,
-        media: []
+        media: [],
+        song: {},
+        emotion: req.body.emotion !== '' ? req.body.emotion : null,
+        energy: req.body.energy !== '' ? req.body.energy : null
     };
 
     // Store media
     if (req.file) {
         const image = {
+            type: 'image',
             name: req.file.filename,
             path: `/${req.file.filename}`
         };
 
-        console.log(image);
-
         memory.media.push(image);
     }
+    
+    // Store song data
+    memory.song.id = req.body.songId !== '' ? req.body.songId : null;
+    memory.song.albumCover = req.body.songAlbumCover !== '' ? req.body.songAlbumCover : null;
+    memory.song.name = req.body.songName !== '' ? req.body.songName : null;
+    memory.song.artist = req.body.songArtist !== '' ? req.body.songArtist : null;
+
+    console.log(memory.song);
 
     // Save new user to database
     const newMemory = new Memory(memory);
@@ -209,3 +262,8 @@ app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
         }
     });
 });
+
+// Generate random id
+function generateId() {
+    return Math.floor(Math.random() * 100000000000000000);
+}

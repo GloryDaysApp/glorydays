@@ -31,12 +31,13 @@ const account = new Schema({
 });
 
 const memory = new Schema({
+    memoryId: String,
     song: {
         type: Array,
         default: []
     },
     emotion: String,
-    intensity: String, 
+    energy: String, 
     description: {
         type: Array,
         default: []

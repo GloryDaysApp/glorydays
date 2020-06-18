@@ -57,7 +57,7 @@
 }
 
 .music-player--small.big {
-    height: calc(100vh - 73px);
+    height: calc(var(--vh, 1vh) * 100 - 73px);
     transition: all .7s ease-in-out;
     justify-content: space-around;
     display: flex;

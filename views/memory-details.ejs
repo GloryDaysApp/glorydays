@@ -1,6 +1,6 @@
 <header>
-    <%- include('partials/head') %>
-    <!-- <h1><%= title %></h1> -->
+  <%- include('partials/head') %>
+  <!-- <h1><%= title %></h1> -->
 </header>
 
 <section class="container container--details" id="navigation-state--nav-only">
@@ -19,7 +19,6 @@
         <% } else { %>
             <div class="song-information"> 
         <% } %>
-
                 <% if (data.media.length > 0) { %>
                     <img src=".<%=data.media[0].path%>" alt="chosen memory image" class="background-image">
                 <% } else if (data.song.length > 0) { %>

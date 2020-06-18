@@ -1,0 +1,108 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "MarjoleinAardewijn",
+      "name": "MarjoleinAardewijn",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/23479038?v=4",
+      "profile": "https://github.com/MarjoleinAardewijn",
+      "contributions": [
+        "code",
+        "infra",
+        "bug",
+        "a11y",
+        "content",
+        "doc",
+        "design",
+        "ideas",
+        "maintenance",
+        "question",
+        "tutorial",
+        "test"
+      ]
+    },
+    {
+      "login": "Coenmathijssen",
+      "name": "Coenmathijssen",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/43337909?v=4",
+      "profile": "https://github.com/Coenmathijssen",
+      "contributions": [
+        "code",
+        "bug",
+        "a11y",
+        "content",
+        "doc",
+        "design",
+        "ideas",
+        "maintenance",
+        "question",
+        "test",
+        "data"
+      ]
+    },
+    {
+      "login": "marissaverdonck",
+      "name": "marissaverdonck",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/43657951?v=4",
+      "profile": "https://github.com/marissaverdonck",
+      "contributions": [
+        "code",
+        "bug",
+        "a11y",
+        "content",
+        "doc",
+        "design",
+        "ideas",
+        "maintenance",
+        "question",
+        "test"
+      ]
+    },
+    {
+      "login": "jenniferslagt",
+      "name": "Jennifer Slagt",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/45489420?v=4",
+      "profile": "http://www.jenniferslagt.nl",
+      "contributions": [
+        "code",
+        "bug",
+        "a11y",
+        "content",
+        "doc",
+        "design",
+        "ideas",
+        "maintenance",
+        "question",
+        "test"
+      ]
+    },
+    {
+      "login": "Zeijls",
+      "name": "Simone",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/45422060?v=4",
+      "profile": "https://github.com/Zeijls",
+      "contributions": [
+        "code",
+        "bug",
+        "a11y",
+        "content",
+        "doc",
+        "design",
+        "ideas",
+        "maintenance",
+        "question",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "glorydays",
+  "projectOwner": "GloryDaysApp",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

@@ -13,6 +13,8 @@
 
                     span {
                         margin-top: $indent-xxxs;
+                        text-align: left;
+                        margin-left: $indent-xl;
                     }
                 }
             }
@@ -29,8 +31,9 @@
                 &.active {
                     display: block;
                     margin-left: $indent;
+                    margin-right: $indent;
+                    width: 80vw;
                     position: absolute;
-                    margin-top: $indent-xxxl;
                 }
             }
 
@@ -40,7 +43,7 @@
                     max-height: 200px;
                     margin-top: $indent;
                     border-radius: 4px;
-                    right: -9rem;
+                    right: 0;
                     position: absolute;
                 }
             }

@@ -258,7 +258,7 @@ Per functionaliteit is het van belang om uit te zoeken welke Scope hiervoor nodi
 
 ## SDK
 
-...
+De Spotify Web SDK is een beta versie van een client-side Javascript library van Spotify. Met de library kan je een Spotify Player creëren in de browser. Hiermee kan je nummers afspelen, zonder dat Spotify geopend hoeft te zijn. Hiervoor heb je de uit de OAuth verkregen `ACCESS_TOKEN` nodig. Wanneer de webplayer is geïnitialiseerd, kun je nummers afspelen door de `song id` mee te geven. Met de speler kun je afspelen, en local playback (pauzeren, volgende, etc.) controleren. In het geval van Glory Days is een nummer afspelen en pauzeren functioneel. Dit wordt later uitgebreid.
 
 # Datamodel
 

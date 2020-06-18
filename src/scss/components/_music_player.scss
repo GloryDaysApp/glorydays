@@ -38,11 +38,11 @@
     }
 
     .back {
+        @include back-icon;
+
         position: relative;
         margin-left: 3rem;
         display: none;
-
-        @include back-icon;
     }
 
     .button {

@@ -13,10 +13,10 @@
 
 
     .back-overview {
+        @include back-icon;
+        
         position: relative;
         margin-left: 30px;
         margin-bottom: $indent-xxl;
-
-        @include back-icon;
     }
 }

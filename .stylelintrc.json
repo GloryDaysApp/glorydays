@@ -7,6 +7,7 @@
         "order/properties-alphabetical-order": null,
         "selector-no-qualifying-type": null,
         "number-leading-zero": null,
-        "property-no-vendor-prefix": null
+        "property-no-vendor-prefix": null,
+        "selector-max-id": null
     }
 }

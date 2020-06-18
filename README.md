@@ -80,6 +80,10 @@ De band tussen vrienden, familie of verzorger versterken door middel van het oph
 _**Hoe gaat de gebruiker het gebruiken?**_ \
 De verzorger zal een nummer opzoeken via de telefoon voor de patiënt. De patiënt krijgt optioneel bijbehorende afbeeldingen, video en of audio te zien en of horen. Bij de juiste muziek kunnen gerelateerde herinneringen op worden gehaald en vast worden gelegd binnen de app. Herinneringen kunnen te allen tijde terug worden gekeken. 
 
+# Data Life Cycle
+<img width="1074" alt="Screenshot 2020-06-18 at 23 11 02" src="https://user-images.githubusercontent.com/45422060/85072922-24f08f80-b1ba-11ea-934b-7a77c2bda50a.png">
+<img width="1069" alt="Screenshot 2020-06-18 at 23 11 11" src="https://user-images.githubusercontent.com/45422060/85072909-1efaae80-b1ba-11ea-9d85-49df30d63f06.png">
+
 # Installatie
 
 Zie de installatie gids om te zien hoe je de app kan installeren en gebruiken.

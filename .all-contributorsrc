@@ -60,6 +60,24 @@
         "question",
         "test"
       ]
+    },
+    {
+      "login": "Zeijls",
+      "name": "Simone",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/45422060?v=4",
+      "profile": "https://github.com/Zeijls",
+      "contributions": [
+        "code",
+        "bug",
+        "a11y",
+        "content",
+        "doc",
+        "design",
+        "ideas",
+        "maintenance",
+        "question",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,

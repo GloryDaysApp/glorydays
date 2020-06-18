@@ -38,21 +38,11 @@
     }
 
     .back {
-        position: relative;
-        margin-left: 65px;
-        display: none;
+        @include back-icon;
 
-        &::after {
-            content: '';
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: url('./icons/arrow_back.svg') no-repeat;
-            background-size: 22px;
-            width: 22px;
-            height: 22px;
-        }
+        position: relative;
+        margin-left: 3rem;
+        display: none;
     }
 
     .button {
@@ -67,12 +57,13 @@
 }
 
 .music-player--small.big {
-    height: calc(100% - 73px);
+    height: calc(var(--vh, 1vh) * 100 - 73px);
     transition: all .7s ease-in-out;
     justify-content: space-around;
     display: flex;
     flex-direction: column;
     padding-left: 0;
+    bottom: 73px;
 
     .song-info {
         width: 100%;

@@ -32,3 +32,17 @@
 @mixin overlay-gradient($color) {
     background: linear-gradient($color 80%, $color) 10%;
 }
+
+@mixin back-icon {
+    &::after {
+        content: '';
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url('./icons/arrow_back.svg') no-repeat;
+        background-size: 16px;
+        width: 16px;
+        height: 16px;
+    }
+}

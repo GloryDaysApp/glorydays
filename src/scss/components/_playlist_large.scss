@@ -3,6 +3,7 @@
     left: 0;
     top: 0;
     background: $white;
+    margin-bottom: 3rem;
     z-index: 99;
     display: none;
 
@@ -12,20 +13,10 @@
 
 
     .back-overview {
-        position: relative;
-        margin-left: 30px;
-        margin-bottom: $indent-xxl;
+        @include back-icon;
 
-        &::after {
-            content: '';
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: url('./icons/arrow_back.svg') no-repeat;
-            background-size: 22px;
-            width: 22px;
-            height: 22px;
-        }
+        position: relative;
+        margin-left: 2rem;
+        margin-bottom: $indent-xxl;
     }
 }

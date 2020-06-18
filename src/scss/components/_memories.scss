@@ -136,15 +136,12 @@
     .container--details-back {
         margin-bottom: $indent-xxxl;
 
-        a {
-            padding-left: $indent-xxxl;
-        }
+        .back {
+            @include back-icon;
 
-        img {
-            position: absolute;
-            left: $indent;
-            width: 23px;
-            height: 23px;
+            position: relative;
+            margin-left: $indent-xxxl;
+            display: block;
         }
     }
 

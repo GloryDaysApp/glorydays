@@ -13,9 +13,8 @@ if (sliderHeart) {
     };
 
     // Change slider on load
-    outputSliderHeart.innerHTML = sliderHeart.value + ' | 10';
+    outputSliderHeart.innerHTML = sliderHeart.value + ' | 5';
     let value = sliderHeart.value;
-    console.log('value:', sliderHeart);
     changeHeartColor(value);
 }
 
@@ -34,7 +33,7 @@ if (sliderLightning) {
     };
 
     // Change slider on load
-    outputSliderLightning.innerHTML = sliderLightning.value + ' | 10';
+    outputSliderLightning.innerHTML = sliderLightning.value + ' | 5';
     let value = sliderLightning.value;
     console.log('value:', sliderLightning);
     changeLightningColor(value);

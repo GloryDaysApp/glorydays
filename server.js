@@ -150,7 +150,6 @@ app
 
     .get('/:id(\\d+)/', async (req, res) => {
         let myId = req.params.id;
-        console.log('pls ', myId);
 
         if (!req.cookies.REFRESH_TOKEN) {
             res.redirect('/login');
@@ -160,7 +159,6 @@ app
                 Memory
                     .findOne({memoryId: myId})
                     .then((data) => {
-                        console.log('DATA SINGLE ', data);
                         data = data.toJSON();
                         router.pageWithData(res, 'memory-details', 'Herinnering details', data, revManifest);
                     })
@@ -172,7 +170,6 @@ app
                     Memory
                         .findOne({memoryId: myId})
                         .then((data) => {
-                            console.log('data ', data);
                             let dataNew = JSON.stringify(data);
                             router.pageWithData(res, 'memory-details', 'Herinnering details', data, revManifest);
                         })
@@ -217,9 +214,6 @@ const upload = multer({ storage: storage });
 
 // Store data to database
 app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
-
-    console.log(Array.isArray(req.body.keywords));
-
     // Create new memory
     let memory = {
         memoryId: generateId(),
@@ -259,6 +253,8 @@ app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
             console.log('memory has been saved');
         }
     });
+
+    res.redirect('/memories-overview');
 });
 
 // Generate random id

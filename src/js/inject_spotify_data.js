@@ -2,8 +2,6 @@ function injectSpotifyData(data, location, length, title = '') {
     // Clear results
     location.innerHTML = title;
 
-    console.log(data);
-
     // Insert results
     for (let i = 0; i < length; i++) {
         // Create an info container element

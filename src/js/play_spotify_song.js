@@ -1,6 +1,4 @@
 function playSong(song, device_id) {
-    console.log('song: ', song);
-
     // Called when connected to the player created beforehand successfully
 
     const play = ({
@@ -32,11 +30,8 @@ function playSong(song, device_id) {
 
 
 const songClick = document.getElementsByClassName('song-click')[0];
-console.log('hi', songClick);
-
 
 if (songClick) {
-    console.log('hoi', songClick);
     songClick.addEventListener('click', playing);
 }
 

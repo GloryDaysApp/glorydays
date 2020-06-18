@@ -12,7 +12,6 @@ if (songSubmit && songInput) {
 function searchXML(song) {
     const ACCESS_TOKEN = getCookie('ACCESS_TOKEN');
 
-    console.log('song', song);
     const xhr = new XMLHttpRequest();
     const cors = 'https://cors-anywhere.herokuapp.com/';
     xhr.open('GET', `${cors}https://api.spotify.com/v1/search?q=${song}&type=track,artist`, true);

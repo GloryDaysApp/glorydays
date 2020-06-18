@@ -10,11 +10,17 @@
   </a>
 </p>
 
-<img width="360" alt="App Home Screen" src="https://user-images.githubusercontent.com/23479038/85011274-93553380-b161-11ea-8b3f-14d4255cbd3e.png">
+<p align="center">
+  <img width="360" alt="App Home Screen" src="https://user-images.githubusercontent.com/23479038/85011274-93553380-b161-11ea-8b3f-14d4255cbd3e.png">
+</p>
 
+<p align="center">
+  
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+</p>
 
 # Inhoudsopgave
 

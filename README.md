@@ -383,3 +383,10 @@ Bedankt aan deze geweldige mensen ([emoji key](https://allcontributors.org/docs/
 Dit project volgt de specificatie van [all-contributors](https://github.com/all-contributors/all-contributors). Bijdragen van welke aard dan ook zijn welkom!
 
 # Feature Wensenlijst
+- Account aanmaken/inloggen
+- Verschillende subaccounts voor verzorgers
+- Muzieksuggesties op maat
+- Playlist samenstellen
+- Muziekspelen door de gehele app heen
+- Data filteren, sorteren en analyseren
+- Verschillende muziekdiensten

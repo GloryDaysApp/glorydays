@@ -51,6 +51,10 @@
 .container-added-memories {
     width: 100%;
 
+    h1 {
+        margin-bottom: $indent;
+    }
+
     .container--memories {
         display: flex;
         flex-direction: row;

@@ -53,6 +53,13 @@
 
     h1 {
         margin-bottom: $indent;
+
+        .name {
+            color: $glory-blue;
+            font-size: 2rem;
+            font-family: 'Source Serif Semibold',serif;
+            line-height: 2.3rem;
+        }
     }
 
     .container--memories {

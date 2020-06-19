@@ -391,3 +391,4 @@ Dit project volgt de specificatie van [all-contributors](https://github.com/all-
 - Muziekspelen door de gehele app heen
 - Data filteren, sorteren en analyseren
 - Verschillende muziekdiensten
+- Uitgebreidere playback (pauzeren / skippen)

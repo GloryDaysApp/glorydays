@@ -47,33 +47,6 @@ app
 
     // Check if ACCESS_TOKEN exists. If not, fetch a new one with the refresh token.
     .get('/', async (req, res) => {
-        // if (!req.cookies.REFRESH_TOKEN) {
-        //     res.redirect('/login');
-        // } else {
-        //     if (req.cookies.ACCESS_TOKEN) {
-        //         Memory
-        //             .find({})
-        //             .then((data) => {
-        //                 console.log('data ', data);
-        //                 router.pageWithData(res, 'memories-overview', 'Herinneringen', data, revManifest);
-        //             })
-        //             .catch((err) => {
-        //                 console.log('couldnt get memories from database', err);
-        //             });
-        //     } else {
-        //         getRefreshToken(req, res).then(() => {
-        //             Memory
-        //                 .find({})
-        //                 .then((data) => {
-        //                     console.log('data ', data);
-        //                     router.pageWithData(res, 'memories-overview', 'Herinneringen', data, revManifest);
-        //                 })
-        //                 .catch((err) => {
-        //                     console.log('couldnt get memories from database', err);
-        //                 });
-        //         });
-        //     }
-        // }
         router.basicPage(res, 'splashscreen', 'Glory Days', revManifest);
     })
 

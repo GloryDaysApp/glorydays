@@ -387,6 +387,7 @@ Dit project volgt de specificatie van [all-contributors](https://github.com/all-
 - Verschillende subaccounts voor verzorgers
 - Muzieksuggesties op maat
 - Playlist samenstellen
+- Herinnering aanpassen / verwijderen
 - Muziekspelen door de gehele app heen
 - Data filteren, sorteren en analyseren
 - Verschillende muziekdiensten

@@ -1,12 +1,11 @@
 .splashscreen {
     background-image: url('./splashscreen-image.png');
-    object-fit: contain;
     width: 100vw;
     height: 100vh;
 
     padding: 0;
 
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: #eee;
 

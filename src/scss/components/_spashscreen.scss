@@ -1,0 +1,39 @@
+.splashscreen {
+    background-image: url('./splashscreen-image.png');
+    object-fit: contain;
+    width: 100vw;
+    height: 100vh;
+
+    padding: 0;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #eee;
+
+    main {
+        display: flex;
+        align-items: flex-end;
+        height: 100vh;
+        padding: $indent;
+
+        .splashscreen--title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: $indent;
+
+            h1 {
+                color: $glory-blue;
+                margin-bottom: $indent-xxxs;
+                font-family: 'Source Serif Bold', serif;
+            }
+
+            p {
+                color: $lightgrey;
+                width: 70%;
+                line-height: 1.2rem;
+            }
+        }
+    }
+}

@@ -23,18 +23,22 @@
 
 </p>
 
+# Introductie
+
+Glory Days is een toepassing die door middel van autobiografische muziek herinneringen terughaalt en het levensverhaal van de patiënt vastlegt zodat sociale interactie tussen de patiënt en de verzorger, familie en vrienden makkelijk(er) wordt.
+
 # Inhoudsopgave
 
 * [Omschrijving](#Omschrijving)
   * [Doel](#Doel)
   * [Core functionaliteit](#Core-functionaliteit)
 * [User Scenario](#User-scenario)
-* [Data Life Cycle](#Data-Life-Cycle)
 * [Installatie](#Installatie)
   * [Development](#Development)
   * [Production](#Production)
 * [Dependencies](#Dependencies)
   * [Dev dependencies](#Dev-dependencies)
+* [Data Life Cycle](#Data-Life-Cycle)
 * [Spotify API](#Spotify-Api)
   * [Oauth](#Oauth)
     * [OAuth flow](#OAuth-flow)
@@ -80,11 +84,6 @@ De band tussen vrienden, familie of verzorger versterken door middel van het oph
 
 _**Hoe gaat de gebruiker het gebruiken?**_ \
 De verzorger zal een nummer opzoeken via de telefoon voor de patiënt. De patiënt krijgt optioneel bijbehorende afbeeldingen, video en of audio te zien en of horen. Bij de juiste muziek kunnen gerelateerde herinneringen op worden gehaald en vast worden gelegd binnen de app. Herinneringen kunnen te allen tijde terug worden gekeken. 
-
-# Data Life Cycle
-Om overzicht te houden waar de data in de applicatie leeft, is er een Data Life Cycle ontwikkeld. <br>
-<img width="1074" alt="Screenshot 2020-06-18 at 23 11 02" src="https://user-images.githubusercontent.com/45422060/85072922-24f08f80-b1ba-11ea-934b-7a77c2bda50a.png">
-<img width="1069" alt="Screenshot 2020-06-18 at 23 11 11" src="https://user-images.githubusercontent.com/45422060/85072909-1efaae80-b1ba-11ea-9d85-49df30d63f06.png">
 
 # Installatie
 
@@ -207,6 +206,12 @@ De Node.js packages die voor development in de app gebruikt worden zijn:
 | Stylelint | [stylelint](https://www.npmjs.com/package/stylelint) |
 | Stylelint Config Standaard | [stylelint-config-standard](https://www.npmjs.com/package/stylelint-config-standard) |
 | Stylelint Config Sass Guidelines | [stylelint-config-sass-guidelines](https://www.npmjs.com/package/stylelint-config-sass-guidelines) |
+
+# Data Life Cycle
+
+Om overzicht te houden waar de data in de applicatie leeft, is er een Data Life Cycle ontwikkeld. <br>
+<img width="1074" alt="Screenshot 2020-06-18 at 23 11 02" src="https://user-images.githubusercontent.com/45422060/85072922-24f08f80-b1ba-11ea-934b-7a77c2bda50a.png">
+<img width="1069" alt="Screenshot 2020-06-18 at 23 11 11" src="https://user-images.githubusercontent.com/45422060/85072909-1efaae80-b1ba-11ea-9d85-49df30d63f06.png">
        
 # Spotify API
 

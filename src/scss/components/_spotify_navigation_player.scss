@@ -4,6 +4,7 @@
     //display: block;
     background-color: #8bd5d7;
     width: 100vw;
+    width: calc(var(--vw, 1vw) * 100);
     z-index: 100;
 
     ul {

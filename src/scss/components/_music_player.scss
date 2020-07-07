@@ -5,6 +5,7 @@
     position: fixed;
     bottom: 70px;
     width: 100%;
+    width: calc(var(--vw, 1vw) * 100);
     background-color: $brokenwhite;
     visibility: hidden;
     transition: height .7s ease-in-out;
@@ -51,6 +52,7 @@
 
         &.button-primair {
             width: 80vw;
+            width: calc(var(--vw, 1vw) * 80);
             padding: 1rem;
         }
     }

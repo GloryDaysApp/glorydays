@@ -1,6 +1,7 @@
 .splashscreen {
     background-image: url('./splashscreen-image.png');
     width: 100vw;
+    width: calc(var(--vw, 1vw) * 100);
     height: 100vh;
 
     padding: 0;

@@ -16,6 +16,7 @@
     text-align: center;
     border-radius: 50px;
     width: 43vw;
+    width: calc(var(--vw, 1vw) * 43);
     padding: $indent-xs $indent;
     margin: $indent-xxxs 0;
 }
@@ -43,6 +44,7 @@
 .button-muziekstream {
     background-color: $glory-salmon;
     width: 70vw;
+    width: calc(var(--vw, 1vw) * 70);
     padding: $indent $indent-xl;
     border-radius: 50px;
     color: $white;
@@ -104,6 +106,7 @@
     background-color: $glory-blue;
     padding: .8rem $indent;
     width: 50vw;
+    width: calc(var(--vw, 1vw) * 50);
     border: 0;
     color: $white;
 }

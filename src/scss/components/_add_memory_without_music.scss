@@ -6,12 +6,14 @@
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100 - 1vh);
     width: 100vw;
+    width: calc(var(--vw, 1vw) * 100);
     overflow: hidden;
     position: relative;
     top: 1em;
 
     h1 {
         width: 90vw;
+        width: calc(var(--vw, 1vw) * 90);
         max-width: 40rem;
         color: $darkgreen;
         padding: 2.5rem 0 $indent $indent;

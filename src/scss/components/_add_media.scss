@@ -33,6 +33,7 @@
                     margin-left: $indent;
                     margin-right: $indent;
                     width: 80vw;
+                    width: calc(var(--vw, 1vw) * 80);
                     position: absolute;
                 }
             }
@@ -51,6 +52,7 @@
             .output--add-text {
                 .text-add-media {
                     width: 80vw;
+                    width: calc(var(--vw, 1vw) * 80);
                     padding: 0 20px;
                     display: flex;
                     justify-content: space-between;

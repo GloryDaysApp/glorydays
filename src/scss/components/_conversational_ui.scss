@@ -6,9 +6,12 @@
     position: absolute;
     top: 0;
     left: 0;
+    width: 100vw;
+    width: calc(var(--vw, 1vw) * 100);
   
     .back {
         width: 100%;
+        width: calc(var(--vw, 1vw) * 100);
         padding: $indent;
         position: absolute;
         top: 0;
@@ -27,6 +30,7 @@
         overflow: auto;
         flex: none;
         width: 100vw;
+        width: calc(var(--vw, 1vw) * 100);
         height: 100vh;
         flex-flow: column nowrap;
         scroll-snap-type: y mandatory;
@@ -38,12 +42,14 @@
             height: 101vh;
             height: calc(var(--vh, 1vh) * 100 + 1vh);
             width: 100vw;
+            width: calc(var(--vw, 1vw) * 100);
             overflow: hidden;
             position: relative;
             top: 1em;
 
             .legend-text {
                 width: 90vw;
+                width: calc(var(--vw, 1vw) * 90);
                 max-width: 40rem;
                 color: $darkgreen;
                 padding: 2.5rem 0 $indent $indent;
@@ -118,6 +124,7 @@
                 left: 5%;
                 right: 5%;
                 width: 90vw;
+                width: calc(var(--vw, 1vw) * 90);
                 margin: 0 auto;
                 padding: 0 20px;
                 display: flex;
@@ -148,6 +155,7 @@
         text-align: right;
         padding: $indent-xxxs $indent;
         width: 80vw;
+        width: calc(var(--vw, 1vw) * 80);
         text-align: right;
         max-width: 30rem;
         margin: 0 0 0 auto;

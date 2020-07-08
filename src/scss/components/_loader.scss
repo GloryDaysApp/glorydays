@@ -1,0 +1,23 @@
+p.loader {
+  animation: blink 1s infinite alternate;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.25s;
+  position: absolute;
+  top: -2em;
+  font-style: italic;
+}
+
+p.loader.loading {
+  opacity: 1;
+}
+
+@keyframes blink {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}

@@ -58,7 +58,6 @@ app
                 Memory
                     .find({})
                     .then((data) => {
-                        console.log('data ', data);
                         router.pageWithData(res, 'memories-overview', 'Herinneringen', data, revManifest);
                     })
                     .catch((err) => {
@@ -70,7 +69,6 @@ app
                     Memory
                         .find({})
                         .then((data) => {
-                            console.log('data ', data);
                             data = JSON.stringify(data);
                             router.pageWithData(res, 'memories-overview', 'Herinneringen', data, revManifest);
                         })

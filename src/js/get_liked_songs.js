@@ -20,7 +20,7 @@ function getLikedSongs () {
 
         const playlist = document.getElementById('playlist-large');
         if (playlist) {
-            injectSpotifyData(data, playlist, 50, '<h1>Jouw favoriete nummers</h1>');
+            injectSpotifyData(data, playlist, 50, '<h1>Jouw favoriete nummers</h1>', 'song');
         }
     };
 }

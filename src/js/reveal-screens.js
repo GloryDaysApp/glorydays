@@ -53,7 +53,9 @@ function togglePausePlay() {
         playState = false;
     }
 }
-// Toggle visibility of favorite songs
+// Toggle visibility of song lists
+
+// Favorite songs
 const playlistLarge = document.getElementsByClassName('playlist-large')[0];
 const playListSmall = document.getElementById('playlist-small');
 if (playListSmall) {
@@ -69,6 +71,7 @@ if (backOverview) {
 function hidePlaylist() {
     playlistLarge.classList.remove('visible');
 }
+
 // Add memory reveal / hide
 const addMemoryContainer = document.getElementsByClassName('conversational-ui')[0];
 const addMemory = document.getElementById('add-memory');

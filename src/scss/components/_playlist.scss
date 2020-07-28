@@ -17,14 +17,16 @@
         align-items: stretch;
         width: 100%;
         margin: $indent-s 0 $indent-xxs;
+
+        img {
+            width: calc(20vw - 10px);
+            height: calc(20vw - 10px);
+            margin: 0 5px;
+            border-radius: 8px;
+        }
     }
 
-    img {
-        width: calc(20vw - 10px);
-        height: calc(20vw - 10px);
-        margin: 0 5px;
-        border-radius: 8px;
-    }
+    
 
     .button--empty {
         display: block;
@@ -32,11 +34,12 @@
     }
 }
 
-#playlist-large {
+.playlist-large-container {
     width: 100%;
 }
 
-.song {
+.song,
+.artist {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;

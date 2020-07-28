@@ -26,7 +26,33 @@ function searchXML(song) {
         const responseObject = xhr.response;
         const data = cleanData(responseObject);
 
-        const results = document.getElementsByClassName('results')[0];
-        injectSpotifyData(data.tracks, results, 3, '<h1>Bedoelde je één van deze nummers?</h1>');
+        console.log('data joe: ', data);
+
+        const resultsSongs = document.getElementsByClassName('results')[0];
+        injectSpotifyData(data.tracks, resultsSongs, 2, '<h2>Gevonden nummers</h2>', 'song');
+
+        const resultsArtists = document.getElementsByClassName('results')[1];
+        injectSpotifyData(data.artists, resultsArtists, 2, '<h2>Gevonden artiesten</h2>', 'artist');
+
+        // Add eventlistener to reveal and hide screens for artist songs
+        //  Artist songs
+        const artist = document.getElementsByClassName('artist');
+        const artistSongs = document.getElementsByClassName('artist-songs')[0];
+        const artistArray = Array.from(artist);
+
+        console.log('artists: ', artistArray);
+
+        artistArray.forEach(item => {
+            item.addEventListener('click', showArtistSong);
+        });
+
+        function showArtistSong() {
+            console.log('running');
+            artistSongs.classList.add('visible');
+        }
+
+        document.getElementById('back-overview-sec').addEventListener('click', () => {
+            artistSongs.classList.remove('visible');
+        });
     };
 }

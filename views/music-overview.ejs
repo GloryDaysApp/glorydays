@@ -2,10 +2,15 @@
     <%- include('partials/head') %>
 </header>
 <%- include('partials/playlist-large') %>
+<%- include('partials/playlist-large') %>
 <%- include('partials/artist-songs') %>
 <div class="container container--main" id="navigation-state--nav-only">
     <main class="spotify-overview">
         <h1>Hier kun je een nieuw nummer vinden.</h1>
+        <h2>Jouw favoriete nummers</h2>
+        <%- include('partials/playlist-small') %>
+
+        <h2>Jouw tijdmachine</h2>
         <%- include('partials/playlist-small') %>
 
         <%- include('partials/search') %>

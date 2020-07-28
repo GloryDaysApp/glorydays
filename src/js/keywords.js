@@ -6,6 +6,5 @@ if (inputKeywords) {
         const inputKeywordsArray =  inputKeywordsValue.split(' ');
         const inputKeywordsStringFromArray = inputKeywordsArray.join().replace(/,/g,' ');
         inputKeywords.text = inputKeywordsStringFromArray;
-        console.log(inputKeywordsStringFromArray);
     };
 }

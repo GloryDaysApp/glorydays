@@ -56,20 +56,37 @@ function togglePausePlay() {
 // Toggle visibility of song lists
 
 // Favorite songs
-const playlistLarge = document.getElementsByClassName('playlist-large')[0];
-const playListSmall = document.getElementById('playlist-small');
-if (playListSmall) {
-    playListSmall.addEventListener('click', showPlaylist);
+const playlistLargeFirst = document.getElementsByClassName('playlist-large')[0];
+const playListSmallFirst = document.getElementsByClassName('playlist')[0];
+if (playListSmallFirst) {
+    playListSmallFirst.addEventListener('click', showPlaylistFirst);
 }
-function showPlaylist() {
-    playlistLarge.classList.add('visible');
+function showPlaylistFirst() {
+    playlistLargeFirst.classList.add('visible');
 }
-const backOverview = document.getElementById('back-overview');
-if (backOverview) {
-    backOverview.addEventListener('click', hidePlaylist);
+const backOverviewFirst = document.getElementsByClassName('back-overview')[0];
+if (backOverviewFirst) {
+    backOverviewFirst.addEventListener('click', hidePlaylistFirst);
 }
-function hidePlaylist() {
-    playlistLarge.classList.remove('visible');
+function hidePlaylistFirst() {
+    playlistLargeFirst.classList.remove('visible');
+}
+
+// Time capsule
+const playlistLargeSec = document.getElementsByClassName('playlist-large')[1];
+const playListSmallSec = document.getElementsByClassName('playlist')[1];
+if (playListSmallSec) {
+    playListSmallSec.addEventListener('click', showPlaylistSec);
+}
+function showPlaylistSec() {
+    playlistLargeSec.classList.add('visible');
+}
+const backOverviewSec = document.getElementsByClassName('back-overview')[1];
+if (backOverviewSec) {
+    backOverviewSec.addEventListener('click', hidePlaylistSec);
+}
+function hidePlaylistSec() {
+    playlistLargeSec.classList.remove('visible');
 }
 
 // Add memory reveal / hide

@@ -16,9 +16,12 @@ function getLikedSongs () {
     xhr.onload = () => {
         const responseObject = xhr.response;
         let data = cleanSpotifyLikedSongs(responseObject.items);
-        injectAlbumCovers(data);
 
-        const playlist = document.getElementById('playlist-large');
+        const albums = document.getElementsByClassName('albums')[0];
+        injectAlbumCovers(data, albums);
+
+        const playlist = document.getElementsByClassName('playlist-large-container')[0];
+        console.log('data working? ', data);
         if (playlist) {
             injectSpotifyData(data, playlist, 50, '<h1>Jouw favoriete nummers</h1>', 'song');
         }
@@ -26,19 +29,17 @@ function getLikedSongs () {
 }
 
 // Will seperate later - Coen
-function injectAlbumCovers (data) {
-    const albums = document.getElementsByClassName('albums')[0];
-
+function injectAlbumCovers (data, place) {
     // Clear results
-    if (albums) {
-        albums.innerHTML = '';
+    if (place) {
+        place.innerHTML = '';
 
         // Insert the first 5 album covers
         for (let i = 0; i < 5; i++) {
             let img = document.createElement('img');
             img.src = data[i].imageSmall;
             img.alt = 'album cover from a song of your liked songs';
-            albums.appendChild(img);
+            place.appendChild(img);
         }
     }
 }

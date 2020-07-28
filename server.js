@@ -1,5 +1,7 @@
 const config = require('./config');
 const mongoose = require('mongoose');
+const { Storage } = require('@google-cloud/storage');
+const { format } = require('util');
 
 const express = require('express'),
     router = require('./scripts/modules/router'),
@@ -186,22 +188,39 @@ app.get('/refresh', getRefreshToken); // Callback for fetching Spotify tokens
 // app.post('/submit-memory', submitMemory);
 
 const { Account, Memory } = require('./server/database_schema.js');
-const multer = require('multer');
+const Multer = require('multer');
 
-// Multer setup
-const storage = multer.diskStorage({
-    destination: (req, res, cb) => {
-        cb(null, './static/');
+// // Multer setup
+// const multerStorage = multer.diskStorage({
+//     destination: (req, res, cb) => {
+//         cb(null, './static/');
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, new Date().toISOString() + file.originalname);
+//     }
+// });
+
+const multer = Multer({
+    storage: Multer.memoryStorage(),
+    limits: {
+        fileSize: 5 * 1024 * 1024, // no larger than 5mb
     },
-    filename: (req, file, cb) => {
-        cb(null, new Date().toISOString() + file.originalname);
-    }
 });
 
-const upload = multer({ storage: storage });
+// Google cloud setup
+const googleCloud = new Storage({
+    keyFilename: './google_cloud.json',
+    projectId: 'coastal-gantry-284616'
+});
+
+googleCloud.getBuckets().then(bucket => console.log('Google cloud connection succesful: ', bucket));
+
+const bucket = googleCloud.bucket('glorydays_bucket');
+
+// const upload = multer({ storage: storage });
 
 // Store data to database
-app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
+app.post('/submit-memory', multer.single('image-upload'), (req, res, next) => {
     // Create new memory
     let memory = {
         memoryId: generateId(),
@@ -211,25 +230,50 @@ app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
         media: [],
         song: {},
         emotion: req.body.emotion !== '' ? req.body.emotion : null,
-        energy: req.body.energy !== '' ? req.body.energy : null
+        energy: req.body.energy !== '' ? req.body.energy : null,
+        image: null
     };
 
-    // Store media
-    if (req.file) {
-        const image = {
-            type: 'image',
-            name: req.file.filename,
-            path: `/${req.file.filename}`
-        };
+    // // Store media
+    // if (req.file) {
+    //     const image = {
+    //         type: 'image',
+    //         name: req.file.filename,
+    //         path: `/${req.file.filename}`
+    //     };
 
-        memory.media.push(image);
-    }
+    //     memory.media.push(image);
+    // }
     
     // Store song data
     memory.song.id = req.body.songId !== '' ? req.body.songId : null;
     memory.song.albumCover = req.body.songAlbumCover !== '' ? req.body.songAlbumCover : null;
     memory.song.name = req.body.songName !== '' ? req.body.songName : null;
     memory.song.artist = req.body.songArtist !== '' ? req.body.songArtist : null;
+
+    // Store image to Google Cloud
+    if (req.file) {
+        // Create a new blob in the bucket and upload the file data.
+        const blob = bucket.file(req.file.originalname);
+        const blobStream = blob.createWriteStream();
+    
+        blobStream.on('error', (err) => {
+            next(err);
+        });
+    
+        blobStream.on('finish', () => {
+            // The public URL can be used to directly access the file via HTTP.
+            const publicUrl = format(
+                `https://storage.googleapis.com/${bucket.name}/${blob.name}`
+            );
+            res.status(200).send(publicUrl);
+        });
+    
+        blobStream.end(req.file.buffer);
+
+        // Store url to object
+        memory.image = `https://storage.cloud.google.com/glorydays_bucket/${req.file.originalname}`;
+    }
 
     // Save new user to database
     const newMemory = new Memory(memory);
@@ -238,7 +282,7 @@ app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
         if (err) {
             console.log('save failed: ', err);
         } else {
-            console.log('memory has been saved');
+            console.log('memory has been saved', memory.image);
         }
     });
 
@@ -249,3 +293,8 @@ app.post('/submit-memory', upload.single('image-upload'), (req, res) => {
 function generateId() {
     return Math.floor(Math.random() * 100000000000000000);
 }
+
+// // Process the file upload and upload to Google Cloud Storage.
+// app.post('/upload', multer.single('file'), (req, res, next) => {
+    
+// });

@@ -50,10 +50,7 @@ const memory = new Schema({
         type: Array,
         default: []
     },
-    media: {
-        type: Array,
-        default: []
-    }
+    image: String
 });
 
 // // Model

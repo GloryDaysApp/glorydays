@@ -273,6 +273,8 @@ app.post('/submit-memory', multer.single('image-upload'), (req, res, next) => {
 
         // Store url to object
         memory.image = `https://storage.cloud.google.com/glorydays_bucket/${req.file.originalname}`;
+    } else {
+        memory.image = req.body.songAlbumCover !== '' ? req.body.songAlbumCover : null;
     }
 
     // Save new user to database
@@ -293,8 +295,3 @@ app.post('/submit-memory', multer.single('image-upload'), (req, res, next) => {
 function generateId() {
     return Math.floor(Math.random() * 100000000000000000);
 }
-
-// // Process the file upload and upload to Google Cloud Storage.
-// app.post('/upload', multer.single('file'), (req, res, next) => {
-    
-// });

@@ -1,5 +1,5 @@
 <section class="container-added-memories">
-    <h1>Hi <span class="name">Coen</span>, welke herinneringen wil Anton beluisteren?</h1>
+    <h1>De herinneringen van <span class="name">Anton</span>.</h1>
     
     <% if (data) { %>
         <div class="container--memories new">
@@ -21,15 +21,15 @@
                 <% } %>
                 <% if (item.emotion) { %>
                     <% if (item.emotion === '5') { %>
-                        <div class="overlay overlay--glory-green"></div>
+                        <div class="overlay overlay--glory-red"></div>
                     <% } else if (item.emotion === '4') { %>
-                        <div class="overlay overlay--glory-blue"></div>
+                        <div class="overlay overlay--glory-salmon"></div>
                     <% } else if (item.emotion === '3') { %>
                         <div class="overlay overlay--glory-grey"></div>
                     <% } else if (item.emotion === '2') { %>
-                        <div class="overlay overlay--glory-salmon"></div>
+                        <div class="overlay overlay--glory-blue"></div>
                     <% } else if (item.emotion === '1') { %>
-                        <div class="overlay overlay--glory-red"></div>
+                        <div class="overlay overlay--glory-green"></div>
                     <% } %>
                 <% } else { %>
                     <div class="overlay overlay--glory-grey"></div>

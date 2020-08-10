@@ -24,6 +24,15 @@
             font-family: Avenir-Light;
         }
     }
+
+    .close {
+        position: absolute;
+        max-width: 25px;
+        right: 20px;
+        top: 20px;
+        fill: $grey;
+        z-index: 99;
+    }
     
     form {
         display: flex;

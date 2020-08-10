@@ -32,8 +32,6 @@ function findTimeCapsule(data) {
 function getSongs(data) {
     const ACCESS_TOKEN = getCookie('ACCESS_TOKEN');
 
-    console.log('huh', data);
-
     const xhr = new XMLHttpRequest();
     const cors = 'https://cors-anywhere.herokuapp.com/';
   

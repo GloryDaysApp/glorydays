@@ -224,6 +224,7 @@
             }
 
             &.artist {
+                display: block;
                 top: 45%;
                 font-size: 1rem;
             }
@@ -267,6 +268,7 @@
 
     .container-catchword {
         margin-bottom: 4rem;
+        padding-bottom: 2rem;
 
         .catchword {
             background: $glory-blue;

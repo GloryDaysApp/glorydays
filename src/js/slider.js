@@ -43,11 +43,11 @@ if (sliderLightning) {
 function changeHeartColor(value) {
     if (value == 1) {
         removeHeartClasses();
-        heart.classList.add('heart--glory-red');
+        heart.classList.add('heart--glory-green');
         valueDescrHeart.innerHTML = 'verdrietig';
     } else if (value == 2) {
         removeHeartClasses();
-        heart.classList.add('heart--glory-salmon');
+        heart.classList.add('heart--glory-blue');
         valueDescrHeart.innerHTML = 'somber';
     } else if (value == 3) {
         removeHeartClasses();
@@ -55,11 +55,11 @@ function changeHeartColor(value) {
         valueDescrHeart.innerHTML = 'normaal';
     } else if (value == 4) {
         removeHeartClasses();
-        heart.classList.add('heart--glory-blue');
+        heart.classList.add('heart--glory-salmon');
         valueDescrHeart.innerHTML = 'blij';
     } else if (value == 5) {
         removeHeartClasses();
-        heart.classList.add('heart--glory-green');
+        heart.classList.add('heart--glory-red');
         valueDescrHeart.innerHTML = 'gelukkig';
     }
 }
@@ -82,11 +82,11 @@ function removeHeartClasses() {
 function changeLightningColor(value) {
     if (value == 1) {
         removeLightningClasses();
-        lightning.classList.add('lightning--glory-red');
+        lightning.classList.add('lightning--glory-green');
         valueDescrLightning.innerHTML = 'slaperig';
     } else if (value == 2) {
         removeLightningClasses();
-        lightning.classList.add('lightning--glory-salmon');
+        lightning.classList.add('lightning--glory-blue');
         valueDescrLightning.innerHTML = 'moe';
     } else if (value == 3) {
         removeLightningClasses();
@@ -94,11 +94,11 @@ function changeLightningColor(value) {
         valueDescrLightning.innerHTML = 'normaal';
     } else if (value == 4) {
         removeLightningClasses();
-        lightning.classList.add('lightning--glory-blue');
+        lightning.classList.add('lightning--glory-salmon');
         valueDescrLightning.innerHTML = 'actief';
     } else if (value == 5) {
         removeLightningClasses();
-        lightning.classList.add('lightning--glory-green');
+        lightning.classList.add('lightning--glory-red');
         valueDescrLightning.innerHTML = 'energievol';
     }
 }

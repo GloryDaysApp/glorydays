@@ -100,10 +100,19 @@ function revealMemoryContainer() {
     musicPlayer.classList.remove('big');
     addMemoryContainer.classList.add('show');
 }
+
+const hideMemory = document.getElementsByClassName('close')[0];
+if (hideMemory) {
+    hideMemory.addEventListener('click', hideMemoryContainer);
+}
+function hideMemoryContainer() {
+    addMemoryContainer.classList.remove('show');
+}
+
 function appendSongInformation() {
     // Store song data
     let songInfo =  document.getElementById('song-information');
-    if (songInformation) {
+    if (songInformation.hasChildNodes()) {
         document.getElementById('song-id').value = songInfo.firstChild.id;
         document.getElementById('song-album-cover').value = songInfo.firstChild.firstChild.src;
         document.getElementById('song-name').value = songInfo.firstChild.lastChild.children[0].textContent;

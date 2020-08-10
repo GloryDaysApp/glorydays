@@ -6,7 +6,17 @@ if (songSubmit && songInput) {
     songSubmit.addEventListener('click', () => {
         searchXML(songInput.value);
     });
+
+    // If user hits enter inside input search field
+    songInput.addEventListener('keyup', event => {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+            searchXML(songInput.value);
+        }
+    });
 }
+
+
 
 // Search for Spotify songs
 function searchXML(song) {
@@ -54,5 +64,8 @@ function searchXML(song) {
         document.getElementById('back-overview-sec').addEventListener('click', () => {
             artistSongs.classList.remove('visible');
         });
+        
+        // Increase page size to fit
+        document.getElementsByClassName('container--main')[0].style.height = '120vh';
     };
 }

@@ -26,6 +26,9 @@ function playSong(song, device_id) {
         playerInstance: player,
         spotify_uri: `spotify:track:${song}`,
     });
+
+    // Increase page size to fit
+    document.getElementsByClassName('container--main')[0].style.height = '130vh';
 }
 
 

@@ -19,9 +19,9 @@
         <% } else { %>
             <div class="song-information"> 
         <% } %>
-                <% if (data.media.length > 0) { %>
-                    <img src=".<%=data.media[0].path%>" alt="chosen memory image" class="background-image">
-                <% } else if (data.song.length > 0) { %>
+                <% if (data.image !== null) { %>
+                    <img src="<%=data.image%>" alt="chosen memory image" class="background-image">
+                <% } else if (data.song.albumCover !== null) { %>
                     <img src="<%=data.song[0].albumCover%>" alt="album cover" class="background-image">
                 <% } %>
                 <div class="overlay"></div>

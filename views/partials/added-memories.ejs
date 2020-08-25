@@ -12,10 +12,10 @@
                 <% if (item.title) { %>
                     <h2><%=item.title%></h2>
                 <% } %>
-                <% if (item.image) { %>
-                    <img src="<%=item.toJSON().image%>" alt="chosen memory image">
-                <% } else if (item.song.length > 0) { %>
-                    <img src="<%=item.toJSON().song[0].albumCover%>" alt="album cover">
+                <% if (data.image !== null) { %>
+                    <img src="<%=item.toJSON().image%>">
+                <% } else if (data.song.albumCover !== null) { %>
+                    <img src="<%=item.toJSON().song[0].albumCover%>">
                 <% } else { %>
                     <img src="/placeholder.jpg" alt="placeholder image">
                 <% } %>
